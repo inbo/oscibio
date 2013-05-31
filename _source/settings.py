@@ -55,13 +55,14 @@ TWITTER_URL = "https://twitter.com/LifeWatchINBO"
 
 # Blogroll
 LINKS = (
-    ("INBO", "http://www.inbo.be"),
+    ("Research Institute for Nature and Forest (INBO)", "http://www.inbo.be"),
     ("Belgian LifeWatch portal", "http://www.lifewatch.be"),
     ("European LifeWatch portal", "http://www.lifewatch.eu"),
 )
 
 # Social widget
 SOCIAL = (
-    ("Twitter", "https://twitter.com/LifeWatchINBO"),
-    ("GitHub","https://github.com/organizations/LifeWatchINBO"),
+    ("Follow us on Twitter", "https://twitter.com/LifeWatchINBO"),
+    ("Our GitHub repositories", "https://github.com/organizations/LifeWatchINBO"),
+    ("Subscribe to updates", SITEURL + "/" + FEED_ALL_RSS),
 )
