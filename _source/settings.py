@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*- #
 
 SITENAME = "LifeWatch INBO blog"
-SITESUBTITLE = ""  # Set
 SITEURL = ""  # Set
 AUTHOR = "LifeWatch INBO team"
 
