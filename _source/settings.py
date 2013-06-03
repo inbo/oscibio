@@ -44,7 +44,7 @@ TRANSLATION_FEED_ATOM = None
 TRANSLATION_FEED_RSS = None
 
 # Theme
-THEME = "../../spoonbill-lifewatch" # Relative link to theme repository
+THEME = "../../eurasian-spoonbill" # Relative link to theme repository
 
 # External services
 DISQUS_SITENAME = "" # Set
