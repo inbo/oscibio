@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-SITENAME = "LifeWatch INBO blog"
+SITENAME = "LifeWatch INBO"
 SITEURL = ""  # Set
+TITLE = "Rapid biodiversity monitoring with equipment and software"
+SUBTITLE = "We blog about ideas, challenges and technologies related to building an open terrestrial and freshwater observatory in Flanders for the LifeWatch research infrastructure."
 AUTHOR = "LifeWatch INBO team"
 
 TIMEZONE = "Europe/Paris"
