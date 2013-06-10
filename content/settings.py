@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 
 SITENAME = "LifeWatch INBO"
-SITEURL = ""  # Set
 TITLE = "Rapid biodiversity monitoring with equipment and software"
+SITEURL = "http://lifewatchblog-pr.inbosnet.be:8080/blog"
 SUBTITLE = "We blog about ideas, challenges and technologies related to building an open terrestrial and freshwater observatory in Flanders for the LifeWatch research infrastructure."
 AUTHOR = "LifeWatch INBO team"
 
@@ -26,7 +26,7 @@ STATIC_PATHS = (
     ("images"),
     ("files"),
 )
-OUTPUT_PATH = "../" # One level above the _source folder
+OUTPUT_PATH = "../output" # Sibling directory of `content`
 
 # URLs
 ARTICLE_URL = "posts/{slug}.html" # Both slug and slug.html will work
