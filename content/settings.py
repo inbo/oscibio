@@ -9,13 +9,13 @@ AUTHOR = "LifeWatch INBO team"
 
 TIMEZONE = "Europe/Paris"
 DEFAULT_LANG = "en"
-MARKUP = "md"
+MARKUP = (("md"),)
 
 # Reading settings
 DISPLAY_PAGES_ON_MENU = True
 DEFAULT_PAGINATION = None
 DEFAULT_DATE_FORMAT  = "%B %d, %Y"
-SUMMARY_MAX_LENGTH = -1
+SUMMARY_MAX_LENGTH = 0
 
 # Directory settings
 DELETE_OUTPUT_DIRECTORY = False # Change
