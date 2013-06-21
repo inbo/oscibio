@@ -1,3 +1,12 @@
+Title: Why we document our functional requirements on a Github repository
+Date: 2013-07-03 12:00
+Tags: functional analysis, GitHub
+Category: Technical
+Slug: functional-analysis-on-github
+Summary: …
+Author: Bart Aelterman
+Status: draft
+
 We had some issues with the traditional way of documenting functional requirements in a Word file:
 
 - It's hard to make sure everybody on the team is working with the latest version,
