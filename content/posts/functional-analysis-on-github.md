@@ -1,5 +1,3 @@
-# Why we document our functional requirements on a Github repository
-
 We had some issues with the traditional way of documenting functional requirements in a Word file:
 
 - It's hard to make sure everybody on the team is working with the latest version,
@@ -81,4 +79,3 @@ Documenting our requirements as txt files and keeping track of their changes usi
 - Keep track of edits, comments on edits, discussions, issues, ...
 
 Definitely worth a try!
-
