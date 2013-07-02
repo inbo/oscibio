@@ -29,3 +29,5 @@ Kevin develops the applications and APIs, invariably finishing his sentences wit
 [Twitter](https://twitter.com/kazijn) | [GitHub](https://github.com/kazijn)
 
 </div>
+
+![Team](|filename|/images/team.jpg)
