@@ -1,19 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-SITENAME = "LifeWatch INBO blog"
-SITEURL = ""  # Set
+SITENAME = "LifeWatch INBO"
+SITEURL = "http://lifewatchblog-pr.inbosnet.be:8080/blog"
+TITLE = "Towards more efficient biodiversity monitoring"
+SUBTITLE = "We blog about ideas, challenges and technologies related to building an open terrestrial and freshwater observatory in Flanders for the LifeWatch research infrastructure."
 AUTHOR = "LifeWatch INBO team"
 
 TIMEZONE = "Europe/Paris"
 DEFAULT_LANG = "en"
-MARKUP = "md"
+MARKUP = (("md"),)
 
 # Reading settings
 DISPLAY_PAGES_ON_MENU = True
 DEFAULT_PAGINATION = None
 DEFAULT_DATE_FORMAT  = "%B %d, %Y"
-SUMMARY_MAX_LENGTH = -1
+SUMMARY_MAX_LENGTH = 0
 
 # Directory settings
 DELETE_OUTPUT_DIRECTORY = False # Change
@@ -24,7 +26,7 @@ STATIC_PATHS = (
     ("images"),
     ("files"),
 )
-OUTPUT_PATH = "../" # One level above the _source folder
+OUTPUT_PATH = "../output" # Sibling directory of `content`
 
 # URLs
 ARTICLE_URL = "posts/{slug}.html" # Both slug and slug.html will work
@@ -44,7 +46,7 @@ TRANSLATION_FEED_ATOM = None
 TRANSLATION_FEED_RSS = None
 
 # Theme
-THEME = "../../spoonbill-lifewatch" # Relative link to theme repository
+THEME = "../../eurasian-spoonbill" # Relative link to theme repository
 
 # External services
 DISQUS_SITENAME = "" # Set
