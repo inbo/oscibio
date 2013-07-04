@@ -6,14 +6,15 @@ Slug: github-for-functional-requirements
 Summary: A more productive and geeky alternative to the monolithic Word document.
 Status: draft
 
-We had some issues with the traditional way of documenting functional requirements in a Word file:
+Functional requirements are typically documented in a single monolithic document (e.g. a Microsoft Word document), but there are several drawbacks to that approach:
 
-- It's hard to make sure everybody on the team is working with the latest version,
-- it's a pain to keep it up to date: when an illustration of say a UI sketch changes, you have to open your drawing tool, export an image, import it in the Word file, layout the document again, change the version number (or not, which is not correct) and redistribute the new version,
-- you can't expect the business to read this document several times. They might read the first version, but after three versions, nothing is being verified anymore.
-- The analist is spending way to much time layouting the document over and over and over again.
+* Difficult to collaborate on the same document
+* Hard to distinguish accepted sections from draft sections
+* Tedious to update included objects, such as schemas and images
+* To much time is spend on layout
+* No automatic versioning
 
-We distilled a couple of practices out of our experience that should enhance our situation:
+Although there are tools that fulfill some of these needs, such as [Google Docs](https://docs.google.com), a wiki such as [Confluence](http://www.atlassian.com/software/confluence/), or even a full requirements suite such as [Enterprise Architect](http://www.sparxsystems.com/products/ea/index.html), we just went ahead and experimented with Markdown, git repositories, and GitHub. Here's what we learned so far.
 
 ### 1. Keep your content separated from your layout,
 
