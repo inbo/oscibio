@@ -4,7 +4,9 @@
 SITENAME = "LifeWatch INBO"
 SITEURL = "http://lifewatchblog-pr.inbosnet.be:8080/blog"
 TITLE = "Towards more efficient biodiversity monitoring"
-SUBTITLE = "We blog about ideas, challenges and technologies related to building an open terrestrial and freshwater observatory in Flanders for the LifeWatch research infrastructure."
+SUBTITLE = "We blog about ideas, challenges and technologies related to building "\
+           "an open terrestrial and freshwater observatory in Flanders for the "\
+           "LifeWatch research infrastructure."
 AUTHOR = "LifeWatch INBO team"
 
 TIMEZONE = "Europe/Paris"
