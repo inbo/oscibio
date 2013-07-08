@@ -58,8 +58,8 @@ TRANSLATION_FEED_RSS = None
 THEME = "../../eurasian-spoonbill" # Relative link to theme repository
 
 # External services
-DISQUS_SITENAME = "" # Set
 GOOGLE_ANALYTICS = "" # Set
+DISQUS_SITENAME = "lifewatchinbo"
 GOOGLE_WEBMASTER = "" # Set
 GITHUB_URL = "https://github.com/organizations/LifeWatchINBO"
 TWITTER_URL = "https://twitter.com/LifeWatchINBO"
