@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 
 SITENAME = "LifeWatch INBO"
-SITEURL = "http://lifewatchblog-pr.inbosnet.be:8080/blog"
+SITEURL = "http://lifewatch.inbo.be/blog"
 TITLE = "Towards more efficient biodiversity monitoring"
 SUBTITLE = "We blog about ideas, challenges and technologies related to building "\
            "an open terrestrial and freshwater observatory in Flanders for the "\
