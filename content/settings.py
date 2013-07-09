@@ -2,10 +2,19 @@
 # -*- coding: utf-8 -*- #
 
 SITENAME = "LifeWatch INBO"
-SITEURL = "http://lifewatchblog-pr.inbosnet.be:8080/blog"
+SITEURL = "http://lifewatch.inbo.be/blog"
 TITLE = "Towards more efficient biodiversity monitoring"
-SUBTITLE = "We blog about ideas, challenges and technologies related to building an open terrestrial and freshwater observatory in Flanders for the LifeWatch research infrastructure."
+SUBTITLE = "We blog about ideas, challenges and technologies related to building "\
+           "an open terrestrial and freshwater observatory in Flanders for the "\
+           "LifeWatch research infrastructure."
 AUTHOR = "LifeWatch INBO team"
+DISCLAIMER = "The views expressed on this blog represent the ideas of the author(s) "\
+             "and are not to be considered an INBO or institutional policy. "\
+             "Unless stated otherwise, <a xmlns:cc=\"http://creativecommons.org/ns#\" "\
+             "href=\"http://lifewatch.inbo.be/blog\" property=\"cc:attributionName\" "\
+             "rel=\"cc:attributionURL\">all content</a> is licensed under a "\
+             "<a rel =\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">"\
+             "Creative Commons Attribution 3.0 Unported License</a>."
 
 TIMEZONE = "Europe/Paris"
 DEFAULT_LANG = "en"
@@ -49,8 +58,8 @@ TRANSLATION_FEED_RSS = None
 THEME = "../../eurasian-spoonbill" # Relative link to theme repository
 
 # External services
-DISQUS_SITENAME = "" # Set
-GOOGLE_ANALYTICS = "" # Set
+DISQUS_SITENAME = "lifewatchinbo"
+GOOGLE_ANALYTICS = "UA-42312007-1"
 GOOGLE_WEBMASTER = "" # Set
 GITHUB_URL = "https://github.com/organizations/LifeWatchINBO"
 TWITTER_URL = "https://twitter.com/LifeWatchINBO"
