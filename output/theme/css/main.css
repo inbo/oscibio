@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 40em;
     padding: 2em;
     padding-top: 3.5em; /* Height of header + 1em */
-    padding-bottom: 13em; /* Height of footer + 2em */
+    padding-bottom: 15em; /* Height of footer + 2em */
     }
     .content h1 {
         line-height: 1.2em;
@@ -306,6 +306,7 @@ h1, h2, h3, h4, h5, h6 {
             .single pre code {
                 border: none;
                 background: transparent;
+                font-size: 1em;
                 padding: 0;
                 white-space: pre;
             }
@@ -336,15 +337,6 @@ h1, h2, h3, h4, h5, h6 {
             border-top: 1px dashed #CCCCCC;
             margin: 0 -0.5em; /* Extend border left/right */
         }
-        .single .team-member { /* On about page */
-            float: left;
-            margin-right: 1.2em;
-            width: 30%;
-            }
-            .team-member h3 {
-                border: none;
-                margin-top: 0;
-            }
 
     .paginator { /* On body > .container > .content */
         color: #767676;
@@ -382,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #086A9B;
     border-top: solid 0.5em #0182C3;
     bottom: 0;
-    height: 11em;
+    height: 13em;
     position: absolute;
     width: 100%;
     }
@@ -399,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1em;
         margin: 0 auto;
         max-width: 40em;
-        padding: 2em;
+        padding: 2em 2em 0.5em;
         }
         .footer div {
             float: left;
@@ -427,9 +419,29 @@ h1, h2, h3, h4, h5, h6 {
                 font-size: 0.8em;
                 padding: 0.3em 0;
             }
+        .footer p.disclaimer {
+            clear: both;
+            font-family: Arial, sans-serif;
+            font-size: 0.6em;
+            margin: 0;
+            padding-top: 2em;
+        }
 
 
 /* ========== My media queries ========== */
+
+@media only screen and (min-width: 48em) {
+/* Default size */
+    .single .team-member { /* About page: column view */
+        float: left;
+        margin-right: 1.2em;
+        width: 30%;
+        }
+        .team-member h3 {
+            border: none;
+            margin-top: 0;
+        }
+}
 
 @media only screen and (max-width: 48em) {
 /* Medium size */
@@ -437,12 +449,19 @@ h1, h2, h3, h4, h5, h6 {
     .subtitle, /* Index subtitle */
     .header div, /* Header logo */
     .index p, /* Article description */
-    .footer img { /* Footer logo */
+    .footer img, /* Footer logo */
+    .footer p.disclaimer { /* Footer disclaimer */
         display: none;
     }
-    .footer div {
-        width: 50%;
+    .content {
+        padding-bottom: 13em; /* -2 em */ 
     }
+    .footer {
+        height: 11em; /* -2 em */
+        }
+        .footer div {
+            width: 50%;
+        }
 }
 
 @media only screen and (max-width: 36em) {
