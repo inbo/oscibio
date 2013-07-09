@@ -60,7 +60,7 @@ THEME = "../../eurasian-spoonbill" # Relative link to theme repository
 # External services
 DISQUS_SITENAME = "lifewatchinbo"
 GOOGLE_ANALYTICS = "UA-42312007-1"
-GOOGLE_WEBMASTER = "" # Set
+GOOGLE_WEBMASTER = "bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ"
 GITHUB_URL = "https://github.com/organizations/LifeWatchINBO"
 TWITTER_URL = "https://twitter.com/LifeWatchINBO"
 
