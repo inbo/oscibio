@@ -61,7 +61,7 @@ THEME = "../../eurasian-spoonbill" # Relative link to theme repository
 DISQUS_SITENAME = "lifewatchinbo"
 GOOGLE_ANALYTICS = "UA-42312007-1"
 GOOGLE_WEBMASTER = "bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ"
-GITHUB_URL = "https://github.com/organizations/LifeWatchINBO"
+GITHUB_URL = "https://github.com/LifeWatchINBO"
 TWITTER_URL = "https://twitter.com/LifeWatchINBO"
 
 # Blogroll
@@ -74,6 +74,6 @@ LINKS = (
 # Social widget
 SOCIAL = (
     ("Follow us on Twitter", "https://twitter.com/LifeWatchINBO"),
-    ("Our GitHub repositories", "https://github.com/organizations/LifeWatchINBO"),
+    ("Our GitHub repositories", "https://github.com/LifeWatchINBO"),
     ("Subscribe to updates", SITEURL + "/" + FEED_ALL_RSS),
 )
