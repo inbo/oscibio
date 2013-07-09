@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Why we use GitHub for documenting functional requirements - LifeWatch INBO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="google-site-verification" content="" />
+
+        <link rel="shortcut icon" href="http://lifewatch.inbo.be/blog/theme/img/favicon.ico">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/normalize.css">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/main.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome.min.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome-ie7.min.css">
+        <![endif]-->
+        <script src="http://lifewatch.inbo.be/blog/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+
+                        <link href="http://lifewatch.inbo.be/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="LifeWatch INBO Full RSS feed" />
+                                                                    </head>
+    <body>
+    <div class="container">
+        <!-- Content -->
+        <div class="header">
+            <header class="clearfix">
+                <h2><a href="http://lifewatch.inbo.be/blog">LifeWatch INBO</a></h2>
+                <nav>
+                    <ul>
+                                                                                        <li><a href="http://lifewatch.inbo.be/blog/pages/about.html">About</a></li>
+                                                                </ul>
+                </nav>
+            </header>
+            <div>
+                <img src="http://lifewatch.inbo.be/blog/theme/img/inbo-logo.png"/>
+            </div>
+        </div>
+        <div class="content">
+        <article>
+	<section class="single">
+        <header>
+            <h1>Why we use GitHub for documenting functional requirements</h1>
+        </header>
+        <footer>
+            <time datetime="2013-07-03T12:00:00" pubdate>July 03, 2013</time>
+                        <address class="vcard">
+                By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/lifewatch-inbo-team.html">LifeWatch INBO team</a>
+            </address>
+                                    <ul class="tags">Tagged: 
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/functional-requirements.html">functional requirements</a></li>
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/writing.html">writing</a></li>
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/github.html">GitHub</a></li>
+                            </ul>
+                    </footer>
+        <div>
+            <p>Functional requirements are typically documented in a single monolithic document (e.g. a Microsoft Word document), but there are several drawbacks to that approach:</p>
+<ul>
+<li>Difficult to collaborate on the same document</li>
+<li>Hard to distinguish accepted sections from draft sections</li>
+<li>Tedious to update included objects, such as schemas and images</li>
+<li>To much time is spend on layout</li>
+<li>No automatic versioning</li>
+</ul>
+<p>Although there are tools that fulfill some of these needs, such as <a href="https://docs.google.com">Google Docs</a>, a wiki such as <a href="http://www.atlassian.com/software/confluence/">Confluence</a>, or even a full requirements suite such as <a href="http://www.sparxsystems.com/products/ea/index.html">Enterprise Architect</a>, we just went ahead and experimented with Markdown, git repositories, and GitHub. Here's what we learned so far.</p>
+<h3>1. Separate content from layout</h3>
+<p>We write all our documentation in Markdown. Basically, those are txt files in a standardized format that allow you to write headers, bulletted lists, numbered lists, code blocks, etc. You can think of Markdown as a readable html file and indeed, with a Markdown editor you can easily generate html from your Markdown. Add a css file to your html, and you get a nicely formatted page. The benefit of using Markdown is that you can focus on content without worrying about layout. Also, you can insert links in your Markdown files to other files or images (similarly as you would do with html) meaning that when you change an image, you don't have to change the Markdown file as it renders the image when your viewing the file with an editor. Using Markdown removed a lot of layouting overhead.</p>
+<p>We even document our domain model as xsd file and our UI sketches as html. Everything is txt now, no layout issues anymore.</p>
+<h3>2. Organize your content</h3>
+<p>All our Markdown files are organized in logical folders and subfolders. This is not only for finding relevant information quickly, but also makes it possible to automatically generate output. More on that later.</p>
+<h3>3. Avoid redundancy</h3>
+<p>Ok, this one might be impossible. But at least be aware of the advantage of having non redundant information and try to avoid redundancy whenever possible. If you need an explanation for a concept, add a link to the concepts file in your Markdown file in stead of repeating yourself. This is very similar to the DRY principle in coding: don't repeat yourself. By not repeating yourself, if something changes, you only have to change it at one place. This makes your documentation light and makes it much easier to keep your documentation up to date with the ongoing development.</p>
+<h3>4. Version everything</h3>
+<h3>5. Distinguish drafts from accepted versions</h3>
+<h3>6. Use GitHub for bonus features</h3>
+<h2>And then we added git/Github</h2>
+<p>At this point, we had all our documentation as txt files (Markdown for documentation, html for UI sketches, xsd for domain model, tsv for controlled vocabulary and even a json file to describe the expected fields in an input Excel file). Besides the fact that we have separated all content from the layout, this brings another advantage: you can use a revision system to keep track of all changes made to the documentation similar to what you would do with source code. We use git and Github to do this and I'll explain how we do it in the next paragraphs.</p>
+<h3>Git keeps track of the changes made to the documentation</h3>
+<p>When somebody changes something to the documentation, he has to commit that change and include a commit message stating why he or she changed it. Git stores all commits and you can easily go back to earlier versions. You can view the history of each file (say for example the xsd file containing the domain model) to see how it evolved, which changes were made by who and why.</p>
+<h3>Git distinguishes the master copy of the documentation from working copies</h3>
+<p>Git can work with several current versions of your documentation. It calls those 'branches'. The most important branch is the master branch. For developers, the master branch contains the stable production code. Changes to the master branch are only allowed when they have been tested and made sure they don't break anything. The master branch is treated with extreme care.</p>
+<p>We treat the master branch of our documentation exactly that way. Nobody makes changes to the master branch on its own. All changes pass revision by other team members. If you want to add stuff to the master branch, you first create a new branch, make your changes on that branch, and than send a pull request, which is a request to merge the changes of your branch into the master branch. We have the convention that you do not accept your own pull requests, so somebody else from the team has to review your changes, approve them (or point you to mistakes) and accept the changes when everything seems ok.</p>
+<p>This system has several advantages:</p>
+<ul>
+<li>The latest stable version is always the master branch. No discussion about that.</li>
+<li>Everybody can work on a local branch simultanously. You don't have to wait for someone to finish his work and redistribute a new version which you can start editing. What happens when two people edit the same thing? This is what git was designed for. When two team members edited the same line in the same file, git detects the conflict. You have to resolve the conflict manually by indicating which edit can override the other.</li>
+<li>Changes always pass a revision before getting into the master branch.</li>
+</ul>
+<h3>So what does Github do?</h3>
+<p>All the above can be accomplished using git only. Github is a central place where you can host you repository.  Everybody from the team checks out the documentation from the repository in order to stay up to date. Using Github allows you to:</p>
+<ul>
+<li>Don't have to set up a server for your central repository yourself,</li>
+<li>Take advantage of the brilliant UI Github offers to browse through files, history, pull requests, etc. This is more fun because Github understands Markdown and renders those files with a simple layout which makes it easier to read,</li>
+<li>Discuss pull requests containing edits that need to be merged into the master branch before accepting them,</li>
+<li>Report issues using the included issue tracker and discuss and assign issues,</li>
+<li>Host associated html pages (in our case, our mockup) with github-pages,</li>
+<li>Use the included wiki,</li>
+<li>Much, much more.</li>
+</ul>
+<h3>How do we involve the business?</h3>
+<p>The business has no access to our repository. It's too technical, they would get lost. In stead of bombing them with several versions of our requirements document, which they don't read more than once, we communicate with them only about certain topics. If something needs to be added or edited to our documentation, we perform the edits and send a pull request. We don't send this back to the business for approval, this should be done before making the edits to the documentation.</p>
+<p>Nevertheless, a formal document containing the entire requirements documentation is still needed. We consider this an output of our repository. Now here comes the really cool stuff. With everything in text files, and organized well, this document can be generated. After all, this document is nothing more than a concatenation of all the text files, in a logical order. If you started every text file with a header, that's really all you need to do.</p>
+<p>However, we're still having trouble with images though. As we don't include images in our repository, they can't be added to the final document. So you still need some manual intervention there. Also stuff like autonumbering, and a generated table of contents is not been taken care of at this point (although that is technically possible).</p>
+<h3>Disadvantages</h3>
+<p>No method is perfect. Here are some disadvantages:</p>
+<ul>
+<li>Using git is pretty technical. All our team members have a little hacking background so we use the command line for that. However, that might not be feasible with every team and you might need to look for a GUI (of which we cannot suggest one). Nevertheless, some basic to average knowledge of git is required.</li>
+<li>You need to find solutions to work with images. Images can be included in repositories (and in fact, Github has a neat interface to review edits on images) but we prefer not to do so. Every "export..." and "save as..." that you can exclude from your process makes your documentations easier to maintain. If you want to follow this philosophy, you need to look for other ways to document the content of you images. We, for example, used an <code>xsd</code> to document our domain model, but we can't immediately come up with a solution for activity diagrams or use case diagrams.</li>
+<li>You need to streamline the process of creating a final (as in static) document. A little time will need to be invested in creating a generate script (which can be re-used in other projects though) and even that might not completely liberate you from some layouting work.</li>
+</ul>
+<h2>Conclusions</h2>
+<p>Documenting our requirements as txt files and keeping track of their changes using git/Github allowed us to:</p>
+<ul>
+<li>Reduce the layouting work and focus more on the content,</li>
+<li>Keep the documentation manageble so we can keep it up to date with ongoing development,</li>
+<li>Easily collaborate,</li>
+<li>Keep track of edits, comments on edits, discussions, issues, ...</li>
+</ul>
+<p>Definitely worth a try!</p>
+        </div>
+    </section>
+    <section class="comments">
+        <header>
+            <h2>Comments</h2>
+        </header>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'lifewatchinbo'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+</article>
+        </div>
+        <div class="footer">
+                    <footer class="clearfix">
+                <div>
+                    <img src="http://lifewatch.inbo.be/blog/theme/img/lifewatch-inbo-logo.png"/>
+                </div>
+                <div>
+                                        <ul>
+                        <h2>Keep in touch</h2>
+                                                <li><a href="https://twitter.com/LifeWatchINBO">Follow us on Twitter</a></li>
+                                                <li><a href="https://github.com/organizations/LifeWatchINBO">Our GitHub repositories</a></li>
+                                                <li><a href="http://lifewatch.inbo.be/blog/feeds/rss.xml">Subscribe to updates</a></li>
+                                            </ul>
+                                    </div>
+                <div>
+                                        <ul>
+                        <h2>Related websites</h2>
+                                                <li><a href="http://www.inbo.be">Research Institute for Nature and Forest (INBO)</a></li>
+                                                <li><a href="http://www.lifewatch.be">Belgian LifeWatch portal</a></li>
+                                                <li><a href="http://www.lifewatch.eu">European LifeWatch portal</a></li>
+                                            </ul>
+                                    </div>
+                <p class="disclaimer">The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, <a xmlns:cc="http://creativecommons.org/ns#" href="http://lifewatch.inbo.be/blog" property="cc:attributionName" rel="cc:attributionURL">all content</a> is licensed under a <a rel ="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+            </footer>
+                </div>
+    </div>
+
+        <!-- Scripts -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <!--<script>window.jQuery || document.write('<script src="http://lifewatch.inbo.be/blog/theme/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/plugins.js"></script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/main.js"></script>-->
+                <script>
+            var _gaq=[['_setAccount','UA-42312007-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+            </body>
+</html>
