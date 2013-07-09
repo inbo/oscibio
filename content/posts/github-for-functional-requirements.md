@@ -1,34 +1,39 @@
-Title: Why we document our functional requirements on a Github repository
+Title: Why we use GitHub for documenting functional requirements
 Date: 2013-07-03 12:00
-Tags: functional analysis, GitHub
-Category: Technical
-Slug: functional-analysis-on-github
-Summary: …
-Author: Bart Aelterman
+Tags: functional requirements, writing, GitHub
+Slug: github-for-functional-requirements
+Summary: A more productive and geeky alternative to the monolithic Word document.
 Status: draft
 
-We had some issues with the traditional way of documenting functional requirements in a Word file:
+Functional requirements are typically documented in a single monolithic document (e.g. a Microsoft Word document), but there are several drawbacks to that approach:
 
-- It's hard to make sure everybody on the team is working with the latest version,
-- it's a pain to keep it up to date: when an illustration of say a UI sketch changes, you have to open your drawing tool, export an image, import it in the Word file, layout the document again, change the version number (or not, which is not correct) and redistribute the new version,
-- you can't expect the business to read this document several times. They might read the first version, but after three versions, nothing is being verified anymore.
-- The analist is spending way to much time layouting the document over and over and over again.
+* Difficult to collaborate on the same document
+* Hard to distinguish accepted sections from draft sections
+* Tedious to update included objects, such as schemas and images
+* To much time is spend on layout
+* No automatic versioning
 
-We distilled a couple of practices out of our experience that should enhance our situation:
+Although there are tools that fulfill some of these needs, such as [Google Docs](https://docs.google.com), a wiki such as [Confluence](http://www.atlassian.com/software/confluence/), or even a full requirements suite such as [Enterprise Architect](http://www.sparxsystems.com/products/ea/index.html), we just went ahead and experimented with Markdown, git repositories, and GitHub. Here's what we learned so far.
 
-### 1. Keep your content separated from your layout,
+### 1. Separate content from layout
 
 We write all our documentation in Markdown. Basically, those are txt files in a standardized format that allow you to write headers, bulletted lists, numbered lists, code blocks, etc. You can think of Markdown as a readable html file and indeed, with a Markdown editor you can easily generate html from your Markdown. Add a css file to your html, and you get a nicely formatted page. The benefit of using Markdown is that you can focus on content without worrying about layout. Also, you can insert links in your Markdown files to other files or images (similarly as you would do with html) meaning that when you change an image, you don't have to change the Markdown file as it renders the image when your viewing the file with an editor. Using Markdown removed a lot of layouting overhead.
 
 We even document our domain model as xsd file and our UI sketches as html. Everything is txt now, no layout issues anymore.
 
-### 2. Organize your content well
+### 2. Organize your content
 
 All our Markdown files are organized in logical folders and subfolders. This is not only for finding relevant information quickly, but also makes it possible to automatically generate output. More on that later.
 
-### 3. Avoid redundancy in your documentation
+### 3. Avoid redundancy
 
 Ok, this one might be impossible. But at least be aware of the advantage of having non redundant information and try to avoid redundancy whenever possible. If you need an explanation for a concept, add a link to the concepts file in your Markdown file in stead of repeating yourself. This is very similar to the DRY principle in coding: don't repeat yourself. By not repeating yourself, if something changes, you only have to change it at one place. This makes your documentation light and makes it much easier to keep your documentation up to date with the ongoing development.
+
+### 4. Version everything
+
+### 5. Distinguish drafts from accepted versions
+
+### 6. Use GitHub for bonus features
 
 ## And then we added git/Github
 
