@@ -1,4 +1,5 @@
 Title: About
+Slug: about
 
 ## LifeWatch
 
