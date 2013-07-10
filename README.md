@@ -11,6 +11,7 @@ Make sure you have cloned the `lifewatch-blog` and `eurasian-spoonbill` reposito
 3. Push your commits to GitHub.
 4. Ask for feedback via a pull request (`dev` -> `master`).
 5. Incorporate feedback.
+6. Update the post date.
 
 ### Generate output
 
