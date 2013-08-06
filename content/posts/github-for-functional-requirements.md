@@ -1,7 +1,7 @@
 Title: Why we use GitHub for documenting functional requirements
+Slug: github-for-functional-requirements
 Date: 2013-07-03 12:00
 Tags: functional requirements, writing, GitHub
-Slug: github-for-functional-requirements
 Summary: A more productive and geeky alternative to the monolithic Word document.
 Status: draft
 
