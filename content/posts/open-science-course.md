@@ -16,3 +16,11 @@ These sessions consist of a short live class with [domain experts](https://p2pu.
 The live classes are a bit late for us (20:00-21:00 CEST), but we do plan to carry out the tasks on our own pace, which include educating ourselves in specific topics, writing blog posts about these, and participating in the online discussions. We will publish these posts on our personal blogs ([Peter](http://peterdesmet.com) and [Bart](http://bioinformatics-man.blogspot.be/)) and update this page with links to our posts. We will also announce these on [Twitter](https://twitter.com/LifeWatchINBO), so you can follow along and participate in case you are interested.
 
 All material for the course was designed and built by a [community of volunteers](http://creativecommons.org/weblog/entry/37060) and is available under a [CC BY](http://creativecommons.org/licenses/by/3.0/) license, so you can take this course at your own pace as well. You can even earn some [badges](https://p2pu.org/en/courses/5/content/1337/).
+
+## Posts
+
+* [What is open access?](http://peterdesmet.com/posts/oa-1.html) - Peter
+* [How open is my paper?](http://peterdesmet.com/posts/oa-2.html) - Peter
+* [P2PU Open Science course](http://bioinformatics-man.blogspot.be/2013/08/p2pu-open-science-course.html) - Bart
+* [What is open access?](http://bioinformatics-man.blogspot.be/2013/08/what-is-open-access.html) - Bart
+* [Finding open access research articles](http://peterdesmet.com/posts/oa-3.html) - Peter
