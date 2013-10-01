@@ -6,7 +6,7 @@
     <head>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>open data - LifeWatch INBO</title>
+        <title>tutorial - LifeWatch INBO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
@@ -41,18 +41,35 @@
         </div>
         <div class="content">
         <header>
-    <h1>Posts tagged <em>open data</em></h1>
+    <h1>Posts tagged <em>tutorial</em></h1>
 </header>
 
 
 <ol class="index">
     <li>
         <article class="clearfix">
-            <time datetime="2013-08-06T16:00:00" pubdate>August 06, 2013</time>
+            <time datetime="2013-10-01T11:15:00" pubdate>October 01, 2013</time>
             <header>
-                <h2><a href="http://lifewatch.inbo.be/blog/posts/open-science-course.html">Reporting on open science</a></h2>
+                <h2><a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">Using CartoDB to visualize two months in the life of seagull Eric</a></h2>
             </header>
-            <p>Reporting on a course on open access, open data, and open research.</p>
+            <p>Exploring different ways to visualize and analyse tracking data with CartoDB.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The highly imaginative project name is LW-2012-006, and you can read more on it on the <a href="http://www.lifewatch.be/birds">LifeWatch Belgium website</a>.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>A <a href="http://developers.cartodb.com/tutorials/gps_track.html">more in-depth tutorial</a> is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used <code>the_geom_webmercator</code> and not <code>the_geom</code>.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>CartoDB requires an <code>cartodb_id</code> to allow click interaction. I am cheating here by generating a new one based on <code>row_number()</code>.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
         </article>
     </li>
 </ol>

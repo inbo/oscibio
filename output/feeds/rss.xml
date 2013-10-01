@@ -1,5 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LifeWatch INBO</title><link>http://lifewatch.inbo.be/blog/</link><description></description><atom:link href="http://lifewatch.inbo.be/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 06 Aug 2013 16:00:00 +0200</lastBuildDate><item><title>Reporting on open science</title><link>http://lifewatch.inbo.be/blog/posts/open-science-course.html</link><description>&lt;p&gt;We are following an &lt;a href="https://p2pu.org/en/courses/5/open-science-an-introduction/"&gt;online course on open science&lt;/a&gt;, which is hosted on P2PU and organized by &lt;a href="http://creativecommons.org/"&gt;Creative Commons&lt;/a&gt;. The course has 3 sessions:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LifeWatch INBO</title><link>http://lifewatch.inbo.be/blog/</link><description></description><atom:link href="http://lifewatch.inbo.be/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 01 Oct 2013 11:15:00 +0200</lastBuildDate><item><title>Using CartoDB to visualize two months in the life of seagull Eric</title><link>http://lifewatch.inbo.be/blog/posts/tracking-eric.html</link><description>&lt;p&gt;As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS tags. The project&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the western marsh harrier) in collaboration with the &lt;a href="http://www.vliz.be/EN/INTRO"&gt;VLIZ&lt;/a&gt; and &lt;a href="http://www.uva-bits.nl/"&gt;UvA-BiTS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;30 birds have been tagged over the course of this spring and summer. The preliminary results were presented in the media and you can &lt;a href="http://www.lifewatch.be/birds"&gt;follow the birds live&lt;/a&gt;. Most birds have started their annual migration south however, where the antennas we use to download the data cannot pick them up. A good time to visualize some of the data we got.&lt;/p&gt;
+&lt;h2&gt;Meet Eric and CartoDB&lt;/h2&gt;
+&lt;p&gt;As an example, I will visualize two months of tracking data (June-July) from Eric in CartoDB. Eric is male &lt;a href="http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull"&gt;Lesser Black-backed Gull&lt;/a&gt;, breeding in the colony of Zeebrugge. &lt;a href="http://cartodb.com/"&gt;CartoDB&lt;/a&gt; is an open source tool to visualize and analyze geospatial data on the web, developed by &lt;a href="http://vizzuality.com/"&gt;Vizzuality&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Intensity map of occurrences&lt;/h2&gt;
+&lt;p&gt;After uploading the tracking data (which are stored as &lt;a href="https://lifewatch-inbo.cartodb.com/tables/tracking_eric/"&gt;occurrence data&lt;/a&gt;: place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.&lt;/p&gt;
+&lt;iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/71db3552-211b-11e3-bfc7-3f86888f001b/embed_map?title=false&amp;description=false&amp;search=false&amp;shareable=false&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=true&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=&amp;sw_lat=51.32637473423621&amp;sw_lon=3.1468963623046875&amp;ne_lat=51.351575865010346&amp;ne_lon=3.2292938232421875"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The dark red spot on the pier marks the nest of Eric. You can zoom and pan the map, or click on individual points to get the date and time of recording.&lt;/p&gt;
+&lt;h2&gt;Map of trips per day&lt;/h2&gt;
+&lt;p&gt;To get a better sense of the trips Eric made during those two months, we can string the points together in a path. All of this can be done in SQL, since CartoDB is built on &lt;a href="http://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt; and &lt;a href="http://postgis.net/"&gt;PostGIS&lt;/a&gt;. In order to get a path per day, we first need to create a &lt;code&gt;day_of_year&lt;/code&gt; column:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt; &lt;span class="k"&gt;ADD&lt;/span&gt; &lt;span class="k"&gt;COLUMN&lt;/span&gt; &lt;span class="n"&gt;day_of_year&lt;/span&gt; &lt;span class="nb"&gt;integer&lt;/span&gt;
+&lt;span class="k"&gt;UPDATE&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt; &lt;span class="k"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;day_of_year&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DOY&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;date_time&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next, we order the points per &lt;code&gt;date_time&lt;/code&gt;, group them by &lt;code&gt;day_of_year&lt;/code&gt; and make a line&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="n"&gt;ST_MakeLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt; &lt;span class="k"&gt;ORDER&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;date_time&lt;/span&gt; &lt;span class="k"&gt;ASC&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt;  &lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;day_of_year&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt;
+&lt;span class="k"&gt;GROUP&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;day_of_year&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If we visualize this as a choropleth map, we get this:&lt;/p&gt;
+&lt;iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/44cf305c-21f9-11e3-9f83-4f522829d789/embed_map?title=false&amp;description=false&amp;search=false&amp;shareable=false&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=true&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%20ST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20day_of_year%0AFROM%20tracking_eric%0AGROUP%20BY%20day_of_year&amp;sw_lat=50.963616518684226&amp;sw_lon=1.8189239501953125&amp;ne_lat=51.76953957596102&amp;ne_lon=4.4556427001953125"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;You may discover as I did, that Eric flew multiple times to Mouscron in June, while he stayed closer to his nest in July.&lt;/p&gt;
+&lt;h2&gt;Visualizing in time&lt;/h2&gt;
+&lt;p&gt;To truly visualize Eric in time, I used the library &lt;a href="https://github.com/CartoDB/torque"&gt;Torque&lt;/a&gt; (also developed by Vizzuality):&lt;/p&gt;
+&lt;iframe width="100%" height="500" frameborder="0" src="http://lifewatchinbo.github.io/torque/examples/tracking_eric.html"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The visualization compresses two months of data in 150 seconds. As with the previous maps, you can zoom and pan the map.&lt;/p&gt;
+&lt;h2&gt;Analyzing time spent per UTM 1km square&lt;/h2&gt;
+&lt;p&gt;So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but &lt;a href="http://www.postgresql.org/docs/9.3/interactive/index.html"&gt;good documentation&lt;/a&gt; goes a long way.&lt;/p&gt;
+&lt;p&gt;First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the &lt;code&gt;date_time&lt;/code&gt; of the next point (the &lt;code&gt;lead()&lt;/code&gt; function) and the &lt;code&gt;date_time&lt;/code&gt; of this point, and then translating this to seconds (the &lt;code&gt;extract()&lt;/code&gt; function):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt; &lt;span class="k"&gt;ADD&lt;/span&gt; &lt;span class="k"&gt;COLUMN&lt;/span&gt; &lt;span class="n"&gt;duration_in_seconds&lt;/span&gt; &lt;span class="nb"&gt;integer&lt;/span&gt;
+
+&lt;span class="k"&gt;WITH&lt;/span&gt; &lt;span class="n"&gt;calc_duration&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="k"&gt;SELECT&lt;/span&gt;
+    &lt;span class="n"&gt;cartodb_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="k"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;epoch&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lead&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date_time&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;OVER&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;ORDER&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;date_time&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;date_time&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;duration_in_seconds&lt;/span&gt;
+    &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt;
+    &lt;span class="k"&gt;ORDER&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;date_time&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;UPDATE&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt;
+&lt;span class="k"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;duration_in_seconds&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;calc_duration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;duration_in_seconds&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;calc_duration&lt;/span&gt;
+&lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;calc_duration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cartodb_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cartodb_id&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next, we upload a reference grid to CartoDB. I uploaded a &lt;a href="http://www.eea.europa.eu/data-and-maps/data/eea-reference-grids"&gt;shapefile of all UTM 1km squares of Belgium&lt;/a&gt;. Then we &lt;a href="http://developers.cartodb.com/tutorials/joining_data.html"&gt;join the two tables&lt;/a&gt; by geospatial intersection&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt; 
+&lt;span class="n"&gt;row_number&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;OVER&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;ORDER&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;cartodb_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="k"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;duration_in_seconds&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;duration_in_seconds&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;utm_1km&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;eric&lt;/span&gt;
+&lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;ST_Intersects&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;eric&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="k"&gt;GROUP&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The resulting map, with a logaritmic choropleth scale, looks like this&lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/054aa85c-25e2-11e3-8e2c-b3655fb9f73d/embed_map?title=false&amp;description=false&amp;search=false&amp;shareable=false&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=true&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%20%20%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0A%20%20%20%20FROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0A%20%20%20%20WHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20%0A%20%20%20%20GROUP%20BY%20utm.the_geom_webmercator&amp;sw_lat=51.00684227163969&amp;sw_lon=2.62847900390625&amp;ne_lat=51.411199044550045&amp;ne_lon=3.94683837890625"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;You can click on each square to get the time Eric spent there in seconds over two months time. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;WITH&lt;/span&gt; &lt;span class="n"&gt;utm_squares&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="k"&gt;SELECT&lt;/span&gt;
+    &lt;span class="n"&gt;row_number&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;OVER&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;ORDER&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;cartodb_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="k"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;duration_in_seconds&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;duration_in_seconds&lt;/span&gt;
+    &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;utm_1km&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tracking_eric&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;eric&lt;/span&gt;
+    &lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;ST_Intersects&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;eric&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;GROUP&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="n"&gt;utm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;the_geom_webmercator&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;utm_squares&lt;/span&gt; &lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;duration_in_seconds&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3600&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/f1bb680c-25ec-11e3-aaeb-6796bd794fbd/embed_map?title=false&amp;description=false&amp;search=false&amp;shareable=false&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=true&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%0Arow_number()%20OVER%20(ORDER%20BY%20utm.the_geom_webmercator)%20AS%20cartodb_id%2C%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0AFROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0AWHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20and%20duration_in_seconds%20%3E%20300%0AGROUP%20BY%20utm.the_geom_webmercator&amp;sw_lat=51.00684227163969&amp;sw_lon=2.62847900390625&amp;ne_lat=51.411199044550045&amp;ne_lon=3.94683837890625"&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In my opinion &lt;a href="http://cartodb.com"&gt;CartoDB&lt;/a&gt; is an intuitive, yet very powerful tool to visualize and analyse data, which is why I've been a fan from day one. I hope we can &lt;a href="https://github.com/CartoDB/cartodb20"&gt;install&lt;/a&gt; and use it for all our tracking data, in collaboration with the VLIZ and UvA-BiTS. If you're eager to explore yourself, CartoDB is offered as a &lt;a href="http://cartodb.com/pricing/‎"&gt;freemium service&lt;/a&gt;. The data used in this post are available under a &lt;a href="creativecommons.org/publicdomain/zero/1.0/"&gt;Creative Commons Zero&lt;/a&gt; waiver at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CartoDB: &lt;a href="https://lifewatch-inbo.cartodb.com/tables/tracking_eric/"&gt;https://lifewatch-inbo.cartodb.com/tables/tracking_eric/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;API: &lt;a href="https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric"&gt;https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;The highly imaginative project name is LW-2012-006, and you can read more on it on the &lt;a href="http://www.lifewatch.be/birds"&gt;LifeWatch Belgium website&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;A &lt;a href="http://developers.cartodb.com/tutorials/gps_track.html"&gt;more in-depth tutorial&lt;/a&gt; is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used &lt;code&gt;the_geom_webmercator&lt;/code&gt; and not &lt;code&gt;the_geom&lt;/code&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;CartoDB requires an &lt;code&gt;cartodb_id&lt;/code&gt; to allow click interaction. I am cheating here by generating a new one based on &lt;code&gt;row_number()&lt;/code&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Peter Desmet</dc:creator><pubDate>Tue, 01 Oct 2013 11:15:00 +0200</pubDate><guid>tag:lifewatch.inbo.be/blog,2013-10-01:posts/tracking-eric.html</guid><category>CartoDB</category><category>tracking data</category><category>birds</category><category>tutorial</category><category>LW-2012-006</category></item><item><title>Reporting on open science</title><link>http://lifewatch.inbo.be/blog/posts/open-science-course.html</link><description>&lt;p&gt;We are following an &lt;a href="https://p2pu.org/en/courses/5/open-science-an-introduction/"&gt;online course on open science&lt;/a&gt;, which is hosted on P2PU and organized by &lt;a href="http://creativecommons.org/"&gt;Creative Commons&lt;/a&gt;. The course has 3 sessions:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://p2pu.org/en/courses/5/content/11/"&gt;Open Access&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://p2pu.org/en/courses/5/content/13/"&gt;Open Data&lt;/a&gt;&lt;/li&gt;

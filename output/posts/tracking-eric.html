@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Using CartoDB to visualize two months in the life of seagull Eric - LifeWatch INBO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
+
+        <link rel="shortcut icon" href="http://lifewatch.inbo.be/blog/theme/img/favicon.ico">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/normalize.css">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/main.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome.min.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome-ie7.min.css">
+        <![endif]-->
+        <script src="http://lifewatch.inbo.be/blog/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+
+                        <link href="http://lifewatch.inbo.be/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="LifeWatch INBO Full RSS feed" />
+                                                                    </head>
+    <body>
+    <div class="container">
+        <!-- Content -->
+        <div class="header">
+            <header class="clearfix">
+                <h2><a href="http://lifewatch.inbo.be/blog">LifeWatch INBO</a></h2>
+                <nav>
+                    <ul>
+                                                                                        <li><a href="http://lifewatch.inbo.be/blog/pages/about.html">About</a></li>
+                                                                </ul>
+                </nav>
+            </header>
+            <div>
+                <img src="http://lifewatch.inbo.be/blog/theme/img/inbo-logo.png" alt="inbo-logo"/>
+            </div>
+        </div>
+        <div class="content">
+        <article>
+	<section class="single">
+        <header>
+            <h1>Using CartoDB to visualize two months in the life of seagull Eric</h1>
+        </header>
+        <footer>
+            <time datetime="2013-10-01T11:15:00" pubdate>October 01, 2013</time>
+                        <address class="vcard">
+                By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/peter-desmet.html">Peter Desmet</a>
+            </address>
+                                    <ul class="tags">Tagged: 
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a></li>
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/tracking-data.html">tracking data</a></li>
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/birds.html">birds</a></li>
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/tutorial.html">tutorial</a></li>
+                                <li><a href="http://lifewatch.inbo.be/blog/tag/lw-2012-006.html">LW-2012-006</a></li>
+                            </ul>
+                    </footer>
+        <div>
+            <p>As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS tags. The project<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the western marsh harrier) in collaboration with the <a href="http://www.vliz.be/EN/INTRO">VLIZ</a> and <a href="http://www.uva-bits.nl/">UvA-BiTS</a>.</p>
+<p>30 birds have been tagged over the course of this spring and summer. The preliminary results were presented in the media and you can <a href="http://www.lifewatch.be/birds">follow the birds live</a>. Most birds have started their annual migration south however, where the antennas we use to download the data cannot pick them up. A good time to visualize some of the data we got.</p>
+<h2>Meet Eric and CartoDB</h2>
+<p>As an example, I will visualize two months of tracking data (June-July) from Eric in CartoDB. Eric is male <a href="http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull">Lesser Black-backed Gull</a>, breeding in the colony of Zeebrugge. <a href="http://cartodb.com/">CartoDB</a> is an open source tool to visualize and analyze geospatial data on the web, developed by <a href="http://vizzuality.com/">Vizzuality</a>.</p>
+<h2>Intensity map of occurrences</h2>
+<p>After uploading the tracking data (which are stored as <a href="https://lifewatch-inbo.cartodb.com/tables/tracking_eric/">occurrence data</a>: place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.</p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/71db3552-211b-11e3-bfc7-3f86888f001b/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=&sw_lat=51.32637473423621&sw_lon=3.1468963623046875&ne_lat=51.351575865010346&ne_lon=3.2292938232421875"></iframe>
+
+<p>The dark red spot on the pier marks the nest of Eric. You can zoom and pan the map, or click on individual points to get the date and time of recording.</p>
+<h2>Map of trips per day</h2>
+<p>To get a better sense of the trips Eric made during those two months, we can string the points together in a path. All of this can be done in SQL, since CartoDB is built on <a href="http://www.postgresql.org/">PostgreSQL</a> and <a href="http://postgis.net/">PostGIS</a>. In order to get a path per day, we first need to create a <code>day_of_year</code> column:</p>
+<div class="highlight"><pre><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">day_of_year</span> <span class="nb">integer</span>
+<span class="k">UPDATE</span> <span class="n">tracking_eric</span> <span class="k">SET</span> <span class="n">day_of_year</span> <span class="o">=</span> <span class="k">extract</span><span class="p">(</span><span class="n">DOY</span> <span class="k">FROM</span> <span class="n">date_time</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Next, we order the points per <code>date_time</code>, group them by <code>day_of_year</code> and make a line<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>:</p>
+<div class="highlight"><pre><span class="k">SELECT</span> <span class="n">ST_MakeLine</span><span class="p">(</span><span class="n">the_geom_webmercator</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span> <span class="k">ASC</span><span class="p">)</span> <span class="k">AS</span>  <span class="n">the_geom_webmercator</span><span class="p">,</span> <span class="n">day_of_year</span>
+<span class="k">FROM</span> <span class="n">tracking_eric</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">day_of_year</span>
+</pre></div>
+
+
+<p>If we visualize this as a choropleth map, we get this:</p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/44cf305c-21f9-11e3-9f83-4f522829d789/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20ST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20day_of_year%0AFROM%20tracking_eric%0AGROUP%20BY%20day_of_year&sw_lat=50.963616518684226&sw_lon=1.8189239501953125&ne_lat=51.76953957596102&ne_lon=4.4556427001953125"></iframe>
+
+<p>You may discover as I did, that Eric flew multiple times to Mouscron in June, while he stayed closer to his nest in July.</p>
+<h2>Visualizing in time</h2>
+<p>To truly visualize Eric in time, I used the library <a href="https://github.com/CartoDB/torque">Torque</a> (also developed by Vizzuality):</p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatchinbo.github.io/torque/examples/tracking_eric.html"></iframe>
+
+<p>The visualization compresses two months of data in 150 seconds. As with the previous maps, you can zoom and pan the map.</p>
+<h2>Analyzing time spent per UTM 1km square</h2>
+<p>So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but <a href="http://www.postgresql.org/docs/9.3/interactive/index.html">good documentation</a> goes a long way.</p>
+<p>First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the <code>date_time</code> of the next point (the <code>lead()</code> function) and the <code>date_time</code> of this point, and then translating this to seconds (the <code>extract()</code> function):</p>
+<div class="highlight"><pre><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">duration_in_seconds</span> <span class="nb">integer</span>
+
+<span class="k">WITH</span> <span class="n">calc_duration</span> <span class="k">AS</span> <span class="p">(</span>
+    <span class="k">SELECT</span>
+    <span class="n">cartodb_id</span><span class="p">,</span>
+    <span class="k">extract</span><span class="p">(</span><span class="n">epoch</span> <span class="k">FROM</span> <span class="p">(</span><span class="n">lead</span><span class="p">(</span><span class="n">date_time</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="n">OVER</span><span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span><span class="p">)</span> <span class="o">-</span> <span class="n">date_time</span><span class="p">))</span> <span class="k">AS</span> <span class="n">duration_in_seconds</span>
+    <span class="k">FROM</span> <span class="n">tracking_eric</span>
+    <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span>
+<span class="p">)</span>
+<span class="k">UPDATE</span> <span class="n">tracking_eric</span>
+<span class="k">SET</span> <span class="n">duration_in_seconds</span> <span class="o">=</span> <span class="n">calc_duration</span><span class="p">.</span><span class="n">duration_in_seconds</span>
+<span class="k">FROM</span> <span class="n">calc_duration</span>
+<span class="k">WHERE</span> <span class="n">calc_duration</span><span class="p">.</span><span class="n">cartodb_id</span> <span class="o">=</span> <span class="n">tracking_eric</span><span class="p">.</span><span class="n">cartodb_id</span>
+</pre></div>
+
+
+<p>Next, we upload a reference grid to CartoDB. I uploaded a <a href="http://www.eea.europa.eu/data-and-maps/data/eea-reference-grids">shapefile of all UTM 1km squares of Belgium</a>. Then we <a href="http://developers.cartodb.com/tutorials/joining_data.html">join the two tables</a> by geospatial intersection<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>:</p>
+<div class="highlight"><pre><span class="k">SELECT</span> 
+<span class="n">row_number</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cartodb_id</span><span class="p">,</span>
+<span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span>
+<span class="k">sum</span><span class="p">(</span><span class="n">duration_in_seconds</span><span class="p">)</span> <span class="k">as</span> <span class="n">duration_in_seconds</span>
+<span class="k">FROM</span> <span class="n">utm_1km</span> <span class="k">AS</span> <span class="n">utm</span><span class="p">,</span> <span class="n">tracking_eric</span> <span class="k">AS</span> <span class="n">eric</span>
+<span class="k">WHERE</span> <span class="n">ST_Intersects</span><span class="p">(</span><span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span> <span class="n">eric</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">)</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span>
+</pre></div>
+
+
+<p>The resulting map, with a logaritmic choropleth scale, looks like this<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>:</p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/054aa85c-25e2-11e3-8e2c-b3655fb9f73d/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20%20%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0A%20%20%20%20FROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0A%20%20%20%20WHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20%0A%20%20%20%20GROUP%20BY%20utm.the_geom_webmercator&sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625"></iframe>
+
+<p>You can click on each square to get the time Eric spent there in seconds over two months time. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:</p>
+<div class="highlight"><pre><span class="k">WITH</span> <span class="n">utm_squares</span> <span class="k">AS</span> <span class="p">(</span>
+    <span class="k">SELECT</span>
+    <span class="n">row_number</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cartodb_id</span><span class="p">,</span>
+    <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span>
+    <span class="k">sum</span><span class="p">(</span><span class="n">duration_in_seconds</span><span class="p">)</span> <span class="k">as</span> <span class="n">duration_in_seconds</span>
+    <span class="k">FROM</span> <span class="n">utm_1km</span> <span class="k">AS</span> <span class="n">utm</span><span class="p">,</span> <span class="n">tracking_eric</span> <span class="k">AS</span> <span class="n">eric</span>
+    <span class="k">WHERE</span> <span class="n">ST_Intersects</span><span class="p">(</span><span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span> <span class="n">eric</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">)</span>
+    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span>
+<span class="p">)</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">utm_squares</span> <span class="k">WHERE</span> <span class="n">duration_in_seconds</span> <span class="o">&gt;</span> <span class="mi">3600</span>
+</pre></div>
+
+
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/f1bb680c-25ec-11e3-aaeb-6796bd794fbd/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%0Arow_number()%20OVER%20(ORDER%20BY%20utm.the_geom_webmercator)%20AS%20cartodb_id%2C%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0AFROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0AWHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20and%20duration_in_seconds%20%3E%20300%0AGROUP%20BY%20utm.the_geom_webmercator&sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625"></iframe>
+
+<h2>Conclusion</h2>
+<p>In my opinion <a href="http://cartodb.com">CartoDB</a> is an intuitive, yet very powerful tool to visualize and analyse data, which is why I've been a fan from day one. I hope we can <a href="https://github.com/CartoDB/cartodb20">install</a> and use it for all our tracking data, in collaboration with the VLIZ and UvA-BiTS. If you're eager to explore yourself, CartoDB is offered as a <a href="http://cartodb.com/pricing/‎">freemium service</a>. The data used in this post are available under a <a href="creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a> waiver at:</p>
+<ul>
+<li>CartoDB: <a href="https://lifewatch-inbo.cartodb.com/tables/tracking_eric/">https://lifewatch-inbo.cartodb.com/tables/tracking_eric/</a></li>
+<li>API: <a href="https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric">https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric</a></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The highly imaginative project name is LW-2012-006, and you can read more on it on the <a href="http://www.lifewatch.be/birds">LifeWatch Belgium website</a>.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>A <a href="http://developers.cartodb.com/tutorials/gps_track.html">more in-depth tutorial</a> is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used <code>the_geom_webmercator</code> and not <code>the_geom</code>.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>CartoDB requires an <code>cartodb_id</code> to allow click interaction. I am cheating here by generating a new one based on <code>row_number()</code>.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+        </div>
+    </section>
+    <section class="comments">
+        <header>
+            <h2>Comments</h2>
+        </header>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'lifewatchinbo'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+</article>
+        </div>
+        <div class="footer">
+                    <footer class="clearfix">
+                <div>
+                    <img src="http://lifewatch.inbo.be/blog/theme/img/lifewatch-inbo-logo.png" alt="lifewatch-inbo-logo"/>
+                </div>
+                <div>
+                                        <ul>
+                        <h2>Keep in touch</h2>
+                                                <li><a href="https://twitter.com/LifeWatchINBO">Follow us on Twitter</a></li>
+                                                <li><a href="https://github.com/LifeWatchINBO">Our GitHub repositories</a></li>
+                                                <li><a href="http://lifewatch.inbo.be/blog/feeds/rss.xml">Subscribe to updates</a></li>
+                                            </ul>
+                                    </div>
+                <div>
+                                        <ul>
+                        <h2>Related websites</h2>
+                                                <li><a href="http://www.inbo.be">Research Institute for Nature and Forest (INBO)</a></li>
+                                                <li><a href="http://www.lifewatch.be">Belgian LifeWatch portal</a></li>
+                                                <li><a href="http://www.lifewatch.eu">European LifeWatch portal</a></li>
+                                            </ul>
+                                    </div>
+                <p class="disclaimer">The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:cc="http://creativecommons.org/ns#" href="http://lifewatch.inbo.be/blog" property="cc:attributionName" rel="cc:attributionURL">LifeWatch INBO blog</a> is licensed under a <a rel ="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+            </footer>
+                </div>
+    </div>
+
+        <!-- Scripts -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <!--<script>window.jQuery || document.write('<script src="http://lifewatch.inbo.be/blog/theme/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/plugins.js"></script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/main.js"></script>-->
+                <script>
+            var _gaq=[['_setAccount','UA-42312007-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+            </body>
+</html>
