@@ -8,7 +8,7 @@ Status: draft
 
 As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS tags. The project[^1] is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the western marsh harrier) in collaboration with the [VLIZ](http://www.vliz.be/EN/INTRO) and [UvA-BiTS](http://www.uva-bits.nl/).
 
-30 birds have been tagged over the course of this spring and summer. The preliminary results were presented in the media and you can [follow the birds live here](http://www.lifewatch.be/vogels). Most birds have started their annual migration south however, where the antennas we use to download the data cannot pick them up. A good time to visualize some of the data we got.
+30 birds have been tagged over the course of this spring and summer. The preliminary results were presented in the media and you can [follow the birds live](http://www.lifewatch.be/birds). Most birds have started their annual migration south however, where the antennas we use to download the data cannot pick them up. A good time to visualize some of the data we got.
 
 ## Meet Eric and CartoDB
 
@@ -16,7 +16,7 @@ As an example, I will visualize two months of tracking data (June-July) from Eri
 
 ## Intensity map of occurrences
 
-After uploading the tracking data (which are stored as occurrence data: place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.
+After uploading the tracking data (which are stored as [occurrence data](https://lifewatch-inbo.cartodb.com/tables/tracking_eric/): place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.
 
 <iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/71db3552-211b-11e3-bfc7-3f86888f001b/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=&sw_lat=51.32637473423621&sw_lon=3.1468963623046875&ne_lat=51.351575865010346&ne_lon=3.2292938232421875"></iframe>
 
@@ -24,7 +24,7 @@ The dark red spot on the pier marks the nest of Eric. You can zoom and pan the m
 
 ## Map of trips per day
 
-To get a better sense of the trips Eric made during those two months, we can string the points together in a path. All of this can be done in SQLm since CartoDB is built on [PostgreSQL](http://www.postgresql.org/). In order to get a path per day, we first need to create a `day_of_year` column:
+To get a better sense of the trips Eric made during those two months, we can string the points together in a path. All of this can be done in SQL, since CartoDB is built on [PostgreSQL](http://www.postgresql.org/) and [PostGIS](http://postgis.net/). In order to get a path per day, we first need to create a `day_of_year` column:
 
 	:::sql
 	ALTER TABLE tracking_eric ADD COLUMN day_of_year integer
@@ -53,7 +53,7 @@ The visualization compresses two months of data in 150 seconds. As with the prev
 
 ## Analyzing time spent per UTM 1km square
 
-So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I want to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but [good documentation](http://www.postgresql.org/docs/9.3/interactive/index.html) goes a long way.
+So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but [good documentation](http://www.postgresql.org/docs/9.3/interactive/index.html) goes a long way.
 
 First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the `date_time` of the next point (the `lead()` function) and the `date_time` of this point, and then translating this to seconds (the `extract()` function):
 
@@ -87,7 +87,7 @@ The resulting map, with a logaritmic choropleth scale, looks like this[^4]:
 
 <iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/054aa85c-25e2-11e3-8e2c-b3655fb9f73d/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20%20%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0A%20%20%20%20FROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0A%20%20%20%20WHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20%0A%20%20%20%20GROUP%20BY%20utm.the_geom_webmercator&sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625"></iframe>
 
-You can click on each square to get the time Eric spent there in seconds over two months. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:
+You can click on each square to get the time Eric spent there in seconds over two months time. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:
 
     :::sql
     WITH utm_squares AS (
@@ -110,7 +110,7 @@ In my opinion [CartoDB](http://cartodb.com) is an intuitive, yet very powerful t
 * CartoDB: <https://lifewatch-inbo.cartodb.com/tables/tracking_eric/>
 * API: <https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric>
 
-[^1]: The highly imaginative project name is LW-2012-006, and you can read more on it [here](http://www.lifewatch.be/vogels) and [here](http://www.lifewatch.be/project/2-uncategorised/4-observatories).
+[^1]: The highly imaginative project name is LW-2012-006, and you can read more on it on the [LifeWatch Belgium website](http://www.lifewatch.be/birds).
 [^2]: A [more in-depth tutorial](http://developers.cartodb.com/tutorials/gps_track.html) is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used `the_geom_webmercator` and not `the_geom`.
 [^3]: CartoDB requires an `cartodb_id` to allow click interaction. I am cheating here by generating a new one based on `row_number()`.
 [^4]: Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.
