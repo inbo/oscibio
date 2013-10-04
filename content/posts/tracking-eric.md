@@ -104,7 +104,7 @@ You can click on each square to get the time Eric spent there in seconds over tw
 
 ## Conclusion
 
-In my opinion [CartoDB](http://cartodb.com) is an intuitive, yet very powerful tool to visualize and analyse data, which is why I've been a fan from day one. I hope we can [install](https://github.com/CartoDB/cartodb20) and use it for all our tracking data, in collaboration with the VLIZ and UvA-BiTS. If you're eager to explore yourself, CartoDB is offered as a [freemium service](http://cartodb.com/pricing/‎). The data used in this post are available under a [Creative Commons Zero](creativecommons.org/publicdomain/zero/1.0/) waiver at:
+In my opinion [CartoDB](http://cartodb.com) is an intuitive, yet very powerful tool to visualize and analyse data, which is why I've been a fan from day one. I hope we can [install](https://github.com/CartoDB/cartodb20) and use it for all our tracking data, in collaboration with the VLIZ and UvA-BiTS. If you're eager to explore yourself, CartoDB is offered as a [freemium service](http://cartodb.com/pricing/‎). The data used in this post are dedicated to the public domain under a [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/) waiver at:
 
 * CartoDB: <https://lifewatch-inbo.cartodb.com/tables/tracking_eric/>
 * API: <https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric>
