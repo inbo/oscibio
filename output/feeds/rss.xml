@@ -28,9 +28,10 @@
 &lt;p&gt;You may discover as I did, that Eric flew multiple times to Mouscron in June, while he stayed closer to his nest in July.&lt;/p&gt;
 &lt;h2&gt;Visualizing in time&lt;/h2&gt;
 &lt;p&gt;To truly visualize Eric in time, I used the library &lt;a href="https://github.com/CartoDB/torque"&gt;Torque&lt;/a&gt; (also developed by Vizzuality):&lt;/p&gt;
-&lt;iframe width="100%" height="500" frameborder="0" src="http://lifewatchinbo.github.io/torque/examples/tracking_eric.html"&gt;&lt;/iframe&gt;
+&lt;iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/4f97b83c-4af9-11e3-86e2-cff6e432732d/embed_map?title=false&amp;description=false&amp;search=false&amp;shareable=false&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=false&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=&amp;sw_lat=50.611237544825876&amp;sw_lon=1.8216383457183838&amp;ne_lat=51.45753372278527&amp;ne_lon=4.458357095718384"&gt;&lt;/iframe&gt;
 
-&lt;p&gt;The visualization compresses two months of data in 150 seconds. As with the previous maps, you can zoom and pan the map.&lt;/p&gt;
+&lt;p&gt;The visualization compresses two months of data in 120 seconds. As with the previous maps, you can zoom and pan the map.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: since publishing this post, &lt;a href="http://blog.cartodb.com/post/66687861735/torque-is-live-try-it-on-your-cartodb-maps-today"&gt;Torque has been integrated in CartoDB&lt;/a&gt;. The map above now uses the integrated version.&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;Analyzing time spent per UTM 1km square&lt;/h2&gt;
 &lt;p&gt;So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but &lt;a href="http://www.postgresql.org/docs/9.3/interactive/index.html"&gt;good documentation&lt;/a&gt; goes a long way.&lt;/p&gt;
 &lt;p&gt;First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the &lt;code&gt;date_time&lt;/code&gt; of the next point (the &lt;code&gt;lead()&lt;/code&gt; function) and the &lt;code&gt;date_time&lt;/code&gt; of this point, and then translating this to seconds (the &lt;code&gt;extract()&lt;/code&gt; function):&lt;/p&gt;
