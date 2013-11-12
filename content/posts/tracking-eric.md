@@ -46,9 +46,11 @@ You may discover as I did, that Eric flew multiple times to Mouscron in June, wh
 
 To truly visualize Eric in time, I used the library [Torque](https://github.com/CartoDB/torque) (also developed by Vizzuality):
 
-<iframe width="100%" height="500" frameborder="0" src="http://lifewatchinbo.github.io/torque/examples/tracking_eric.html"></iframe>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/4f97b83c-4af9-11e3-86e2-cff6e432732d/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=&sw_lat=50.611237544825876&sw_lon=1.8216383457183838&ne_lat=51.45753372278527&ne_lon=4.458357095718384"></iframe>
 
-The visualization compresses two months of data in 150 seconds. As with the previous maps, you can zoom and pan the map.
+The visualization compresses two months of data in 120 seconds. As with the previous maps, you can zoom and pan the map.
+
+*Note: since publishing this post, [Torque has been integrated in CartoDB](http://blog.cartodb.com/post/66687861735/torque-is-live-try-it-on-your-cartodb-maps-today). The map above now uses the integrated version.*
 
 ## Analyzing time spent per UTM 1km square
 
