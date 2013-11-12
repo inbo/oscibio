@@ -88,9 +88,10 @@
 <p>You may discover as I did, that Eric flew multiple times to Mouscron in June, while he stayed closer to his nest in July.</p>
 <h2>Visualizing in time</h2>
 <p>To truly visualize Eric in time, I used the library <a href="https://github.com/CartoDB/torque">Torque</a> (also developed by Vizzuality):</p>
-<iframe width="100%" height="500" frameborder="0" src="http://lifewatchinbo.github.io/torque/examples/tracking_eric.html"></iframe>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/4f97b83c-4af9-11e3-86e2-cff6e432732d/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=&sw_lat=50.611237544825876&sw_lon=1.8216383457183838&ne_lat=51.45753372278527&ne_lon=4.458357095718384"></iframe>
 
-<p>The visualization compresses two months of data in 150 seconds. As with the previous maps, you can zoom and pan the map.</p>
+<p>The visualization compresses two months of data in 120 seconds. As with the previous maps, you can zoom and pan the map.</p>
+<p><em>Note: since publishing this post, <a href="http://blog.cartodb.com/post/66687861735/torque-is-live-try-it-on-your-cartodb-maps-today">Torque has been integrated in CartoDB</a>. The map above now uses the integrated version.</em></p>
 <h2>Analyzing time spent per UTM 1km square</h2>
 <p>So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but <a href="http://www.postgresql.org/docs/9.3/interactive/index.html">good documentation</a> goes a long way.</p>
 <p>First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the <code>date_time</code> of the next point (the <code>lead()</code> function) and the <code>date_time</code> of this point, and then translating this to seconds (the <code>extract()</code> function):</p>
