@@ -56,7 +56,7 @@ The visualization compresses two months of data in 120 seconds. As with the prev
 
 So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but [good documentation](http://www.postgresql.org/docs/9.3/interactive/index.html) goes a long way.
 
-First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the `date_time` of the current point and the `date_time` of the previous point (the `lag()` function), and then translating this to seconds (the `extract()` function):
+First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the `date_time` of the current point and the `date_time` of the previous point, using the [lag()](http://www.postgresql.org/docs/9.3/static/functions-window.html) function, and then translating this to seconds, using the [extract()](http://www.postgresql.org/docs/9.3/static/functions-datetime.html) function:
 
     :::sql
     ALTER TABLE tracking_eric ADD COLUMN duration_in_seconds integer
