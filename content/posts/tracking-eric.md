@@ -60,7 +60,10 @@ First, we need to calculate the duration for each occurrence point. We can do th
 
     :::sql
     ALTER TABLE tracking_eric ADD COLUMN duration_in_seconds integer
-    
+
+Then:
+
+    :::sql
     WITH calc_duration AS (
         SELECT
         cartodb_id,
