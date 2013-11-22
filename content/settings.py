@@ -27,7 +27,6 @@ DEFAULT_DATE_FORMAT  = "%B %d, %Y"
 SUMMARY_MAX_LENGTH = 0
 
 # Directory settings
-DELETE_OUTPUT_DIRECTORY = False # Change
 PATH = ""
 ARTICLE_DIR = "posts"
 PAGE_DIR = "pages"
@@ -36,6 +35,13 @@ STATIC_PATHS = (
     ("files"),
 )
 OUTPUT_PATH = "../output" # Sibling directory of `content`
+DELETE_OUTPUT_DIRECTORY = False
+OUTPUT_RETENTION = (
+    (".git"),
+    (".gitignore"),
+    ("humans.txt"),
+    ("robots.txt"),
+)
 
 # URLs
 ARTICLE_URL = "posts/{slug}.html" # Both slug and slug.html will work
