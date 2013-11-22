@@ -3,7 +3,7 @@ Slug: tracking-eric
 Date: 2013-10-01 11:15
 Author: Peter Desmet
 Tags: CartoDB, tracking data, birds, tutorial, LW-2012-006
-Summary: Exploring different ways to visualize and analyse tracking data with CartoDB.
+Summary: Exploring different ways to visualize and analyze tracking data with CartoDB.
 
 As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS tags. The project[^1] is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the western marsh harrier) in collaboration with the [VLIZ](http://www.vliz.be/EN/INTRO) and [UvA-BiTS](http://www.uva-bits.nl/).
 
@@ -56,15 +56,18 @@ The visualization compresses two months of data in 120 seconds. As with the prev
 
 So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but [good documentation](http://www.postgresql.org/docs/9.3/interactive/index.html) goes a long way.
 
-First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the `date_time` of the next point (the `lead()` function) and the `date_time` of this point, and then translating this to seconds (the `extract()` function):
+First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the `date_time` of the current point and the `date_time` of the previous point, using the [lag()](http://www.postgresql.org/docs/9.3/static/functions-window.html) function, and then translating this to seconds, using the [extract()](http://www.postgresql.org/docs/9.3/static/functions-datetime.html) function:
 
     :::sql
     ALTER TABLE tracking_eric ADD COLUMN duration_in_seconds integer
-    
+
+Then:
+
+    :::sql
     WITH calc_duration AS (
         SELECT
         cartodb_id,
-        extract(epoch FROM (lead(date_time,1) OVER(ORDER BY date_time) - date_time)) AS duration_in_seconds
+        extract(epoch FROM (date_time - lag(date_time,1) OVER(ORDER BY date_time))) AS duration_in_seconds
         FROM tracking_eric
         ORDER BY date_time
     )
