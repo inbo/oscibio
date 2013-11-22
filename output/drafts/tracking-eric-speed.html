@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Reporting on open science - LifeWatch INBO</title>
+        <title>What is the average speed of seagull Eric? - LifeWatch INBO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
@@ -43,36 +43,55 @@
 <article>
 	<section class="single">
         <header>
-            <h1>Reporting on open science</h1>
+            <h1>What is the average speed of seagull Eric?</h1>
         </header>
         <footer>
-            <time datetime="2013-08-06T16:00:00" pubdate>August 06, 2013</time>
+            <time datetime="2013-12-01T11:00:00" pubdate>December 01, 2013</time>
             <address class="vcard">
                 By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/peter-desmet.html">Peter Desmet</a>
             </address>
             <ul class="tags">Tagged: 
-                <li><a href="http://lifewatch.inbo.be/blog/tag/news.html">news</a></li>
-                <li><a href="http://lifewatch.inbo.be/blog/tag/open-data.html">open data</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/tracking-data.html">tracking data</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/birds.html">birds</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/tutorial.html">tutorial</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/lw-2012-006.html">LW-2012-006</a></li>
             </ul>
         </footer>
         <div>
-            <p>We are following an <a href="https://p2pu.org/en/courses/5/open-science-an-introduction/">online course on open science</a>, which is hosted on P2PU and organized by <a href="http://creativecommons.org/">Creative Commons</a>. The course has 3 sessions:</p>
-<ul>
-<li><a href="https://p2pu.org/en/courses/5/content/11/">Open Access</a></li>
-<li><a href="https://p2pu.org/en/courses/5/content/13/">Open Data</a></li>
-<li><a href="https://p2pu.org/en/courses/5/content/12/">Open Research</a></li>
-</ul>
-<p>These sessions consist of a short live class with <a href="https://p2pu.org/en/courses/5/content/1370/">domain experts</a> on Google Hangout, <a href="https://p2pu.org/en/courses/5/content/283/">bite-sized tasks</a> for the participants, and an online discussion.</p>
-<p>The live classes are a bit late for us (20:00-21:00 CEST), but we do plan to carry out the tasks on our own pace, which include educating ourselves in specific topics, writing blog posts about these, and participating in the online discussions. We will publish these posts on our personal blogs (<a href="http://peterdesmet.com">Peter</a> and <a href="http://bioinformatics-man.blogspot.be/">Bart</a>) and update this page with links to our posts. We will also announce these on <a href="https://twitter.com/LifeWatchINBO">Twitter</a>, so you can follow along and participate in case you are interested.</p>
-<p>All material for the course was designed and built by a <a href="http://creativecommons.org/weblog/entry/37060">community of volunteers</a> and is available under a <a href="http://creativecommons.org/licenses/by/3.0/">CC BY</a> license, so you can take this course at your own pace as well. You can even earn some <a href="https://p2pu.org/en/courses/5/content/1337/">badges</a>.</p>
-<h2>Posts</h2>
-<ul>
-<li><a href="http://peterdesmet.com/posts/oa-1.html">What is open access?</a> - Peter</li>
-<li><a href="http://peterdesmet.com/posts/oa-2.html">How open is my paper?</a> - Peter</li>
-<li><a href="http://bioinformatics-man.blogspot.be/2013/08/p2pu-open-science-course.html">P2PU Open Science course</a> - Bart</li>
-<li><a href="http://bioinformatics-man.blogspot.be/2013/08/what-is-open-access.html">What is open access?</a> - Bart</li>
-<li><a href="http://peterdesmet.com/posts/oa-3.html">Finding open access research articles</a> - Peter</li>
-</ul>
+            <p>In our <a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">previous post</a> we explored how we can visualize two months of tracking data with <a href="http://cartodb.com/">CartoDB</a>. This time, we have another look at the data to discover what distance and speed lesser black-backed gull Eric covered.</p>
+<h2>Calculating the distance</h2>
+<p>Similar to how we calculated <code>duration_in_seconds</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, we will associate a <code>distance_in_meters</code> to each occurrence point<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>. We do this by calculating the distance between <code>the_geom</code> of the current point and <code>the_geom</code> of the previous point, using the <a href="http://www.postgresql.org/docs/9.3/static/functions-window.html">lag()</a> and <a href="http://http://postgis.net/docs/ST_Distance_Sphere.html">st_distance_sphere()</a> functions.  Although we can do this in a view, we'll add <code>duration_in_meters</code> as a field in the table for further use:</p>
+<div class="highlight"><pre><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">distance_in_meters</span> <span class="n">double</span> <span class="k">precision</span>
+</pre></div>
+
+
+<p>Then:</p>
+<div class="highlight"><pre><span class="k">WITH</span> <span class="n">calc_distance</span> <span class="k">AS</span> <span class="p">(</span>
+    <span class="k">SELECT</span>
+        <span class="n">cartodb_id</span><span class="p">,</span>
+        <span class="n">ST_Distance_Sphere</span><span class="p">(</span><span class="n">the_geom</span><span class="p">,</span><span class="n">lag</span><span class="p">(</span><span class="n">the_geom</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="n">OVER</span><span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span><span class="p">))</span> <span class="k">AS</span> <span class="n">distance_in_meters</span>
+    <span class="k">FROM</span> <span class="n">tracking_eric</span>
+    <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span>
+<span class="p">)</span>
+<span class="k">UPDATE</span> <span class="n">tracking_eric</span>
+<span class="k">SET</span> <span class="n">distance_in_meters</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">distance_in_meters</span>
+<span class="k">FROM</span> <span class="n">calc_distance</span> <span class="k">c</span>
+<span class="k">WHERE</span> <span class="k">c</span><span class="p">.</span><span class="n">cartodb_id</span> <span class="o">=</span> <span class="n">tracking_eric</span><span class="p">.</span><span class="n">cartodb_id</span>
+</pre></div>
+
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>See "Analyzing time spent per UTM 1km square" in the <a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">previous post</a>.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>You can visualize both parameters as the time and distance it took to <strong>arrive</strong> at that point, which is why the first record has <code>null</code> for these parameters.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
         </div>
     </section>
     <section class="comments">
