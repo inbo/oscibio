@@ -6,7 +6,7 @@ Tags: CartoDB, tracking data, birds, tutorial, LW-2012-006
 Summary: ...
 Status: draft
 
-In our [previous post](|filename|tracking-eric.md) we explored how we can visualize two months of tracking data with [CartoDB](http://cartodb.com/). This time, we have another look at the data to discover what distance and speed lesser black-backed gull Eric covered.
+In our [previous post]({filename}tracking-eric.md) we explored how we can visualize two months of tracking data with [CartoDB](http://cartodb.com/). This time, we have another look at the data to discover what distance and speed lesser black-backed gull Eric covered.
 
 ## Calculating the distance
 
@@ -30,5 +30,5 @@ Then:
     FROM calc_distance c
     WHERE c.cartodb_id = tracking_eric.cartodb_id
 
-[^1]: See "Analyzing time spent per UTM 1km square" in the [previous post](|filename|tracking-eric.md).
+[^1]: See "Analyzing time spent per UTM 1km square" in the [previous post]({filename}tracking-eric.md).
 [^2]: You can visualize both parameters as the time and distance it took to **arrive** at that point, which is why the first record has `null` for these parameters.

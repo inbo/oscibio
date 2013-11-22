@@ -40,4 +40,4 @@ Kevin develops the applications and APIs, invariably finishing his sentences wit
 
 </div>
 
-![Team](|filename|/images/team.jpg)
+![Team]({filename}/images/team.jpg)
