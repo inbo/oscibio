@@ -137,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1em;
         margin: 0 auto;
         max-width: 40em;
+        min-width: 20em;
         padding: 0 2em;
         position: relative;
         text-transform: uppercase;
@@ -184,6 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6em;
     margin: 0 auto;
     max-width: 40em;
+    min-width: 20em;
     padding: 2em;
     padding-top: 3.5em; /* Height of header + 1em */
     padding-bottom: 15em; /* Height of footer + 2em */
@@ -391,6 +393,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1em;
         margin: 0 auto;
         max-width: 40em;
+        min-width: 20em;
         padding: 2em 2em 0.5em;
         }
         .footer div {
@@ -468,6 +471,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Small size */
 
     .header {
+        min-width: 24em; /* Necessary for relative position: 20em + padding */
         position: relative;
     }
     .content {
