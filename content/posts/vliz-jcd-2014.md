@@ -8,7 +8,7 @@ Status: draft
 
 We will be presenting some preliminary results from our bird tracking network at the [VLIZ Young Marine Scientists' Day](http://www.vliz.be/jcd/en) on March 7 in Brugge. The study is conducted in close collaboration with the [Terrestrial Ecological Unit (TEREC)](http://www.ecology.ugent.be/terec/) of the University of Ghent, the [Flanders Marine Institute (VLIZ)](www.vliz.be/en) and [UvA-BiTS](http://www.uva-bits.nl/) at the University of Amsterdam.
 
-Here we report on the specific movements of one breeding [Lesser Black-backed Gull](http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull) and two [Herring Gulls](http://en.wikipedia.org/wiki/European_Herring_Gull) during and after breeding season, showing how the movements of the gulls vary during the course of the breeding season and fluctuate with tidal movements. The movements are visualized with [CartoDB](http://cartodb.com), an open source tool to visualize and analyze geospatial data on the web (see also our [previous post]({filename}tracking-eric.md)).
+Here we report on the specific movements of one breeding [Lesser Black-backed Gull](http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull) and two [Herring Gulls](http://en.wikipedia.org/wiki/European_Herring_Gull) during and after breeding season, showing how the movements of the gulls vary during the course of the breeding season and fluctuate with the tidal movements. The movements are visualized with [CartoDB](http://cartodb.com), an open source tool to visualize and analyze geospatial data on the web (see also our [previous post]({filename}tracking-eric.md)).
 
 ## Eric
 
@@ -30,6 +30,8 @@ During incubation of the eggs in May, Jurgen, a Herring Gull that nested on a ro
 
 Finally we show the micro-scale movements of Anne, a Herring Gull that nested in Ostend. Even more than Jurgen, Anne was regularly found feeding and resting on the jetties and the beaches near Ostend. If we zoom in on her behaviour clear tidal patterns can be seen. At low tide, Anne used the mudflats and the lower parts of the jetties to feed on arthropods and shellfish. During high tide she rested on the higher parts of the jetties or at the beach.
 
-*viz*
+*[Fullscreen map](http://cdb.io/1b5l4rL)*
+
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/b8d2720e-7d37-11e3-9408-7dfc5fbee961/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%20FROM%20three_gulls%20WHERE%20bird_name%20%3D%20'Anne'%20AND%20tidal_height%20IS%20NOT%20NULL&sw_lat=51.2123343912289&sw_lon=2.8635424375534058&ne_lat=51.21562752887236&ne_lon=2.8738421201705933"></iframe>
 
 These analyses use only a small part of the tracking data of the gulls that were received until now. We hope to answer many research questions at multiple scales with the data gathered over the next few years. These data will also be made available as open data to stimulate further use. A subset of the data for Eric can already be [visualized and downloaded]({filename}tracking-eric.md).
