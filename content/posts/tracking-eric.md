@@ -114,7 +114,7 @@ In my opinion [CartoDB](http://cartodb.com) is an intuitive, yet very powerful t
 * CartoDB: <https://lifewatch-inbo.cartodb.com/tables/tracking_eric/>
 * API: <https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric>
 
-[^1]: The highly imaginative project name is LW-2012-006, and you can read more on it on the [LifeWatch Belgium website](http://www.lifewatch.be/birds).
+[^1]: You can read more on it on the [LifeWatch Belgium website](http://www.lifewatch.be/birds).
 [^2]: A [more in-depth tutorial](http://developers.cartodb.com/tutorials/gps_track.html) is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used `the_geom_webmercator` and not `the_geom`.
 [^3]: CartoDB requires an `cartodb_id` to allow click interaction. I am cheating here by generating a new one based on `row_number()`.
 [^4]: Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.
