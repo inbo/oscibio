@@ -16,7 +16,7 @@ The GPS positions of the Lesser Black-backed Gull called Eric (which was also pr
 
 <iframe width="100%" height="550" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/b43fa5a6-7dd0-11e3-ba2a-5f9e077d1162/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20%0AST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20%0Aextract(month%20FROM%20date_time)%20as%20month%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Eric'%20%0AAND%20date_time%20%3C%20'2013-08-01'%0AGROUP%20BY%20month%0AORDER%20BY%20month%20DESC&sw_lat=51.12959947058646&sw_lon=2.5148391723632812&ne_lat=51.54996450656601&ne_lon=3.8331985473632812"></iframe>
 
-*viz*
+<iframe width="100%" height="550" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/87d050a4-7eb3-11e3-978e-1fac82688e3c/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%2C%20extract(month%20from%20date_time)%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Eric'%20%0AAND%20date_time%20%3C%20'2013-08-01'&sw_lat=50.11991770447466&sw_lon=-0.16582489013671875&ne_lat=51.81477025165092&ne_lon=5.107612609863281"></iframe>
 
 ## Jurgen
 
