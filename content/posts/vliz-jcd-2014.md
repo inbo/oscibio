@@ -12,9 +12,9 @@ Here we report on the specific movements of one breeding [Lesser Black-backed Gu
 
 ## Eric
 
-The GPS positions of the Lesser Black-backed Gull called Eric (which was also presented in our [previous post]({filename}tracking-eric.md)) show that he changes his foraging behavior to fulfill the growing energetic needs during the breeding season. When still incubating eggs in Zeebrugge (**month**), Eric mainly foraged in the agricultural areas to the southeast of the colony. He also made regular trips to Moeskroen, about 65 km from the colony site, to feed on potato chips that were declared unfit for human consumption and dumped in containers. After hatching of the eggs (**month**) and with the growth of the chicks, energy needs rapidly increased and Eric more and more foraged at sea probably to feed on energy rich discarded fish.
+The GPS positions of the Lesser Black-backed Gull called Eric (which was also presented in our [previous post]({filename}tracking-eric.md)) show that he changes his foraging behaviour to fulfil the growing energetic needs during the breeding season. When still incubating eggs in Zeebrugge, Eric mainly foraged in the agricultural areas to the southeast of the colony (May). He also made regular trips to Moeskroen (June), about 65 km from the colony site, to feed on potato chips that were declared unfit for human consumption and dumped in containers. After hatching of the eggs and with the growth of the chicks in July, energy needs rapidly increased and Eric more and more foraged at sea probably to feed on energy rich discarded fish.
 
-*viz*
+<iframe width="100%" height="550" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/b43fa5a6-7dd0-11e3-ba2a-5f9e077d1162/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20%0AST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20%0Aextract(month%20FROM%20date_time)%20as%20month%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Eric'%20%0AAND%20date_time%20%3C%20'2013-08-01'%0AGROUP%20BY%20month%0AORDER%20BY%20month%20DESC&sw_lat=51.12959947058646&sw_lon=2.5148391723632812&ne_lat=51.54996450656601&ne_lon=3.8331985473632812"></iframe>
 
 *viz*
 
