@@ -20,11 +20,11 @@ The GPS positions of the Lesser Black-backed Gull called Eric (which was also pr
 
 ## Jurgen
 
-During incubation of the eggs in May, Jurgen, a Herring Gull that nested on a roof top in Ostend, most often foraged close to his nest (within 10km) mainly at the hard substrates probably to feed on crabs and shellfish. Sometimes he made longer trips to the open sea. During the chick-rearing season (**month**) Jurgen more often made trips to the sea, up to about 30 km form the colony. After his chicks had fledged (August and September) and energy demands decreased, his foraging range reduced and he almost exclusively foraged and rested at the hard substrates (jetties) in the vicinity of Ostend. In October Jurgen again changes his foraging strategy and he now regularly feeds inland in the agricultural areas to the southeast of Ostend and less often returns to the colony site.
+During incubation of the eggs in May, Jurgen, a Herring Gull that nested on a roof top in Ostend, most often foraged close to his nest (within 10km) mainly at the hard substrates probably to feed on crabs and shellfish. Sometimes he made longer trips to the open sea. During the chick-rearing season (June and July) Jurgen more often made trips to the sea, up to about 30 km form the colony. After his chicks had fledged (August and September) and energy demands decreased, his foraging range reduced and he almost exclusively foraged and rested at the hard substrates (jetties) in the vicinity of Ostend. In mid-October Jurgen again changes his foraging strategy and he now regularly feeds inland in the agricultural areas to the southeast of Ostend and less often returns to the colony site.
 
 *viz*
 
-*viz*
+<iframe width="100%" height="550" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/f3c2e28a-7dce-11e3-b5da-8d618f739278/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%20%0AFROM%20three_gulls%20%0AWHERE%20bird_name%20%3D%20'Jurgen'&sw_lat=50.98998901565247&sw_lon=1.9947052001953125&ne_lat=51.41162732176919&ne_lon=3.3130645751953125"></iframe>
 
 ## Anne
 
