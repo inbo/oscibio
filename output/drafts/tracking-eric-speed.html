@@ -51,17 +51,16 @@
                 By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/peter-desmet.html">Peter Desmet</a>
             </address>
             <ul class="tags">Tagged: 
+                <li><a href="http://lifewatch.inbo.be/blog/tag/bird-tracking.html">bird tracking</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/visualization.html">visualization</a></li>
                 <li><a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a></li>
-                <li><a href="http://lifewatch.inbo.be/blog/tag/tracking-data.html">tracking data</a></li>
-                <li><a href="http://lifewatch.inbo.be/blog/tag/birds.html">birds</a></li>
                 <li><a href="http://lifewatch.inbo.be/blog/tag/tutorial.html">tutorial</a></li>
-                <li><a href="http://lifewatch.inbo.be/blog/tag/lw-2012-006.html">LW-2012-006</a></li>
             </ul>
         </footer>
         <div>
             <p>In our <a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">previous post</a> we explored how we can visualize two months of tracking data with <a href="http://cartodb.com/">CartoDB</a>. This time, we have another look at the data to discover what distance and speed lesser black-backed gull Eric covered.</p>
 <h2>Calculating the distance</h2>
-<p>Similar to how we calculated <code>duration_in_seconds</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, we will associate a <code>distance_in_meters</code> to each occurrence point<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>. We do this by calculating the distance between <code>the_geom</code> of the current point and <code>the_geom</code> of the previous point, using the <a href="http://www.postgresql.org/docs/9.3/static/functions-window.html">lag()</a> and <a href="http://http://postgis.net/docs/ST_Distance_Sphere.html">st_distance_sphere()</a> functions.  Although we can do this in a view, we'll add <code>duration_in_meters</code> as a field in the table for further use:</p>
+<p>Similar to how we calculated <code>duration_in_seconds</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, we will associate a <code>distance_in_meters</code> to each occurrence point<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>. We do this by calculating the distance between <code>the_geom</code> of the current point and <code>the_geom</code> of the previous point, using the <a href="http://www.postgresql.org/docs/9.3/static/functions-window.html">lag()</a> and <a href="http://postgis.net/docs/ST_Distance_Sphere.html">st_distance_sphere()</a> functions.  Although we can do this in a view, we'll add <code>duration_in_meters</code> as a field in the table for further use:</p>
 <div class="highlight"><pre><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">distance_in_meters</span> <span class="n">double</span> <span class="k">precision</span>
 </pre></div>
 

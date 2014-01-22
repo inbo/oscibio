@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Visualizing three seagulls for the VLIZ Young Marine Scientists' Day - LifeWatch INBO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
+
+        <link rel="shortcut icon" href="http://lifewatch.inbo.be/blog/theme/img/favicon.ico">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/normalize.css">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/main.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome.min.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome-ie7.min.css">
+        <![endif]-->
+        <script src="http://lifewatch.inbo.be/blog/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <link href="http://lifewatch.inbo.be/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="LifeWatch INBO Full RSS feed" />
+    </head>
+    <body>
+    <div class="container">
+        <!-- Content -->
+        <div class="header">
+            <header class="clearfix">
+                <h2><a href="http://lifewatch.inbo.be/blog">LifeWatch INBO</a></h2>
+                <nav>
+                    <ul>
+                        <li><a href="http://lifewatch.inbo.be/blog/pages/about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div>
+                <img src="http://lifewatch.inbo.be/blog/theme/img/inbo-logo.png" alt="inbo-logo"/>
+            </div>
+        </div>
+        <div class="content">
+<article>
+	<section class="single">
+        <header>
+            <h1>Visualizing three seagulls for the VLIZ Young Marine Scientists' Day</h1>
+        </header>
+        <footer>
+            <time datetime="2014-01-22T11:00:00" pubdate>January 22, 2014</time>
+            <address class="vcard">
+                By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/peter-desmet-eric-stienen.html">Peter Desmet, Eric Stienen</a>
+            </address>
+            <ul class="tags">Tagged: 
+                <li><a href="http://lifewatch.inbo.be/blog/tag/bird-tracking.html">bird tracking</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/visualization.html">visualization</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a></li>
+            </ul>
+        </footer>
+        <div>
+            <p>We will be presenting some preliminary results from our bird tracking network at the <a href="http://www.vliz.be/jcd/en">VLIZ Young Marine Scientists' Day</a> on March 7 in Brugge. The study is conducted in close collaboration with the <a href="http://www.ecology.ugent.be/terec/">Terrestrial Ecological Unit (TEREC)</a> of the University of Ghent, the <a href="www.vliz.be/en">Flanders Marine Institute (VLIZ)</a> and <a href="http://www.uva-bits.nl/">UvA-BiTS</a> at the University of Amsterdam.</p>
+<p>Here we report on the specific movements of one breeding <a href="http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull">Lesser Black-backed Gull</a> and two <a href="http://en.wikipedia.org/wiki/European_Herring_Gull">Herring Gulls</a> during and after breeding season, showing how the movements of the gulls vary during the course of the breeding season and fluctuate with the tidal movements. The movements are visualized with <a href="http://cartodb.com">CartoDB</a>, an open source tool to visualize and analyze geospatial data on the web (see also our <a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">previous post</a>).</p>
+<h2>Eric</h2>
+<p>The GPS positions of the Lesser Black-backed Gull called Eric (which was also presented in our <a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">previous post</a>) show that he changes his foraging behaviour to fulfil the growing energetic needs during the breeding season. When still <strong>incubating eggs</strong> in Zeebrugge, Eric mainly foraged in the agricultural areas to the southeast of the colony. He also made regular trips to Moeskroen, about 65 km from the colony site, to feed on potato chips that were declared unfit for human consumption and dumped in containers. After hatching of the eggs and with the <strong>growth of the chicks</strong> in July, energy needs rapidly increased and Eric more and more foraged at sea probably to feed on energy rich discarded fish. During the <strong>postfledging</strong> period the foraging range becomes more restricted.</p>
+<p><a href="http://lifewatch-inbo.cartodb.com/viz/b43fa5a6-7dd0-11e3-ba2a-5f9e077d1162/embed_map?title=true&amp;description=true&amp;search=false&amp;shareable=true&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=true&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%20%0AST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20%0ACASE%0AWHEN%20date_time%20%3E%3D%20'2013-05-28'%20AND%20date_time%20%3C%20'2013-06-25'%20THEN%20'1.%20Egg%20incubation'%0AWHEN%20date_time%20%3E%3D%20'2013-06-25'%20AND%20date_time%20%3C%20'2013-07-24'%20THEN%20'2.%20Chick%20rearing'%0AELSE%20'3.%20Postfledging'%0AEND%20as%20behaviour%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Eric'%0AAND%20outlier%20IS%20NULL%0AGROUP%20BY%20behaviour%0AORDER%20BY%20behaviour&amp;sw_lat=51.0&amp;sw_lon=2.0&amp;ne_lat=51.6&amp;ne_lon=4.4">Fullscreen map</a> | <a href="https://gist.github.com/peterdesmet/8555625">SQL</a> | <a href="https://gist.github.com/peterdesmet/8555656">CartoCSS</a></p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/b43fa5a6-7dd0-11e3-ba2a-5f9e077d1162/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20%0AST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20%0ACASE%0AWHEN%20date_time%20%3E%3D%20'2013-05-28'%20AND%20date_time%20%3C%20'2013-06-25'%20THEN%20'1.%20Egg%20incubation'%0AWHEN%20date_time%20%3E%3D%20'2013-06-25'%20AND%20date_time%20%3C%20'2013-07-24'%20THEN%20'2.%20Chick%20rearing'%0AELSE%20'3.%20Postfledging'%0AEND%20as%20behaviour%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Eric'%0AAND%20outlier%20IS%20NULL%0AGROUP%20BY%20behaviour%0AORDER%20BY%20behaviour&sw_lat=51.0&sw_lon=2.0&ne_lat=51.6&ne_lon=4.4"></iframe>
+
+<p><a href="http://lifewatch-inbo.cartodb.com/viz/87d050a4-7eb3-11e3-978e-1fac82688e3c/embed_map?title=true&amp;description=true&amp;search=false&amp;shareable=true&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=false&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%20*%2C%20extract(month%20from%20date_time)%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Eric'%20%0AAND%20date_time%20%3C%20'2013-08-01'&amp;sw_lat=51.0&amp;sw_lon=2.0&amp;ne_lat=51.6&amp;ne_lon=4.4">Fullscreen map</a> | <a href="https://gist.github.com/peterdesmet/8555766">SQL</a> | <a href="https://gist.github.com/peterdesmet/8555796">CartoCSS</a></p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/87d050a4-7eb3-11e3-978e-1fac82688e3c/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%2C%20extract(month%20from%20date_time)%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Eric'%20%0AAND%20date_time%20%3C%20'2013-08-01'&sw_lat=51.0&sw_lon=2.0&ne_lat=51.6&ne_lon=4.4"></iframe>
+
+<h2>Jurgen</h2>
+<p>During <strong>incubation of the eggs</strong> in May, Jurgen, a Herring Gull that nested on a roof top in Ostend, most often foraged close to his nest (within 10km) mainly at the hard substrates probably to feed on crabs and shellfish. Sometimes he made longer trips to the open sea. During the <strong>chick rearing</strong> season Jurgen more often made trips to the sea, up to about 30 km form the colony. After his <strong>chicks had fledged</strong> and energy demands decreased, his foraging range reduced and he almost exclusively foraged and rested at the hard substrates (jetties) in the vicinity of Ostend. In mid-October Jurgen again changes his foraging strategy and he now regularly feeds inland in the agricultural areas to the southeast of Ostend and less often returns to the colony site.</p>
+<p><a href="http://lifewatch-inbo.cartodb.com/viz/93117da8-7eb8-11e3-bb99-652bfb2903df/embed_map?title=true&amp;description=true&amp;search=false&amp;shareable=true&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=true&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%20%0AST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20%0ACASE%20%0AWHEN%20date_time%20%3C%20'2013-06-01'%20THEN%20'1.%20Egg%20incubation'%0AWHEN%20date_time%20%3E%3D%20'2013-06-01'%20AND%20date_time%20%3C%20'2013-08-01'%20THEN%20'2.%20Chick-rearing'%0AWHEN%20date_time%20%3E%3D%20'2013-08-01'%20AND%20date_time%20%3C%20'2013-10-15'%20THEN%20'3.%20Chicks%20fledged'%0AELSE%20'4.%20Inland%20foraging'%0AEND%20as%20behaviour%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Jurgen'%20%0AGROUP%20BY%20behaviour%20%0AORDER%20BY%20behaviour&amp;sw_lat=51.0&amp;sw_lon=2.4&amp;ne_lat=51.6&amp;ne_lon=3.4">Fullscreen map</a></p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/93117da8-7eb8-11e3-bb99-652bfb2903df/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20%0AST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20%0ACASE%20%0AWHEN%20date_time%20%3C%20'2013-06-01'%20THEN%20'1.%20Egg%20incubation'%0AWHEN%20date_time%20%3E%3D%20'2013-06-01'%20AND%20date_time%20%3C%20'2013-08-01'%20THEN%20'2.%20Chick-rearing'%0AWHEN%20date_time%20%3E%3D%20'2013-08-01'%20AND%20date_time%20%3C%20'2013-10-15'%20THEN%20'3.%20Chicks%20fledged'%0AELSE%20'4.%20Inland%20foraging'%0AEND%20as%20behaviour%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Jurgen'%20%0AGROUP%20BY%20behaviour%20%0AORDER%20BY%20behaviour&sw_lat=51.0&sw_lon=2.4&ne_lat=51.6&ne_lon=3.4"></iframe>
+
+<p><a href="http://lifewatch-inbo.cartodb.com/viz/f3c2e28a-7dce-11e3-b5da-8d618f739278/embed_map?title=true&amp;description=true&amp;search=false&amp;shareable=true&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=false&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%20*%2C%20%0ACASE%20%0AWHEN%20date_time%20%3E%3D%20'2013-05-17'%20AND%20date_time%20%3C%20'2013-06-07'%20THEN%201%0AWHEN%20date_time%20%3E%3D%20'2013-06-07'%20AND%20date_time%20%3C%20'2013-07-21'%20THEN%202%0AELSE%203%0AEND%20as%20behaviour_number%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Jurgen'%20%0AAND%20outlier%20IS%20NULL&amp;sw_lat=51.0&amp;sw_lon=2.4&amp;ne_lat=51.6&amp;ne_lon=3.4">Fullscreen map</a></p>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/f3c2e28a-7dce-11e3-b5da-8d618f739278/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%2C%20%0ACASE%20%0AWHEN%20date_time%20%3E%3D%20'2013-05-17'%20AND%20date_time%20%3C%20'2013-06-07'%20THEN%201%0AWHEN%20date_time%20%3E%3D%20'2013-06-07'%20AND%20date_time%20%3C%20'2013-07-21'%20THEN%202%0AELSE%203%0AEND%20as%20behaviour_number%0AFROM%20three_gulls%0AWHERE%20bird_name%20%3D%20'Jurgen'%20%0AAND%20outlier%20IS%20NULL&sw_lat=51.0&sw_lon=2.4&ne_lat=51.6&ne_lon=3.4"></iframe>
+
+<h2>Anne</h2>
+<p>Finally we show the micro-scale movements of Anne, a Herring Gull that nested in Ostend. Even more than Jurgen, Anne was regularly found feeding and resting on the jetties and the beaches near Ostend. If we zoom in on her behaviour clear tidal patterns can be seen. At low tide, Anne used the mudflats and the lower parts of the jetties to feed on arthropods and shellfish. During high tide she rested on the higher parts of the jetties or at the beach.</p>
+<p><a href="http://lifewatch-inbo.cartodb.com/viz/b8d2720e-7d37-11e3-9408-7dfc5fbee961/embed_map?title=true&amp;description=true&amp;search=false&amp;shareable=true&amp;cartodb_logo=true&amp;layer_selector=false&amp;legends=true&amp;scrollwheel=true&amp;sublayer_options=1&amp;sql=SELECT%20*%20FROM%20three_gulls%20WHERE%20bird_name%20%3D%20'Anne'%20AND%20tidal_height%20IS%20NOT%20NULL&amp;sw_lat=51.210297904587534&amp;sw_lon=2.859519124031067&amp;ne_lat=51.21688423563423&amp;ne_lon=2.880118489265442">Fullscreen map</a></p>
+<iframe width="100%" height="550" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/b8d2720e-7d37-11e3-9408-7dfc5fbee961/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%20FROM%20three_gulls%20WHERE%20bird_name%20%3D%20'Anne'%20AND%20tidal_height%20IS%20NOT%20NULL&sw_lat=51.210297904587534&sw_lon=2.859519124031067&ne_lat=51.21688423563423&ne_lon=2.880118489265442"></iframe>
+
+<p>These analyses use only a small part of the tracking data of the gulls that were received until now. We hope to answer many research questions at multiple scales with the data gathered over the next few years. These data will also be made available as open data to stimulate further use. A subset of the data for Eric can already be <a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">visualized and downloaded</a>.</p>
+        </div>
+    </section>
+    <section class="comments">
+        <header>
+            <h2>Comments</h2>
+        </header>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'lifewatchinbo'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+</article>
+        </div>
+        <div class="footer">
+            <footer class="clearfix">
+                <div>
+                    <img src="http://lifewatch.inbo.be/blog/theme/img/lifewatch-inbo-logo.png" alt="lifewatch-inbo-logo"/>
+                </div>
+                <div>
+                    <ul>
+                        <h2>Keep in touch</h2>
+                        <li><a href="https://twitter.com/LifeWatchINBO">Follow us on Twitter</a></li>
+                        <li><a href="https://github.com/LifeWatchINBO">Our GitHub repositories</a></li>
+                        <li><a href="http://lifewatch.inbo.be/blog/feeds/rss.xml">Subscribe to updates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <h2>Related websites</h2>
+                        <li><a href="http://www.inbo.be">Research Institute for Nature and Forest (INBO)</a></li>
+                        <li><a href="http://www.lifewatch.be">Belgian LifeWatch portal</a></li>
+                        <li><a href="http://www.lifewatch.eu">European LifeWatch portal</a></li>
+                    </ul>
+                </div>
+                <p class="disclaimer">The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:cc="http://creativecommons.org/ns#" href="http://lifewatch.inbo.be/blog" property="cc:attributionName" rel="cc:attributionURL">LifeWatch INBO blog</a> is licensed under a <a rel ="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+            </footer>
+        </div>
+    </div>
+
+        <!-- Scripts -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <!--<script>window.jQuery || document.write('<script src="http://lifewatch.inbo.be/blog/theme/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/plugins.js"></script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/main.js"></script>-->
+        <script>
+            var _gaq=[['_setAccount','UA-42312007-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
