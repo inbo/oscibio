@@ -2,7 +2,7 @@ Title: Using CartoDB to visualize two months in the life of seagull Eric
 Slug: tracking-eric
 Date: 2013-10-01 11:15
 Author: Peter Desmet
-Tags: CartoDB, tracking data, birds, tutorial, LW-2012-006
+Tags: bird tracking, visualization, CartoDB, tutorial
 Summary: Exploring different ways to visualize and analyze tracking data with CartoDB.
 
 As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS tags. The project[^1] is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the western marsh harrier) in collaboration with the [VLIZ](http://www.vliz.be/EN/INTRO) and [UvA-BiTS](http://www.uva-bits.nl/).
@@ -114,7 +114,7 @@ In my opinion [CartoDB](http://cartodb.com) is an intuitive, yet very powerful t
 * CartoDB: <https://lifewatch-inbo.cartodb.com/tables/tracking_eric/>
 * API: <https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric>
 
-[^1]: The highly imaginative project name is LW-2012-006, and you can read more on it on the [LifeWatch Belgium website](http://www.lifewatch.be/birds).
+[^1]: You can read more on it on the [LifeWatch Belgium website](http://www.lifewatch.be/birds).
 [^2]: A [more in-depth tutorial](http://developers.cartodb.com/tutorials/gps_track.html) is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used `the_geom_webmercator` and not `the_geom`.
 [^3]: CartoDB requires an `cartodb_id` to allow click interaction. I am cheating here by generating a new one based on `row_number()`.
 [^4]: Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.

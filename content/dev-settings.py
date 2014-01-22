@@ -12,3 +12,4 @@ DEFAULT_PAGINATION = None # To test pagination
 
 # External services
 GOOGLE_ANALYTICS = "UA-XXXXX-X" # Don't track while coding
+DISQUS_SITENAME = "" # Don't link to existing Disqus forum while coding
