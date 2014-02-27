@@ -1,4 +1,4 @@
-Title: Using CartoDB to visualize two months in the life of seagull Eric
+Title: Using CartoDB to visualize two months in the life of gull Eric
 Slug: tracking-eric
 Date: 2013-10-01 11:15
 Author: Peter Desmet
