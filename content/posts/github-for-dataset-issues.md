@@ -9,6 +9,9 @@ Part of our mission in building an open terrestrial and freshwater observatory i
 
 [^1]: The term [data publishing](http://www.pensoft.net/page.php?P=23) is used, as making biodiversity data available online is not unlike traditional publishing of research results.
 
+## Open issue tracking for data
+
+Even though we rigorously review our (to be) published data with tools such as [Open Refine](), there will always be errors and inconsistencies in our data. Inspired by the **open issue tracking** by [Canadensys](http://data.canadensys.net/vascan) for the Database of Vascular Plants of Canada (VASCAN), the [OKFN Labs](http://okfnlabs.org/blog/2013/11/06/tracking-data-issues.html) for public datasets, and [VertNet]() for specimen data, we have started to do the same.
 Also guidelines
 
 IPT, workflow, guidelines, high standard (rigourous review)
