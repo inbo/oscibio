@@ -11,7 +11,13 @@ Part of our mission in building an open terrestrial and freshwater observatory i
 
 ## Open issue tracking for data
 
-Even though we rigorously review our (to be) published data with tools such as [Open Refine](), there will always be errors and inconsistencies in our data. Inspired by the **open issue tracking** by [Canadensys](http://data.canadensys.net/vascan) for the Database of Vascular Plants of Canada (VASCAN), the [OKFN Labs](http://okfnlabs.org/blog/2013/11/06/tracking-data-issues.html) for public datasets, and [VertNet]() for specimen data, we have started to do the same.
+Even though we rigorously review our (to be) published data with tools such as [Open Refine](http://openrefine.org/), there will always be errors and inconsistencies in our data. Inspired by the **open issue tracking** by [Canadensys](http://data.canadensys.net/vascan) for the Database of Vascular Plants of Canada (VASCAN), the [OKFN Labs](http://okfnlabs.org/blog/2013/11/06/tracking-data-issues.html) for public datasets, and [VertNet](http://blog.vertnet.org/post/74297660841/issue-tracking-available-in-the-vertnet-portal-at) for specimen data, we have started to do the same.
+
+...
+
+
+Each dataset now has its repository on GitHub. In the README, we provide a short description of the dataset (including a link), a link to the published dataset and , where we provide a short description in the README and link to the pu
+
 Also guidelines
 
 IPT, workflow, guidelines, high standard (rigourous review)
