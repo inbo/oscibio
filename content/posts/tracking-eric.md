@@ -17,7 +17,7 @@ As an example, I will visualize two months of tracking data (June-July) from Eri
 
 After uploading the tracking data (which are stored as [occurrence data](https://lifewatch-inbo.cartodb.com/tables/tracking_eric/): place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.
 
-<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/71db3552-211b-11e3-bfc7-3f86888f001b/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=&sw_lat=51.32637473423621&sw_lon=3.1468963623046875&ne_lat=51.351575865010346&ne_lon=3.2292938232421875"></iframe>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/71db3552-211b-11e3-bfc7-3f86888f001b/embed_map?title=false&description=false&search=false&shareable=true&cartodb_logo=false&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=51.32637473423621&sw_lon=3.1468963623046875&ne_lat=51.351575865010346&ne_lon=3.2292938232421875" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 The dark red spot on the pier marks the nest of Eric. You can zoom and pan the map, or click on individual points to get the date and time of recording.
 
@@ -38,7 +38,7 @@ Next, we order the points per `date_time`, group them by `day_of_year` and make 
 
 If we visualize this as a choropleth map, we get this:
 
-<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/44cf305c-21f9-11e3-9f83-4f522829d789/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20ST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20day_of_year%0AFROM%20tracking_eric%0AGROUP%20BY%20day_of_year&sw_lat=50.963616518684226&sw_lon=1.8189239501953125&ne_lat=51.76953957596102&ne_lon=4.4556427001953125"></iframe>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/44cf305c-21f9-11e3-9f83-4f522829d789/embed_map?title=false&description=false&search=false&shareable=true&cartodb_logo=false&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=SELECT%20ST_MakeLine(the_geom_webmercator%20ORDER%20BY%20date_time%20ASC)%20AS%20the_geom_webmercator%2C%20day_of_year%0AFROM%20tracking_eric%0AGROUP%20BY%20day_of_year&sw_lat=50.963616518684226&sw_lon=1.8189239501953125&ne_lat=51.76953957596102&ne_lon=4.4556427001953125" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 You may discover as I did, that Eric flew multiple times to Mouscron in June, while he stayed closer to his nest in July.
 
@@ -46,7 +46,7 @@ You may discover as I did, that Eric flew multiple times to Mouscron in June, wh
 
 To truly visualize Eric in time, I used the library [Torque](https://github.com/CartoDB/torque) (also developed by Vizzuality):
 
-<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/4f97b83c-4af9-11e3-86e2-cff6e432732d/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=&sw_lat=50.611237544825876&sw_lon=1.8216383457183838&ne_lat=51.45753372278527&ne_lon=4.458357095718384"></iframe>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/4f97b83c-4af9-11e3-86e2-cff6e432732d/embed_map?title=false&description=false&search=false&shareable=true&cartodb_logo=false&layer_selector=false&legends=false&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=50.611237544825876&sw_lon=1.8216383457183838&ne_lat=51.45753372278527&ne_lon=4.458357095718384" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 The visualization compresses two months of data in 120 seconds. As with the previous maps, you can zoom and pan the map.
 
@@ -89,7 +89,7 @@ Next, we upload a reference grid to CartoDB. I uploaded a [shapefile of all UTM 
 
 The resulting map, with a logaritmic choropleth scale, looks like this[^4]:
 
-<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/054aa85c-25e2-11e3-8e2c-b3655fb9f73d/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20%20%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0A%20%20%20%20FROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0A%20%20%20%20WHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20%0A%20%20%20%20GROUP%20BY%20utm.the_geom_webmercator&sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625"></iframe>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/054aa85c-25e2-11e3-8e2c-b3655fb9f73d/embed_map?title=false&description=false&search=false&shareable=true&cartodb_logo=false&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=SELECT%0Arow_number()%20OVER%20(ORDER%20BY%20utm.the_geom_webmercator)%20AS%20cartodb_id%2C%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0A%20%20%20%20FROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0A%20%20%20%20WHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20%0A%20%20%20%20GROUP%20BY%20utm.the_geom_webmercator&sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 You can click on each square to get the time Eric spent there in seconds over two months time. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:
 
@@ -105,7 +105,7 @@ You can click on each square to get the time Eric spent there in seconds over tw
     )
     SELECT * FROM utm_squares WHERE duration_in_seconds > 3600
 
-<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/f1bb680c-25ec-11e3-aaeb-6796bd794fbd/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%0Arow_number()%20OVER%20(ORDER%20BY%20utm.the_geom_webmercator)%20AS%20cartodb_id%2C%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0AFROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0AWHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%20and%20duration_in_seconds%20%3E%20300%0AGROUP%20BY%20utm.the_geom_webmercator&sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625"></iframe>
+<iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/f1bb680c-25ec-11e3-aaeb-6796bd794fbd/embed_map?title=false&description=false&search=false&shareable=true&cartodb_logo=false&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=WITH%20utm_squares%20AS%20(%0ASELECT%0Arow_number()%20OVER%20(ORDER%20BY%20utm.the_geom_webmercator)%20AS%20cartodb_id%2C%0Autm.the_geom_webmercator%2C%20sum(duration_in_seconds)%20as%20duration_in_seconds%0AFROM%20utm_1km%20AS%20utm%2C%20tracking_eric%20AS%20eric%0AWHERE%20ST_Intersects(utm.the_geom_webmercator%2C%20eric.the_geom_webmercator)%0AGROUP%20BY%20utm.the_geom_webmercator)%0A%0ASELECT%20*%20FROM%20utm_squares%20WHERE%20duration_in_seconds%20%3E%203600&sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Conclusion
 
