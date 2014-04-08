@@ -15,7 +15,7 @@ As an example, I will visualize two months of tracking data (June-July) from Eri
 
 ## Intensity map of occurrences
 
-After uploading the tracking data (which are stored as [occurrence data](https://lifewatch-inbo.cartodb.com/tables/tracking_eric/): place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.
+After uploading the tracking data (which are stored as [occurrence data](http://lifewatch-inbo.cartodb.com/tables/tracking_eric/public): place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.
 
 <iframe width="100%" height="500" frameborder="0" src="http://lifewatch-inbo.cartodb.com/viz/71db3552-211b-11e3-bfc7-3f86888f001b/embed_map?title=false&description=false&search=false&shareable=true&cartodb_logo=false&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=51.32637473423621&sw_lon=3.1468963623046875&ne_lat=51.351575865010346&ne_lon=3.2292938232421875" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
@@ -111,7 +111,7 @@ You can click on each square to get the time Eric spent there in seconds over tw
 
 In my opinion [CartoDB](http://cartodb.com) is an intuitive, yet very powerful tool to visualize and analyse data, which is why I've been a fan from day one. I hope we can [install](https://github.com/CartoDB/cartodb20) and use it for all our tracking data, in collaboration with the VLIZ and UvA-BiTS. If you're eager to explore yourself, CartoDB is offered as a [freemium service](http://cartodb.com/pricing/‎). The data used in this post are dedicated to the public domain under a [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/) waiver at:
 
-* CartoDB: <https://lifewatch-inbo.cartodb.com/tables/tracking_eric/>
+* CartoDB: <http://lifewatch-inbo.cartodb.com/tables/tracking_eric/public>
 * API: <https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric>
 
 [^1]: You can read more on it on the [LifeWatch Belgium website](http://www.lifewatch.be/birds).
