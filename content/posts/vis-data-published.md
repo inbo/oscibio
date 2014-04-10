@@ -4,6 +4,7 @@ Date: 2014-04-04 19:00
 Author: Peter Desmet
 Tags: data publication, GBIF
 Summary: All species occurrence data from our Fish Information System can now be used by anyone.
+Status: draft
 
 ## Introduction
 
