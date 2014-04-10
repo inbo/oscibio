@@ -1,19 +1,14 @@
-Title: Releasing Nemo: 440.000+ fish occurrences are now available as open data
+Title: 440.000+ fish occurrences are now available as open data
 Slug: vis-data-published
-Date: 2014-04-04 19:00
+Date: 2014-04-14 10:00
 Author: Peter Desmet
 Tags: data publication, GBIF
-Summary: All species occurrence data from our Fish Information System can now be used by anyone.
+Summary: How we used GBIF tools and CC0 to make all species occurrence data from our Fish Information System available to everyone.
 Status: draft
 
 ## Introduction
 
-In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory[^1], we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of [GBIF tools](http://www.gbif.org/publishingdata) to standardize, document, and publish our data. One of the systems[^2] that we have just made available in such a way is the **Fish Information System (VIS)**, releasing more than 440.000 fish occurrences as two datasets into the public domain, where they can be used by anyone.
-
-If you want to explore the data right away, here are the two dataset pages on GBIF:
-
-* [VIS - Fishes in inland waters in Flanders, Belgium](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f) (362.000 records)
-* [VIS - Fishes in estuarine habitats in Flanders, Belgium](http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4) (80.719 records)
+In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory[^1], we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of [GBIF tools](http://www.gbif.org/publishingdata) to standardize, document, and publish our data. One of the systems[^2] that we have just made available in such a way is the **Fish Information System (VIS)**, releasing more than 440.000 fish occurrences as [two datasets](http://www.gbif.org/dataset/search?q=vis) into the public domain, where they can be used by anyone.
 
 [^1]: Such as the [bird tracking network](http://lifewatch.inbo.be/blog/tag/bird-tracking.html).
 
@@ -29,11 +24,11 @@ Although summarized data are publicly accessible to users via <http://vis.milieu
 
 *Map of the all the sampling locations in VIS (orange = inland waters, green = estuaries).*
 
-## Data publication workflow using GBIF tools
+## Publishing data using GBIF tools
 
-In collaboration with Dimitri Brosens from the [Belgian Biodiversity Platform](http://www.biodiversity.be) and the involved researchers, we published the data as two datasets: one for inland waters and one for estuarine habitats.
+In collaboration with Dimitri Brosens from the [Belgian Biodiversity Platform](http://www.biodiversity.be) and the involved researchers, we published the data as two datasets: [one for inland waters](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f) and [one for estuarine habitats](http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4).
 
-For each dataset we created an SQL view in the VIS database, expressing all species occurrence information as [Darwin Core terms](http://rs.tdwg.org/dwc/terms/index.htm). [Darwin Core](http://doi.org/10.1371/journal.pone.0029715) is the international standard for expressing biodiversity data. This view is then used by our [GBIF Integrated Publishing Toolkit (IPT)](http://data.inbo.be/ipt) to serve the data as a tab-delimited text file.
+For each dataset we created an SQL view in the VIS database, expressing all species occurrence information as [Darwin Core terms](http://rs.tdwg.org/dwc/terms/index.htm). Darwin Core is the [international standard for expressing biodiversity data](http://doi.org/10.1371/journal.pone.0029715). This view is then used by our [GBIF Integrated Publishing Toolkit (IPT)](http://data.inbo.be/ipt) to serve the data as a tab-delimited text file.
 
 In addition, we describe the dataset in detail. These metadata are recorded in our IPT in the [Ecological Metadata Language (EML)](http://en.wikipedia.org/wiki/Ecological_Metadata_Language), the international standard for expressing such information. The metadata include information regarding the project, involved parties, sampling methods, and taxonomic, geographic, and temporal scope.
 
@@ -41,18 +36,15 @@ Both data and metadata are then published as a **Darwin Core Archive**, a zipped
 
 [^3]: You download these files directly from our IPT: [Fishes in inland waters](http://data.inbo.be/ipt/archive.do?r=vis-inland-occurrences) (6MB) & [Fishes in estuarine habitats](http://data.inbo.be/ipt/archive.do?r=vis-estuary-occurrences) (1.2MB)
 
-To increase discoverability, we registered the datasets with the **Global Biodiversity Information Facility (GBIF)**. This not only allows users to [discover the data](http://www.gbif.org/dataset/search?q=vis), but allows machines to [interface with the data](http://www.gbif.org/developer/occurrence) and [metadata](http://www.gbif.org/developer/registry) as well, via the robust webservices developed by GBIF.
+To increase discoverability, we registered the datasets with the **Global Biodiversity Information Facility (GBIF)**. This not only allows users to [discover the data](http://www.gbif.org/dataset/search?q=vis), but also allows machines to [interface with the data](http://www.gbif.org/developer/occurrence) and [metadata](http://www.gbif.org/developer/registry) via the robust webservices developed by GBIF.
 
-## Collaborating around open data
+## Open data
 
 The datasets have been dedicated to the public domain under a [Creative Commons Zero waiver](http://creativecommons.org/publicdomain/zero/1.0/), allowing anyone to use the data without restrictions. By providing the data under such a waiver and in bulk (i.e. the Darwin Core Archive), these now meet [all the criteria for open data](http://opendefinition.org/od/).
 
-Norms
-
-We have also started to publicly document and solve issues with the data and metadata in a GitHub repository (https://github.com/LifeWatchINBO/vis-inland-occurrences/issues) as well as providing the metadata as an easy to read text file (https://github.com/LifeWatchINBO/vis-inland-occurrences/blob/master/paper.md). This not only allows users to be informed of ongoing activities, but also allows them to records issues and contribute suggestions themselves. We hope this creates an open community of data users.
-
 Since its registration with GBIF on 24 December 2013, the dataset has already generated 94 downloads in the last 3 months, covering 21.175.785 records (58 times the size of the datasets).
 
+If you want to explore the data right away, here are the two dataset pages on GBIF:
 
-
-FLORABANK
+* [VIS - Fishes in inland waters in Flanders, Belgium](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f) (362.000 records)
+* [VIS - Fishes in estuarine habitats in Flanders, Belgium](http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4) (80.719 records)
