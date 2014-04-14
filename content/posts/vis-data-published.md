@@ -36,9 +36,9 @@ Both data and metadata are then published as a **Darwin Core Archive**, a zipped
 
 [^3]: You download these files directly from our IPT: [Fishes in inland waters](http://data.inbo.be/ipt/archive.do?r=vis-inland-occurrences) (6MB) & [Fishes in estuarine habitats](http://data.inbo.be/ipt/archive.do?r=vis-estuary-occurrences) (1.2MB)
 
-To increase discoverability[ˆ4], we registered the datasets with the **Global Biodiversity Information Facility (GBIF)**. This not only allows users to [discover the data](http://www.gbif.org/dataset/search?q=vis), but also allows machines to [interface with the data](http://www.gbif.org/developer/occurrence) and [metadata](http://www.gbif.org/developer/registry) via the robust webservices developed by GBIF.
+To increase discoverability[^4], we registered the datasets with the **Global Biodiversity Information Facility (GBIF)**. This not only allows users to [discover the data](http://www.gbif.org/dataset/search?q=vis), but also allows machines to [interface with the data](http://www.gbif.org/developer/occurrence) and [metadata](http://www.gbif.org/developer/registry) via the robust webservices developed by GBIF.
 
-[ˆ4]: Since the registration of the [first dataset](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f/activity) on the 24th of December 2013, the dataset has already generated 125 downloads in the last 3.5 months, covering xxx records (xx times the size of the dataset).
+[^4]: Since the registration of the [first dataset](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f/activity), the dataset has already generated 120 downloads in the last 3.5 months, covering 25.861.296 records (71 times the size of the dataset).
 
 ## Open data
 
