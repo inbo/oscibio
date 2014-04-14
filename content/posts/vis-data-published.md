@@ -3,7 +3,7 @@ Slug: vis-data-published
 Date: 2014-04-14 11:40
 Author: Peter Desmet
 Tags: data publication, GBIF
-Summary: How we used GBIF tools and CC0 to make all species occurrence data from our Fish Information System available to everyone.
+Summary: Making our fish occurrence data available to everyone using GBIF tools and CC0.
 
 ## Introduction
 
