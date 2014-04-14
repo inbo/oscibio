@@ -31,6 +31,9 @@ Inspired by 1) dataset post, 2) vascan and 3) vertnet, we also went for this.
 
 ## Issues
 
+We have also started to publicly document and solve issues with the data and metadata in a GitHub repository (https://github.com/LifeWatchINBO/vis-inland-occurrences/issues) as well as providing the metadata as an easy to read text file (https://github.com/LifeWatchINBO/vis-inland-occurrences/blob/master/paper.md). This not only allows users to be informed of ongoing activities, but also allows them to records issues and contribute suggestions themselves. We hope this creates an open community of data users.
+
+
 * labels
 * assigning
 * 
