@@ -30,21 +30,19 @@ In collaboration with Dimitri Brosens from the [Belgian Biodiversity Platform](h
 
 For each dataset we created an SQL view in the VIS database, expressing all species occurrence information as [Darwin Core terms](http://rs.tdwg.org/dwc/terms/index.htm). Darwin Core is the [international standard for expressing biodiversity data](http://doi.org/10.1371/journal.pone.0029715). This view is then used by our [GBIF Integrated Publishing Toolkit (IPT)](http://data.inbo.be/ipt) to serve the data as a tab-delimited text file.
 
-In addition, we describe the dataset in detail. These metadata are recorded in our IPT in the [Ecological Metadata Language (EML)](http://en.wikipedia.org/wiki/Ecological_Metadata_Language), the international standard for expressing such information. The metadata include information regarding the project, involved parties, sampling methods, and taxonomic, geographic, and temporal scope.
+In addition, we described the datasets in detail. These metadata are recorded in our IPT in the [Ecological Metadata Language (EML)](http://en.wikipedia.org/wiki/Ecological_Metadata_Language), the international standard for expressing such information. The metadata include information regarding the project, involved parties, sampling methods, and taxonomic, geographic, and temporal scope.
 
-Both data and metadata are then published as a **Darwin Core Archive**, a zipped folder containing the standardized files[^3]. Darwin Core Archives are the recommended method for disclosing biodiversity data, allowing users and machines to download, read, and use the data and metadata. Updates to the data are published regularly to our IPT, as new versions of the same Darwin Core Archive.
+Both data and metadata are then published as a **Darwin Core Archive**, a zipped folder containing the standardized files[^3]. Darwin Core Archives are the recommended method for disclosing biodiversity data in bulk, allowing users and machines to download, read, and use the data and metadata. Updates to the data are published regularly to our IPT, as new versions of the same Darwin Core Archive.
 
 [^3]: You download these files directly from our IPT: [Fishes in inland waters](http://data.inbo.be/ipt/archive.do?r=vis-inland-occurrences) (6MB) & [Fishes in estuarine habitats](http://data.inbo.be/ipt/archive.do?r=vis-estuary-occurrences) (1.2MB)
 
-To increase discoverability, we registered the datasets with the **Global Biodiversity Information Facility (GBIF)**. This not only allows users to [discover the data](http://www.gbif.org/dataset/search?q=vis), but also allows machines to [interface with the data](http://www.gbif.org/developer/occurrence) and [metadata](http://www.gbif.org/developer/registry) via the robust webservices developed by GBIF.
+To increase discoverability[ˆ4], we registered the datasets with the **Global Biodiversity Information Facility (GBIF)**. This not only allows users to [discover the data](http://www.gbif.org/dataset/search?q=vis), but also allows machines to [interface with the data](http://www.gbif.org/developer/occurrence) and [metadata](http://www.gbif.org/developer/registry) via the robust webservices developed by GBIF.
+
+[ˆ4]: Since the registration of the [first dataset](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f/activity) on the 24th of December 2013, the dataset has already generated 125 downloads in the last 3.5 months, covering xxx records (xx times the size of the dataset).
 
 ## Open data
 
-The datasets have been dedicated to the public domain under a [Creative Commons Zero waiver](http://creativecommons.org/publicdomain/zero/1.0/), allowing anyone to use the data without restrictions. By providing the data under such a waiver and in bulk (i.e. the Darwin Core Archive), these now meet [all the criteria for open data](http://opendefinition.org/od/).
-
-Since its registration with GBIF on 24 December 2013, the dataset has already generated 94 downloads in the last 3 months, covering 21.175.785 records (58 times the size of the datasets).
-
-If you want to explore the data right away, here are the two dataset pages on GBIF:
+The researchers have been dedicated the datasets to the public domain under a [Creative Commons Zero waiver](http://creativecommons.org/publicdomain/zero/1.0/), allowing anyone to use the data without restrictions. By providing the data under such a waiver and in bulk (i.e. the Darwin Core Archive), these now meet [all the criteria for open data](http://opendefinition.org/od/). Visit the dataset pages to discover and download the data yourself:
 
 * [VIS - Fishes in inland waters in Flanders, Belgium](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f) (362.000 records)
 * [VIS - Fishes in estuarine habitats in Flanders, Belgium](http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4) (80.719 records)
