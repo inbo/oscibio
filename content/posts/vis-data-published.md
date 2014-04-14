@@ -41,7 +41,7 @@ To increase discoverability[^4], we registered the datasets with the **Global Bi
 
 ## Open data
 
-The researchers have been dedicated the datasets to the public domain under a [Creative Commons Zero waiver](http://creativecommons.org/publicdomain/zero/1.0/), allowing anyone to use the data without restrictions. By providing the data under such a waiver and in bulk (i.e. the Darwin Core Archive), these now meet [all the criteria for open data](http://opendefinition.org/od/). Visit the dataset pages to discover and download the data yourself:
+The researchers have dedicated the datasets to the public domain under a [Creative Commons Zero waiver](http://creativecommons.org/publicdomain/zero/1.0/), allowing anyone to use the data without restrictions. By providing the data under such a waiver and in bulk (i.e. the Darwin Core Archive), these now meet [all the criteria for open data](http://opendefinition.org/od/). Visit the dataset pages to discover and download the data yourself:
 
 * [VIS - Fishes in inland waters in Flanders, Belgium](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f) (362.000 records)
 * [VIS - Fishes in estuarine habitats in Flanders, Belgium](http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4) (80.719 records)
