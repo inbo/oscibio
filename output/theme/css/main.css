@@ -151,11 +151,11 @@ h1, h2, h3, h4, h5, h6 {
             padding: 1em 0em;
         }
         .header h2 {
-            width: 60%;
+            width: 50%;
         }
         .header nav {
             text-align: right;
-            width: 40%;
+            width: 50%;
             }
             .header nav ul {
                 list-style-type: none;
@@ -479,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
     }
     .content {
-        margin-top: 0;
+        padding-top: 1em;
     }
     .content h1.title, /* Index title */
     .index time, /* Article date */
