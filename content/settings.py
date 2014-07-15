@@ -8,13 +8,7 @@ SUBTITLE = "We blog about ideas, challenges and technologies related to building
            "an open terrestrial and freshwater observatory in Flanders for the "\
            "LifeWatch research infrastructure."
 AUTHOR = "LifeWatch INBO team"
-DISCLAIMER = "The views expressed on this blog represent the ideas of the author(s) "\
-             "and are not to be considered an INBO or institutional policy. "\
-             "Unless stated otherwise, all content on this <a xmlns:cc=\"http://creativecommons.org/ns#\" "\
-             "href=\"http://lifewatch.inbo.be/blog\" property=\"cc:attributionName\" "\
-             "rel=\"cc:attributionURL\">LifeWatch INBO blog</a> is licensed under a "\
-             "<a rel =\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">"\
-             "Creative Commons Attribution 3.0 Unported License</a>."
+DISCLAIMER = "The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\" href=\"http://lifewatch.inbo.be/blog\">LifeWatch INBO blog</a> is licensed under a <a rel =\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"> Creative Commons Attribution 4.0 International License</a>."
 
 TIMEZONE = "Europe/Paris"
 DEFAULT_LANG = "en"
