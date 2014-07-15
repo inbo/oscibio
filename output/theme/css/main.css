@@ -55,13 +55,14 @@ textarea {
 
 /* ========== h5bp: My custom styles ========== */
 
-/* Colourco.de
-    a-blue: #0182C3;
-    background/hover-blue: #086A9B;
-    text-black: #313131;
-    text-gray: #767676;
-    hover-gray: #4E4E4E;
-    border-gray: #CCCCCC;
+/* House style
+    main, a, footer bg (pink): #C04384;
+    secondary, hover (dark pink): #843860;
+    footer-text (light pink): #E4A0C3;
+    text, header (black): #313131;
+    text (gray): #767676;
+    hover (gray): #4E4E4E;
+    border (gray): #CCCCCC;
 */
 
 html {
@@ -75,12 +76,12 @@ body {
 }
 
 a {
-    color: #0182C3;
+    color: #C04384;
     text-decoration: none;
     }
     a:hover {
         border-bottom: 1px dotted currentcolor;
-        color: #086A9B;
+        color: #843860;
     }
     a[href^="https://github.com"],
     a[href^="https://twitter.com"],
@@ -118,8 +119,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header { /* On body > .container > div */
-    background-color: #D2CB00;
-    background-color: rgba(207, 199, 0, 0.9); /* Equivalent of the #D2CB00; */
+    background-color: #313131;
+    background-color: rgba(30, 30, 30, 0.9); /* Equivalent of the #313131; */
     height: 2.5em;
     left: 0;
     position: fixed;
@@ -128,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     }
     .header a {
-        color: #313131;
+        color: white;
     }
     .header header {
         font-family: "Noto Sans", sans-serif;
@@ -169,17 +170,6 @@ h1, h2, h3, h4, h5, h6 {
                     .header nav li.active a {
                         border-bottom: 1px dotted currentcolor;
                     }
-    .header div { /* Header logo */
-        background: #A39E5D url("../img/inbo-colors.png") repeat-y left;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: calc((100% - 40em - 4em)/2); /* Full size - width header - padding header, devided by two */ 
-        }
-        .header div img {
-            margin-left: 60px; /* For background-image */ 
-        }
 
 .content { /* On body > .container > div */
     line-height: 1.6em;
@@ -377,22 +367,22 @@ h1, h2, h3, h4, h5, h6 {
         }
 
 .footer { /* On body > .container > div */
-    background-color: #086A9B;
-    border-top: solid 0.5em #0182C3;
+    background-color: #C04384;
+    border-top: solid 0.5em #843860;
     bottom: 0;
     height: 13em;
     position: absolute;
     width: 100%;
     }
     .footer a {
-        color: #81D5FF;
+        color: white;
         }
         .footer a:hover {
             border: none;
-            color: white;
+            text-decoration: underline;
         }
     .footer footer {
-        color: white;
+        color: #E4A0C3;
         font-family: "Noto Sans", sans-serif;
         line-height: 1em;
         margin: 0 auto;
@@ -405,8 +395,8 @@ h1, h2, h3, h4, h5, h6 {
             width: 33%;
             }
             .footer div img {
-                margin-top: 1em;
-                width: 100%;
+                margin-top: 2em;
+                width: 90%;
             }
             .footer div h2 {
                 font-size: 0.8em;
@@ -454,7 +444,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Medium size */
 
     .subtitle, /* Index subtitle */
-    .header div, /* Header logo */
     .index p, /* Article description */
     .footer img, /* Footer logo */
     .footer p.disclaimer { /* Footer disclaimer */
