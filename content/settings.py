@@ -22,12 +22,12 @@ SUMMARY_MAX_LENGTH = 0
 
 # Directory settings
 PATH = ""
-ARTICLE_DIR = "posts"
-PAGE_DIR = "pages"
-STATIC_PATHS = (
-    ("images"),
-    ("files"),
-)
+ARTICLE_PATHS = ["posts"]
+PAGE_PATHS = ["pages"]
+STATIC_PATHS = [
+    "images",
+    "files"
+]
 OUTPUT_PATH = "../output" # Sibling directory of `content`
 DELETE_OUTPUT_DIRECTORY = False
 OUTPUT_RETENTION = (
