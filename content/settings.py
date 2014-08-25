@@ -22,12 +22,12 @@ SUMMARY_MAX_LENGTH = 0
 
 # Directory settings
 PATH = ""
-ARTICLE_DIR = "posts"
-PAGE_DIR = "pages"
-STATIC_PATHS = (
-    ("images"),
-    ("files"),
-)
+ARTICLE_PATHS = ["posts"]
+PAGE_PATHS = ["pages"]
+STATIC_PATHS = [
+    "images",
+    "files"
+]
 OUTPUT_PATH = "../output" # Sibling directory of `content`
 DELETE_OUTPUT_DIRECTORY = False
 OUTPUT_RETENTION = (
@@ -36,6 +36,7 @@ OUTPUT_RETENTION = (
     ("humans.txt"),
     ("robots.txt"),
 )
+CACHE_CONTENT = False
 
 # URLs
 ARTICLE_URL = "posts/{slug}.html" # Both slug and slug.html will work
@@ -51,6 +52,8 @@ CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
 TAG_FEED_ATOM = None
 TAG_FEED_RSS = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 TRANSLATION_FEED_ATOM = None
 TRANSLATION_FEED_RSS = None
 
