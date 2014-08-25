@@ -36,6 +36,7 @@ OUTPUT_RETENTION = (
     ("humans.txt"),
     ("robots.txt"),
 )
+CACHE_CONTENT = False
 
 # URLs
 ARTICLE_URL = "posts/{slug}.html" # Both slug and slug.html will work
