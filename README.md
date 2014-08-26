@@ -24,5 +24,5 @@ Make sure you have cloned the `lifewatch-blog` and `eurasian-spoonbill` reposito
 
 1. Login to the production server.
 2. Go to the `lifewatch-blog` directory.
-3. Use `git pull`.
+3. Use `git pull https://github.com/LifeWatchINBO/lifewatch-blog master`.
 4. Verify on <http://lifewatch.inbo.be/blog>.
