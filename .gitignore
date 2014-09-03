@@ -1,2 +1,4 @@
 .DS_Store
 *.pyc
+py-env/
+test-output/

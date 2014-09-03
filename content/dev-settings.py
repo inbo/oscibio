@@ -5,7 +5,10 @@ import sys
 sys.path.append('.')
 from settings import *
 
-SITEURL = "http://localhost/pelican/lifewatch"
+SITEURL = "http://localhost:8080"
+
+# Directory settings
+OUTPUT_PATH = "../test-output"
 
 # Reading settings
 DEFAULT_PAGINATION = None # To test pagination
