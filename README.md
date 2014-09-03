@@ -1,17 +1,56 @@
 This repository contains the content and settings for the [LifeWatch INBO blog](http://lifewatch.inbo.be/blog). It is generated into a static website with [Pelican](http://docs.getpelican.com/en/3.1.1/).
 
-## Instructions
+## Installation instructions
 
-Make sure you have cloned the `lifewatch-blog` and `eurasian-spoonbill` repository to the same local directory. The latter one is the theme repository and is only necessary if you want to generate output.
+On your local computer, make sure you have cloned the `lifewatch-blog` and `eurasian-spoonbill` repository to the same directory. The latter one is the theme of the blog and required to generate the correct output.
+
+### Create virtual Python environment
+
+If not yet installed, install `virtualenv` first: `sudo pip install virtualenv`.
+
+```shell
+cd lifewatch-blog
+virtualenv py-env --python=python2.7
+source py-env/bin/activate
+pip install pelican
+pip install markdown
+```
+
+### Create test-output directory
+
+```shell
+mkdir test-output
+```
+
+### Start simple server
+
+```shell
+cd test-output
+python -m SimpleHTTPServer 8080
+```
+
+Go to <http://localhost:8080> for the test website. Use the publishing instructions to generate the website.
+
+### Activate virtual Python environment
+
+Could be done in a new terminal window.
+
+```shell
+.. cd
+source py-env/bin/activate
+```
+
+## Publishing instructions
 
 ### Write and ask feedback
 
-1. Write content on your local `dev` branch.
-2. Optional: test locally with `pelican -s dev-settings.py -o /path/to/output`.
-3. Push your commits to GitHub.
-4. Ask for feedback via a pull request (`dev` -> `master`).
-5. Incorporate feedback.
-6. Update the post date.
+1. Go to `content`
+2. Write content on your local `dev` branch.
+3. Optional: test locally with `pelican -s dev-settings.py` which will generate the website in `test-output` at <http://localhost:8080>.
+4. Push your commits to GitHub.
+5. Ask for feedback via a pull request (`dev` -> `master`).
+6. Incorporate feedback.
+7. Update the post date.
 
 ### Generate output
 
