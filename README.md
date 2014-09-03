@@ -1,3 +1,5 @@
+# LifeWatch INBO blog
+
 This repository contains the content and settings for the [LifeWatch INBO blog](http://lifewatch.inbo.be/blog). It is generated into a static website with [Pelican](http://docs.getpelican.com/en/3.1.1/).
 
 ## Installation instructions
