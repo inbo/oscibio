@@ -1,4 +1,4 @@
-Title: 440.000+ fish occurrences are now available as open data
+Title: 440,000+ fish occurrences are now available as open data
 Slug: vis-data-published
 Date: 2014-04-14 11:40
 Author: Peter Desmet
@@ -7,7 +7,7 @@ Summary: Making our fish occurrence data available to everyone using GBIF tools 
 
 ## Introduction
 
-In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory[^1], we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of [GBIF tools](http://www.gbif.org/publishingdata/summary) to standardize, document, and publish our data. One of the systems[^2] that we have just made available in such a way is the **Fish Information System (VIS)**, releasing more than 440.000 fish occurrences as [two datasets](http://www.gbif.org/dataset/search?q=vis) into the public domain, where they can be used by anyone.
+In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory[^1], we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of [GBIF tools](http://www.gbif.org/publishingdata/summary) to standardize, document, and publish our data. One of the systems[^2] that we have just made available in such a way is the **Fish Information System (VIS)**, releasing more than 440,000 fish occurrences as [two datasets](http://www.gbif.org/dataset/search?q=vis) into the public domain, where they can be used by anyone.
 
 [^1]: Such as the [bird tracking network](http://lifewatch.inbo.be/blog/tag/bird-tracking.html).
 
@@ -43,5 +43,5 @@ To increase discoverability[^4], we registered the datasets with the **Global Bi
 
 The researchers have dedicated the datasets to the public domain under a [Creative Commons Zero waiver](http://creativecommons.org/publicdomain/zero/1.0/), allowing anyone to use the data without restrictions. By providing the data under such a waiver and in bulk (i.e. the Darwin Core Archive), these now meet [all the criteria for open data](http://opendefinition.org/od/). Visit the dataset pages to discover and download the data yourself:
 
-* [VIS - Fishes in inland waters in Flanders, Belgium](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f) (362.000 records)
-* [VIS - Fishes in estuarine waters in Flanders, Belgium](http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4) (80.719 records)
+* [VIS - Fishes in inland waters in Flanders, Belgium](http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f) (362,000 records)
+* [VIS - Fishes in estuarine waters in Flanders, Belgium](http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4) (80,719 records)
