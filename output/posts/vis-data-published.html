@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>440.000+ fish occurrences are now available as open data - LifeWatch INBO</title>
+        <title>400,000+ fish occurrences are now available as open data - LifeWatch INBO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
@@ -40,10 +40,10 @@
 <article>
 	<section class="single">
         <header>
-            <h1>440.000+ fish occurrences are now available as open data</h1>
+            <h1>400,000+ fish occurrences are now available as open data</h1>
         </header>
         <footer>
-            <time datetime="2014-04-14T11:40:00" pubdate>April 14, 2014</time>
+            <time datetime="2014-04-14T11:40:00+02:00" pubdate>April 14, 2014</time>
             <address class="vcard">
                 By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/peter-desmet.html">Peter Desmet</a>
             </address>
@@ -54,7 +54,7 @@
         </footer>
         <div>
             <h2>Introduction</h2>
-<p>In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of <a href="http://www.gbif.org/publishingdata/summary">GBIF tools</a> to standardize, document, and publish our data. One of the systems<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> that we have just made available in such a way is the <strong>Fish Information System (VIS)</strong>, releasing more than 440.000 fish occurrences as <a href="http://www.gbif.org/dataset/search?q=vis">two datasets</a> into the public domain, where they can be used by anyone.</p>
+<p>In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of <a href="http://www.gbif.org/publishingdata/summary">GBIF tools</a> to standardize, document, and publish our data. One of the systems<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> that we have just made available in such a way is the <strong>Fish Information System (VIS)</strong>, releasing more than 400,000<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup> fish occurrences as <a href="http://www.gbif.org/dataset/search?q=vis">two datasets</a> into the public domain, where they can be used by anyone.</p>
 <h2>Background</h2>
 <p>The <a href="http://vis.milieuinfo.be">Fish Information System</a> is a database set up by the INBO to monitor the status of fishes and their habitats in Flanders, Belgium. It contains data regarding occurrences, stocks, pollutants, indexes, and reintroductions. The consolidated database was set up in 2001, but sampling has been going on since 1992. The data are used to calculate the EQR (Ecological Quality Ratio) in the framework of the EU water directive and Natura2000, as well as to provide updated information for the Flemish red list of freshwater fishes.</p>
 <p>Although summarized data are publicly accessible to users via <a href="http://vis.milieuinfo.be">http://vis.milieuinfo.be</a>, these cannot be accessed via a webservice and do not meet the <a href="http://opendefinition.org">criteria for open data</a> we strive for.</p>
@@ -64,13 +64,13 @@
 <p>In collaboration with Dimitri Brosens from the <a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a> and the involved researchers, we published the data as two datasets: <a href="http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f">one for inland waters</a> and <a href="http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4">one for estuarine waters</a>.</p>
 <p>For each dataset we created an SQL view in the VIS database, expressing all species occurrence information as <a href="http://rs.tdwg.org/dwc/terms/index.htm">Darwin Core terms</a>. Darwin Core is the <a href="http://doi.org/10.1371/journal.pone.0029715">international standard for expressing biodiversity data</a>. This view is then used by our <a href="http://data.inbo.be/ipt">GBIF Integrated Publishing Toolkit (IPT)</a> to serve the data as a tab-delimited text file.</p>
 <p>In addition, we described the datasets in detail. These metadata are recorded in our IPT in the <a href="http://en.wikipedia.org/wiki/Ecological_Metadata_Language">Ecological Metadata Language (EML)</a>, the international standard for expressing such information. The metadata include information regarding the project, involved parties, sampling methods, and taxonomic, geographic, and temporal scope.</p>
-<p>Both data and metadata are then published as a <strong>Darwin Core Archive</strong>, a zipped folder containing the standardized files<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>. Darwin Core Archives are the recommended method for disclosing biodiversity data in bulk, allowing users and machines to download, read, and use the data and metadata. Updates to the data are published regularly to our IPT, as new versions of the same Darwin Core Archive.</p>
-<p>To increase discoverability<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>, we registered the datasets with the <strong>Global Biodiversity Information Facility (GBIF)</strong>. This not only allows users to <a href="http://www.gbif.org/dataset/search?q=vis">discover the data</a>, but also allows machines to <a href="http://www.gbif.org/developer/occurrence">interface with the data</a> and <a href="http://www.gbif.org/developer/registry">metadata</a> via the robust webservices developed by GBIF.</p>
+<p>Both data and metadata are then published as a <strong>Darwin Core Archive</strong>, a zipped folder containing the standardized files<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>. Darwin Core Archives are the recommended method for disclosing biodiversity data in bulk, allowing users and machines to download, read, and use the data and metadata. Updates to the data are published regularly to our IPT, as new versions of the same Darwin Core Archive.</p>
+<p>To increase discoverability<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>, we registered the datasets with the <strong>Global Biodiversity Information Facility (GBIF)</strong>. This not only allows users to <a href="http://www.gbif.org/dataset/search?q=vis">discover the data</a>, but also allows machines to <a href="http://www.gbif.org/developer/occurrence">interface with the data</a> and <a href="http://www.gbif.org/developer/registry">metadata</a> via the robust webservices developed by GBIF.</p>
 <h2>Open data</h2>
 <p>The researchers have dedicated the datasets to the public domain under a <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero waiver</a>, allowing anyone to use the data without restrictions. By providing the data under such a waiver and in bulk (i.e. the Darwin Core Archive), these now meet <a href="http://opendefinition.org/od/">all the criteria for open data</a>. Visit the dataset pages to discover and download the data yourself:</p>
 <ul>
-<li><a href="http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f">VIS - Fishes in inland waters in Flanders, Belgium</a> (362.000 records)</li>
-<li><a href="http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4">VIS - Fishes in estuarine waters in Flanders, Belgium</a> (80.719 records)</li>
+<li><a href="http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f">VIS - Fishes in inland waters in Flanders, Belgium</a> (359,262 records)</li>
+<li><a href="http://www.gbif.org/dataset/274a36be-0626-41c1-a757-3064e05811a4">VIS - Fishes in estuarine waters in Flanders, Belgium</a> (44,694 records)</li>
 </ul>
 <div class="footnote">
 <hr />
@@ -82,10 +82,13 @@
 <p><a href="http://doi.org/10.3897/phytokeys.12.2849">Florabank1</a>, one of our other systems, has been available since August 2011. It currently holds over <a href="http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1">3.5 million plant occurrence records</a>.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>You download these files directly from our IPT: <a href="http://data.inbo.be/ipt/archive.do?r=vis-inland-occurrences">Fishes in inland waters</a> (6MB) &amp; <a href="http://data.inbo.be/ipt/archive.do?r=vis-estuarine-occurrences">Fishes in estuarine waters</a> (1.2MB)&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>This was incorrectly reported as 440.000 records before. The inflated number of occurrence records was caused by a import issue in the estuarine dataset.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>Since the registration of the <a href="http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f/activity">first dataset</a>, the dataset has already generated 120 downloads in the last 3.5 months, covering 25.861.296 records (71 times the size of the dataset).&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>You download these files directly from our IPT: <a href="http://data.inbo.be/ipt/archive.do?r=vis-inland-occurrences">Fishes in inland waters</a> (6MB) &amp; <a href="http://data.inbo.be/ipt/archive.do?r=vis-estuarine-occurrences">Fishes in estuarine waters</a> (1.2MB)&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Since the registration of the <a href="http://www.gbif.org/dataset/823dc56e-f987-495c-98bf-43318719e30f/activity">first dataset</a>, the dataset has already generated 120 downloads in the last 3.5 months, covering 25.861.296 records (71 times the size of the dataset).&#160;<a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
