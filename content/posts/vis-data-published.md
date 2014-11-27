@@ -2,7 +2,7 @@ Title: 400,000+ fish occurrences are now available as open data
 Slug: vis-data-published
 Date: 2014-04-14 11:40
 Author: Peter Desmet
-Tags: GBIF, open data
+Tags: fish, GBIF, open data
 Summary: Making our fish occurrence data available to everyone using GBIF tools and CC0.
 
 ## Introduction
