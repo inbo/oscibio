@@ -2,7 +2,7 @@ Title: Using CartoDB to visualize two months in the life of gull Eric
 Slug: tracking-eric
 Date: 2013-10-01 11:15
 Author: Peter Desmet
-Tags: bird tracking, visualization, CartoDB, tutorial, open data
+Tags: birds, bird tracking, visualization, CartoDB, tutorial, open data
 Summary: Exploring different ways to visualize and analyze tracking data with CartoDB.
 
 As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS trackers. The project[^1] is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the Western Marsh Harrier) in collaboration with the [VLIZ](http://www.vliz.be/EN/INTRO) and [UvA-BiTS](http://www.uva-bits.nl/).

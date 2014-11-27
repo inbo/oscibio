@@ -2,7 +2,7 @@ Title: What is the average speed of seagull Eric?
 Slug: tracking-eric-speed
 Date: 2013-12-01 11:00
 Author: Peter Desmet
-Tags: bird tracking, visualization, CartoDB, tutorial
+Tags: birds, bird tracking, visualization, CartoDB, tutorial
 Summary: ...
 Status: draft
 
