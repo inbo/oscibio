@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Gull tracking data from the 2013 breeding season published as open data - LifeWatch INBO</title>
+        <title>23 winters of waterbird counts published as open data - LifeWatch INBO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
@@ -40,29 +40,34 @@
 <article>
 	<section class="single">
         <header>
-            <h1>Gull tracking data from the 2013 breeding season published as open data</h1>
+            <h1>23 winters of waterbird counts published as open data</h1>
         </header>
         <footer>
-            <time datetime="2014-07-22T15:20:00+02:00" pubdate>July 22, 2014</time>
+            <time datetime="2014-11-27T16:00:00+01:00" pubdate>November 27, 2014</time>
             <address class="vcard">
                 By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/peter-desmet.html">Peter Desmet</a>
             </address>
             <ul class="tags">Tagged: 
                 <li><a href="http://lifewatch.inbo.be/blog/tag/birds.html">birds</a></li>
-                <li><a href="http://lifewatch.inbo.be/blog/tag/bird-tracking.html">bird tracking</a></li>
                 <li><a href="http://lifewatch.inbo.be/blog/tag/open-data.html">open data</a></li>
                 <li><a href="http://lifewatch.inbo.be/blog/tag/gbif.html">GBIF</a></li>
             </ul>
         </footer>
         <div>
-            <p>We have written about our bird tracking network <a href="http://lifewatch.inbo.be/blog/tag/bird-tracking.html">before</a> - the network we set up with the Flanders Marine Institute (VLIZ) to track large birds with <a href="http://www.uva-bits.nl">advanced GPS trackers</a> - showing how the data can be <a href="http://lifewatch.inbo.be/blog/posts/jcd-2014.html">visualized with CartoDB</a> and releasing a small sample dataset of the famous <a href="http://lifewatch.inbo.be/blog/posts/tracking-eric.html">Lesser Black-backed Gull Eric</a>.</p>
-<p>This tracking network is collecting rich, fascinating, and beautiful data: data which potential we do not want to limit to our research questions and needs. This is why we are happy to announce that we have just published <strong>all gull tracking data from the 2013 breeding season</strong> as open data, available to anyone!</p>
-<iframe width="100%" height="600" frameborder="0" src="//lifewatch-inbo.cartodb.com/viz/a12cbfc4-0e4b-11e4-8aa1-0e230854a1cb/embed_map?title=false&description=false&search=false&shareable=true&cartodb_logo=false&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=SELECT%0A%09t.cartodb_id%2C%0A%09t.the_geom%2C%0A%09t.the_geom_webmercator%2C%0A%09CASE%0A%09%09WHEN%20d.scientific_name%20%3D%20'Larus%20fuscus'%20THEN%201%0A%09%09WHEN%20d.scientific_name%20%3D%20'Larus%20argentatus'%20THEN%202%0A%09END%20AS%20species_number%0AFROM%0A%09bird_tracking%20AS%20t%0A%09LEFT%20JOIN%20bird_tracking_devices%20AS%20d%0A%09ON%20t.device_info_serial%20%3D%20d.device_info_serial%0AWHERE%0A%09t.userflag%20%3D%20false%0A%09AND%20d.project_shortname%20%3D%20'gull'&sw_lat=51.102834783597565&sw_lon=2.485407292842865&ne_lat=51.4494738511512&ne_lon=3.6932167410850525" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <p>We have just published another core data system of the Research Institute for Nature and Forest (INBO) as open data: <strong>Watervogels - Wintering waterbirds in Flanders, Belgium</strong>. The dataset joins the systems <a href="http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1">Florabank1</a> and <a href="http://www.gbif.org/dataset/search?q=vis+-+Fishes">Fish Information System (VIS)</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, as well as <a href="http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b">numerous other datasets</a> that have been published and registered via our <a href="http://data.inbo.be/ipt">GBIF Integrated Publishing Toolkit</a>. Special thanks to principal investigator Koen Devos (INBO), data liaison officer Dimitri Brosens (<a href="http://www.biodiversity.be">Belgian Biodiversity Platform</a>) and the many volunteer observers to make this possible.</p>
+<p><a href="http://www.gbif.org/dataset/7f9eb622-c036-44c6-8be9-5793eaa1fa1e">Watervogels - Wintering waterbirds in Flanders, Belgium</a> contains more than 80,000 bird counts, covering almost <strong>640,000 observations</strong> and 37 million individuals for the period 1991-2014. It includes information on 170 species in nearly 1,200 wetland sites. The aim of these bird counts is to gather information on the size, distribution and long term trends of wintering waterbird populations in Flanders. These data are also used to assess the importance of individual sites for waterbirds, using quantitative criteria. Furthermore, the waterbird counts contribute to international monitoring programs, such as the International Waterbird Census (coordinated by Wetlands International) and fulfil some of the objectives of the European Bird Directive, the Ramsar Convention, and the Agreement on the Conservation of African-Eurasian Migratory Waterbirds (AEWA). The data are released in bulk as open data. See the dataset metadata for contact information, scope and methodology. [<a href="https://github.com/LifeWatchINBO/watervogels-occurrences/blob/master/metadata.md">from the metadata</a>]</p>
+<script src="https://embed.github.com/view/geojson/LifeWatchINBO/watervogels-occurrences/master/localities/localities.geojson?width=768"></script>
 
-<p>The <a href="http://www.gbif.org/dataset/83e20573-f7dd-4852-9159-21566e1e691e">dataset</a> contains over 440,000 occurrences (visualized above), recorded by 27 GPS trackers mounted on 22 <a href="http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull">Lesser Black-backed Gulls</a> and 5 <a href="http://en.wikipedia.org/wiki/European_Herring_Gull">Herring Gulls</a> breeding at the Belgian coast. The metadata provides extensive information regarding the sampling protocol, taxonomic, geographic, and temporal scope, and involved parties.</p>
-<p>As with all our species occurrence data, we make use of GBIF tools (see <a href="http://lifewatch.inbo.be/blog/posts/vis-data-published.html">this blog post</a>) to document, standardize, and publish the data. In addition, we created a GitHub repository where you can <a href="https://github.com/LifeWatchINBO/bird-tracking-gull-occurrences/issues">report issues</a> or get the <a href="https://github.com/LifeWatchINBO/bird-tracking-gull-occurrences/blob/master/paper.md">metadata in Markdown format</a>. We also opened up access to the tracking data via our <a href="https://github.com/LifeWatchINBO/bird-tracking/blob/master/cartodb/README.md">CartoDB API</a>.</p>
-<p>We have dedicated the data to the public domain under a <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero waiver</a>, allowing anyone to use these without restrictions. We do appreciate it however if you provide a link to the <a href="http://dataset.inbo.be/bird-tracking-gull-occurrences">original dataset</a> when possible and we are always interested to see what you did with the data. Leave a comment, reach us at <a href="https://twitter.com/LifeWatchINBO">LifeWatchINBO</a> or see our contact information in the metadata.</p>
-<p>We hope by working openly we can build a vibrant community around these data and data we plan to publish in the future. Go exploring at <a href="http://www.gbif.org/dataset/83e20573-f7dd-4852-9159-21566e1e691e">Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast</a>.</p>
+<p><em>Map of the wetland locations in Flanders in which the waterbirds are counted each winter.</em></p>
+<p>As usual, issues with the data or dataset can be <a href="https://github.com/LifeWatchINBO/watervogels-occurrences/issues">reported via GitHub</a>, where one can also find a <a href="https://github.com/LifeWatchINBO/watervogels-occurrences/blob/master/metadata.md">Markdown version of the extensive metadata</a>. We have dedicated the data to the public domain under a <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero waiver</a>, allowing anyone to use these without restrictions. We do appreciate it however if you read and follow <a href="https://github.com/LifeWatchINBO/norms-for-data-use">these norms for data use</a> and provide a link to the original dataset (<a href="http://dataset.inbo.be/watervogels-occurrences">http://dataset.inbo.be/watervogels-occurrences</a>) when possible. We are always interested to see what you did with the data. Leave a comment, reach us at <a href="https://twitter.com/LifeWatchINBO">LifeWatchINBO</a> or see our contact information in the metadata.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The publication of the Fish Information System (VIS) was announced in a <a href="http://lifewatch.inbo.be/blog/posts/vis-data-published.html">blog post earlier this year</a>.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
         </div>
     </section>
     <section class="comments">
