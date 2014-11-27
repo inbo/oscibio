@@ -7,7 +7,7 @@ Summary: Making our fish occurrence data available to everyone using GBIF tools 
 
 ## Introduction
 
-In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory[^1], we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of [GBIF tools](http://www.gbif.org/publishingdata/summary) to standardize, document, and publish our data. One of the systems[^2] that we have just made available in such a way is the **Fish Information System (VIS)**, releasing more than 400,000[^3] fish occurrences as [two datasets](http://www.gbif.org/dataset/search?q=vis) into the public domain, where they can be used by anyone.
+In addition to the new infrastructure we are setting up for our terrestrial and freshwater observatory[^1], we are also integrating existing systems of the INBO into the LifeWatch infrastructure. As the majority of our systems contain species occurrence data, we are making use of [GBIF tools](http://www.gbif.org/publishingdata/summary) to standardize, document, and publish our data. One of the systems[^2] that we have just made available in such a way is the **Fish Information System (VIS)**, releasing more than 400,000[^3] fish occurrences as [two datasets](http://www.gbif.org/dataset/search?q=vis+-+Fishes) into the public domain, where they can be used by anyone.
 
 [^1]: Such as the [bird tracking network](http://lifewatch.inbo.be/blog/tag/bird-tracking.html).
 
