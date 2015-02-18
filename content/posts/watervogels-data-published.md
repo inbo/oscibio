@@ -1,4 +1,4 @@
-Title: 23 winters of waterbird counts published as open data
+Title: 22 winters of waterbird counts published as open data
 Slug: watervogels-data-published
 Date: 2014-11-27 16:00
 Author: Peter Desmet
