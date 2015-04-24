@@ -38,7 +38,7 @@ Go to <http://localhost:8080> for the test website. Use the publishing instructi
 Could be done in a new terminal window.
 
 ```shell
-.. cd
+cd ..
 source py-env/bin/activate
 ```
 
