@@ -1,4 +1,4 @@
-Title: Breeding birds atlas 2000-2002 published as open data
+Title: Breeding birds atlas 2000-2002 is published as open data
 Slug: broedvogels-data-published
 Date: 2015-05-08 14:10
 Author: Peter Desmet

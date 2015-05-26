@@ -3,7 +3,7 @@ Slug: open-science-course
 Date: 2013-08-06 16:00
 Author: Peter Desmet
 Tags: news, open data
-Summary: Reporting on a course on open access, open data, and open research.
+Summary: We're following a course on open access, open data, and open research.
 
 We are following an [online course on open science](https://p2pu.org/en/courses/5/open-science-an-introduction/), which is hosted on P2PU and organized by [Creative Commons](http://creativecommons.org/). The course has 3 sessions:
 
