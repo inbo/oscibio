@@ -1,4 +1,4 @@
-Title: Gull tracking data from the 2013 breeding season published as open data
+Title: Gull tracking data from the 2013 breeding season are published as open data
 Slug: bird-tracking-data-published
 Date: 2014-07-22 15:20
 Author: Peter Desmet
