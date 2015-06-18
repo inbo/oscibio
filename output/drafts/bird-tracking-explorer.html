@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bird tracking explorer released - LifeWatch INBO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
+
+        <link rel="shortcut icon" href="http://lifewatch.inbo.be/blog/theme/img/favicon.ico">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/normalize.css">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/main.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400">
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome.min.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome-ie7.min.css">
+        <![endif]-->
+        <script src="http://lifewatch.inbo.be/blog/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <link href="http://lifewatch.inbo.be/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="LifeWatch INBO Full RSS feed" />
+    </head>
+    <body>
+    <div class="container">
+        <!-- Content -->
+        <div class="header">
+            <header class="clearfix">
+                <h2><a href="http://lifewatch.inbo.be/blog">LifeWatch INBO</a></h2>
+                <nav>
+                    <ul>
+                        <li><a href="http://lifewatch.inbo.be/blog/pages/about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="content">
+<article>
+	<section class="single">
+        <header>
+            <h1>Bird tracking explorer released</h1>
+        </header>
+        <footer>
+            <time datetime="2015-06-06T13:00:00+02:00" pubdate>June 06, 2015</time>
+            <address class="vcard">
+                By <a class="url fn" href="http://lifewatch.inbo.be/blog/author/bart-aelterman.html">Bart Aelterman</a>
+            </address>
+            <ul class="tags">Tagged: 
+                <li><a href="http://lifewatch.inbo.be/blog/tag/birds.html">birds</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/bird-tracking.html">bird tracking</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/visualization.html">visualization</a></li>
+                <li><a href="http://lifewatch.inbo.be/blog/tag/software.html">software</a></li>
+            </ul>
+        </footer>
+        <div>
+            <p>We are happy to announce that the second version of our <a href="http://lifewatchinbo.github.io/bird-tracking/explorer/index.html">bird tracking explorer</a> was released. The bird tracking explorer allows you to explore the birds that we are tracking in our <a href="http://www.lifewatch.be/birds">LifeWatch bird tracking project</a>. You select a bird and view its tracks on the map. The heatmap below the map gives you an idea of the activity of the bird over time. Days when the bird was more active (meaning it travelled more kilometers that day) are darker compared to other days.</p>
+<p><img alt="The bird tracking explorer" src="../images/bird-tracking-explorer-screenshot.png" title="=300x" /></p>
+<p>While this already gives you an overview of the general activity of and areas visited by the bird, you can dive deeper in the data by clicking on a day or month label of the heatmap. This will cause the map to refresh and only show tracks of the date(s) you selected. Additionally, two charts will be drawn at the bottom of the page. The first one is a more detailed heatmap showing the activity of the bird by hour which allows you to investigate its daily activity. The second one is a line chart that displays the same data for one day.</p>
+<p><img alt="Detailed charts are shown when a day or month is selected" src="../images/bird-tracking-explorer-detail-charts.png" title="=300x" /></p>
+<p>Two buttons allow you to switch between two different metrics. The first one is the distance travelled which will highlight hours when the bird was active. The second one shows the distance from the birds catch location. This can highlight interesting patterns in the birds behaviour. E.g. the image below shows how gull Eric is travelling to a location at about 70 kilometers distance from his colony in the afternoon for 5 consecutive days (which happened to be a <a href="http://www.standaard.be/cnt/dmf20130618_00627212">potato chips fabric</a>).</p>
+<p><img alt="Furthest distance from catch location heatmap" src="../images/bird-tracking-eric-potato-chips.png" title="=250x" /></p>
+<p>The bird tracking explorer currently contains data from 63 individuals (44 lesser black-backed gulls, 16 herring gulls and 3 western marsh harriers). Depending on the individual, tracks are available from May 2013 until August 2014. That includes the winter period during which certain birds migrate to Africa as is shown for western marsh harrier Jozef below.</p>
+<p><img alt="Jozef migrating to Africa" src="../images/bird-tracking-jozef-migrating.png" title="=350x" /></p>
+<h2>Technologies used</h2>
+<h3>The CartoDB SQL API</h3>
+<p>We have blogged about CartoDB and how we use it to create interactive maps <a href="http://lifewatch.inbo.be/blog/posts/jcd-2014.html">before</a>. Perhaps a less known feature of CartoDB is its <a href="http://docs.cartodb.com/cartodb-platform/sql-api.html">SQL API</a> that allows you to query your CartoDB datasets. The API accepts plain SQL statements which gives an enormous flexibility.</p>
+<p>For instance, the following query fetches bird metadata from our <a href="https://inbo.cartodb.com/u/lifewatch/tables/bird_tracking_devices/public">public <code>bird tracking devices</code> dataset</a>. Note that we can even join multiple CartoDB datasets using the API.</p>
+<div class="highlight"><pre>SELECT d.bird_name,
+  d.catch_location,
+  d.ring_code,
+  d.device_info_serial,
+  d.sex,
+  d.scientific_name,
+  d.longitude,
+  d.latitude,
+  d.tracking_started_at,
+  t.start_date,
+  t.end_date
+FROM bird_tracking_devices AS d
+INNER JOIN (
+  SELECT device_info_serial,
+    min(date_time) AS start_date,
+    max(date_time) AS end_date
+  FROM bird_tracking
+  WHERE userflag IS FALSE
+  GROUP BY device_info_serial
+) AS t ON d.device_info_serial = t.device_info_serial
+ORDER BY d.scientific_name, d.bird_name
+</pre></div>
+
+
+<p>The SQL API is accessible at <code>https://&lt;your account&gt;.cartodb.com/api/v2/sql</code> and the SQL query should be added with the <code>?q</code> parameter. The API will return the <a href="https://lifewatch.cartodb.com/api/v2/sql?q=SELECT%20d.bird_name,%20d.catch_location,%20d.ring_code,%20d.device_info_serial,%20d.sex,%20d.scientific_name,%20d.longitude,%20d.latitude,%20d.tracking_started_at,%20t.start_date,%20t.end_date%20FROM%20bird_tracking_devices%20AS%20d%20INNER%20JOIN%20(SELECT%20device_info_serial,%20min(date_time)%20AS%20start_date,%20max(date_time)%20AS%20end_date%20FROM%20bird_tracking%20WHERE%20userflag%20IS%20FALSE%20GROUP%20BY%20device_info_serial)%20AS%20t%20ON%20d.device_info_serial%20=%20t.device_info_serial%20ORDER%20BY%20d.scientific_name,%20d.bird_name">results of that query as JSON</a>.</p>
+<p>The bird tracking explorer uses this API to retrieve the data requested by the user.</p>
+<h3>JavaScript libraries</h3>
+<p>We have used a couple of open source JavaScript libraries to render the map and charts and to interact with the CartoDB SQL API.</p>
+<ul>
+<li><a href=""><strong>jQuery</strong></a>: Used to interact with the SQL API.</li>
+<li><a href="http://docs.cartodb.com/cartodb-platform/cartodb-js.html"><strong>CartoDB.js</strong></a>: This is a CartoDB JavaScript library that lets you create CartoDB maps on the fly in the browser. We use it to build the map and update it when a user selects a new bird or date.</li>
+<li><a href="https://kamisama.github.io/cal-heatmap/"><strong>Cal-Heatmap</strong></a>: This library can render interactive calendar heatmaps.</li>
+<li><a href="http://c3js.org/"><strong>C3js</strong></a>: Elegant JavaScript charting library. Both C3js and Cal-heatmap are built on top of <a href="http://d3js.org">D3js</a>.</li>
+</ul>
+<h2>Explore!</h2>
+<p>Go ahead and <a href="http://lifewatchinbo.github.io/bird-tracking/explorer/index.html">explore the bird tracking data</a> yourself. Developers might want to explore the <a href="https://github.com/LifeWatchINBO/bird-tracking">source code on GitHub</a>. If you have any comments, remarks or suggestions, leave a comment or <a href="https://github.com/LifeWatchINBO/bird-tracking/issues">create an issue</a>.</p>
+        </div>
+    </section>
+    <section class="comments">
+        <header class="clearfix">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="LifeWatchINBO" data-size="large" data-related="LifeWatchINBO">Tweet</a>
+            <h2>Comments</h2>
+        </header>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'lifewatchinbo'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+</article>
+        </div>
+        <div class="footer">
+            <footer class="clearfix">
+                <div>
+                    <a href="http://www.inbo.be"><img src="http://lifewatch.inbo.be/blog/theme/img/inbo-logo.png" alt="INBO logo"/></a>
+                </div>
+                <div>
+                    <ul>
+                        <h2>Keep in touch</h2>
+                        <li><a href="https://twitter.com/LifeWatchINBO">Follow us on Twitter</a></li>
+                        <li><a href="https://github.com/LifeWatchINBO">Our GitHub repositories</a></li>
+                        <li><a href="http://lifewatch.inbo.be/blog/feeds/rss.xml">Subscribe to updates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <h2>Related websites</h2>
+                        <li><a href="http://www.inbo.be">Research Institute for Nature and Forest (INBO)</a></li>
+                        <li><a href="http://www.lifewatch.be">Belgian LifeWatch portal</a></li>
+                        <li><a href="http://www.lifewatch.eu">European LifeWatch portal</a></li>
+                    </ul>
+                </div>
+                <p class="disclaimer">The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:dct="http://purl.org/dc/terms/" property="dct:title" href="http://lifewatch.inbo.be/blog">LifeWatch INBO blog</a> is licensed under a <a rel ="license" href="http://creativecommons.org/licenses/by/4.0/"> Creative Commons Attribution 4.0 International License</a>.</p>
+            </footer>
+        </div>
+    </div>
+
+        <!-- Scripts -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <!--<script>window.jQuery || document.write('<script src="http://lifewatch.inbo.be/blog/theme/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/plugins.js"></script>-->
+        <!--<script src="http://lifewatch.inbo.be/blog/theme/js/main.js"></script>-->
+        <script>
+            var _gaq=[['_setAccount','UA-42312007-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
