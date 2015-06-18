@@ -25,7 +25,7 @@ In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/caa466f4-0f7b-1
 
 ## Night 2
 
-In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/eb60c596-1060-11e5-aa6e-0e853d047bba/public_map) we use the same method to show nocturnal bird migration on the night of April 7-8, 2013. Note that some birds even reach the Baltic states in a single night, assuming they continued their flights until sunrise. These birds could have potentially flown xx km in a single night.
+In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/eb60c596-1060-11e5-aa6e-0e853d047bba/public_map) we use the same method to show nocturnal bird migration on the night of April 7-8, 2013. Note that some birds even reach the Baltic states in a single night, assuming they continued their flights until sunrise.
 
 <iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/eb60c596-1060-11e5-aa6e-0e853d047bba/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
@@ -36,8 +36,7 @@ In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/88c30be4-1063-1
 * Songbirds, with an airspeed below 16m/s, shown in orange
 * Waterbirds (geese, ducks, and waders) with an airspeed above 16m/s, shown in blue.
 
-The wind is shown as small blue tracks in the background.
-This visualisation shows that especially waterbirds (ducks and/or waders) dominated the bird migration (light blue colours) and due to their faster airspeeds reach the Baltic states in a single night, a distance of 900 km in 10 hours (i.e. 90km/h). This is much faster than what would be possible based on their powered flight alone (i.e. airspeed). Birds profited from the following winds in their last hours above Poland.
+This visualisation shows that especially waterbirds (ducks and/or waders) dominated the bird migration (light blue colours) and due to their faster airspeeds could reach the Baltic states in a single night, a distance of 900km in 10 hours (i.e. 90km/h or 25m/s). This is much faster than what would be possible based on their powered flight alone, i.e. their airspeed, which was on average 21m/s on which they could potentially have flown 750km in a single night without wind. Birds mainly profited from the following winds in their last hours above Poland.
 
 <iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/88c30be4-1063-11e5-a9ae-0e853d047bba/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
