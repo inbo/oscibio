@@ -2,7 +2,7 @@ Title: Our flow visualization is featured in Nature
 Slug: nature-toolbox
 Date: 2015-03-05 10:00
 Author: Peter Desmet
-Tags: news, bird tracking, ENRAM
+Tags: news, birds, visualization, radar, ENRAM
 Summary: The current issue of Nature discusses some of the visualization tools we use.
 
 The [Toolbox special in the current issue of Nature](http://doi.org/10.1038/519119a) discusses the (new) geospatial visualization tools that are available to researchers - such as CartoDB and TileMill:
