@@ -11,21 +11,21 @@ One of our goals this year was to visualize forward trajectory model data for bi
 
 ## Long-range surveillance radar
 
-The source data for our visualizations were gathered and processed by a bird radar detection system called [ROBIN](http://www.robinradar.com). The ROBIN system received a radar signal from two long-range surveillance radars in Belgium and the Netherlands. Every half hour radar measurements were sampled from ten successive high-resolution images and processed to extract location, ground speed, and track direction of individual birds or flocks. For this project we used data from the first two hours after sunset on April 6 and 7, 2013. During this period birds take-off from the radar locations to start their nocturnal spring migration.
+The source data for our visualizations were gathered and processed by a bird radar detection system called [ROBIN](http://www.robinradar.com). The ROBIN system received a radar signal from two long-range surveillance radars in Belgium and the Netherlands. Every half hour radar measurements were sampled from ten successive high-resolution images and processed to extract location, ground speed, and track direction of individual birds or flocks. For this project we used data from the first two hours after sunset on April 6 and 7, 2013. During this period birds take-off from the radar locations to continue their nocturnal spring migration.
 
 ## Forward trajectory model
 
-For each individual bird track we extracted time and location, and calculated the airspeed and heading using the wind at 925hPa. We used these parameters to simulate a forward trajectory based on a model described in [Shamoun-Baranes & van Gasteren 2011](http://doi.org/10.1016/j.anbehav.2011.01.003). By keeping the birds’ airspeed and heading constant, influences of wind will effect new positions each 5 minutes and result in the presented forward trajectory until sunrise. Strong following winds during the night or location can increase the ground speeds above 100 km per hour.
+For each individual bird track we extracted time, location, ground speed, and track direction and calculated the airspeed and heading using the wind at 925hPa. We used these parameters to simulate a forward trajectory based on a model described in [Shamoun-Baranes & van Gasteren 2011](http://doi.org/10.1016/j.anbehav.2011.01.003). By keeping the birds’ airspeed and heading constant, influences of wind will effect new positions each 5 minutes and result in the presented forward trajectory until sunrise. Strong following winds during the night or location can increase the ground speeds above 100 km per hour.
 
 ## Night 1
 
-In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/caa466f4-0f7b-11e5-9d94-0e4fddd5de28/public_map) we show nocturnal bird migration on the night of April 6-7, 2013. Bird tracks were measured every half hour and are shown as different groups in the visualization. The wind is shown as small blue tracks in the background. Note that most birds reach the German-Polish border and a few are able to reach halfway Poland if they took off just after sunset and flew all night.
+In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/caa466f4-0f7b-11e5-9d94-0e4fddd5de28/public_map) we show nocturnal bird migration on the night of April 6-7, 2013. Bird tracks were measured every half hour and are shown as different groups in the visualization. The wind is shown as small blue tracks in the background. Note that most birds reach the German-Polish border and a few are able to reach central Poland if they took off just after sunset and flew all night.
 
 <iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/caa466f4-0f7b-11e5-9d94-0e4fddd5de28/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Night 2
 
-In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/eb60c596-1060-11e5-aa6e-0e853d047bba/public_map) we use the same method to show nocturnal bird migration on the night of April 7-8, 2013. Note that some birds even reach the Baltic states in a single night, assuming they continued their flights until sunrise. 
+In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/eb60c596-1060-11e5-aa6e-0e853d047bba/public_map) we use the same method to show nocturnal bird migration on the night of April 7-8, 2013. Note that some birds even reach the Baltic states in a single night, assuming they continued their flights until sunrise. These birds could have potentially flown xx km in a single night.
 
 <iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/eb60c596-1060-11e5-aa6e-0e853d047bba/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
@@ -37,7 +37,7 @@ In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/88c30be4-1063-1
 * Waterbirds (geese, ducks, and waders) with an airspeed above 16m/s, shown in blue.
 
 The wind is shown as small blue tracks in the background.
-This visualisation shows that especially waterbirds (ducks and/or waders) dominated the bird migration (light blue colors) and due their faster airspeeds reach the Baltic states in a single night, a distance of 900 km in 10 hours (i.e. 90km/h). This is much faster based on airspeed alone. Birds profited from the following winds in their last hours above Poland.
+This visualisation shows that especially waterbirds (ducks and/or waders) dominated the bird migration (light blue colours) and due to their faster airspeeds reach the Baltic states in a single night, a distance of 900 km in 10 hours (i.e. 90km/h). This is much faster than what would be possible based on their powered flight alone (i.e. airspeed). Birds profited from the following winds in their last hours above Poland.
 
 <iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/88c30be4-1063-11e5-a9ae-0e853d047bba/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
