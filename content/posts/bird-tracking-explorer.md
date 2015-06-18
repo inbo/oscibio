@@ -1,4 +1,10 @@
-# Bird tracking explorer 2 released
+Title: Bird tracking explorer released
+Slug: bird-tracking-explorer
+Date: 2015-06-06 13:00
+Author: Bart Aelterman
+Tags: birds, bird tracking, visualization, software
+Summary: ...
+Status: draft
 
 We are happy to announce that the second version of our [bird tracking explorer](http://lifewatchinbo.github.io/bird-tracking/explorer/index.html) was released. The bird tracking explorer allows you to explore the birds that we are tracking in our [LifeWatch bird tracking project](http://www.lifewatch.be/birds). You select a bird and view its tracks on the map. The heatmap below the map gives you an idea of the activity of the bird over time. Days when the bird was more active (meaning it travelled more kilometers that day) are darker compared to other days.
 
