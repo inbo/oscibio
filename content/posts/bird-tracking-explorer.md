@@ -1,73 +1,47 @@
 Title: Bird tracking explorer released
 Slug: bird-tracking-explorer
-Date: 2015-06-06 13:00
-Author: Bart Aelterman
-Tags: birds, bird tracking, visualization, software
-Summary: ...
-Status: draft
+Date: 2015-06-30 15:00
+Author: Bart Aelterman, Peter Desmet
+Tags: birds, bird tracking, visualization, software, CartoDB
+Summary: We've developed an open source tool to let you explore our bird tracking data.
 
-We are happy to announce that the second version of our [bird tracking explorer](http://lifewatchinbo.github.io/bird-tracking/explorer/index.html) was released. The bird tracking explorer allows you to explore the birds that we are tracking in our [LifeWatch bird tracking project](http://www.lifewatch.be/birds). You select a bird and view its tracks on the map. The heatmap below the map gives you an idea of the activity of the bird over time. Days when the bird was more active (meaning it travelled more kilometers that day) are darker compared to other days.
+As we have written before, our [bird tracking data are open]({filename}bird-tracking-data-published.md): you can download these in [bulk](http://doi.org/10.15468/02omly), via the [CartoDB API](https://github.com/LifeWatchINBO/bird-tracking/blob/master/cartodb/README.md) or the [GBIF API](http://api.gbif.org/v1/occurrence/search?datasetkey=83e20573-f7dd-4852-9159-21566e1e691e). These methods don't allow you however to quickly explore a single individual, for a certain time period[^1]. This is why we're happy to announce our [bird tracking explorer](http://lifewatchinbo.github.io/bird-tracking/explorer/index.html), an experimental, open source tool that allows you to do just that.
 
-![The bird tracking explorer](../images/bird-tracking-explorer-screenshot.png =300x)
+[^1]: The [birdmap developed by VLIZ](http://www.lifewatch.be/birdmap?group=Kleine%20mantelmeeuw) does allow you to do this for the real-time data.
 
-While this already gives you an overview of the general activity of and areas visited by the bird, you can dive deeper in the data by clicking on a day or month label of the heatmap. This will cause the map to refresh and only show tracks of the date(s) you selected. Additionally, two charts will be drawn at the bottom of the page. The first one is a more detailed heatmap showing the activity of the bird by hour which allows you to investigate its daily activity. The second one is a line chart that displays the same data for one day.
+[![Bird tracking explorer]({filename}/images/bird-tracking-explorer.png)](http://lifewatchinbo.github.io/bird-tracking/explorer/index.html)
 
-![Detailed charts are shown when a day or month is selected](../images/bird-tracking-explorer-detail-charts.png =300x)
+## Features
 
-Two buttons allow you to switch between two different metrics. The first one is the distance travelled which will highlight hours when the bird was active. The second one shows the distance from the birds catch location. This can highlight interesting patterns in the birds behaviour. E.g. the image below shows how gull Eric is travelling to a location at about 70 kilometers distance from his colony in the afternoon for 5 consecutive days (which happened to be a [potato chips fabric](http://www.standaard.be/cnt/dmf20130618_00627212)).
+* **Select a bird**: The explorer is designed to explore the activity of a single individual, which you can select from the dropdown menu. Basic metadata about the selected bird (sex, species, ring code, caught date) are indicated on the right.
+* **Map**: All public occurrences of the selected individual are shown on the map, which you can zoom and pan.
+* **Year chart**: The year chart gives you an overview of the activity of the bird over time. Each day (clustered in months) is represented by a square, which colour indicates the number of kilometers the bird travelled that day. Hover over a square to get the exact kilometers.
 
-![Furthest distance from catch location heatmap](../images/bird-tracking-eric-potato-chips.png =250x)
+The map and year chart already give you a general overview of the area and time in which the bird was active, you can explore the data even further by clicking a day (square) or month (label) on the year chart. This will cause the map to refresh and only show occurrences from that day or month and two additional charts to be drawn below the year chart:
 
-The bird tracking explorer currently contains data from 63 individuals (44 lesser black-backed gulls, 16 herring gulls and 3 western marsh harriers). Depending on the individual, tracks are available from May 2013 until August 2014. That includes the winter period during which certain birds migrate to Africa as is shown for western marsh harrier Jozef below.
+* **Month chart**: This chart on the left is similar to the year chart, but shows a metric (see further) per hour, clustered by day of the month. This is helpful to compare daily patterns.
+* **Day chart**: If a single day is selected, this chart on the right shows the same daily metric as a line chart.
+* **Select a metric**: Buttons above the charts allow you to toggle between the two metrics to be shown by the charts:
+    * **Distance travelled**/hour: an indication of activity.
+    * **Furthest distance from catch location**/hour: an indication of migration/trips, as the catch location is generally in the vicinity of the birds’ nest.
 
-![Jozef migrating to Africa](../images/bird-tracking-jozef-migrating.png =350x)
+![Metric charts]({filename}/images/bird-tracking-explorer-metric-charts.png)
 
-## Technologies used
+These charts can highlight interesting patterns in the birds’ behaviour, e.g. the image above shows how gull [Eric]({filename}tracking-eric.md) is travelling to a location at about 70 kilometers from his colony in the afternoon for five consecutive days in June 2013. That location happened to be a [potato chips factory](http://www.standaard.be/cnt/dmf20130618_00627212), where he fed on discarded chips declared unfit for human consumption.
 
-### The CartoDB SQL API
+## Technology
 
-We have blogged about CartoDB and how we use it to create interactive maps [before](http://lifewatch.inbo.be/blog/posts/jcd-2014.html). Perhaps a less known feature of CartoDB is its [SQL API](http://docs.cartodb.com/cartodb-platform/sql-api.html) that allows you to query your CartoDB datasets. The API accepts plain SQL statements which gives an enormous flexibility.
+We developed the bird tracking explorer to learn and experiment with some open source technologies:
 
-For instance, the following query fetches bird metadata from our [public `bird tracking devices` dataset](https://inbo.cartodb.com/u/lifewatch/tables/bird_tracking_devices/public). Note that we can even join multiple CartoDB datasets using the API.
+* **CartoDB API**: We have blogged about the mapping tool [CartoDB](http://lifewatch.inbo.be/blog/tag/cartodb.html) before. Perhaps a lesser-known feature of CartoDB is its [SQL API](https://github.com/LifeWatchINBO/bird-tracking/blob/master/cartodb/README.md), which allows you to query datasets in plain SQL giving you enormous flexibility. All data shown by the explorer are queried via the CartoDB API. 
+* **CartoDB.js**: A [JavaScript library](http://docs.cartodb.com/cartodb-platform/cartodb-js.html) to create CartoDB maps on the fly in the browser. We use it to build the map and update it when a user selects a new bird or date.
+* **jQuery**: A [Javascript library](https://jquery.com/) to interact with the SQL API and add interactivity to the page.
+* **Cal-Heatmap**: A [Javascript library](https://kamisama.github.io/cal-heatmap/) to create interactive calendar heat maps, used for the year and month charts. Requires [D3](http://d3js.org).
+* **C3.js**: A [JavaScript library](http://c3js.org/) to create interactive charts, used for the day chart. Requires [D3](http://d3js.org).
+* **Bootstrap**: A [HTML, CSS and JavaScript framework](http://getbootstrap.com/) to quickly create a nice, responsive design.
 
-```
-SELECT d.bird_name,
-  d.catch_location,
-  d.ring_code,
-  d.device_info_serial,
-  d.sex,
-  d.scientific_name,
-  d.longitude,
-  d.latitude,
-  d.tracking_started_at,
-  t.start_date,
-  t.end_date
-FROM bird_tracking_devices AS d
-INNER JOIN (
-  SELECT device_info_serial,
-    min(date_time) AS start_date,
-    max(date_time) AS end_date
-  FROM bird_tracking
-  WHERE userflag IS FALSE
-  GROUP BY device_info_serial
-) AS t ON d.device_info_serial = t.device_info_serial
-ORDER BY d.scientific_name, d.bird_name
-```
+## Go explore
 
-The SQL API is accessible at `https://<your account>.cartodb.com/api/v2/sql` and the SQL query should be added with the `?q` parameter. The API will return the <a href="https://lifewatch.cartodb.com/api/v2/sql?q=SELECT%20d.bird_name,%20d.catch_location,%20d.ring_code,%20d.device_info_serial,%20d.sex,%20d.scientific_name,%20d.longitude,%20d.latitude,%20d.tracking_started_at,%20t.start_date,%20t.end_date%20FROM%20bird_tracking_devices%20AS%20d%20INNER%20JOIN%20(SELECT%20device_info_serial,%20min(date_time)%20AS%20start_date,%20max(date_time)%20AS%20end_date%20FROM%20bird_tracking%20WHERE%20userflag%20IS%20FALSE%20GROUP%20BY%20device_info_serial)%20AS%20t%20ON%20d.device_info_serial%20=%20t.device_info_serial%20ORDER%20BY%20d.scientific_name,%20d.bird_name">results of that query as JSON</a>.
+The bird tracking explorer currently contains data from 63 individuals (44 Lesser Black-backed Gulls, 16 Herring Gulls and 3 Western Marsh Harriers). Depending on the individual, tracks are available from May 2013 until August 2014. That includes the winter period during which certain birds migrate to Spain and Africa. So go ahead, and [explore the bird tracking data yourself](http://lifewatchinbo.github.io/bird-tracking/explorer/index.html). Developers might want to explore the [open source code on GitHub](https://github.com/LifeWatchINBO/bird-tracking).
 
-The bird tracking explorer uses this API to retrieve the data requested by the user.
-
-### JavaScript libraries
-
-We have used a couple of open source JavaScript libraries to render the map and charts and to interact with the CartoDB SQL API.
-
-- [**jQuery**](): Used to interact with the SQL API.
-- [**CartoDB.js**](http://docs.cartodb.com/cartodb-platform/cartodb-js.html): This is a CartoDB JavaScript library that lets you create CartoDB maps on the fly in the browser. We use it to build the map and update it when a user selects a new bird or date.
-- [**Cal-Heatmap**](https://kamisama.github.io/cal-heatmap/): This library can render interactive calendar heatmaps.
-- [**C3js**](http://c3js.org/): Elegant JavaScript charting library. Both C3js and Cal-heatmap are built on top of [D3js](http://d3js.org).
-
-
-## Explore!
-
-Go ahead and [explore the bird tracking data](http://lifewatchinbo.github.io/bird-tracking/explorer/index.html) yourself. Developers might want to explore the [source code on GitHub](https://github.com/LifeWatchINBO/bird-tracking). If you have any comments, remarks or suggestions, leave a comment or [create an issue](https://github.com/LifeWatchINBO/bird-tracking/issues).
+If you have a comment, remark or suggestion, leave a comment below or [create an issue](https://github.com/LifeWatchINBO/bird-tracking/issues).
