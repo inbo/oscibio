@@ -21,7 +21,7 @@ The map and year chart already give you a general overview of the area and time 
 
 * **Month chart**: This chart on the left is similar to the year chart, but shows a metric (see further) per hour, clustered by day of the month. This is helpful to compare daily patterns.
 * **Day chart**: If a single day is selected, this chart on the right shows the same daily metric as a line chart.
-* **Select a metric**: Button above the charts allow you to toggle between the metric to be shown by the two charts:
+* **Select a metric**: Buttons above the charts allow you to toggle between the two metrics to be shown by the charts:
     * **Distance travelled**/hour: an indication of activity.
     * **Furthest distance from catch location**/hour: an indication of migration/trips, as the catch location is generally in the vicinity of the birds’ nest.
 
