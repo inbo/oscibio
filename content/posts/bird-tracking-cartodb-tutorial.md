@@ -1,6 +1,11 @@
-# Visualizing bird tracking data with CartoDB
+Title: A tutorial on visualizing bird tracking data with CartoDB
+Slug: cartodb-tracking-data-tutorial.md
+Date: 2015-08-10 12:00
+Author: Peter Desmet
+Tags: bird-tracking, visualization, CartoDB
+Summary: ...
 
-A workshop by [Peter Desmet](https://twitter.com/peterdesmet) at the [Animal Movement Analysis Summer Course](http://horizon.science.uva.nl/scge2015-wiki/doku.php) on July 10, 2015 at the University of Amsterdam.
+This tutorial is based on a workshop I gave at the [Animal Movement Analysis Summer Course](http://horizon.science.uva.nl/scge2015-wiki/doku.php) on July 10, 2015 at the University of Amsterdam.
 
 ## Introduction
 
