@@ -24,6 +24,36 @@ This tutorial is based on a workshop I gave at the [Animal Movement Analysis Sum
 
 ## Upload data
 
+For this tutorial, we use [our open bird tracking data]({filename}bird-tracking-data-published.md). To make it easier for you to follow along with a free CartoDB account, you can [download a subset of the data here]({filename}/files/bird_tracking.csv). If you want to know how that subset was created, here's the SQL query I used:
+
+```SQL
+SELECT
+    t.the_geom_webmercator,
+    t.altitude,
+    t.date_time,
+    t.device_info_serial,
+    t.direction,
+    t.latitude,
+    t.longitude,
+    |/(t.x_speed^2 + t.y_speed^2) AS speed_2d,
+    d.bird_name
+FROM bird_tracking t
+    LEFT JOIN lifewatch.bird_tracking_devices d
+    ON t.device_info_serial = d.device_info_serial
+WHERE
+    t.userflag IS FALSE AND
+    t.date_time >= '2013-08-15' AND
+    t.date_time < '2014-05-01' AND
+    d.bird_name IN (
+        'Eric',
+        'Nico',
+        'Sanne'
+    )
+ORDER BY
+    d.bird_name,
+    t.date_time
+```
+
 1. Download [this tracking data file](http://horizon.science.uva.nl/public/AMA_2015/DAY5/CartoDB/scge_lbbg_migration.csv.zip)
 2. **Go to your datasets overview.**
 3. **Upload `scge_lbbg_migration.csv`** (or the zip, it doesn't matter) by dragging the file to your browser window. CartoDB recognizes [multiple files formats](http://docs.cartodb.com/cartodb-editor.html#supported-file-formats).
