@@ -236,23 +236,22 @@ h1, h2, h3, h4, h5, h6 {
                 color: currentcolor;
             }
             .single time,
-            .single address {
-                display: inline;
-                font-style: normal;
+            .single .authors {
+                display: inline; /* Will ignore margin and padding on a .metadata-list */
             }
-            .tags { /* On body > .container > .content > article > section > footer > ul */
+            .metadata-list { /* On body > .container > .content > article > section > footer > ul */
                 margin: 0.5em 0 0;
                 padding: 0;
                 }
-                .tags li {
+                .metadata-list li {
                     display: inline;
                     list-style: none;
                     }
-                    .tags li:after {
+                    .metadata-list li:after {
                         content: ", ";
                     }
-                    .tags li:last-child:after {
-                        content: ".";
+                    .metadata-list li:last-child:after {
+                        content: "";
                     }
         .single h2 {
             font-size: 1.6em;

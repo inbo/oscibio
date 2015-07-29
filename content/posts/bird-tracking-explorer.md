@@ -1,7 +1,7 @@
 Title: Bird tracking explorer released
 Slug: bird-tracking-explorer
 Date: 2015-06-30 15:00
-Author: Bart Aelterman, Peter Desmet
+Authors: Bart Aelterman, Peter Desmet
 Tags: birds, bird tracking, visualization, software, CartoDB
 Summary: We've developed an open source tool to let you explore our bird tracking data.
 
