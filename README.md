@@ -4,55 +4,81 @@ This repository contains the content and settings for the [LifeWatch INBO blog](
 
 ## Installation instructions
 
-On your local computer, make sure you have cloned the `lifewatch-blog` and `eurasian-spoonbill` repository to the same directory. The latter one is the theme of the blog and required to generate the correct output.
+1. On your local computer, make sure you have cloned the [lifewatch-blog](https://github.com/LifeWatchINBO/lifewatch-blog) and [eurasian-spoonbill](https://github.com/LifeWatchINBO/eurasian-spoonbill) repository to the same directory. The latter one is the theme of the blog and required to generate the correct output.
+2. Create a virtual Python environment (if not yet installed, install `virtualenv` first: `sudo pip install virtualenv`):
 
-### Create virtual Python environment
+  ```shell
+  cd lifewatch-blog
+  virtualenv py-env --python=python2.7
+  source py-env/bin/activate
+  pip install pelican
+  pip install markdown
+  ```
+3. Create `test-output` directory
 
-If not yet installed, install `virtualenv` first: `sudo pip install virtualenv`.
+  ```shell
+  mkdir test-output
+  ```
 
-```shell
-cd lifewatch-blog
-virtualenv py-env --python=python2.7
-source py-env/bin/activate
-pip install pelican
-pip install markdown
-```
+## Writing setup instructions
 
-### Create test-output directory
+1. Start a simple server from `test-output`. Note: the port `8080` is hardcoded in the `dev-settings.py`.
 
-```shell
-mkdir test-output
-```
+  ```shell
+  cd test-output
+  python -m SimpleHTTPServer 8080
+  ```
 
-### Start simple server
+2. Go to <http://localhost:8080> to see the test website.
+3. To generate new content, you'll need Pelican, which will run in the virtual environment you have set up. Activate the virtual environment:
 
-```shell
-cd test-output
-python -m SimpleHTTPServer 8080
-```
+  ```shell
+  cd ..
+  source py-env/bin/activate
+  ```
 
-Go to <http://localhost:8080> for the test website. Use the publishing instructions to generate the website.
+## Writing instructions
 
-### Activate virtual Python environment
+1. Write content locally on the `dev` branch.
+2. Go to `content/posts` and create a new one by copy/pasting another one and updating the filename, text and metadata.
+3. The syntax of the post is:
 
-Could be done in a new terminal window.
+  ```Markdown
+  Title: Jurassic Park
+  Slug: jurassic-park
+  Date: 2012-12-17 17:00
+  Authors: Alan Grant, Ian Malcolm // Or Author: Alan Grant
+  Tags: dinosaurs, endorsement, quote
+  Summary: After much consideration...
+  Status: draft // To hide the post from the index list for now
 
-```shell
-cd ..
-source py-env/bin/activate
-```
+  Content as Markdown
+  
+  ## Headings start at H2 (since post title is H1)
+
+  Links to other posts:
+  
+  [bird tracking data are open]({filename}bird-tracking-data-published.md)
+  
+  Images:
+  
+  ![Bird tracking explorer]({filename}/images/bird-tracking-explorer.png)
+
+  Code (without the \):
+
+  \```SQL
+  SELECT * FROM bird_tracking
+  \```
+	```
+
+5. Generate your content locally with `pelican -s dev-settings.py` (which will generate the files in `test-output`). You can also use `pelican -s dev-settings.py --autoreload` for automatic generation.
+6. See your content locally at <http://localhost:8080>.
+7. Push your commits to GitHub (content in `test-output` will be ignored).
+8. Ask for feedback via a pull request (`dev` -> `master`).
+9. Incorporate feedback.
+7. Update the post date.
 
 ## Publishing instructions
-
-### Write and ask feedback
-
-1. Go to `content`
-2. Write content on your local `dev` branch.
-3. Optional: test locally with `pelican -s dev-settings.py` which will generate the website in `test-output` at <http://localhost:8080>.
-4. Push your commits to GitHub.
-5. Ask for feedback via a pull request (`dev` -> `master`).
-6. Incorporate feedback.
-7. Update the post date.
 
 ### Generate output
 
