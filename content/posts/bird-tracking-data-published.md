@@ -17,5 +17,5 @@ As with all our species occurrence data, we make use of GBIF tools (see [this bl
 
 We have dedicated the data to the public domain under a [Creative Commons Zero waiver](http://creativecommons.org/publicdomain/zero/1.0/), allowing anyone to use these without restrictions. We do appreciate it however if you [follow these norms](http://www.inbo.be/en/norms-data-use) and are always interested to see what you did with the data. Leave a comment, reach us at [LifeWatchINBO](https://twitter.com/LifeWatchINBO) or see our contact information in the metadata.
 
-We hope by working openly we can build a vibrant community around these data and data we plan to publish in the future. Go exploring at [Bird tracking - GPS tracking of Lesser Black-backed Gull and Herring Gull breeding at the Belgian coast](http://www.gbif.org/dataset/83e20573-f7dd-4852-9159-21566e1e691e).
+We hope by working openly we can build a vibrant community around these data and data we plan to publish in the future. Go exploring at [Bird tracking - GPS tracking of Lesser Black-backed Gulls and Herring Gulls breeding at the Belgian coast](http://www.gbif.org/dataset/83e20573-f7dd-4852-9159-21566e1e691e).
 
