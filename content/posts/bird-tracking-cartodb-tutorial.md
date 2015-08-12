@@ -133,8 +133,8 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
             marker-fill: #F2D2D3;
         }
 
-[^3]: Maps can have spaces and punctation in their name, dataset names use lowercase and underscores.
-[^4]: You'll have dismiss to [cool](http://blog.cartodb.com/one-click-mapping/), but somewhat obstrusive `Analyzing dataset` pop-up.
+[^3]: Maps can have spaces and punctuation in their name, dataset names use lowercase and underscores.
+[^4]: You'll have to dismiss the [cool](http://blog.cartodb.com/one-click-mapping/), but somewhat obtrusive `Analyzing dataset` pop-up.
 
 ## Create a map of migration speed
 
@@ -271,7 +271,7 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b
 
 1. **Duplicate** your map and **name it** `Migration in time`.
 2. This time, we'll add a map on top of the previous one. **Click** `+` on the right hand side to add a new layer and **choose the same table** `bird_tracking`.
-3. **Apply the same time contraints** in the SQL:
+3. **Apply the same time constraints** in the SQL:
 
         :::SQL
         SELECT * 
