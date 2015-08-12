@@ -47,10 +47,10 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
         LEFT JOIN bird_tracking_devices d
         ON t.device_info_serial = d.device_info_serial
     WHERE
-        t.userflag IS FALSE AND
-        t.date_time >= '2013-08-15' AND
-        t.date_time < '2014-05-01' AND
-        d.bird_name IN (
+        t.userflag IS FALSE
+        AND t.date_time >= '2013-08-15'
+        AND t.date_time < '2014-05-01'
+        AND d.bird_name IN (
             'Eric',
             'Nico',
             'Sanne'
@@ -84,53 +84,53 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
             count(distinct device_info_serial) AS individuals
         FROM bird_tracking
 
-8. **Click** `Clear view` to remove any applied SQL.
+8. **Click `Clear view`** to remove any applied SQL.
  
 ## Create your first map
 
-1. **Click** `Visualize` in the top right to create your first map.
+1. **Click `Visualize`** in the top right to create your first map.
 2. Once created, click the title `bird_tracking1` and rename it to `My first map`[^3].
-3. **Click** `Map view`.
+3. **Click `Map view`**.
 4. You can change the background map by clicking `Change basemap` in the bottom right[^4]. `Positron` is a good default basemap, but there are many other options available and even more via `Yours` (including maps from NASA). Note that for the `Positron` and `Dark matter` basemaps, city labels will be [positioned on top of your data](http://blog.cartodb.com/let-your-labels-shine/), making them more readable. Choose `Positron (labels below)` to turn this off or `Positron (lite)` to have no labels at all.
 5. Click `Options` in the bottom right to select the map interaction options you want to provide to the visitors of your map, such as `Zoom controls` or a `Fullscreen` button.
 6. The map view also provides a toolbar on the right, where you'll recognize the same `SQL` and `Filters` features from the data view.
-7. **Click** `Wizards` in the toolbar to see a plethora of visualization options. These are all explained in the [CartoDB documentation](http://docs.cartodb.com/cartodb-editor.html#map-wizards).
-8. **Try** `Intensity` with the following options to get a sense of the distribution of occurrences:
+7. **Click `Wizards`** in the toolbar to see a plethora of visualization options. These are all explained in the [CartoDB documentation](http://docs.cartodb.com/cartodb-editor.html#map-wizards).
+8. **Try `Intensity`** with the following options to get a sense of the distribution of occurrences:
 
     ![Intensity map]({filename}/images/cartodb-intensity.png)
 
-9. **Try** `Choropleth` with the following options to see the relative altitude distribution (see the [documentation](http://docs.cartodb.com/cartodb-editor.html#choropleth) for different quantification methods):
+9. **Try `Choropleth`** with the following options to see the relative altitude distribution (see the [documentation](http://docs.cartodb.com/cartodb-editor.html#choropleth) for different quantification methods):
 
     ![Choropleth map]({filename}/images/cartodb-choropleth.png)
 
-10. Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map. **Click** `CSS` in the toolbar to discover how the quantification buckets (in this case `Quantile`) are defined:
+10. Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map. **Click `CSS`** in the toolbar to discover how the quantification buckets (in this case `Quantile`) are defined:
 
         :::CSS
         /** choropleth visualization */
 
         #bird_tracking{
-          marker-fill-opacity: 0.8;
-          marker-line-color: #FFF;
-          marker-line-width: 0.5;
-          marker-line-opacity: 1;
-          marker-width: 7;
-          marker-fill: #F2D2D3;
-          marker-allow-overlap: true;
+            marker-fill-opacity: 0.8;
+            marker-line-color: #FFF;
+            marker-line-width: 0.5;
+            marker-line-opacity: 1;
+            marker-width: 7;
+            marker-fill: #F2D2D3;
+            marker-allow-overlap: true;
         }
         #bird_tracking [ altitude <= 6965] {
-           marker-fill: #C1373C;
+            marker-fill: #C1373C;
         }
         #bird_tracking [ altitude <= 634] {
-           marker-fill: #CC4E52;
+            marker-fill: #CC4E52;
         }
         #bird_tracking [ altitude <= 338.5] {
-           marker-fill: #D4686C;
+            marker-fill: #D4686C;
         }
         #bird_tracking [ altitude <= 66.5] {
-           marker-fill: #EBB7B9;
+            marker-fill: #EBB7B9;
         }
         #bird_tracking [ altitude <= -205.5] {
-           marker-fill: #F2D2D3;
+            marker-fill: #F2D2D3;
         }
 
 [^3]: Maps can have spaces and punctation in their name, dataset names use lowercase and underscores.
@@ -138,134 +138,134 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
 
 ## Create a map of migration speed
 
-1. We want to save our previous work and create another map. **Click** `Edit > Duplicate map` and **name it** `Where does gull 311 rest?`.
-2. **Add a `WHERE` clause to the SQL** to only select gull 311 between specific dates:
+1. We want to save our previous work and create another map. **Click `Edit > Duplicate map` and name it `Where does gull Nico rest?`**.
+2. **Add a `WHERE` clause to the SQL** to only select gull Nico between specific dates:
 
-    ```SQL
-    SELECT *
-    FROM scge_lbbg_migration
-    WHERE
-        device_info_serial = 311
-        AND date_time >= '2010-08-01'
-        AND date_time <= '2011-03-30'
-    ```
+        :::SQL
+        SELECT * 
+        FROM bird_tracking
+        WHERE
+            bird_name = 'Nico'
+            AND date_time >= '2013-08-15'
+            AND date_time < '2014-01-01'
 
-3. We want to visualize the travel speed of gull 311. The best way to start is to **create a `Choropleth` map**, with the following options:
+3. We want to visualize the travel speed of gull Nico. The best way to start is to **create a `Choropleth` map**, with the following options:
 
-    ![Start from a choropleth map](migration-speed-1.png)
+    ![Start from a choropleth map]({filename}/images/cartodb-migration-speed-1.png)
 
-4. Most of the dots are red and the story does not come across yet. Let's dive into the CSS to **fine-tine the map**. We basically set all dots to green, except where the speed is below 2m/s, which we show larger and in red:
+4. Most of the dots are red and the story does not come across yet. Let's dive into the CSS to **fine-tune the map**. We basically set all dots to green, except where the speed is below 2m/s, which we show larger and in red:
 
-    ```CSS
-    /** choropleth visualization */
+        :::CSS
+        /** choropleth visualization */
 
-    #scge_lbbg_migration{
-      marker-fill-opacity: 0.8;
-      marker-line-color: #FFF;
-      marker-line-width: 0.5;
-      marker-line-opacity: 1;
-      marker-width: 6;
-      marker-fill: #1a9850;
-      marker-allow-overlap: true;
-    }
-    #scge_lbbg_migration [ speed_2d < 2] {
-      marker-fill: #d73027;
-      marker-width: 10;
-      marker-line-width: 1;
-    }
-    ```
+        #bird_tracking{
+            marker-fill-opacity: 0.8;
+            marker-line-color: #FFF;
+            marker-line-width: 0.5;
+            marker-line-opacity: 1;
+            marker-width: 6;
+            marker-fill: #1a9850;
+            marker-allow-overlap: true;
+        }
+        #bird_tracking [ speed_2d < 2] {
+            marker-fill: #d73027;
+            marker-width: 10;
+            marker-line-width: 1;
+        }
 
-5. **Click** `Legends` in the toolbar to manually set what to be shown in the legend:
+5. **Click `Legends`** in the toolbar to manually set what to be shown in the legend (using template `Custom`):
 
-    ![Update the legend](migration-speed-2.png)
+    ![Update the legend]({filename}/images/cartodb-migration-speed-2.png)
 
-6. Click a point and chose `Select field` to **create an info window**.
+6. Click a point and chose `Select fields` to **create an info window**.
 
-    ![Define info windows](migration-speed-3.png)
+    ![Define info windows]({filename}/images/cartodb-migration-speed-3.png)
 
 7. **Describe your map** by clicking `Edit metadata...` in the top left.
-8. **Share your map** by clicking `Publish` in the top right. The sharing dialog box provides you with a link to the map or the code to embed it in a web page. The `CartoDB.js` is for advanced use in apps.
-9. **Copy the link and paste it in a new browser tab** to verify the info windows and the bounding box (i.e. is the interesting part of the data visible?). Anything you update in your map (including zoom level and bounding box) will affect the public map (reload the page to see the changes).
+8. **Share your map** by clicking `Publish` in the top right. The dialog box provides you with a link to the map or the code to embed it in a web page. `CartoDB.js` is for advanced use in apps.
+9. **Copy the link and paste it in a new browser tab** to verify the info windows are working and the bounding box makes sense, i.e. are the interesting part of the data visible? Anything you update in your map (including zoom level and bounding box) will affect the public map (reload the page to see the changes).
 
-[See the final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890-0e4fddd5de28/public_map)
+The [final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890-0e4fddd5de28/public_map):
+
+<iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890-0e4fddd5de28/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Create a map of tracks per month
 
-1. **Duplicate** your map and **name it** `Tracks per month`.
-2. This time we want to string the occurrences together as lines: one line per individual (sorted on date), per month. **This can be done in the SQL**. See the [PostgreSQL documentation](http://www.postgresql.org/docs/9.4/static/functions-datetime.html) for date functions. `the_geom_webmercator` is a geospatial field that is calculated by CartoDB in the background based on `the_geom` and is used for the actual display on the map. Since we're defining a new geospatial field (i.e. a line), we have to explicitely include it.
+1. **Duplicate your map and name it `Tracks per month`**.
+2. This time we want to string the occurrences together as lines: one line per individual (with the occurrences sorted by date), per month. **This can be done in the SQL**. See the [PostgreSQL documentation](http://www.postgresql.org/docs/9.4/static/functions-datetime.html) for date functions. `the_geom_webmercator` is a geospatial field that is calculated by CartoDB in the background based on `the_geom` and is used for the actual display on the map. Since we're defining a new geospatial field (i.e. a line), we have to explicitly include it.
 
-    ```SQL
-    SELECT
-        ST_MakeLine(the_geom_webmercator ORDER BY date_time ASC) AS the_geom_webmercator,
-        extract(month from date_time) AS month,
-        device_info_serial
-    FROM scge_lbbg_migration
-    WHERE
-        date_time >= '2010-08-01'
-        AND date_time <= '2010-12-31'
-    GROUP BY
-        device_info_serial,
-        month
-    ```
+        :::SQL
+        SELECT
+            ST_MakeLine(the_geom_webmercator ORDER BY date_time ASC) AS the_geom_webmercator,
+            extract(month from date_time) AS month,
+            bird_name
+        FROM bird_tracking
+        WHERE
+            date_time > '2013-08-15'
+            AND date_time < '2014-01-01'
+        GROUP BY
+            bird_name,
+            month
 
 3. We want to display each month in a different colour, so **start with a `Choropleth` map**, with the following options:
 
-    ![Start from a choropleth map](month-tracks-1.png)
+    ![Start from a choropleth map]({filename}/images/cartodb-month-tracks-1.png)
 
-4. We will also include labels (start doing this in the `Choropleth` options), so you can still see which track belongs to which individual. **Fine-tune the map in the CSS**:
+4. We will also include labels (start doing this in the `Choropleth` options), so you can still see which track belongs to which individual. **Fine-tune the map in the CSS** (note the round numbers for the months):
 
-    ```CSS
-    /** choropleth visualization */
+        :::CSS
+        /** choropleth visualization */
 
-    #scge_lbbg_migration{
-      polygon-opacity: 0;
-      line-color: #FFFFCC;
-      line-width: 1.5;
-      line-opacity: 0.8;
-    }
+        #bird_tracking{
+          polygon-opacity: 0;
+          line-color: #FFFFCC;
+          line-width: 1.5;
+          line-opacity: 0.8;
+        }
 
-    #scge_lbbg_migration::labels {
-      text-name: [device_info_serial];
-      text-face-name: 'Lato Bold';
-      text-size: 12;
-      text-label-position-tolerance: 10;
-      text-fill: #000;
-      text-halo-fill: #FFF;
-      text-halo-radius: 2;
-      text-dy: -10;
-      text-allow-overlap: false;
-      text-placement: interior;
-      text-placement-type: simple;
-    }
+        #bird_tracking::labels {
+          text-name: [bird_name];
+          text-face-name: 'Lato Bold';
+          text-size: 12;
+          text-label-position-tolerance: 10;
+          text-fill: #000;
+          text-halo-fill: #FFF;
+          text-halo-radius: 2;
+          text-dy: -10;
+          text-allow-overlap: false;
+          text-placement: line;
+          text-placement-type: simple;
+        }
 
-    #scge_lbbg_migration [ month <= 12] {
-       line-color: #253494;
-    }
-    #scge_lbbg_migration [ month <= 11] {
-       line-color: #2C7FB8;
-    }
-    #scge_lbbg_migration [ month <= 10] {
-       line-color: #41B6C4;
-    }
-    #scge_lbbg_migration [ month <= 9] {
-       line-color: #A1DAB4;
-    }
-    #scge_lbbg_migration [ month <= 8] {
-       line-color: #FFFFCC;
-    }
-    ```
+        #bird_tracking [ month <= 12] {
+           line-color: #253494;
+        }
+        #bird_tracking [ month <= 11] {
+           line-color: #2C7FB8;
+        }
+        #bird_tracking [ month <= 10] {
+           line-color: #41B6C4;
+        }
+        #bird_tracking [ month <= 9] {
+           line-color: #A1DAB4;
+        }
+        #bird_tracking [ month <= 8] {
+           line-color: #FFFFCC;
+        }
 
 5. **Update the legend**:
 
-    ![Update the legend](month-tracks-2.png)
+    ![Update the legend]({filename}/images/cartodb-month-tracks-2.png)
 
-6. To provide some more context, let's annotate the map. In the top right, **click** `Add Element > Add annotation item` and **indicate summer and winter locations**:
+6. To provide some more context, let's annotate the map. In the top right, **click `Add Element > Add annotation item` and indicate summer and winter locations**. The position of an annotation element is linked to a location on the map (though placement can be a bit difficult) and you can define between which zoom levels to show it, to avoid cluttering:
 
-    ![Add annotatinos](month-tracks-3.png)
+    ![Add annotatinos]({filename}/images/cartodb-month-tracks-3.png)
 
 7. Finally, **update the description** in `Edit metadata...` and **publish your map**.
 
-[See the final map](https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b-0e018d66dc29/public_map)
+The [final map](https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b-0e018d66dc29/public_map):
+
+<iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b-0e018d66dc29/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Create an animated map
 
