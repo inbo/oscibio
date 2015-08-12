@@ -259,7 +259,7 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890
 
 6. To provide some more context, let's annotate the map. In the top right, **click `Add Element > Add annotation item` and indicate summer and winter locations**. The position of an annotation element is linked to a location on the map (though placement can be a bit difficult) and you can define between which zoom levels to show it, to avoid cluttering:
 
-    ![Add annotatinos]({filename}/images/cartodb-month-tracks-3.png)
+    ![Add annotations]({filename}/images/cartodb-month-tracks-3.png)
 
 7. Finally, **update the description** in `Edit metadata...` and **publish your map**.
 
@@ -270,79 +270,79 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b
 ## Create an animated map
 
 1. **Duplicate** your map and **name it** `Migration in time`.
-2. This time, we'll add a map on top of the previous one. **Click** `+` on the right hand side to add a new layer and **choose the same table** `scge_lbbg_migration`.
-
-    ![Add a layer](torque-1.png)
-
+2. This time, we'll add a map on top of the previous one. **Click** `+` on the right hand side to add a new layer and **choose the same table** `bird_tracking`.
 3. **Apply the same time contraints** in the SQL:
 
-    ```SQL
-    SELECT * 
-    FROM scge_lbbg_migration
-    WHERE
-        date_time >= '2010-08-01'
-        AND date_time <= '2010-12-31'
-    ```
+        :::SQL
+        SELECT * 
+        FROM bird_tracking
+        WHERE
+            date_time > '2013-08-15'
+            AND date_time < '2014-01-01'
 
-4. From the `Wizards`, **choose** `Torque cat`, with the following options. The `Time Column` should always be your date.
+4. From the `Wizards`, **choose `Torque cat`**, with the following options. The `Time Column` should always be your date.
 
-    ![Torque cat](torque-2.png)
+    ![Torque category options]({filename}/images/cartodb-torque-1.png)
 
-    ![Torque cat](torque-3.png)
+    ![Torque category options]({filename}/images/cartodb-torque-2.png)
 
 5. The final CSS looks like this:
 
-    ```CSS
-    /** torque_cat visualization */
+        :::CSS
+        /** torque_cat visualization */
 
-    Map {
-    -torque-frame-count:256;
-    -torque-animation-duration:30;
-    -torque-time-attribute:"date_time";
-    -torque-aggregation-function:"CDB_Math_Mode(torque_category)";
-    -torque-resolution:1;
-    -torque-data-aggregation:linear;
-    }
+        Map {
+        -torque-frame-count:256;
+        -torque-animation-duration:30;
+        -torque-time-attribute:"date_time";
+        -torque-aggregation-function:"CDB_Math_Mode(torque_category)";
+        -torque-resolution:1;
+        -torque-data-aggregation:linear;
+        }
 
-    #scge_lbbg_migration{
-      comp-op: source-over;
-      marker-fill-opacity: 0.9;
-      marker-line-color: #FFF;
-      marker-line-width: 0;
-      marker-line-opacity: 1;
-      marker-type: ellipse;
-      marker-width: 3;
-      marker-fill: #FF9900;
-    }
-    #scge_lbbg_migration[frame-offset=1] {
-     marker-width:5;
-     marker-fill-opacity:0.45; 
-    }
-    #scge_lbbg_migration[frame-offset=2] {
-     marker-width:7;
-     marker-fill-opacity:0.225; 
-    }
-    #scge_lbbg_migration[value=1] {
-       marker-fill: #D6301D;
-    }
-    #scge_lbbg_migration[value=2] {
-       marker-fill: #A53ED5;
-    }
-    #scge_lbbg_migration[value=3] {
-       marker-fill: #FFCC00;
-    }
-    ```
+        #bird_tracking{
+            comp-op: source-over;
+            marker-fill-opacity: 0.9;
+            marker-line-color: #FFF;
+            marker-line-width: 0;
+            marker-line-opacity: 1;
+            marker-type: ellipse;
+            marker-width: 3;
+            marker-fill: #FF6600;
+        }
+        #bird_tracking[frame-offset=1] {
+            marker-width:5;
+            marker-fill-opacity:0.45; 
+        }
+        #bird_tracking[frame-offset=2] {
+            marker-width:7;
+            marker-fill-opacity:0.225; 
+        }
+        #bird_tracking[value=1] {
+            marker-fill: #B81609;
+        }
+        #bird_tracking[value=2] {
+            marker-fill: #FFA300;
+        }
+        #bird_tracking[value=3] {
+            marker-fill: #A53ED5;
+        }
 
-6. **Update the legend**, **remove the `device_info_serial` labels** from the other layer (they are no longer required) and **publish your map**.
+6. **Update the legend**, **remove the `bird_name` labels** from the other layer (they are no longer required) and **publish your map**.
 
-[See the final map](https://inbo.cartodb.com/u/lifewatch/viz/a36b9c78-2679-11e5-a586-0e853d047bba/public_map)
+The [final map](https://inbo.cartodb.com/u/lifewatch/viz/4eb8fcee-40fe-11e5-bfaa-0e9d821ea90d/public_map):
 
-## Further reading
+<iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/4eb8fcee-40fe-11e5-bfaa-0e9d821ea90d/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-This is just the beginning: upload your own tracking data, play with the settings, and start creating beautiful maps. For inspiration and tutorials, see:
+## The end... and a beginning
 
-* [LifeWatch INBO maps](https://inbo.cartodb.com/u/lifewatch/maps): lots of tracking data maps
-* [LifeWatch INBO blog posts on CartoDB](http://lifewatch.inbo.be/blog/tag/cartodb.html): tutorials and things we`ve build with CartoDB
-* [CartoDB map gallery](https://cartodb.com/gallery/): the cream of the crop of CartoDB maps
-* [CartoDB academy](http://academy.cartodb.com/): step by step tutorials on how to create maps in CartoDB
-* [CartoDB documentation](http://docs.cartodb.com/): if you want to know more about all the features
+You've made it to the end of this tutorial! We hope it was useful to you and you got inspired to use CartoDB for your own tracking data. Please share your maps or any feedback you have regarding this tutorial in the comments below!
+
+For inspiration and tutorials, see:
+
+* [Our CartoDB maps](https://inbo.cartodb.com/u/lifewatch/maps), mostly using bird tracking data.
+* [Our blog posts on CartoDB](http://lifewatch.inbo.be/blog/tag/cartodb.html), including more specific tutorials and things we've built.
+* [CartoDB map gallery](https://cartodb.com/gallery/): the cream of the crop of CartoDB maps.
+* [CartoDB academy](http://academy.cartodb.com/): step by step tutorials on how to create maps in CartoDB.
+* [CartoDB documentation](http://docs.cartodb.com/): if you want to know more about all the features.
+
