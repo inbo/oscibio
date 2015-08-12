@@ -5,130 +5,136 @@ Author: Peter Desmet
 Tags: bird-tracking, visualization, CartoDB
 Summary: ...
 
-This tutorial is based on a workshop I gave at the [Animal Movement Analysis Summer Course](http://horizon.science.uva.nl/scge2015-wiki/doku.php) on July 10, 2015 at the University of Amsterdam.
+We have been using [CartoDB for bird tracking data](http://lifewatch.inbo.be/blog/tag/cartodb.html) for a while now and are very happy to that see that we have inspired others to do the [same](http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html), including for [other species](http://blog.cartodb.com/fisher/). To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops[^1]. Rather than keeping the course material private, I've decided to publish it here on this blog, so anyone can use it.
+
+[^1]: The [Animal Movement Analysis Summer Course](http://horizon.science.uva.nl/scge2015-wiki/doku.php) organized by the [Institute for Biodiversity and Ecosystem Dynamics](http://ibed.uva.nl/) on July 10 and the [LifeWatch GIS and WebGis workshop](http://biodiversity.be/conference2015/workshops/) organized by the Université catholique de Louvain and INBO on September 16.
+
+Note: If you want to follow along with this tutorial, you'll at least need to do the actions in **bold**, all the rest in optional.
 
 ## Introduction
 
-[CartoDB](http://cartodb.com) is a tool to explore, analyze and visualize geospatial data online. In my opinion, it's like Gmail or GitHub: one of the best software tools ever. CartoDB is being used in a [wide area of domains](https://cartodb.com/gallery) (e.g. [education and research](https://cartodb.com/industries/education-and-research/)): in this workshop I'll give an introduction on how to use it for tracking data.
+[CartoDB](http://cartodb.com) is a tool to explore, analyze and visualize geospatial data online. In my opinion, it's like Gmail or GitHub: one of the best software tools ever. CartoDB is used in a [wide area of domains](https://cartodb.com/gallery) and has [great documentation](http://docs.cartodb.com/), but in this tutorial I'll focus on how it can be used for exploring and visualizing animal tracking data. Since [we are tracking birds](http://lifewatch.inbo.be/blog/tag/bird-tracking.html), I'll use our open data of Lesser Black-backed Gulls in the examples, but the methods can be applied to other animal tracking data as well. This tutorial is by no means meant to be exhaustive: it's a step by step guide to get you started and hopefully inspire you to do cool things with your own data.
 
-## Create account
+## Create an account
 
-**Go to <https://cartodb.com/signup> to create an account**. Free accounts allow you to upload 50MB as public tables.
+**Go to <https://cartodb.com/signup> to create an account.** Free accounts allow you to upload 50MB of data, but all your data and maps will be public[^2].
+
+[^2]: They are public in the sense that they can be discovered on your public profile, for which you need to know your user name.
 
 ## Login
 
 1. On login, you see your private dashboard. This is where you can upload data, create maps and manage your account.
 2. CartoDB will display contextual help messages to get you to know the tool. For an overview, see [the documentation on the CartoDB editor](http://docs.cartodb.com/).
-3. You have a `dashboard/maps` overview and `dashboard/datasets` overview.
+3. At the top, you can toggle between your `Maps` and `Datasets` dashboard.
 4. You also have a public profile (`https://user.cartodb.com/maps`). All datasets you upload and maps you create will be visible there.
 
 ## Upload data
 
-For this tutorial, we use [our open bird tracking data]({filename}bird-tracking-data-published.md). To make it easier for you to follow along with a free CartoDB account, you can [download a subset of the data here]({filename}/files/bird_tracking.csv). If you want to know how that subset was created, here's the SQL query I used:
+For this tutorial, well use [our open bird tracking data]({filename}bird-tracking-data-published.md). To make it easier for you to follow along with a free CartoDB account, you can [download a subset of the data here]({filename}/files/bird_tracking.csv), containing migration data for three gulls. If you want to know how that subset was created, here's the SQL query I used:
 
-```SQL
-SELECT
-    t.the_geom_webmercator,
-    t.altitude,
-    t.date_time,
-    t.device_info_serial,
-    t.direction,
-    t.latitude,
-    t.longitude,
-    |/(t.x_speed^2 + t.y_speed^2) AS speed_2d,
-    d.bird_name
-FROM bird_tracking t
-    LEFT JOIN lifewatch.bird_tracking_devices d
-    ON t.device_info_serial = d.device_info_serial
-WHERE
-    t.userflag IS FALSE AND
-    t.date_time >= '2013-08-15' AND
-    t.date_time < '2014-05-01' AND
-    d.bird_name IN (
-        'Eric',
-        'Nico',
-        'Sanne'
-    )
-ORDER BY
-    d.bird_name,
-    t.date_time
-```
+    :::SQL
+    SELECT
+        t.the_geom_webmercator,
+        t.altitude,
+        t.date_time,
+        t.device_info_serial,
+        t.direction,
+        t.latitude,
+        t.longitude,
+        |/(t.x_speed^2 + t.y_speed^2) AS speed_2d,
+        d.bird_name
+    FROM bird_tracking t
+        LEFT JOIN bird_tracking_devices d
+        ON t.device_info_serial = d.device_info_serial
+    WHERE
+        t.userflag IS FALSE AND
+        t.date_time >= '2013-08-15' AND
+        t.date_time < '2014-05-01' AND
+        d.bird_name IN (
+            'Eric',
+            'Nico',
+            'Sanne'
+        )
+    ORDER BY
+        d.bird_name,
+        t.date_time
 
-1. Download [this tracking data file](http://horizon.science.uva.nl/public/AMA_2015/DAY5/CartoDB/scge_lbbg_migration.csv.zip)
-2. **Go to your datasets overview.**
-3. **Upload `scge_lbbg_migration.csv`** (or the zip, it doesn't matter) by dragging the file to your browser window. CartoDB recognizes [multiple files formats](http://docs.cartodb.com/cartodb-editor.html#supported-file-formats).
+1. **Download [this zipped bird tracking csv file]({filename}/files/bird_tracking.zip).**
+2. **Go to your datasets dashboard.**
+3. **Upload the file** by dragging it to your browser window. CartoDB recognizes [multiple files formats](http://docs.cartodb.com/cartodb-editor.html#supported-file-formats).
 
 ## Data view
 
-1. CartoDB is powered by PostgreSQL and PostGIS.
-2. CartoDB has created a table from your file and done some automatic interpretation of the data types. Some additional columns have been created as well, such as `cartodb_id`.
-3. Geospatial data are interpreted automatically in `the_geom`. This interpretation assumes the geodetic datum to be `WGS84`. `the_geom` supports points, lines and polygons, but only one type per dataset.
-4. Click the arrow next to field name to manipulate columns: e.g. delete, alter data type, etc.
-5. Most of the functionality is in the toolbar on the right hand side: e.g. `Merge datasets`, `Add rows` and `Filters`.
-6. Filters are great for exploring the data. **Try out the filter for altitude.**
+1. CartoDB is powered by PostgreSQL & PostGIS and has created a database table from your file and done some automatic interpretation of the data types. Some additional columns have been created as well, such as `cartodb_id`.
+2. Geospatial data are interpreted automatically in `the_geom`. This interpretation assumes the geodetic datum to be `WGS84`. `the_geom` supports points, lines and polygons, but only one type per dataset.
+3. Click the arrow next to field name to manipulate columns, such as sorting, renaming, deleting or changing data types.
+4. Most of the functionality is in the collapsed toolbar on the right, such as merging datasets, adding rows or columns, and filters.
+5. Filters are great for exploring the data. **Try out the filter for altitude.**
 
-    ![Filters](filters.png)
+    ![Filters]({filename}/images/cartodb-filters.png)
 
-7. Filters are actually just SQL, a much more powerful language to select, aggregate or update your data. CartoDB supports all PostgreSQL and PostGIS SQL functions.
-8. Click `SQL` in the toolbar and **try this SQL** to get some statistics about the scope of the dataset:
+6. Filters are actually just SQL, a much more powerful language to select, aggregate or update your data. CartoDB supports all PostgreSQL and PostGIS SQL functions.
+7. Click `SQL` in the toolbar and **try this SQL** to get some statistics about the scope of the dataset:
 
-    ```SQL
-    SELECT
-        count(*) AS occurrences,
-        min(date_time) AS min_date_time,
-        max(date_time) AS max_date_time,
-        count(distinct device_info_serial) AS individuals
-    FROM scge_lbbg_migration
-    ```
+        :::SQL
+        SELECT
+            count(*) AS occurrences,
+            min(date_time) AS min_date_time,
+            max(date_time) AS max_date_time,
+            count(distinct device_info_serial) AS individuals
+        FROM bird_tracking
 
-9. **Click** `Clear view` to remove any applied SQL.
+8. **Click** `Clear view` to remove any applied SQL.
  
 ## Create your first map
 
-1. **Click** `Visualize` in the top right to create your first map and **name it** `My first map`.
-2. **Click** `Map view`.
-3. You can change the background map by clicking `Change basemap` in the bottom right. `Positron` is a good default basemap, but there are many more options available and even more via `Yours` (including maps from NASA).
-4. Click `Options` in the bottom right to select the map interaction options you want to provide to visitors of your map, such as `Zoom controls` or a `Fullscreen` button.
-5. Map view also provides a toolbar on the right: we already know `SQL` and `Filters` from the data view.
-6. **Click** `Wizards` in the toolbar to see lots of visualization options. These are all explained in the [CartoDB documentation](http://docs.cartodb.com/cartodb-editor.html#map-wizards).
-7. **Try** `Intensity` with the following options:
+1. **Click** `Visualize` in the top right to create your first map.
+2. Once created, click the title `bird_tracking1` and rename it to `My first map`[^3].
+3. **Click** `Map view`.
+4. You can change the background map by clicking `Change basemap` in the bottom right[^4]. `Positron` is a good default basemap, but there are many other options available and even more via `Yours` (including maps from NASA). Note that for the `Positron` and `Dark matter` basemaps, city labels will be [positioned on top of your data](http://blog.cartodb.com/let-your-labels-shine/), making them more readable. Choose `Positron (labels below)` to turn this off or `Positron (lite)` to have no labels at all.
+5. Click `Options` in the bottom right to select the map interaction options you want to provide to the visitors of your map, such as `Zoom controls` or a `Fullscreen` button.
+6. The map view also provides a toolbar on the right, where you'll recognize the same `SQL` and `Filters` features from the data view.
+7. **Click** `Wizards` in the toolbar to see a plethora of visualization options. These are all explained in the [CartoDB documentation](http://docs.cartodb.com/cartodb-editor.html#map-wizards).
+8. **Try** `Intensity` with the following options to get a sense of the distribution of occurrences:
 
-    ![Intensity map](intensity.png)
+    ![Intensity map]({filename}/images/cartodb-intensity.png)
 
-8. **Try** `Choropleth` with the following options (see the [documentation](http://docs.cartodb.com/cartodb-editor.html#choropleth) for different quantification methods):
+9. **Try** `Choropleth` with the following options to see the relative altitude distribution (see the [documentation](http://docs.cartodb.com/cartodb-editor.html#choropleth) for different quantification methods):
 
-    ![Choropleth map](choropleth.png)
+    ![Choropleth map]({filename}/images/cartodb-choropleth.png)
 
-9. Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map. **Click** `CSS` in the toolbar to discover how the quantification buckets are defined:
+10. Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map. **Click** `CSS` in the toolbar to discover how the quantification buckets (in this case `Quantile`) are defined:
 
-    ```CSS
-    /** choropleth visualization */
+        :::CSS
+        /** choropleth visualization */
 
-    #scge_lbbg_migration{
-      marker-fill-opacity: 0.8;
-      marker-line-color: #FFF;
-      marker-line-width: 0.5;
-      marker-line-opacity: 1;
-      marker-width: 8;
-      marker-fill: #F2D2D3;
-      marker-allow-overlap: true;
-    }
-    #scge_lbbg_migration [ altitude <= 3294] {
-       marker-fill: #C1373C;
-    }
-    #scge_lbbg_migration [ altitude <= 2345] {
-       marker-fill: #CC4E52;
-    }
-    #scge_lbbg_migration [ altitude <= 1396] {
-       marker-fill: #D4686C;
-    }
-    #scge_lbbg_migration [ altitude <= 447] {
-       marker-fill: #EBB7B9;
-    }
-    #scge_lbbg_migration [ altitude <= -502] {
-       marker-fill: #F2D2D3;
-    }
-    ```
+        #bird_tracking{
+          marker-fill-opacity: 0.8;
+          marker-line-color: #FFF;
+          marker-line-width: 0.5;
+          marker-line-opacity: 1;
+          marker-width: 7;
+          marker-fill: #F2D2D3;
+          marker-allow-overlap: true;
+        }
+        #bird_tracking [ altitude <= 6965] {
+           marker-fill: #C1373C;
+        }
+        #bird_tracking [ altitude <= 634] {
+           marker-fill: #CC4E52;
+        }
+        #bird_tracking [ altitude <= 338.5] {
+           marker-fill: #D4686C;
+        }
+        #bird_tracking [ altitude <= 66.5] {
+           marker-fill: #EBB7B9;
+        }
+        #bird_tracking [ altitude <= -205.5] {
+           marker-fill: #F2D2D3;
+        }
+
+[^3]: Maps can have spaces and punctation in their name, dataset names use lowercase and underscores.
+[^4]: You'll have dismiss to [cool](http://blog.cartodb.com/one-click-mapping/), but somewhat obstrusive `Analyzing dataset` pop-up.
 
 ## Create a map of migration speed
 
