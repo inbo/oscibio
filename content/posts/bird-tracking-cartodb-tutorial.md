@@ -5,7 +5,7 @@ Author: Peter Desmet
 Tags: bird-tracking, visualization, CartoDB
 Summary: An introduction to using CartoDB for tracking data, based on two workshops we gave.
 
-We have been using [CartoDB for bird tracking data](http://lifewatch.inbo.be/blog/tag/cartodb.html) for a while now and are very happy to that see that we have inspired others to do the [same](http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html), including for [other species](http://blog.cartodb.com/fisher/). To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops[^1]. Rather than handing the course material to the participants of these workshops only, I decided to publish it here on this blog, so anyone can use it.
+We have been using [CartoDB for bird tracking data](http://lifewatch.inbo.be/blog/tag/cartodb.html) for a while now and are very happy to see that we have inspired others to do the [same](http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html), including for [other species](http://blog.cartodb.com/fisher/). To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops[^1]. Rather than handing the course material to the participants of these workshops only, I decided to publish it here on this blog, so anyone can use it.
 
 [^1]: The [Animal Movement Analysis Summer Course](http://horizon.science.uva.nl/scge2015-wiki/doku.php) organized by the [Institute for Biodiversity and Ecosystem Dynamics](http://ibed.uva.nl/) on July 10 and the [LifeWatch GIS and WebGis workshop](http://biodiversity.be/conference2015/workshops/) organized by the Université catholique de Louvain and the INBO on September 16.
 
