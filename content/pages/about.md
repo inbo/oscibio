@@ -12,7 +12,7 @@ Further background information about the project can be found on [lifewatch.be](
 
 ## Team
 
-<div markdown="1" class="team-member">
+<div class="team" markdown="1>
 
 ### Peter Desmet - Team coordinator
 
@@ -20,8 +20,6 @@ Peter manages the projects, communication and team. He also coordinates the data
 
 [Twitter](https://twitter.com/peterdesmet) | [GitHub](https://github.com/peterdesmet)
 
-</div>
-<div markdown="1" class="team-member">
 
 ### Bart Aelterman - Analyst
 
@@ -29,8 +27,6 @@ Bart interviews the researchers involved to figure out their exact needs. He the
 
 [Twitter](https://twitter.com/bartaelterman) | [GitHub](https://github.com/bartaelterman)
 
-</div>
-<div markdown="1" class="team-member">
 
 ### Kevin Azijn - Software developer
 
