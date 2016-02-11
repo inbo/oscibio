@@ -426,14 +426,17 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (min-width: 48em) {
 /* Default size */
-    .single .team-member { /* About page: column view */
-        float: left;
-        margin-right: 1.2em;
-        width: 30%;
+    .single .team { /* About page */
+        clear: both;
         }
-        .team-member h3 {
-            border: none;
-            margin-top: 0;
+        .single .team img {
+            float: left;
+            margin-bottom: 1.2em;
+            margin-right: 1.2em;
+            width: 200px;
+        }
+        .single .team h3 {
+            clear: both;
         }
 }
 
