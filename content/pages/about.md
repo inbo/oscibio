@@ -16,24 +16,34 @@ Further background information about the project can be found on [lifewatch.be](
 
 ### Peter Desmet - Team coordinator
 
-Peter manages the projects, communication and team. He also coordinates the data publication, in collaboration with networks such as [GBIF](http://www.gbif.org) and [BioVeL](http://www.biovel.eu/). His [personal mission](http://peterdesmet.com/pages/about.html) is to promote open data, standards and software. He is not fond of administration.
+![Peter](https://avatars0.githubusercontent.com/u/600993?v=3&amp;s=200)
+
+Peter coordinates the project, team, and communication. He is a driving force behind the INBO's open data policy, geeks about publishing biodiversity data, and loves creating visualizations.
 
 [Twitter](https://twitter.com/peterdesmet) | [GitHub](https://github.com/peterdesmet)
 
+### Bart Aelterman - Data scientist
 
-### Bart Aelterman - Analyst
+![Bart](https://avatars2.githubusercontent.com/u/2742677?v=3&amp;s=200)
 
-Bart interviews the researchers involved to figure out their exact needs. He then translates those needs to software requirements with the help of processes, diagrams, mockups, and coffee. During his train commute, Bart is a [bioinformatics-hacker](http://bioinformatics-man.blogspot.be/), wishing he had wifi-access.
+Bart is responsible for developing data processing pipelines, providing storage infrastructure, and user interfaces. As the size of the datasets can become challenging, he assist researchers with data handling, explorative analyses, and visualizations.
 
 [Twitter](https://twitter.com/bartaelterman) | [GitHub](https://github.com/bartaelterman)
 
+### Stijn Van Hoey - Open data publisher
 
-### Kevin Azijn - Software developer
+![Stijn](https://avatars3.githubusercontent.com/u/754862?v=3&amp;s=200)
 
-Kevin develops the applications and APIs, invariably finishing his sentences with a semicolon. He has experience in mobile app development and dreams of a future where he can automatically monitor biodiversity from his bicycle.
+Stijn is an avid promoter of open science. He supports researchers in their journey towards open data publishing and reproducible science, by eliminating the technical barriers.
 
-[Twitter](https://twitter.com/kazijn) | [GitHub](https://github.com/kazijn)
+[Twitter](https://twitter.com/svanhoey) | [GitHub](https://github.com/stijnvanhoey)
+
+### Dimitri Brosens - Data liaison officer
+
+![Dimitri](https://pbs.twimg.com/profile_images/697704395010674688/loMMFKWQ.png)
+
+Dimitri is data liaison officer at the [Belgian Biodiversity Platform](http://www.biodiversity.be). He loves to chat with researchers to help them publish their data. His ultimate goal is to get Belgium on the world map of biodiversity data.
+
+[Twitter](https://twitter.com/dimibro) | [GitHub](https://github.com/dimevil)
 
 </div>
-
-![Team]({filename}/images/team.jpg)
