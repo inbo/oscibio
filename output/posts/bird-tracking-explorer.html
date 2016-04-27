@@ -57,8 +57,8 @@
             </ul>
         </footer>
         <div>
-            <p>As we have written before, our <a href="http://lifewatch.inbo.be/blog/posts/bird-tracking-data-published.html">bird tracking data are open</a>: you can download these in <a href="http://doi.org/10.15468/02omly">bulk</a>, via the <a href="https://github.com/LifeWatchINBO/bird-tracking/blob/master/cartodb/README.md">CartoDB API</a> or the <a href="http://api.gbif.org/v1/occurrence/search?datasetkey=83e20573-f7dd-4852-9159-21566e1e691e">GBIF API</a>. These methods don't allow you however to quickly explore a single individual, for a certain time period<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>. This is why we're happy to announce our <a href="http://lifewatchinbo.github.io/bird-tracking/explorer/index.html">bird tracking explorer</a>, an experimental, open source tool that allows you to do just that.</p>
-<p><a href="http://lifewatchinbo.github.io/bird-tracking/explorer/index.html"><img alt="Bird tracking explorer" src="http://lifewatch.inbo.be/blog/images/bird-tracking-explorer.png" /></a></p>
+            <p>As we have written before, our <a href="http://lifewatch.inbo.be/blog/posts/bird-tracking-data-published.html">bird tracking data are open</a>: you can download these in <a href="http://doi.org/10.15468/02omly">bulk</a>, via the <a href="https://github.com/inbo/bird-tracking/blob/master/cartodb/README.md">CartoDB API</a> or the <a href="http://api.gbif.org/v1/occurrence/search?datasetkey=83e20573-f7dd-4852-9159-21566e1e691e">GBIF API</a>. These methods don't allow you however to quickly explore a single individual, for a certain time period<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>. This is why we're happy to announce our <a href="http://inbo.github.io/bird-tracking/explorer/index.html">bird tracking explorer</a>, an experimental, open source tool that allows you to do just that.</p>
+<p><a href="http://inbo.github.io/bird-tracking/explorer/index.html"><img alt="Bird tracking explorer" src="http://lifewatch.inbo.be/blog/images/bird-tracking-explorer.png" /></a></p>
 <h2>Features</h2>
 <ul>
 <li><strong>Select a bird</strong>: The explorer is designed to explore the activity of a single individual, which you can select from the dropdown menu. Basic metadata about the selected bird (sex, species, ring code, caught date) are indicated on the right.</li>
@@ -80,7 +80,7 @@
 <h2>Technology</h2>
 <p>We developed the bird tracking explorer to learn and experiment with some open source technologies:</p>
 <ul>
-<li><strong>CartoDB API</strong>: We have blogged about the mapping tool <a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a> before. Perhaps a lesser-known feature of CartoDB is its <a href="https://github.com/LifeWatchINBO/bird-tracking/blob/master/cartodb/README.md">SQL API</a>, which allows you to query datasets in plain SQL giving you enormous flexibility. All data shown by the explorer are queried via the CartoDB API. </li>
+<li><strong>CartoDB API</strong>: We have blogged about the mapping tool <a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a> before. Perhaps a lesser-known feature of CartoDB is its <a href="https://github.com/inbo/bird-tracking/blob/master/cartodb/README.md">SQL API</a>, which allows you to query datasets in plain SQL giving you enormous flexibility. All data shown by the explorer are queried via the CartoDB API. </li>
 <li><strong>CartoDB.js</strong>: A <a href="http://docs.cartodb.com/cartodb-platform/cartodb-js.html">JavaScript library</a> to create CartoDB maps on the fly in the browser. We use it to build the map and update it when a user selects a new bird or date.</li>
 <li><strong>jQuery</strong>: A <a href="https://jquery.com/">Javascript library</a> to interact with the SQL API and add interactivity to the page.</li>
 <li><strong>Cal-Heatmap</strong>: A <a href="https://kamisama.github.io/cal-heatmap/">Javascript library</a> to create interactive calendar heat maps, used for the year and month charts. Requires <a href="http://d3js.org">D3</a>.</li>
@@ -88,8 +88,8 @@
 <li><strong>Bootstrap</strong>: A <a href="http://getbootstrap.com/">HTML, CSS and JavaScript framework</a> to quickly create a nice, responsive design.</li>
 </ul>
 <h2>Go explore</h2>
-<p>The bird tracking explorer currently contains data from 63 individuals (44 Lesser Black-backed Gulls, 16 Herring Gulls and 3 Western Marsh Harriers). Depending on the individual, tracks are available from May 2013 until August 2014. That includes the winter period during which certain birds migrate to Spain and Africa. So go ahead, and <a href="http://lifewatchinbo.github.io/bird-tracking/explorer/index.html">explore the bird tracking data yourself</a>. Developers might want to explore the <a href="https://github.com/LifeWatchINBO/bird-tracking">open source code on GitHub</a>.</p>
-<p>If you have a comment, remark or suggestion, leave a comment below or <a href="https://github.com/LifeWatchINBO/bird-tracking/issues">create an issue</a>.</p>
+<p>The bird tracking explorer currently contains data from 63 individuals (44 Lesser Black-backed Gulls, 16 Herring Gulls and 3 Western Marsh Harriers). Depending on the individual, tracks are available from May 2013 until August 2014. That includes the winter period during which certain birds migrate to Spain and Africa. So go ahead, and <a href="http://inbo.github.io/bird-tracking/explorer/index.html">explore the bird tracking data yourself</a>. Developers might want to explore the <a href="https://github.com/inbo/bird-tracking">open source code on GitHub</a>.</p>
+<p>If you have a comment, remark or suggestion, leave a comment below or <a href="https://github.com/inbo/bird-tracking/issues">create an issue</a>.</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -130,7 +130,7 @@
                         <ul>
                             <h2>Keep in touch</h2>
                             <li><a href="https://twitter.com/LifeWatchINBO">Follow us on Twitter</a></li>
-                            <li><a href="https://github.com/LifeWatchINBO">Our GitHub repositories</a></li>
+                            <li><a href="https://github.com/inbo">Our GitHub repositories</a></li>
                             <li><a href="http://lifewatch.inbo.be/blog/feeds/rss.xml">Subscribe to updates</a></li>
                         </ul>
                     </div>

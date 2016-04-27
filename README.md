@@ -91,5 +91,5 @@ This repository contains the content and settings for the [LifeWatch INBO blog](
 
 1. Login to the production server.
 2. Go to the `lifewatch-blog` directory.
-3. Use `git pull https://github.com/LifeWatchINBO/lifewatch-blog master`.
+3. Use `git pull https://github.com/inbo/lifewatch-blog master`.
 4. Verify on <http://lifewatch.inbo.be/blog>.
