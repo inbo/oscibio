@@ -4,7 +4,8 @@
 
 * Peter Desmet: <https://twitter.com/peterdesmet>
 * Bart Aelterman: <https://twitter.com/bartaelterman>
-* Kevin Azijn: <https://twitter.com/kazijn>
+* Stijn Van Hoey: <https://twitter.com/svanhoey>
+* Dimitri Brosens: <https://twitter.com/dimibro>
 
 ## THANKS
 
@@ -13,8 +14,8 @@
 ## TECHNOLOGY COLOPHON
 
 * Powered by Pelican: <http://docs.getpelican.com/>
-* Hosted on GitHub: <https://github.com/LifeWatchINBO>
-* Styled with our own theme Eurasian Spoonbill: <https://github.com/LifeWatchINBO/eurasian-spoonbill>
+* Hosted on GitHub: <https://github.com/inbo>
+* Styled with our own theme Eurasian Spoonbill: <https://github.com/inbo/eurasian-spoonbill>
 * Based on html5boilerplate: <http://html5boilerplate.com/>
 * Header font is Noto Sans: <http://www.google.com/fonts/specimen/Noto+Sans>
 * Icon font is Font Awesome: <http://fortawesome.github.io/Font-Awesome/>
