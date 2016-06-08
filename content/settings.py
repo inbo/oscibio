@@ -28,7 +28,7 @@ STATIC_PATHS = [
     "images",
     "files"
 ]
-OUTPUT_PATH = "../output" # Sibling directory of `content`
+OUTPUT_PATH = "../" # root
 DELETE_OUTPUT_DIRECTORY = False
 OUTPUT_RETENTION = (
     (".git"),
