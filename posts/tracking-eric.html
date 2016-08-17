@@ -68,13 +68,13 @@
 <p>The dark red spot on the pier marks the nest of Eric. You can zoom and pan the map, or click on individual points to get the date and time of recording.</p>
 <h2>Map of trips per day</h2>
 <p>To get a better sense of the trips Eric made during those two months, we can string the points together in a path. All of this can be done in SQL, since CartoDB is built on <a href="http://www.postgresql.org/">PostgreSQL</a> and <a href="http://postgis.net/">PostGIS</a>. In order to get a path per day, we first need to create a <code>day_of_year</code> column:</p>
-<div class="highlight"><pre><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">day_of_year</span> <span class="nb">integer</span>
+<div class="highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">day_of_year</span> <span class="nb">integer</span>
 <span class="k">UPDATE</span> <span class="n">tracking_eric</span> <span class="k">SET</span> <span class="n">day_of_year</span> <span class="o">=</span> <span class="k">extract</span><span class="p">(</span><span class="n">DOY</span> <span class="k">FROM</span> <span class="n">date_time</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Next, we order the points per <code>date_time</code>, group them by <code>day_of_year</code> and make a line<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>:</p>
-<div class="highlight"><pre><span class="k">SELECT</span> <span class="n">ST_MakeLine</span><span class="p">(</span><span class="n">the_geom_webmercator</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span> <span class="k">ASC</span><span class="p">)</span> <span class="k">AS</span>  <span class="n">the_geom_webmercator</span><span class="p">,</span> <span class="n">day_of_year</span>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">ST_MakeLine</span><span class="p">(</span><span class="n">the_geom_webmercator</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span> <span class="k">ASC</span><span class="p">)</span> <span class="k">AS</span>  <span class="n">the_geom_webmercator</span><span class="p">,</span> <span class="n">day_of_year</span>
 <span class="k">FROM</span> <span class="n">tracking_eric</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">day_of_year</span>
 </pre></div>
@@ -93,12 +93,12 @@
 <h2>Analyzing time spent per UTM 1km square</h2>
 <p>So far, I only created visualizations of the data, but CartoDB also allows me to analyze the data. I would like to know how much time Eric spent per square kilometer. This was quite a challenge for my novice SQL skills, but <a href="http://www.postgresql.org/docs/9.3/interactive/index.html">good documentation</a> goes a long way.</p>
 <p>First, we need to calculate the duration for each occurrence point. We can do this by calculating the difference between the <code>date_time</code> of the current point and the <code>date_time</code> of the previous point, using the <a href="http://www.postgresql.org/docs/9.3/static/functions-window.html">lag()</a> function, and then translating this to seconds, using the <a href="http://www.postgresql.org/docs/9.3/static/functions-datetime.html">extract()</a> function:</p>
-<div class="highlight"><pre><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">duration_in_seconds</span> <span class="nb">integer</span>
+<div class="highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tracking_eric</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">duration_in_seconds</span> <span class="nb">integer</span>
 </pre></div>
 
 
 <p>Then:</p>
-<div class="highlight"><pre><span class="k">WITH</span> <span class="n">calc_duration</span> <span class="k">AS</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><span class="k">WITH</span> <span class="n">calc_duration</span> <span class="k">AS</span> <span class="p">(</span>
     <span class="k">SELECT</span>
     <span class="n">cartodb_id</span><span class="p">,</span>
     <span class="k">extract</span><span class="p">(</span><span class="n">epoch</span> <span class="k">FROM</span> <span class="p">(</span><span class="n">date_time</span> <span class="o">-</span> <span class="n">lag</span><span class="p">(</span><span class="n">date_time</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="n">OVER</span><span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span><span class="p">)))</span> <span class="k">AS</span> <span class="n">duration_in_seconds</span>
@@ -113,7 +113,7 @@
 
 
 <p>Next, we upload a reference grid to CartoDB. I uploaded a <a href="http://www.eea.europa.eu/data-and-maps/data/eea-reference-grids">shapefile of all UTM 1km squares of Belgium</a>. Then we <a href="http://developers.cartodb.com/tutorials/joining_data.html">join the two tables</a> by geospatial intersection<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>:</p>
-<div class="highlight"><pre><span class="k">SELECT</span> 
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> 
 <span class="n">row_number</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cartodb_id</span><span class="p">,</span>
 <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span>
 <span class="k">sum</span><span class="p">(</span><span class="n">duration_in_seconds</span><span class="p">)</span> <span class="k">as</span> <span class="n">duration_in_seconds</span>
@@ -127,7 +127,7 @@
 <iframe width="100%" height="500" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/aa08c6b6-a62f-11e4-8fad-0e4fddd5de28/embed_map?sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 <p>You can click on each square to get the time Eric spent there in seconds over two months time. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:</p>
-<div class="highlight"><pre><span class="k">WITH</span> <span class="n">utm_squares</span> <span class="k">AS</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><span class="k">WITH</span> <span class="n">utm_squares</span> <span class="k">AS</span> <span class="p">(</span>
     <span class="k">SELECT</span>
     <span class="n">row_number</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cartodb_id</span><span class="p">,</span>
     <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span>

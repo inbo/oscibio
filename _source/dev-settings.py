@@ -5,10 +5,10 @@ import sys
 sys.path.append('.')
 from settings import *
 
-SITEURL = "http://localhost:8080"
+SITEURL = "http://localhost:8000"
 
 # Directory settings
-OUTPUT_PATH = "../test-output"
+OUTPUT_PATH = "../dev-output"
 
 # Reading settings
 DEFAULT_PAGINATION = None # To test pagination

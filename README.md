@@ -1,95 +1,96 @@
 # LifeWatch INBO blog
 
-This repository contains the content and settings for the [LifeWatch INBO blog](http://lifewatch.inbo.be/blog). It is generated into a static website with [Pelican](http://docs.getpelican.com/en/3.1.1/).
+This repository contains the content and settings for the [LifeWatch INBO blog](http://lifewatch.inbo.be/blog). It is generated as a static website with [Pelican](http://docs.getpelican.com).
 
-## Installation instructions
+## 1. Write a post
 
-1. On your local computer, make sure you have cloned the [lifewatch-blog](https://github.com/LifeWatchINBO/lifewatch-blog) and [eurasian-spoonbill](https://github.com/LifeWatchINBO/eurasian-spoonbill) repository to the same directory. The latter one is the theme of the blog and required to generate the correct output.
-2. Create a virtual Python environment (if not yet installed, install `virtualenv` first: `sudo pip install virtualenv`):
+1. Start a new post by copy/pasting one from `_source/posts` and update the filename and metadata. You can do this either locally or on GitHub.
+2. The syntax to use for your post is:
 
-  ```shell
-  cd lifewatch-blog
-  virtualenv py-env --python=python2.7
-  source py-env/bin/activate
-  pip install pelican
-  pip install markdown
-  ```
-3. Create `test-output` directory
+    ```Markdown
+    Title: Jurassic Park
+    Slug: jurassic-park
+    Date: 2012-12-17 17:00
+    Authors: Alan Grant, Ian Malcolm // Or Author: Alan Grant
+    Tags: dinosaurs, endorsement, quote
+    Summary: After much consideration...
+    Status: draft // To hide the post from the index list for now
 
-  ```shell
-  mkdir test-output
-  ```
+    Content as Markdown
+      
+    ## Headings start at H2 (since post title is H1)
 
-## Writing setup instructions
+    Links to other posts:
+      
+    [bird tracking data are open]({filename}bird-tracking-data-published.md)
 
-1. Start a simple server from `test-output`. Note: the port `8080` is hardcoded in the `dev-settings.py`.
+    Images:
+      
+    ![Bird tracking explorer]({filename}/images/bird-tracking-explorer.png)
 
-  ```shell
-  cd test-output
-  python -m SimpleHTTPServer 8080
-  ```
+    Code (without the \):
 
-2. Go to <http://localhost:8080> to see the test website.
-3. To generate new content, you'll need Pelican, which will run in the virtual environment you have set up. Activate the virtual environment:
+    \```SQL
+    SELECT * FROM bird_tracking
+    \```
+    ```
 
-  ```shell
-  cd ..
-  source py-env/bin/activate
-  ```
+3. Commit and push your changes.
+3. Ask for feedback via a pull request (`master` → `gh-pages`)
+4. Incorporate the feedback
 
-## Writing instructions
+Your posts is now 2 steps away from being published on the website.
 
-1. Write content locally on the `dev` branch.
-2. Go to `content/posts` and create a new one by copy/pasting another one and updating the filename, text and metadata.
-3. The syntax of the post is:
+## 2. Generate the website
 
-  ```Markdown
-  Title: Jurassic Park
-  Slug: jurassic-park
-  Date: 2012-12-17 17:00
-  Authors: Alan Grant, Ian Malcolm // Or Author: Alan Grant
-  Tags: dinosaurs, endorsement, quote
-  Summary: After much consideration...
-  Status: draft // To hide the post from the index list for now
+You need Pelican to convert your post into static HTML and update the RSS, homepage, and necessary author/category pages. Ask one of the contributors to do it for you or install all the necessary components yourself:
 
-  Content as Markdown
-  
-  ## Headings start at H2 (since post title is H1)
+### Get the blog and theme repo
 
-  Links to other posts:
-  
-  [bird tracking data are open]({filename}bird-tracking-data-published.md)
-  
-  Images:
-  
-  ![Bird tracking explorer]({filename}/images/bird-tracking-explorer.png)
+    git clone https://github.com/inbo/lifewatch-blog
+    git clone https://github.com/inbo/eurasian-spoonbill
 
-  Code (without the \):
+The latter one is the theme of the website and required to generate the correct output.
 
-  \```SQL
-  SELECT * FROM bird_tracking
-  \```
-	```
+### Create and activate an environment
 
-5. Generate your content locally with `pelican -s dev-settings.py` (which will generate the files in `test-output`). You can also use `pelican -s dev-settings.py --autoreload` for automatic generation.
-6. See your content locally at <http://localhost:8080>.
-7. Push your commits to GitHub (content in `test-output` will be ignored).
-8. Ask for feedback via a pull request (`dev` -> `master`).
-9. Incorporate feedback.
-7. Update the post date.
+Here we create an environment with [conda](http://conda.pydata.org/docs/get-started.html):
 
-## Publishing instructions
+    conda create -n pelican python=3.5 pelican markdown --channel conda-forge
 
+To activate:
+
+    source activate pelican
+>>>>>>> dev
+
+To deactivate:
+
+<<<<<<< HEAD
 ### Generate output
+=======
+    source deactivate
 
-1. Generate output locally with `pelican -s settings.py`. Files will be updated in the `output` folder.
-2. Verify the output in your browser.
-3. Push your commits to GitHub (these will be included in the open pull request).
-4. Accept the pull request to `master`.
+### Generate the website
 
-### Update content on server
+    cd lifewatch-blog/_source
+    pelican -s dev-settings.py
+>>>>>>> dev
 
-1. Login to the production server.
-2. Go to the `lifewatch-blog` directory.
-3. Use `git pull https://github.com/inbo/lifewatch-blog master`.
-4. Verify on <http://lifewatch.inbo.be/blog>.
+Use the `--autoreload` option to generate the site on every change.
+
+### Preview the website
+
+In a new terminal tab:
+
+    python http.server 8000
+
+Which will serve the website at <http://localhost:8000/dev-output>
+
+## Publish the website
+
+1. Update the post date and time.
+2. Generate the website one last time, this time with the production settings: `pelican -s settings.py`.
+3. Commit and push the generated files.
+4. Accept the pull request.
+
+Your changes are now included in the `gh-pages` branch, which serves the website at http://inbo.github.io/lifewatch-blog = http://lifewatch.inbo.be/blog.

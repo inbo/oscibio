@@ -14,21 +14,13 @@ Further background information about the project can be found on [lifewatch.be](
 
 <div class="team" markdown="1>
 
-### Peter Desmet - Team coordinator
+### Peter Desmet - Project coordinator
 
 ![Peter](https://avatars0.githubusercontent.com/u/600993?v=3&amp;s=200)
 
 Peter coordinates the project, team, and communication. He is a driving force behind the INBO's open data policy, geeks about publishing biodiversity data, and loves creating visualizations.
 
 [Twitter](https://twitter.com/peterdesmet) | [GitHub](https://github.com/peterdesmet)
-
-### Bart Aelterman - Data scientist
-
-![Bart](https://avatars2.githubusercontent.com/u/2742677?v=3&amp;s=200)
-
-Bart is responsible for developing data processing pipelines, providing storage infrastructure, and user interfaces. As the size of the datasets can become challenging, he assist researchers with data handling, explorative analyses, and visualizations.
-
-[Twitter](https://twitter.com/bartaelterman) | [GitHub](https://github.com/bartaelterman)
 
 ### Stijn Van Hoey - Open data publisher
 
