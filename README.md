@@ -72,7 +72,6 @@ To deactivate:
 
     cd lifewatch-blog/_source
     pelican -s dev-settings.py
->>>>>>> dev
 
 Use the `--autoreload` option to generate the site on every change.
 
