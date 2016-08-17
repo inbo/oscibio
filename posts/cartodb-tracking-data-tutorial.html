@@ -69,7 +69,7 @@
 </ol>
 <h2>Upload data</h2>
 <p>For this tutorial, well use <a href="http://lifewatch.inbo.be/blog/posts/bird-tracking-data-published.html">our open bird tracking data</a>. To make it easier to follow along with a free CartoDB account, you can <a href="http://lifewatch.inbo.be/blog/files/bird_tracking.zip">download a subset of the data (2.1MB)</a>, containing migration data for three gulls. If you want to know how that subset was created, here's the SQL query I used:</p>
-<div class="highlight"><pre><span class="k">SELECT</span>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">t</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span>
     <span class="n">t</span><span class="p">.</span><span class="n">altitude</span><span class="p">,</span>
     <span class="n">t</span><span class="p">.</span><span class="n">date_time</span><span class="p">,</span>
@@ -117,7 +117,7 @@
 </li>
 <li>
 <p>Click <code>SQL</code> in the toolbar and <strong>try this SQL</strong> to get some statistics about the scope of the dataset:</p>
-<div class="highlight"><pre><span class="k">SELECT</span>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">occurrences</span><span class="p">,</span>
     <span class="k">min</span><span class="p">(</span><span class="n">date_time</span><span class="p">)</span> <span class="k">AS</span> <span class="n">min_date_time</span><span class="p">,</span>
     <span class="k">max</span><span class="p">(</span><span class="n">date_time</span><span class="p">)</span> <span class="k">AS</span> <span class="n">max_date_time</span><span class="p">,</span>
@@ -151,30 +151,30 @@
 </li>
 <li>
 <p>Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>. <strong>Click <code>CSS</code></strong> in the toolbar to discover how the quantification buckets (in this case <code>Quantile</code>) are defined:</p>
-<div class="highlight"><pre><span class="c">/** choropleth visualization */</span>
+<div class="highlight"><pre><span></span><span class="c">/** choropleth visualization */</span>
 
-<span class="nf">#bird_tracking</span><span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">7</span><span class="p">;</span>
+<span class="nn">#bird_tracking</span><span class="p">{</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">7</span><span class="p">;</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#F2D2D3</span><span class="p">;</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">allow</span><span class="o">-</span><span class="n">overlap</span><span class="o">:</span> <span class="n">true</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">6965</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">6965</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#C1373C</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">634</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">634</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#CC4E52</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">338</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">338</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#D4686C</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">66</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">66</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#EBB7B9</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">-205</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">-205</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#F2D2D3</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -187,7 +187,7 @@
 <li>We want to save our previous work and create another map. <strong>Click <code>Edit &gt; Duplicate map</code> and name it <code>Where does gull Nico rest?</code></strong>.</li>
 <li>
 <p><strong>Add a <code>WHERE</code> clause to the SQL</strong> to only select gull Nico between specific dates:</p>
-<div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> 
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> 
 <span class="k">FROM</span> <span class="n">bird_tracking</span>
 <span class="k">WHERE</span>
     <span class="n">bird_name</span> <span class="o">=</span> <span class="s1">&#39;Nico&#39;</span>
@@ -203,21 +203,21 @@
 </li>
 <li>
 <p>Most of the dots are red and the story does not come across yet. Let's dive into the CSS to <strong>fine-tune the map</strong>. We basically set all dots to green, except where the speed is below 2m/s, which we show larger and in red:</p>
-<div class="highlight"><pre><span class="c">/** choropleth visualization */</span>
+<div class="highlight"><pre><span></span><span class="c">/** choropleth visualization */</span>
 
-<span class="nf">#bird_tracking</span><span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">6</span><span class="p">;</span>
+<span class="nn">#bird_tracking</span><span class="p">{</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">6</span><span class="p">;</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#1a9850</span><span class="p">;</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">allow</span><span class="o">-</span><span class="n">overlap</span><span class="o">:</span> <span class="n">true</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">speed_2d</span> <span class="o">&lt;</span> <span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">speed_2d</span> <span class="o">&lt;</span> <span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#d73027</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">10</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">10</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -246,7 +246,7 @@
 <li><strong>Duplicate your map and name it <code>Tracks per month</code></strong>.</li>
 <li>
 <p>This time we want to string the occurrences together as lines: one line per individual (with the occurrences sorted by date), per month. <strong>This can be done in the SQL</strong>. See the <a href="http://www.postgresql.org/docs/9.4/static/functions-datetime.html">PostgreSQL documentation</a> for date functions. <code>the_geom_webmercator</code> is a geospatial field that is calculated by CartoDB in the background based on <code>the_geom</code> and is used for the actual display on the map. Since we're defining a new geospatial field (i.e. a line), we have to explicitly include it.</p>
-<div class="highlight"><pre><span class="k">SELECT</span>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">ST_MakeLine</span><span class="p">(</span><span class="n">the_geom_webmercator</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span> <span class="k">ASC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">the_geom_webmercator</span><span class="p">,</span>
     <span class="k">extract</span><span class="p">(</span><span class="k">month</span> <span class="k">from</span> <span class="n">date_time</span><span class="p">)</span> <span class="k">AS</span> <span class="k">month</span><span class="p">,</span>
     <span class="n">bird_name</span>
@@ -267,43 +267,43 @@
 </li>
 <li>
 <p>We will also include labels (start doing this in the <code>Choropleth</code> options), so you can still see which track belongs to which individual. <strong>Fine-tune the map in the CSS</strong> (note that I've changed the months to integers):</p>
-<div class="highlight"><pre><span class="c">/** choropleth visualization */</span>
+<div class="highlight"><pre><span></span><span class="c">/** choropleth visualization */</span>
 
-<span class="nf">#bird_tracking</span><span class="p">{</span>
-  <span class="n">polygon</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#FFFFCC</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nf">#bird_tracking</span><span class="o">:</span><span class="nd">:labels</span> <span class="p">{</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="p">[</span><span class="n">bird_name</span><span class="p">];</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">face</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="s1">&#39;Lato Bold&#39;</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">12</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">label</span><span class="o">-</span><span class="k">position</span><span class="o">-</span><span class="n">tolerance</span><span class="o">:</span> <span class="m">10</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">halo</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">halo</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">2</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">dy</span><span class="o">:</span> <span class="m">-10</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">allow</span><span class="o">-</span><span class="n">overlap</span><span class="o">:</span> <span class="n">false</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">placement</span><span class="o">:</span> <span class="n">line</span><span class="p">;</span>
-  <span class="k">text</span><span class="o">-</span><span class="n">placement</span><span class="o">-</span><span class="n">type</span><span class="o">:</span> <span class="n">simple</span><span class="p">;</span>
+<span class="nn">#bird_tracking</span><span class="p">{</span>
+  <span class="n">polygon</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFFFCC</span><span class="p">;</span>
+  <span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+  <span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">12</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#253494</span><span class="p">;</span>
+<span class="nn">#bird_tracking</span><span class="o">:</span><span class="nd">:labels</span> <span class="p">{</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="p">[</span><span class="n">bird_name</span><span class="p">];</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">face</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="s1">&#39;Lato Bold&#39;</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="nb">size</span><span class="o">:</span> <span class="m">12</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">label</span><span class="o">-</span><span class="nb">position</span><span class="o">-</span><span class="n">tolerance</span><span class="o">:</span> <span class="m">10</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">halo</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">halo</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">2</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">dy</span><span class="o">:</span> <span class="m">-10</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">allow</span><span class="o">-</span><span class="n">overlap</span><span class="o">:</span> <span class="n">false</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">placement</span><span class="o">:</span> <span class="n">line</span><span class="p">;</span>
+  <span class="nb">text</span><span class="o">-</span><span class="n">placement</span><span class="o">-</span><span class="n">type</span><span class="o">:</span> <span class="n">simple</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">11</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#2C7FB8</span><span class="p">;</span>
+
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">12</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#253494</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">10</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#41B6C4</span><span class="p">;</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">11</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#2C7FB8</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">9</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#A1DAB4</span><span class="p">;</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">10</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#41B6C4</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">8</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#FFFFCC</span><span class="p">;</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">9</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#A1DAB4</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">8</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFFFCC</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -330,7 +330,7 @@
 <li>This time, we'll add a map on top of the previous one. <strong>Click</strong> <code>+</code> on the right hand side to add a new layer and <strong>choose the same table</strong> <code>bird_tracking</code>.</li>
 <li>
 <p><strong>Apply the same time constraints</strong> in the SQL:</p>
-<div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> 
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> 
 <span class="k">FROM</span> <span class="n">bird_tracking</span>
 <span class="k">WHERE</span>
     <span class="n">date_time</span> <span class="o">&gt;</span> <span class="s1">&#39;2013-08-15&#39;</span>
@@ -346,7 +346,7 @@
 </li>
 <li>
 <p>The final CSS looks like this:</p>
-<div class="highlight"><pre><span class="c">/** torque_cat visualization */</span>
+<div class="highlight"><pre><span></span><span class="c">/** torque_cat visualization */</span>
 
 <span class="nt">Map</span> <span class="p">{</span>
 <span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">frame</span><span class="o">-</span><span class="n">count</span><span class="o">:</span><span class="m">256</span><span class="p">;</span>
@@ -357,31 +357,31 @@
 <span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">aggregation</span><span class="o">:</span><span class="n">linear</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nf">#bird_tracking</span><span class="p">{</span>
+<span class="nn">#bird_tracking</span><span class="p">{</span>
     <span class="n">comp</span><span class="o">-</span><span class="n">op</span><span class="o">:</span> <span class="n">source</span><span class="o">-</span><span class="n">over</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">type</span><span class="o">:</span> <span class="n">ellipse</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="k">width</span><span class="o">:</span> <span class="m">3</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">3</span><span class="p">;</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#FF6600</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="k">width</span><span class="o">:</span><span class="m">5</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">45</span><span class="p">;</span> 
+<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span><span class="m">5</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">45</span><span class="p">;</span> 
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="k">width</span><span class="o">:</span><span class="m">7</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">225</span><span class="p">;</span> 
+<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span><span class="m">7</span><span class="p">;</span>
+    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">225</span><span class="p">;</span> 
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#B81609</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#FFA300</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">3</span><span class="o">]</span> <span class="p">{</span>
+<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">3</span><span class="o">]</span> <span class="p">{</span>
     <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#A53ED5</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
