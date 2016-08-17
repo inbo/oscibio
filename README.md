@@ -61,13 +61,11 @@ Here we create an environment with [conda](http://conda.pydata.org/docs/get-star
 To activate:
 
     source activate pelican
->>>>>>> dev
 
 To deactivate:
 
-<<<<<<< HEAD
 ### Generate output
-=======
+
     source deactivate
 
 ### Generate the website
