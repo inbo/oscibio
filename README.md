@@ -1,69 +1,61 @@
 # LifeWatch INBO blog
 
-This repository contains the content and settings for the [LifeWatch INBO blog](http://lifewatch.inbo.be/blog). It is generated into a static website with [Pelican](http://docs.getpelican.com/en/3.1.1/).
+This repository contains the content and settings for the [LifeWatch INBO blog](http://lifewatch.inbo.be/blog). It is generated as a static website with [Pelican](http://docs.getpelican.com).
 
-## Installation instructions
+## 1. Write a post
 
-On your local computer, make sure you have cloned the `lifewatch-blog` and `eurasian-spoonbill` repository to the same directory. The latter one is the theme of the blog and required to generate the correct output.
+1. Create a new post in `_source/posts` on the `master` branch, either locally or on GitHub. See the other posts for syntax and required metadata.
+2. Commit and push your changes.
+3. Ask for feedback via a pull request (`master` → `gh-pages`)
+4. Incorporate the feedback
 
-### Create virtual Python environment
+Your posts is now 2 steps away from being published on the website.
 
-If not yet installed, install `virtualenv` first: `sudo pip install virtualenv`.
+## 2. Generate the website
 
-```shell
-cd lifewatch-blog
-virtualenv py-env --python=python2.7
-source py-env/bin/activate
-pip install pelican
-pip install markdown
-```
+You need Pelican to convert your post into static HTML and update the RSS, homepage, and necessary author/category pages. Ask one of the contributors to do it for you or install all the necessary components yourself:
 
-### Create test-output directory
+### Get the blog and theme repo
 
-```shell
-mkdir test-output
-```
+    git clone https://github.com/inbo/lifewatch-blog
+    git clone https://github.com/inbo/eurasian-spoonbill
 
-### Start simple server
+The latter one is the theme of the website and required to generate the correct output.
 
-```shell
-cd test-output
-python -m SimpleHTTPServer 8080
-```
+### Create and activate an environment
 
-Go to <http://localhost:8080> for the test website. Use the publishing instructions to generate the website.
+Here we create an environment with [conda](http://conda.pydata.org/docs/get-started.html):
 
-### Activate virtual Python environment
+    conda create -n pelican python=3.5 pelican markdown --channel conda-forge
 
-Could be done in a new terminal window.
+To activate:
 
-```shell
-cd ..
-source py-env/bin/activate
-```
+    source activate pelican
 
-## Publishing instructions
+To deactivate:
 
-### Write and ask feedback
+    source deactivate
 
-1. Go to `content`
-2. Write content on your local `dev` branch.
-3. Optional: test locally with `pelican -s dev-settings.py` which will generate the website in `test-output` at <http://localhost:8080>.
-4. Push your commits to GitHub.
-5. Ask for feedback via a pull request (`dev` -> `master`).
-6. Incorporate feedback.
-7. Update the post date.
+### Generate the website
 
-### Generate output
+    cd lifewatch-blog/_source
+    pelican -s dev-settings.py
 
-1. Generate output locally with `pelican -s settings.py`. Files will be updated in the `output` folder.
-2. Verify the output in your browser.
-3. Push your commits to GitHub (these will be included in the open pull request).
-4. Accept the pull request to `master`.
+Use the `--autoreload` option to generate the site on every change.
 
-### Update content on server
+### Preview the website
 
-1. Login to the production server.
-2. Go to the `lifewatch-blog` directory.
-3. Use `git pull https://github.com/inbo/lifewatch-blog master`.
-4. Verify on <http://lifewatch.inbo.be/blog>.
+In a new terminal tab:
+
+    python http.server 8000
+
+Which will serve the website at <http://localhost:8000/dev-output>
+
+## Publish the website
+
+1. Update the post date and time.
+2. Generate the website one last time, this time with the production settings: `pelican -s settings.py`.
+3. Commit and push the generated files.
+4. Accept the pull request.
+
+Your changes are now included in the `gh-pages` branch, which serves the website at http://inbo.github.io/lifewatch-blog = http://lifewatch.inbo.be/blog.

@@ -1,4 +1,4 @@
 .DS_Store
 *.pyc
-py-env/
-test-output/
+dev-output/
+*/__pycache__
