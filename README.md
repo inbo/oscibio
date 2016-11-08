@@ -78,7 +78,7 @@ Use the `--autoreload` option to generate the site for every change.
 
 In a new terminal tab:
 
-    python http.server 8000
+    python -m http.server 8000
 
 Which will serve the website at <http://localhost:8000/dev-output>
 
