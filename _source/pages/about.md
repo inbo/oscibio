@@ -15,17 +15,18 @@ Further background information about the project can be found on [lifewatch.be](
 <div class="team" markdown="1>
 
 ### Tanja Milotic - Project coordinator
-![Tanja] (https://avatars2.githubusercontent.com/u/26165229?v=3&s=460)
 
-Tanja coordinates the project, team, and communication.She strongly believes in the value of open science in biodiversity research. 
+![Tanja] (https://avatars2.githubusercontent.com/u/26165229?v=3&amp;s=200)
+
+Tanja coordinates the LifeWatch INBO project and communication. She strongly believes in the value of open science in biodiversity research. 
 
 [Twitter](https://twitter.com/milotict) | [GitHub](https://github.com/milotictanja)
 
-### Peter Desmet - Project coordinator
+### Peter Desmet - Open science coordinator
 
 ![Peter](https://avatars0.githubusercontent.com/u/600993?v=3&amp;s=200)
 
-Peter coordinates the project, team, and communication. He is a driving force behind the INBO's open data policy, geeks about publishing biodiversity data, and loves creating visualizations.
+Peter coordinates the open science team at the INBO. He is a driving force behind the INBO's open data policy, geeks about publishing biodiversity data, and loves creating visualizations.
 
 [Twitter](https://twitter.com/peterdesmet) | [GitHub](https://github.com/peterdesmet)
 
