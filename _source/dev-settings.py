@@ -5,7 +5,7 @@ import sys
 sys.path.append('.')
 from settings import *
 
-SITEURL = "http://localhost:8000"
+SITEURL = "http://localhost:8000/dev-output"
 
 # Directory settings
 OUTPUT_PATH = "../dev-output"

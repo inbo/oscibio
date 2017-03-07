@@ -76,7 +76,7 @@ Use the `--autoreload` option to generate the site for every change.
 
 ### Preview the website
 
-In a new terminal tab:
+In a new terminal tab, in the root of the repository, do:
 
     python -m http.server 8000
 
