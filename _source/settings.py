@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*- #
 
 SITENAME = "LifeWatch INBO"
-SITEURL = "http://lifewatch.inbo.be/blog"
+SITEURL = "https://lifewatch.inbo.be/blog"
 TITLE = "Towards more efficient biodiversity monitoring"
 SUBTITLE = "We blog about ideas, challenges and technologies related to building "\
            "an open terrestrial and freshwater observatory in Flanders for the "\
            "LifeWatch research infrastructure."
 AUTHOR = "LifeWatch INBO team"
-DISCLAIMER = "The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\" href=\"http://lifewatch.inbo.be/blog\">LifeWatch INBO blog</a> is licensed under a <a rel =\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"> Creative Commons Attribution 4.0 International License</a>."
+DISCLAIMER = "The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\" href=\"https://lifewatch.inbo.be/blog\">LifeWatch INBO blog</a> is licensed under a <a rel =\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"> Creative Commons Attribution 4.0 International License</a>."
 
 TIMEZONE = "Europe/Paris"
 DEFAULT_LANG = "en"
