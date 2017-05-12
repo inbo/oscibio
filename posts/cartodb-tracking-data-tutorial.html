@@ -11,27 +11,27 @@
         <meta name="viewport" content="width=device-width">
         <meta name="google-site-verification" content="bHOQjaP_2zAxd-nxU1TDYpBAasDIAgtgbSKcckig3iQ" />
 
-        <link rel="shortcut icon" href="http://lifewatch.inbo.be/blog/theme/img/favicon.ico">
-        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/normalize.css">
-        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/main.css">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400">
-        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="https://lifewatch.inbo.be/blog/theme/img/favicon.ico">
+        <link rel="stylesheet" href="https://lifewatch.inbo.be/blog/theme/css/normalize.css">
+        <link rel="stylesheet" href="https://lifewatch.inbo.be/blog/theme/css/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400">
+        <link rel="stylesheet" href="https://lifewatch.inbo.be/blog/theme/css/font-awesome.min.css">
         <!--[if IE 7]>
-        <link rel="stylesheet" href="http://lifewatch.inbo.be/blog/theme/css/font-awesome-ie7.min.css">
+        <link rel="stylesheet" href="https://lifewatch.inbo.be/blog/theme/css/font-awesome-ie7.min.css">
         <![endif]-->
-        <script src="http://lifewatch.inbo.be/blog/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="https://lifewatch.inbo.be/blog/theme/js/vendor/modernizr-2.6.2.min.js"></script>
 
-        <link href="http://lifewatch.inbo.be/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="LifeWatch INBO Full RSS feed" />
+        <link href="https://lifewatch.inbo.be/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="LifeWatch INBO Full RSS feed" />
     </head>
     <body>
         <div class="container">
             <!-- Content -->
             <div class="header">
                 <header class="clearfix">
-                    <h2><a href="http://lifewatch.inbo.be/blog">LifeWatch INBO</a></h2>
+                    <h2><a href="https://lifewatch.inbo.be/blog">LifeWatch INBO</a></h2>
                     <nav>
                         <ul>
-                            <li><a href="http://lifewatch.inbo.be/blog/pages/about.html">About</a></li>
+                            <li><a href="https://lifewatch.inbo.be/blog/pages/about.html">About</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -45,12 +45,12 @@
         <footer>
             <time datetime="2015-09-01T13:00:00+02:00" pubdate>September 01, 2015</time>
                 <ul class="metadata-list authors">By
-                    <li><a href="http://lifewatch.inbo.be/blog/author/peter-desmet.html">Peter Desmet</a></li>
+                    <li><a href="https://lifewatch.inbo.be/blog/author/peter-desmet.html">Peter Desmet</a></li>
                 </ul>
             <ul class="metadata-list tags">Tagged: 
-                <li><a href="http://lifewatch.inbo.be/blog/tag/bird-tracking.html">bird-tracking</a></li>
-                <li><a href="http://lifewatch.inbo.be/blog/tag/visualization.html">visualization</a></li>
-                <li><a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a></li>
+                <li><a href="https://lifewatch.inbo.be/blog/tag/bird-tracking.html">bird-tracking</a></li>
+                <li><a href="https://lifewatch.inbo.be/blog/tag/visualization.html">visualization</a></li>
+                <li><a href="https://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB</a></li>
             </ul>
         </footer>
         <div>
@@ -68,7 +68,7 @@
 <li>You also have a public profile (<code>https://user.cartodb.com/maps</code>). All datasets you upload and maps you create, will be visible there.</li>
 </ol>
 <h2>Upload data</h2>
-<p>For this tutorial, well use <a href="http://lifewatch.inbo.be/blog/posts/bird-tracking-data-published.html">our open bird tracking data</a>. To make it easier to follow along with a free CartoDB account, you can <a href="http://lifewatch.inbo.be/blog/files/bird_tracking.zip">download a subset of the data (2.1MB)</a>, containing migration data for three gulls. If you want to know how that subset was created, here's the SQL query I used:</p>
+<p>For this tutorial, well use <a href="https://lifewatch.inbo.be/blog/posts/bird-tracking-data-published.html">our open bird tracking data</a>. To make it easier to follow along with a free CartoDB account, you can <a href="https://lifewatch.inbo.be/blog/files/bird_tracking.zip">download a subset of the data (2.1MB)</a>, containing migration data for three gulls. If you want to know how that subset was created, here's the SQL query I used:</p>
 <div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">t</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span>
     <span class="n">t</span><span class="p">.</span><span class="n">altitude</span><span class="p">,</span>
@@ -98,7 +98,7 @@
 
 
 <ol>
-<li><strong>Download <a href="http://lifewatch.inbo.be/blog/files/bird_tracking.zip">this zipped bird tracking csv file</a>.</strong></li>
+<li><strong>Download <a href="https://lifewatch.inbo.be/blog/files/bird_tracking.zip">this zipped bird tracking csv file</a>.</strong></li>
 <li><strong>Go to your datasets dashboard.</strong></li>
 <li><strong>Upload the file</strong> by dragging it to your browser window. CartoDB recognizes <a href="http://docs.cartodb.com/cartodb-editor.html#supported-file-formats">multiple files formats</a>.</li>
 </ol>
@@ -110,7 +110,7 @@
 <li>Most of the functionality is in the collapsed toolbar on the right, such as merging datasets, adding rows or columns, and filters.</li>
 <li>
 <p>Filters are great for exploring the data. <strong>Try out the filter for altitude.</strong></p>
-<p><img alt="Filters" src="http://lifewatch.inbo.be/blog/images/cartodb-filters.png" /></p>
+<p><img alt="Filters" src="https://lifewatch.inbo.be/blog/images/cartodb-filters.png" /></p>
 </li>
 <li>
 <p>Filters are actually just SQL, a much more powerful language to select, aggregate or update your data. CartoDB supports all PostgreSQL and PostGIS SQL functions.</p>
@@ -143,11 +143,11 @@
 <li><strong>Click <code>Wizards</code></strong> in the toolbar to see a plethora of visualization options. These are all explained in the <a href="http://docs.cartodb.com/cartodb-editor.html#map-wizards">CartoDB documentation</a>.</li>
 <li>
 <p><strong>Try <code>Intensity</code></strong> with the following options to get a sense of the distribution of occurrences:</p>
-<p><img alt="Intensity map" src="http://lifewatch.inbo.be/blog/images/cartodb-intensity.png" /></p>
+<p><img alt="Intensity map" src="https://lifewatch.inbo.be/blog/images/cartodb-intensity.png" /></p>
 </li>
 <li>
 <p><strong>Try <code>Choropleth</code></strong> with the following options to see the relative altitude distribution (see the <a href="http://docs.cartodb.com/cartodb-editor.html#choropleth">documentation</a> to learn more about the different quantification methods):</p>
-<p><img alt="Choropleth map" src="http://lifewatch.inbo.be/blog/images/cartodb-choropleth.png" /></p>
+<p><img alt="Choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-choropleth.png" /></p>
 </li>
 <li>
 <p>Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>. <strong>Click <code>CSS</code></strong> in the toolbar to discover how the quantification buckets (in this case <code>Quantile</code>) are defined:</p>
@@ -199,7 +199,7 @@
 </li>
 <li>
 <p>We want to visualize the travel speed of gull Nico. The best way to start is to <strong>create a <code>Choropleth</code> map</strong>, with the following options:</p>
-<p><img alt="Start from a choropleth map" src="http://lifewatch.inbo.be/blog/images/cartodb-migration-speed-1.png" /></p>
+<p><img alt="Start from a choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-1.png" /></p>
 </li>
 <li>
 <p>Most of the dots are red and the story does not come across yet. Let's dive into the CSS to <strong>fine-tune the map</strong>. We basically set all dots to green, except where the speed is below 2m/s, which we show larger and in red:</p>
@@ -225,11 +225,11 @@
 </li>
 <li>
 <p><strong>Click <code>Legends</code></strong> in the toolbar to manually set what to be shown in the legend (using template <code>Custom</code>):</p>
-<p><img alt="Update the legend" src="http://lifewatch.inbo.be/blog/images/cartodb-migration-speed-2.png" /></p>
+<p><img alt="Update the legend" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-2.png" /></p>
 </li>
 <li>
 <p>Click a point and chose <code>Select fields</code> to <strong>create an info window</strong>.</p>
-<p><img alt="Define info windows" src="http://lifewatch.inbo.be/blog/images/cartodb-migration-speed-3.png" /></p>
+<p><img alt="Define info windows" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-3.png" /></p>
 </li>
 <li>
 <p><strong>Describe your map</strong> by clicking <code>Edit metadata...</code> in the top left.</p>
@@ -263,7 +263,7 @@
 </li>
 <li>
 <p>We want to display each month in a different colour, so <strong>start with a <code>Choropleth</code> map</strong>, with the following options:</p>
-<p><img alt="Start from a choropleth map" src="http://lifewatch.inbo.be/blog/images/cartodb-month-tracks-1.png" /></p>
+<p><img alt="Start from a choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-1.png" /></p>
 </li>
 <li>
 <p>We will also include labels (start doing this in the <code>Choropleth</code> options), so you can still see which track belongs to which individual. <strong>Fine-tune the map in the CSS</strong> (note that I've changed the months to integers):</p>
@@ -311,11 +311,11 @@
 </li>
 <li>
 <p><strong>Update the legend</strong>:</p>
-<p><img alt="Update the legend" src="http://lifewatch.inbo.be/blog/images/cartodb-month-tracks-2.png" /></p>
+<p><img alt="Update the legend" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-2.png" /></p>
 </li>
 <li>
 <p>To provide some more context, let's annotate the map. In the top right, <strong>click <code>Add Element &gt; Add annotation item</code> and indicate summer and winter locations</strong>. The position of an annotation element is linked to a location on the map (though placement can be a bit difficult) and you can define between which zoom levels to show it, to avoid cluttering:</p>
-<p><img alt="Add annotations" src="http://lifewatch.inbo.be/blog/images/cartodb-month-tracks-3.png" /></p>
+<p><img alt="Add annotations" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-3.png" /></p>
 </li>
 <li>
 <p>Finally, <strong>update the description</strong> in <code>Edit metadata...</code> and <strong>publish your map</strong>.</p>
@@ -341,8 +341,8 @@
 </li>
 <li>
 <p>From the <code>Wizards</code>, <strong>choose <code>Torque cat</code></strong><sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup>, with the following options. The <code>Time Column</code> should always be your date.</p>
-<p><img alt="Torque category options" src="http://lifewatch.inbo.be/blog/images/cartodb-torque-1.png" /></p>
-<p><img alt="Torque category options" src="http://lifewatch.inbo.be/blog/images/cartodb-torque-2.png" /></p>
+<p><img alt="Torque category options" src="https://lifewatch.inbo.be/blog/images/cartodb-torque-1.png" /></p>
+<p><img alt="Torque category options" src="https://lifewatch.inbo.be/blog/images/cartodb-torque-2.png" /></p>
 </li>
 <li>
 <p>The final CSS looks like this:</p>
@@ -457,14 +457,14 @@
             <div class="footer">
                 <footer class="clearfix">
                     <div>
-                        <a href="http://www.inbo.be"><img src="http://lifewatch.inbo.be/blog/theme/img/inbo-logo.png" alt="INBO logo"/></a>
+                        <a href="http://www.inbo.be"><img src="https://lifewatch.inbo.be/blog/theme/img/inbo-logo.png" alt="INBO logo"/></a>
                     </div>
                     <div>
                         <ul>
                             <h2>Keep in touch</h2>
                             <li><a href="https://twitter.com/LifeWatchINBO">Follow us on Twitter</a></li>
                             <li><a href="https://github.com/inbo">Our GitHub repositories</a></li>
-                            <li><a href="http://lifewatch.inbo.be/blog/feeds/rss.xml">Subscribe to updates</a></li>
+                            <li><a href="https://lifewatch.inbo.be/blog/feeds/rss.xml">Subscribe to updates</a></li>
                         </ul>
                     </div>
                     <div>
@@ -475,7 +475,7 @@
                             <li><a href="http://www.lifewatch.eu">European LifeWatch portal</a></li>
                         </ul>
                     </div>
-                    <p class="disclaimer">The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:dct="http://purl.org/dc/terms/" property="dct:title" href="http://lifewatch.inbo.be/blog">LifeWatch INBO blog</a> is licensed under a <a rel ="license" href="http://creativecommons.org/licenses/by/4.0/"> Creative Commons Attribution 4.0 International License</a>.</p>
+                    <p class="disclaimer">The views expressed on this blog represent the ideas of the author(s) and are not to be considered an INBO or institutional policy. Unless stated otherwise, all content on this <a xmlns:dct="http://purl.org/dc/terms/" property="dct:title" href="https://lifewatch.inbo.be/blog">LifeWatch INBO blog</a> is licensed under a <a rel ="license" href="http://creativecommons.org/licenses/by/4.0/"> Creative Commons Attribution 4.0 International License</a>.</p>
                 </footer>
             </div>
         </div>
