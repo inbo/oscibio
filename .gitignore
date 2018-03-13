@@ -1,4 +1,4 @@
 .DS_Store
 *.pyc
-dev-output/
+dev-docs/
 */__pycache__
