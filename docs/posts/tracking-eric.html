@@ -57,7 +57,7 @@
             </ul>
         </footer>
         <div>
-            <p>As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS trackers. The project<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the Western Marsh Harrier) in collaboration with the <a href="http://www.vliz.be/EN/INTRO">VLIZ</a> and <a href="http://www.uva-bits.nl/">UvA-BiTS</a>.</p>
+            <p>As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS trackers. The project<sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the Western Marsh Harrier) in collaboration with the <a href="http://www.vliz.be/EN/INTRO">VLIZ</a> and <a href="http://www.uva-bits.nl/">UvA-BiTS</a>.</p>
 <p>30 birds have been tagged over the course of this spring and summer. The preliminary results were presented in the media and you can <a href="http://www.lifewatch.be/birds">follow the birds live</a>. Most birds have started their annual migration south however, where the antennas we use to download the data cannot pick them up. A good time to visualize some of the data we got.</p>
 <h2>Meet Eric and CartoDB</h2>
 <p>As an example, I will visualize two months of tracking data (June-July) from Eric in CartoDB. Eric is male <a href="http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull">Lesser Black-backed Gull</a>, breeding in the colony of Zeebrugge. <a href="http://cartodb.com/">CartoDB</a> is an open source tool to visualize and analyze geospatial data on the web, developed by <a href="http://vizzuality.com/">Vizzuality</a>.</p>
@@ -73,7 +73,7 @@
 </pre></div>
 
 
-<p>Next, we order the points per <code>date_time</code>, group them by <code>day_of_year</code> and make a line<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>:</p>
+<p>Next, we order the points per <code>date_time</code>, group them by <code>day_of_year</code> and make a line<sup id="fnref-2"><a class="footnote-ref" href="#fn-2">2</a></sup>:</p>
 <div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">ST_MakeLine</span><span class="p">(</span><span class="n">the_geom_webmercator</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_time</span> <span class="k">ASC</span><span class="p">)</span> <span class="k">AS</span>  <span class="n">the_geom_webmercator</span><span class="p">,</span> <span class="n">day_of_year</span>
 <span class="k">FROM</span> <span class="n">tracking_eric</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">day_of_year</span>
@@ -112,7 +112,7 @@
 </pre></div>
 
 
-<p>Next, we upload a reference grid to CartoDB. I uploaded a <a href="http://www.eea.europa.eu/data-and-maps/data/eea-reference-grids">shapefile of all UTM 1km squares of Belgium</a>. Then we <a href="http://developers.cartodb.com/tutorials/joining_data.html">join the two tables</a> by geospatial intersection<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>:</p>
+<p>Next, we upload a reference grid to CartoDB. I uploaded a <a href="http://www.eea.europa.eu/data-and-maps/data/eea-reference-grids">shapefile of all UTM 1km squares of Belgium</a>. Then we <a href="http://developers.cartodb.com/tutorials/joining_data.html">join the two tables</a> by geospatial intersection<sup id="fnref-3"><a class="footnote-ref" href="#fn-3">3</a></sup>:</p>
 <div class="highlight"><pre><span></span><span class="k">SELECT</span> 
 <span class="n">row_number</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cartodb_id</span><span class="p">,</span>
 <span class="n">utm</span><span class="p">.</span><span class="n">the_geom_webmercator</span><span class="p">,</span>
@@ -123,7 +123,7 @@
 </pre></div>
 
 
-<p>The resulting map, with a logaritmic choropleth scale, looks like this<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>:</p>
+<p>The resulting map, with a logaritmic choropleth scale, looks like this<sup id="fnref-4"><a class="footnote-ref" href="#fn-4">4</a></sup>:</p>
 <iframe width="100%" height="500" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/aa08c6b6-a62f-11e4-8fad-0e4fddd5de28/embed_map?sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 <p>You can click on each square to get the time Eric spent there in seconds over two months time. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:</p>
@@ -149,19 +149,19 @@
 <li>API: <a href="https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric">https://lifewatch-inbo.cartodb.com/api/v2/sql?q=SELECT * FROM tracking_eric</a></li>
 </ul>
 <div class="footnote">
-<hr />
+<hr>
 <ol>
-<li id="fn:1">
-<p>You can read more on it on the <a href="http://www.lifewatch.be/birds">LifeWatch Belgium website</a>.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn-1">
+<p>You can read more on it on the <a href="http://www.lifewatch.be/birds">LifeWatch Belgium website</a>.&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn:2">
-<p>A <a href="http://developers.cartodb.com/tutorials/gps_track.html">more in-depth tutorial</a> is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used <code>the_geom_webmercator</code> and not <code>the_geom</code>.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li id="fn-2">
+<p>A <a href="http://developers.cartodb.com/tutorials/gps_track.html">more in-depth tutorial</a> is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used <code>the_geom_webmercator</code> and not <code>the_geom</code>.&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:3">
-<p>CartoDB requires an <code>cartodb_id</code> to allow click interaction. I am cheating here by generating a new one based on <code>row_number()</code>.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<li id="fn-3">
+<p>CartoDB requires an <code>cartodb_id</code> to allow click interaction. I am cheating here by generating a new one based on <code>row_number()</code>.&#160;<a class="footnote-backref" href="#fnref-3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
-<li id="fn:4">
-<p>Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<li id="fn-4">
+<p>Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.&#160;<a class="footnote-backref" href="#fnref-4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

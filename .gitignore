@@ -1,4 +1,9 @@
-.DS_Store
+# Python
 *.pyc
-dev-output/
 */__pycache__
+
+# Mac OS X
+.DS_Store
+
+# Local site
+docs-local/
