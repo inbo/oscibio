@@ -40,4 +40,4 @@ You can either write a post via the GitHub user interface or locally. The proced
 
 ## Generate website
 
-Content is generated as a static website with [Pelican](http://docs.getpelican.com). This needs to be done locally. Ask [@peterdesmet](https://github.com/peterdesmet) to do this or follow the deployment instructions in the [README](README).
+Content is generated as a static website with [Pelican](http://docs.getpelican.com). This needs to be done locally. Ask [@peterdesmet](https://github.com/peterdesmet) to do this or follow the deployment instructions in the [README](README.md).
