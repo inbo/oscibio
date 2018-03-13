@@ -54,12 +54,12 @@
             </ul>
         </footer>
         <div>
-            <p>We have been using <a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB for bird tracking data</a> for a while now and are very happy to see that we have inspired others to do the <a href="http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html">same</a>, including for <a href="http://blog.cartodb.com/fisher/">other species</a>. To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>. Rather than handing the course material to the participants of these workshops only, I decided to publish it here on this blog, so anyone can use it.</p>
+            <p>We have been using <a href="http://lifewatch.inbo.be/blog/tag/cartodb.html">CartoDB for bird tracking data</a> for a while now and are very happy to see that we have inspired others to do the <a href="http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html">same</a>, including for <a href="http://blog.cartodb.com/fisher/">other species</a>. To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops<sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup>. Rather than handing the course material to the participants of these workshops only, I decided to publish it here on this blog, so anyone can use it.</p>
 <h2>Introduction</h2>
 <p><a href="http://cartodb.com">CartoDB</a> is a tool to explore, analyze and visualize geospatial data online. In my opinion, it's like Gmail or GitHub: one of the best software tools ever. CartoDB is used in a <a href="https://cartodb.com/gallery">wide area of domains</a> and has <a href="http://docs.cartodb.com/">great documentation</a>, but in this tutorial I'll focus on how it can be used for exploring and visualizing animal tracking data. Since <a href="http://lifewatch.inbo.be/blog/tag/bird-tracking.html">we are tracking birds</a>, I'll use our open data of Lesser Black-backed Gulls in the examples, but the methods can be applied to other animal tracking data as well (I hope). This tutorial is by no means meant to be exhaustive: it's a step by step guide to get you started and hopefully inspire you to do cool things with your own data.</p>
 <p>Note: If you want to follow along with this tutorial, you'll at least need to do the actions in <strong>bold</strong>, all the rest in optional.</p>
 <h2>Create an account</h2>
-<p><strong>Go to <a href="https://cartodb.com/signup">https://cartodb.com/signup</a> to create an account</strong>, if you haven't got one already. Free accounts allow you to upload 50MB of data, but keep in mind that all your data and maps will be public<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>.</p>
+<p><strong>Go to <a href="https://cartodb.com/signup">https://cartodb.com/signup</a> to create an account</strong>, if you haven't got one already. Free accounts allow you to upload 50MB of data, but keep in mind that all your data and maps will be public<sup id="fnref-2"><a class="footnote-ref" href="#fn-2">2</a></sup>.</p>
 <h2>Login</h2>
 <ol>
 <li>Once logged in, you see your private dashboard. This is where you (and only you) can upload data, create maps and manage your account.</li>
@@ -110,7 +110,7 @@
 <li>Most of the functionality is in the collapsed toolbar on the right, such as merging datasets, adding rows or columns, and filters.</li>
 <li>
 <p>Filters are great for exploring the data. <strong>Try out the filter for altitude.</strong></p>
-<p><img alt="Filters" src="https://lifewatch.inbo.be/blog/images/cartodb-filters.png" /></p>
+<p><img alt="Filters" src="https://lifewatch.inbo.be/blog/images/cartodb-filters.png"></p>
 </li>
 <li>
 <p>Filters are actually just SQL, a much more powerful language to select, aggregate or update your data. CartoDB supports all PostgreSQL and PostGIS SQL functions.</p>
@@ -128,54 +128,54 @@
 
 </li>
 <li>
-<p>From the <code>Edit</code> menu in the top right you can export any query you make, in multiple file formats<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>. This is useful if you want to convert geospatial data from one file format to another, but don't have the tools on your computer to do so.</p>
+<p>From the <code>Edit</code> menu in the top right you can export any query you make, in multiple file formats<sup id="fnref2-3"><a class="footnote-ref" href="#fn-3">3</a></sup>. This is useful if you want to convert geospatial data from one file format to another, but don't have the tools on your computer to do so.</p>
 </li>
 <li><strong>Click <code>Clear view</code></strong> to remove any applied SQL.</li>
 </ol>
 <h2>Create your first map</h2>
 <ol>
 <li><strong>Click <code>Visualize</code></strong> in the top right to create your first map.</li>
-<li>Once created, click the title <code>bird_tracking1</code> and rename it to <code>My first map</code><sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>.</li>
+<li>Once created, click the title <code>bird_tracking1</code> and rename it to <code>My first map</code><sup id="fnref-3"><a class="footnote-ref" href="#fn-3">3</a></sup>.</li>
 <li><strong>Click <code>Map view</code></strong>.</li>
-<li>You can change the background map by clicking <code>Change basemap</code> in the bottom right<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>. <code>Positron</code> is a good default basemap, but there are many other options available and even more via <code>Yours</code> (including daily cloud cover maps from NASA). Note that for the <code>Positron</code> and <code>Dark matter</code> basemaps, city labels will be <a href="http://blog.cartodb.com/let-your-labels-shine/">positioned on top of your data</a>, making them more readable. Choose <code>Positron (labels below)</code> to turn this off or <code>Positron (lite)</code> to have no labels at all.</li>
+<li>You can change the background map by clicking <code>Change basemap</code> in the bottom right<sup id="fnref-4"><a class="footnote-ref" href="#fn-4">4</a></sup>. <code>Positron</code> is a good default basemap, but there are many other options available and even more via <code>Yours</code> (including daily cloud cover maps from NASA). Note that for the <code>Positron</code> and <code>Dark matter</code> basemaps, city labels will be <a href="http://blog.cartodb.com/let-your-labels-shine/">positioned on top of your data</a>, making them more readable. Choose <code>Positron (labels below)</code> to turn this off or <code>Positron (lite)</code> to have no labels at all.</li>
 <li>Click <code>Options</code> in the bottom right to select the map interaction options you want to provide to the visitors of your map, such as <code>Zoom controls</code> or a <code>Fullscreen</code> button.</li>
 <li>The map view also provides a toolbar on the right, where you'll recognize the same <code>SQL</code> and <code>Filters</code> features from the data view.</li>
 <li><strong>Click <code>Wizards</code></strong> in the toolbar to see a plethora of visualization options. These are all explained in the <a href="http://docs.cartodb.com/cartodb-editor.html#map-wizards">CartoDB documentation</a>.</li>
 <li>
 <p><strong>Try <code>Intensity</code></strong> with the following options to get a sense of the distribution of occurrences:</p>
-<p><img alt="Intensity map" src="https://lifewatch.inbo.be/blog/images/cartodb-intensity.png" /></p>
+<p><img alt="Intensity map" src="https://lifewatch.inbo.be/blog/images/cartodb-intensity.png"></p>
 </li>
 <li>
 <p><strong>Try <code>Choropleth</code></strong> with the following options to see the relative altitude distribution (see the <a href="http://docs.cartodb.com/cartodb-editor.html#choropleth">documentation</a> to learn more about the different quantification methods):</p>
-<p><img alt="Choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-choropleth.png" /></p>
+<p><img alt="Choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-choropleth.png"></p>
 </li>
 <li>
-<p>Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>. <strong>Click <code>CSS</code></strong> in the toolbar to discover how the quantification buckets (in this case <code>Quantile</code>) are defined:</p>
+<p>Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map<sup id="fnref-5"><a class="footnote-ref" href="#fn-5">5</a></sup>. <strong>Click <code>CSS</code></strong> in the toolbar to discover how the quantification buckets (in this case <code>Quantile</code>) are defined:</p>
 <div class="highlight"><pre><span></span><span class="c">/** choropleth visualization */</span>
 
-<span class="nn">#bird_tracking</span><span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">7</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#F2D2D3</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">allow</span><span class="o">-</span><span class="n">overlap</span><span class="o">:</span> <span class="n">true</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="p">{</span>
+    <span class="n">marker-fill-opacity</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">;</span>
+    <span class="n">marker-line-color</span><span class="p">:</span> <span class="mh">#FFF</span><span class="p">;</span>
+    <span class="n">marker-line-width</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">;</span>
+    <span class="n">marker-line-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">marker-width</span><span class="p">:</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#F2D2D3</span><span class="p">;</span>
+    <span class="n">marker-allow-overlap</span><span class="p">:</span> <span class="n">true</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">6965</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#C1373C</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">6965</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#C1373C</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">634</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#CC4E52</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">634</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#CC4E52</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">338</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#D4686C</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">338</span><span class="p">.</span><span class="nc">5</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#D4686C</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">66</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#EBB7B9</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">66</span><span class="p">.</span><span class="nc">5</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#EBB7B9</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">-205</span><span class="nc">.5</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#F2D2D3</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">altitude</span> <span class="o">&lt;=</span> <span class="nt">-205</span><span class="p">.</span><span class="nc">5</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#F2D2D3</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -199,25 +199,25 @@
 </li>
 <li>
 <p>We want to visualize the travel speed of gull Nico. The best way to start is to <strong>create a <code>Choropleth</code> map</strong>, with the following options:</p>
-<p><img alt="Start from a choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-1.png" /></p>
+<p><img alt="Start from a choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-1.png"></p>
 </li>
 <li>
 <p>Most of the dots are red and the story does not come across yet. Let's dive into the CSS to <strong>fine-tune the map</strong>. We basically set all dots to green, except where the speed is below 2m/s, which we show larger and in red:</p>
 <div class="highlight"><pre><span></span><span class="c">/** choropleth visualization */</span>
 
-<span class="nn">#bird_tracking</span><span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">6</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#1a9850</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">allow</span><span class="o">-</span><span class="n">overlap</span><span class="o">:</span> <span class="n">true</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="p">{</span>
+    <span class="n">marker-fill-opacity</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">;</span>
+    <span class="n">marker-line-color</span><span class="p">:</span> <span class="mh">#FFF</span><span class="p">;</span>
+    <span class="n">marker-line-width</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">;</span>
+    <span class="n">marker-line-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">marker-width</span><span class="p">:</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#1a9850</span><span class="p">;</span>
+    <span class="n">marker-allow-overlap</span><span class="p">:</span> <span class="n">true</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">speed_2d</span> <span class="o">&lt;</span> <span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#d73027</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">10</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">speed_2d</span> <span class="o">&lt;</span> <span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#d73027</span><span class="p">;</span>
+    <span class="n">marker-width</span><span class="p">:</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">marker-line-width</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -225,18 +225,18 @@
 </li>
 <li>
 <p><strong>Click <code>Legends</code></strong> in the toolbar to manually set what to be shown in the legend (using template <code>Custom</code>):</p>
-<p><img alt="Update the legend" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-2.png" /></p>
+<p><img alt="Update the legend" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-2.png"></p>
 </li>
 <li>
 <p>Click a point and chose <code>Select fields</code> to <strong>create an info window</strong>.</p>
-<p><img alt="Define info windows" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-3.png" /></p>
+<p><img alt="Define info windows" src="https://lifewatch.inbo.be/blog/images/cartodb-migration-speed-3.png"></p>
 </li>
 <li>
 <p><strong>Describe your map</strong> by clicking <code>Edit metadata...</code> in the top left.</p>
 </li>
 <li><strong>Share your map</strong> by clicking <code>Publish</code> in the top right. The dialog box provides you with a link to the map or the code to embed it in a web page. <code>CartoDB.js</code> is for advanced use in apps.</li>
 <li><strong>Copy the link and paste it in a new browser tab</strong> to verify the info windows are working and the bounding box makes sense, i.e. are the interesting part of the data visible? Anything you update in your map (including zoom level and bounding box) will affect the public map (reload the page to see the changes).</li>
-<li>Researchers often ask if they can export the map<sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup>. That's not the goal of CartoDB (which is creating online, interactive maps), but you can create a screenshot by clicking <code>Export Image</code> in the top left. Unedited, it's probably not fit for publication in a journal (e.g. the scale and indication of north are missing, which you could add manually), but luckily the default basemaps are already open data (required by some journals). You just need to credit <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>.</li>
+<li>Researchers often ask if they can export the map<sup id="fnref-6"><a class="footnote-ref" href="#fn-6">6</a></sup>. That's not the goal of CartoDB (which is creating online, interactive maps), but you can create a screenshot by clicking <code>Export Image</code> in the top left. Unedited, it's probably not fit for publication in a journal (e.g. the scale and indication of north are missing, which you could add manually), but luckily the default basemaps are already open data (required by some journals). You just need to credit <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>.</li>
 </ol>
 <p>The <a href="https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890-0e4fddd5de28/public_map">final map</a>:</p>
 <iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890-0e4fddd5de28/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
@@ -263,47 +263,47 @@
 </li>
 <li>
 <p>We want to display each month in a different colour, so <strong>start with a <code>Choropleth</code> map</strong>, with the following options:</p>
-<p><img alt="Start from a choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-1.png" /></p>
+<p><img alt="Start from a choropleth map" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-1.png"></p>
 </li>
 <li>
 <p>We will also include labels (start doing this in the <code>Choropleth</code> options), so you can still see which track belongs to which individual. <strong>Fine-tune the map in the CSS</strong> (note that I've changed the months to integers):</p>
 <div class="highlight"><pre><span></span><span class="c">/** choropleth visualization */</span>
 
-<span class="nn">#bird_tracking</span><span class="p">{</span>
-  <span class="n">polygon</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFFFCC</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-  <span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="p">{</span>
+  <span class="n">polygon-opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">line-color</span><span class="p">:</span> <span class="mh">#FFFFCC</span><span class="p">;</span>
+  <span class="n">line-width</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">;</span>
+  <span class="n">line-opacity</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nn">#bird_tracking</span><span class="o">:</span><span class="nd">:labels</span> <span class="p">{</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="p">[</span><span class="n">bird_name</span><span class="p">];</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">face</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="s1">&#39;Lato Bold&#39;</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="nb">size</span><span class="o">:</span> <span class="m">12</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">label</span><span class="o">-</span><span class="nb">position</span><span class="o">-</span><span class="n">tolerance</span><span class="o">:</span> <span class="m">10</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">halo</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">halo</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">2</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">dy</span><span class="o">:</span> <span class="m">-10</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">allow</span><span class="o">-</span><span class="n">overlap</span><span class="o">:</span> <span class="n">false</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">placement</span><span class="o">:</span> <span class="n">line</span><span class="p">;</span>
-  <span class="nb">text</span><span class="o">-</span><span class="n">placement</span><span class="o">-</span><span class="n">type</span><span class="o">:</span> <span class="n">simple</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="p">::</span><span class="nd">labels</span> <span class="p">{</span>
+  <span class="n">text-name</span><span class="p">:</span> <span class="p">[</span><span class="n">bird_name</span><span class="p">];</span>
+  <span class="n">text-face-name</span><span class="p">:</span> <span class="s1">&#39;Lato Bold&#39;</span><span class="p">;</span>
+  <span class="n">text-size</span><span class="p">:</span> <span class="mi">12</span><span class="p">;</span>
+  <span class="n">text-label-position-tolerance</span><span class="p">:</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">text-fill</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+  <span class="n">text-halo-fill</span><span class="p">:</span> <span class="mh">#FFF</span><span class="p">;</span>
+  <span class="n">text-halo-radius</span><span class="p">:</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="n">text-dy</span><span class="p">:</span> <span class="mi">-10</span><span class="p">;</span>
+  <span class="n">text-allow-overlap</span><span class="p">:</span> <span class="n">false</span><span class="p">;</span>
+  <span class="n">text-placement</span><span class="p">:</span> <span class="n">line</span><span class="p">;</span>
+  <span class="n">text-placement-type</span><span class="p">:</span> <span class="n">simple</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">12</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#253494</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">12</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line-color</span><span class="p">:</span> <span class="mh">#253494</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">11</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#2C7FB8</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">11</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line-color</span><span class="p">:</span> <span class="mh">#2C7FB8</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">10</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#41B6C4</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">10</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line-color</span><span class="p">:</span> <span class="mh">#41B6C4</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">9</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#A1DAB4</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">9</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line-color</span><span class="p">:</span> <span class="mh">#A1DAB4</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">8</span><span class="o">]</span> <span class="p">{</span>
-   <span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFFFCC</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span> <span class="o">[</span> <span class="nt">month</span> <span class="o">&lt;=</span> <span class="nt">8</span><span class="o">]</span> <span class="p">{</span>
+   <span class="n">line-color</span><span class="p">:</span> <span class="mh">#FFFFCC</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -311,11 +311,11 @@
 </li>
 <li>
 <p><strong>Update the legend</strong>:</p>
-<p><img alt="Update the legend" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-2.png" /></p>
+<p><img alt="Update the legend" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-2.png"></p>
 </li>
 <li>
 <p>To provide some more context, let's annotate the map. In the top right, <strong>click <code>Add Element &gt; Add annotation item</code> and indicate summer and winter locations</strong>. The position of an annotation element is linked to a location on the map (though placement can be a bit difficult) and you can define between which zoom levels to show it, to avoid cluttering:</p>
-<p><img alt="Add annotations" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-3.png" /></p>
+<p><img alt="Add annotations" src="https://lifewatch.inbo.be/blog/images/cartodb-month-tracks-3.png"></p>
 </li>
 <li>
 <p>Finally, <strong>update the description</strong> in <code>Edit metadata...</code> and <strong>publish your map</strong>.</p>
@@ -340,49 +340,49 @@
 
 </li>
 <li>
-<p>From the <code>Wizards</code>, <strong>choose <code>Torque cat</code></strong><sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup>, with the following options. The <code>Time Column</code> should always be your date.</p>
-<p><img alt="Torque category options" src="https://lifewatch.inbo.be/blog/images/cartodb-torque-1.png" /></p>
-<p><img alt="Torque category options" src="https://lifewatch.inbo.be/blog/images/cartodb-torque-2.png" /></p>
+<p>From the <code>Wizards</code>, <strong>choose <code>Torque cat</code></strong><sup id="fnref-7"><a class="footnote-ref" href="#fn-7">7</a></sup>, with the following options. The <code>Time Column</code> should always be your date.</p>
+<p><img alt="Torque category options" src="https://lifewatch.inbo.be/blog/images/cartodb-torque-1.png"></p>
+<p><img alt="Torque category options" src="https://lifewatch.inbo.be/blog/images/cartodb-torque-2.png"></p>
 </li>
 <li>
 <p>The final CSS looks like this:</p>
 <div class="highlight"><pre><span></span><span class="c">/** torque_cat visualization */</span>
 
 <span class="nt">Map</span> <span class="p">{</span>
-<span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">frame</span><span class="o">-</span><span class="n">count</span><span class="o">:</span><span class="m">256</span><span class="p">;</span>
-<span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="o">:</span><span class="m">30</span><span class="p">;</span>
-<span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">attribute</span><span class="o">:</span><span class="s2">&quot;date_time&quot;</span><span class="p">;</span>
-<span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">aggregation</span><span class="o">-</span><span class="n">function</span><span class="o">:</span><span class="s2">&quot;CDB_Math_Mode(torque_category)&quot;</span><span class="p">;</span>
-<span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">resolution</span><span class="o">:</span><span class="m">1</span><span class="p">;</span>
-<span class="o">-</span><span class="n">torque</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">aggregation</span><span class="o">:</span><span class="n">linear</span><span class="p">;</span>
+<span class="err">-</span><span class="n">torque-frame-count</span><span class="p">:</span><span class="mi">256</span><span class="p">;</span>
+<span class="err">-</span><span class="n">torque-animation-duration</span><span class="p">:</span><span class="mi">30</span><span class="p">;</span>
+<span class="err">-</span><span class="n">torque-time-attribute</span><span class="p">:</span><span class="s2">&quot;date_time&quot;</span><span class="p">;</span>
+<span class="err">-</span><span class="n">torque-aggregation-function</span><span class="p">:</span><span class="s2">&quot;CDB_Math_Mode(torque_category)&quot;</span><span class="p">;</span>
+<span class="err">-</span><span class="n">torque-resolution</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span>
+<span class="err">-</span><span class="n">torque-data-aggregation</span><span class="p">:</span><span class="kc">linear</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nn">#bird_tracking</span><span class="p">{</span>
-    <span class="n">comp</span><span class="o">-</span><span class="n">op</span><span class="o">:</span> <span class="n">source</span><span class="o">-</span><span class="n">over</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">color</span><span class="o">:</span> <span class="m">#FFF</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">type</span><span class="o">:</span> <span class="n">ellipse</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span> <span class="m">3</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#FF6600</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="p">{</span>
+    <span class="n">comp-op</span><span class="p">:</span> <span class="n">source-over</span><span class="p">;</span>
+    <span class="n">marker-fill-opacity</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">;</span>
+    <span class="n">marker-line-color</span><span class="p">:</span> <span class="mh">#FFF</span><span class="p">;</span>
+    <span class="n">marker-line-width</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">marker-line-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">marker-type</span><span class="p">:</span> <span class="n">ellipse</span><span class="p">;</span>
+    <span class="n">marker-width</span><span class="p">:</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#FF6600</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span><span class="m">5</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">45</span><span class="p">;</span> 
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-width</span><span class="p">:</span><span class="mi">5</span><span class="p">;</span>
+    <span class="n">marker-fill-opacity</span><span class="p">:</span><span class="mf">0.45</span><span class="p">;</span> 
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="nb">width</span><span class="o">:</span><span class="m">7</span><span class="p">;</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="nb">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">225</span><span class="p">;</span> 
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="o">[</span><span class="nt">frame-offset</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-width</span><span class="p">:</span><span class="mi">7</span><span class="p">;</span>
+    <span class="n">marker-fill-opacity</span><span class="p">:</span><span class="mf">0.225</span><span class="p">;</span> 
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#B81609</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">1</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#B81609</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#FFA300</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">2</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#FFA300</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nn">#bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">3</span><span class="o">]</span> <span class="p">{</span>
-    <span class="n">marker</span><span class="o">-</span><span class="n">fill</span><span class="o">:</span> <span class="m">#A53ED5</span><span class="p">;</span>
+<span class="p">#</span><span class="nn">bird_tracking</span><span class="o">[</span><span class="nt">value</span><span class="o">=</span><span class="nt">3</span><span class="o">]</span> <span class="p">{</span>
+    <span class="n">marker-fill</span><span class="p">:</span> <span class="mh">#A53ED5</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -406,28 +406,28 @@
 <li><a href="http://docs.cartodb.com/">CartoDB documentation</a>: if you want to know more about all the features.</li>
 </ul>
 <div class="footnote">
-<hr />
+<hr>
 <ol>
-<li id="fn:1">
-<p>The <a href="http://horizon.science.uva.nl/scge2015-wiki/doku.php">Animal Movement Analysis Summer Course</a> organized by the <a href="http://ibed.uva.nl/">Institute for Biodiversity and Ecosystem Dynamics</a> on July 10 and the <a href="http://biodiversity.be/conference2015/workshops/">LifeWatch GIS and WebGis workshop</a> organized by the Université catholique de Louvain and the INBO on September 16.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn-1">
+<p>The <a href="http://horizon.science.uva.nl/scge2015-wiki/doku.php">Animal Movement Analysis Summer Course</a> organized by the <a href="http://ibed.uva.nl/">Institute for Biodiversity and Ecosystem Dynamics</a> on July 10 and the <a href="http://biodiversity.be/conference2015/workshops/">LifeWatch GIS and WebGis workshop</a> organized by the Université catholique de Louvain and the INBO on September 16.&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn:2">
-<p>They are public in the sense that they can be discovered on your public profile, for which one needs to know your user name.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li id="fn-2">
+<p>They are public in the sense that they can be discovered on your public profile, for which one needs to know your user name.&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:3">
-<p>Maps can have spaces and punctuation in their name, dataset names (which are actually PostgreSQL database tables) use lowercase and underscores.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<li id="fn-3">
+<p>Maps can have spaces and punctuation in their name, dataset names (which are actually PostgreSQL database tables) use lowercase and underscores.&#160;<a class="footnote-backref" href="#fnref-3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2-3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
-<li id="fn:4">
-<p>You'll have to dismiss the <a href="http://blog.cartodb.com/one-click-mapping/">cool</a>, but somewhat obtrusive <code>Analyzing dataset</code> pop-up.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<li id="fn-4">
+<p>You'll have to dismiss the <a href="http://blog.cartodb.com/one-click-mapping/">cool</a>, but somewhat obtrusive <code>Analyzing dataset</code> pop-up.&#160;<a class="footnote-backref" href="#fnref-4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
-<li id="fn:5">
-<p>If you want to edit the CSS, it's best to always start from a wizard and set most of the options there first. Once you start editing the CSS, changes to the wizard options are no longer applied. You can only reset this by choosing another visualization from the wizard, which will override all CSS changes.&#160;<a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<li id="fn-5">
+<p>If you want to edit the CSS, it's best to always start from a wizard and set most of the options there first. Once you start editing the CSS, changes to the wizard options are no longer applied. You can only reset this by choosing another visualization from the wizard, which will override all CSS changes.&#160;<a class="footnote-backref" href="#fnref-5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
-<li id="fn:6">
-<p>In addition to the data, which you can export from the <code>Edit</code> menu in the top right (see also step 8 of the <code>Data view</code> section of this tutorial).&#160;<a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<li id="fn-6">
+<p>In addition to the data, which you can export from the <code>Edit</code> menu in the top right (see also step 8 of the <code>Data view</code> section of this tutorial).&#160;<a class="footnote-backref" href="#fnref-6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
-<li id="fn:7">
-<p>You can add many layers to a map, but only one Torque layer (= one animated layer). That is because CartoDB cannot guarantee that multiple Torque layers will use the same time scale and speed (which is something the user defines), so it wouldn't make sense to play those at the same time. If you want to animate the same data, but with different colours for a certain attribute (e.g. individual), use the <code>Torque cat</code> like we did here. This works best if you don't use too many categories.&#160;<a class="footnote-backref" href="#fnref:7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<li id="fn-7">
+<p>You can add many layers to a map, but only one Torque layer (= one animated layer). That is because CartoDB cannot guarantee that multiple Torque layers will use the same time scale and speed (which is something the user defines), so it wouldn't make sense to play those at the same time. If you want to animate the same data, but with different colours for a certain attribute (e.g. individual), use the <code>Torque cat</code> like we did here. This works best if you don't use too many categories.&#160;<a class="footnote-backref" href="#fnref-7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
