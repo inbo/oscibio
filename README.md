@@ -19,8 +19,8 @@ Files and directories indicated with `GENERATED` should not be edited manually.
 ├── settings.py       : Production settings for Pelican, generates website in "docs" (used by GitHub pages)
 │
 ├── content
-│   ├── extra         : Static files that need to go in website root
 │   ├── files         : Static files (e.g. pdfs)
+│   ├── extra         : Static files that need to go in website root
 │   ├── images        : Static images (e.g. screenshots)
 │   ├── pages         : Website pages (in Markdown)
 │   └── posts         : Website posts (in Markdown)
@@ -44,6 +44,14 @@ Files and directories indicated with `GENERATED` should not be edited manually.
 2. Build the site:
     * Locally: `pelican -s settings-local.py` → website is generated in `docs-local/`
     * For the actual website: `pelican -s settings.py` → website is generated in `docs/`
+3. Serve the **local** site:
+    
+    ```bash
+    # in a new terminal window
+    cd docs-local
+    python -m http.server 8000
+    ```
+4. Go to <http://localhost:8000>
 
 ## Contributors
 
