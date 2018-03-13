@@ -7,12 +7,12 @@ from settings import *
 
 # CONTENT
 
-OUTPUT_PATH = "../dev-output"
+OUTPUT_PATH = "../docs-local"
 
 
 # URLS
 
-SITEURL = "http://localhost:8000/dev-output"
+SITEURL = ""
 
 
 # PRESENTATION

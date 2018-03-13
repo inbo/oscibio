@@ -3,23 +3,21 @@
 
 # CONTENT
 
-PATH = ""
+PATH = "content"
 PAGE_PATHS = ["pages"]
 ARTICLE_PATHS = ["posts"]
 STATIC_PATHS = [
     "images",
-    "files"
+    "files",
+    "extra"
 ]
-OUTPUT_PATH = "../"
-OUTPUT_RETENTION = (
-    (".git"),
-    (".gitignore"),
-    ("humans.txt"),
-    ("robots.txt"),
-)
-DELETE_OUTPUT_DIRECTORY = False
+EXTRA_PATH_METADATA = {
+    "extra/humans.txt": {"path": "humans.txt"},
+    "extra/robots.txt": {"path": "robots.txt"},
+}
+OUTPUT_PATH = "docs"
+DELETE_OUTPUT_DIRECTORY = True
 CACHE_CONTENT = False
-MARKUP = (("md"),)
 
 
 # PLUGINS
@@ -83,7 +81,7 @@ SOCIAL = (
 
 # THEME SETTINGS
 
-THEME = "../../eurasian-spoonbill" # Relative link to theme repository
+THEME = "../eurasian-spoonbill" # Relative link to theme repository
 TITLE = "Towards more efficient biodiversity monitoring"
 SUBTITLE = "We blog about ideas, challenges and technologies related to building "\
            "an open terrestrial and freshwater observatory in Flanders for the "\
