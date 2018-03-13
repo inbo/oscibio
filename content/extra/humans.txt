@@ -1,0 +1,21 @@
+# humanstxt.org/
+
+## TEAM
+
+* Peter Desmet: <https://twitter.com/peterdesmet>
+* Bart Aelterman: <https://twitter.com/bartaelterman>
+* Stijn Van Hoey: <https://twitter.com/svanhoey>
+* Dimitri Brosens: <https://twitter.com/dimibro>
+
+## THANKS
+
+* Open source software
+
+## TECHNOLOGY COLOPHON
+
+* Powered by Pelican: <http://docs.getpelican.com/>
+* Hosted on GitHub: <https://github.com/inbo>
+* Styled with our own theme Eurasian Spoonbill: <https://github.com/inbo/eurasian-spoonbill>
+* Based on html5boilerplate: <http://html5boilerplate.com/>
+* Header font is Noto Sans: <http://www.google.com/fonts/specimen/Noto+Sans>
+* Icon font is Font Awesome: <http://fortawesome.github.io/Font-Awesome/>
