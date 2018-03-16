@@ -40,4 +40,8 @@ You can either write a post via the GitHub user interface or locally. The proced
 
 ## Generate website
 
-Content is generated as a static website with [Pelican](http://docs.getpelican.com). This needs to be done locally. Ask [@peterdesmet](https://github.com/peterdesmet) to do this or follow the deployment instructions in the [README](README.md).
+Content is generated as a static website with [Pelican](http://docs.getpelican.com): follow the deployment instructions in the [README](README.md) to do this or ask [@peterdesmet](https://github.com/peterdesmet).
+
+1. Only build to the gitignored `docs-local/` (using `pelican -s settings-local.py`) when writing your post. This avoids merge conflicts and cluttered pull requests.
+2. Once your pull request is approved, merge the master in your branch and build the production website to `docs/`
+3. Then accept the pull request
