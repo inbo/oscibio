@@ -12,7 +12,7 @@ OUTPUT_PATH = "docs-local"
 
 # URLS
 
-SITEURL = ""
+SITEURL = "http://localhost:8000"
 
 
 # PRESENTATION
