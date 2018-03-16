@@ -1,8 +1,10 @@
-Title: Introduction
-Slug: introduction
-Date: 2013-07-08 12:00
-Tags: news
-Summary: Hello world!
+---
+title: Introduction
+slug: introduction
+date: 2013-07-08 12:00
+tags: news
+summary: Hello world!
+---
 
 Welcome to the blog of the [LifeWatch INBO team](../pages/about.html)! After a couple of months of preparatory work, we are ready to start sharing ideas and experiences in order to turn the LifeWatch efforts at the INBO into open and collaborative projects.
 

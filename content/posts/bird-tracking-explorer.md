@@ -1,9 +1,11 @@
-Title: Bird tracking explorer released
-Slug: bird-tracking-explorer
-Date: 2015-06-30 15:00
-Authors: Bart Aelterman, Peter Desmet
-Tags: birds, bird tracking, visualization, software, CartoDB
-Summary: We've developed an open source tool to let you explore our bird tracking data.
+---
+title: Bird tracking explorer released
+slug: bird-tracking-explorer
+date: 2015-06-30 15:00
+authors: Bart Aelterman, Peter Desmet
+tags: birds, bird tracking, visualization, software, CartoDB
+summary: We've developed an open source tool to let you explore our bird tracking data.
+---
 
 As we have written before, our [bird tracking data are open]({filename}bird-tracking-data-published.md): you can download these in [bulk](http://doi.org/10.15468/02omly), via the [CartoDB API](https://github.com/inbo/bird-tracking/blob/master/cartodb/README.md) or the [GBIF API](http://api.gbif.org/v1/occurrence/search?datasetkey=83e20573-f7dd-4852-9159-21566e1e691e). These methods don't allow you however to quickly explore a single individual, for a certain time period[^1]. This is why we're happy to announce our [bird tracking explorer](http://inbo.github.io/bird-tracking/explorer/index.html), an experimental, open source tool that allows you to do just that.
 

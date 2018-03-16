@@ -1,9 +1,11 @@
-Title: Gull tracking data from the 2013 breeding season are published as open data
-Slug: bird-tracking-data-published
-Date: 2014-07-22 15:20
-Author: Peter Desmet
-Tags: birds, bird tracking, open data, GBIF
-Summary: Our first set of tracking data are now available for everyone to use.
+---
+title: Gull tracking data from the 2013 breeding season are published as open data
+slug: bird-tracking-data-published
+date: 2014-07-22 15:20
+author: Peter Desmet
+tags: birds, bird tracking, open data, GBIF
+summary: Our first set of tracking data are now available for everyone to use.
+---
 
 We have written about our bird tracking network [before](http://lifewatch.inbo.be/blog/tag/bird-tracking.html) - the network we set up with the Flanders Marine Institute (VLIZ) to track large birds with [advanced GPS trackers](http://www.uva-bits.nl) - showing how the data can be [visualized with CartoDB]({filename}jcd-2014.md) and releasing a small sample dataset of the famous [Lesser Black-backed Gull Eric]({filename}tracking-eric.md).
 

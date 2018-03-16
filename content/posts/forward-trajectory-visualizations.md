@@ -1,9 +1,11 @@
-Title: Using CartoDB to visualize how far birds migrate in a single night
-Slug: forward-trajectory-visualizations
-Date: 2015-06-18 13:50
-Authors: Peter Desmet, Hans van Gasteren
-Tags: birds, visualization, radar, ENRAM, CartoDB
-Summary: We created three nocturnal bird migration forward trajectory visualizations for ENRAM.
+---
+title: Using CartoDB to visualize how far birds migrate in a single night
+slug: forward-trajectory-visualizations
+date: 2015-06-18 13:50
+authors: Peter Desmet, Hans van Gasteren
+tags: birds, visualization, radar, ENRAM, CartoDB
+summary: We created two nocturnal bird migration forward trajectory visualizations for ENRAM.
+---
 
 Last week we participated in a very productive [workshop in Amsterdam](http://www.enram.eu/activities/visualisations-from-show-cases-to-production) organized by working group 3 of ENRAM. ENRAM is the European Network for the Radar Surveillance of Animal Movement funded by [COST](http://cost.eu/) and the workshop was a follow-up on the hackathon at which we created the [flow visualization]({filename}bird-migration-flow-visualization.md) last year.
 

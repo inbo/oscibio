@@ -1,9 +1,11 @@
-Title: Reporting on open science
-Slug: open-science-course
-Date: 2013-08-06 16:00
-Author: Peter Desmet
-Tags: news, open data
-Summary: We're following a course on open access, open data, and open research.
+---
+title: Reporting on open science
+slug: open-science-course
+date: 2013-08-06 16:00
+author: Peter Desmet
+tags: news, open data
+summary: We're following a course on open access, open data, and open research.
+---
 
 We are following an [online course on open science](https://p2pu.org/en/courses/5/open-science-an-introduction/), which is hosted on P2PU and organized by [Creative Commons](http://creativecommons.org/). The course has 3 sessions:
 

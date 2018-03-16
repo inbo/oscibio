@@ -1,9 +1,11 @@
-Title: VIS, a database on fishes in Flanders, is published as open data
-Slug: vis-data-published
-Date: 2014-04-14 11:40
-Author: Peter Desmet
-Tags: fish, GBIF, open data
-Summary: How we used GBIF tools and CC0 to publish over 400,000 fish occurrences.
+---
+title: VIS, a database on fishes in Flanders, is published as open data
+slug: vis-data-published
+date: 2014-04-14 11:40
+author: Peter Desmet
+tags: fish, GBIF, open data
+summary: How we used GBIF tools and CC0 to publish over 400,000 fish occurrences.
+---
 
 ## Introduction
 
