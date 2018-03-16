@@ -7,7 +7,7 @@ from settings import *
 
 # CONTENT
 
-OUTPUT_PATH = "../docs-local"
+OUTPUT_PATH = "docs-local"
 
 
 # URLS
