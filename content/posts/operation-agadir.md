@@ -13,9 +13,9 @@ We do have another way of knowing how he is doing though, but it requires a bit 
 
 He's sharing the beach of Agadir with thousands of other gulls, including 3 gulls we are tracking, as well as a number of gulls tracked in other [UvA-BiTS](http://www.uva-bits.nl/) projects. Eric's tracker is not the only one we've been unable to retrieve data from. We lost track of Hilbran on April 10, 2014 and Jasmin on September 23, 2014. That doesn't mean their tracker has stopped recording and storing data... they've just been unable to establish a connection with a base antenna to upload that data.
 
-<iframe width="100%" height="800" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/6a22a626-c509-11e5-8ec2-0e674067d321/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/0b65e14c-c7eb-4a08-bcff-c2cc8c4a18d4/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-*The tracks and last recorded position (circle) of our four "Agadir gulls".*
+*The tracks and last recorded position (circle) of two of our "Agadir gulls".*
 
 But since we now know that these gulls are in Agadir **right now**, we've decided to organize a data rescue mission! Entrepid explorers Hans Matheve (Ghent University) and Marwa Kavelaars (University of Antwerp) are currently on their way to Agadir to find back our gulls, in the hope of downloading the precious data their trackers might contain.
 
