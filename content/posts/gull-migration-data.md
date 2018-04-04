@@ -17,15 +17,15 @@ We don't have tracking data from all gulls however: data collected by the [track
 
 [^1]: Not via satellite, which would be very expensive and require even more power from the battery.
 
-From the 22 Lesser Black-backed Gull that were tagged in 2013, we were able to retrieve migration data from nine individuals on their return to the colony in March-April 2014. Below is an animated map using CartoDB's recently added [heatmap feature](http://blog.cartodb.com/introducing-heatmaps/), aggregating all tracking data from the 22 Lesser Black-backed Gulls over 12 months (June 2013 - May 2014).
+From the 22 Lesser Black-backed Gull that were tagged in 2013, we were able to retrieve migration data from nine individuals on their return to the colony in March-April 2014. Below is an animated map using CartoDB's recently added [heatmap feature](http://blog.cartodb.com/introducing-heatmaps/), aggregating all tracking data from 6 Lesser Black-backed Gulls over 12 months (June 2013 - May 2014).
 
-<iframe width="100%" height="800" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/a9845fda-03a3-11e5-8d7f-0e4fddd5de28/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/81a2594d-f6e6-42e4-9a1e-add22753b8a1/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Hitchhiking Harry
 
 The trackers also allow us to look at individual stories. The migration story of Harry is one of the most interesting. After the breeding season, Harry stayed close to two months in the UK, after which he migrated to Seville, Spain. On the way back north in March, it looks like Harry hitchhiked on a boat in the Bay of Biscay. Unfortunately, this boat was going south, so he had to fly the distance twice[^2].
 
-<iframe width="100%" height="800" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/afe199fa-f5b2-11e4-8503-0e853d047bba/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/afe199fa-f5b2-11e4-8503-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 [^2]: More stories can be discovered on the [LifeWatch Belgium website](http://lifewatch.be/en/historical-data-birds).
 
@@ -33,7 +33,7 @@ The trackers also allow us to look at individual stories. The migration story of
 
 So, how is [everyone's favourite gull Eric]({filename}tracking-eric.md) doing? As you can see below, Eric had a successful migration to Agadir, Morocco in 2013. On March 29, 2014 he flew back to the breeding colony in Zeebrugge, where he arrived eight days later. In May that year we lost track of Eric: the last occurrence we were able to retrieve dates `2014-05-11T03:22:52Z`, on the roof of a building in Zeebrugge. His tracker probably malfunctioned or he didn't stay around the antenna long enough to send more data.
 
-<iframe width="100%" height="800" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/88a48488-ea59-11e4-849b-0e853d047bba/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/88a48488-ea59-11e4-849b-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 So, is he still alive? We don't know for sure, but we do know that he migrated successfully back to Agadir, Morocco in 2014. As do all our gulls, Eric is ringed with two leg rings: a standard metal ring with code `L907172`, which can be read and reported if he is captured or found dead, but also a blue ring with code `URAM`, which can be observed from a distance with binoculars. Thanks to the blue ring and a network of voluntary observers, we know that Eric made it to Agadir in 2014: he was observed there nine times, by three different observers, between January 12 and March 21, 2015. Eric is ringed since July 2008, and he has been observed in Agadir almost every year since then. We hope he's still doing fine today and we are grateful he got so many people interested in our bird tracking network.
 
