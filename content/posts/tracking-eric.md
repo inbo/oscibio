@@ -19,7 +19,7 @@ As an example, I will visualize two months of tracking data (June-July) from Eri
 
 After uploading the tracking data (which are stored as [occurrence data](http://lifewatch-inbo.cartodb.com/tables/tracking_eric/public): place, time, and some parameters) to CartoDB, one of the easiest maps to make is an intensity map. Overlapping points generate a higher colour intensity, highlighting clusters on the map.
 
-<iframe width="100%" height="500" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/c6a7b182-a630-11e4-99e9-0e018d66dc29/embed_map?sw_lat=51.32637473423621&sw_lon=3.1468963623046875&ne_lat=51.351575865010346&ne_lon=3.2292938232421875" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/c6a7b182-a630-11e4-99e9-0e018d66dc29/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 The dark red spot on the pier marks the nest of Eric. You can zoom and pan the map, or click on individual points to get the date and time of recording.
 
@@ -34,13 +34,16 @@ To get a better sense of the trips Eric made during those two months, we can str
 Next, we order the points per `date_time`, group them by `day_of_year` and make a line[^2]:
 
 	:::sql
-	SELECT ST_MakeLine(the_geom_webmercator ORDER BY date_time ASC) AS 	the_geom_webmercator, day_of_year
+	SELECT
+        ST_MakeLine(the_geom_webmercator ORDER BY date_time ASC) AS 	the_geom_webmercator,
+        day_of_year,
+        1 AS cartodb_id -- required
 	FROM tracking_eric
 	GROUP BY day_of_year
 
 If we visualize this as a choropleth map, we get this:
 
-<iframe width="100%" height="500" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/c2b30758-a634-11e4-b98f-0e018d66dc29/embed_map?sw_lat=50.963616518684226&sw_lon=1.8189239501953125&ne_lat=51.76953957596102&ne_lon=4.4556427001953125" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/c2b30758-a634-11e4-b98f-0e018d66dc29/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 You may discover as I did, that Eric flew multiple times to Mouscron in June, while he stayed closer to his nest in July.
 
@@ -48,7 +51,7 @@ You may discover as I did, that Eric flew multiple times to Mouscron in June, wh
 
 To truly visualize Eric in time, I used the library [Torque](https://github.com/CartoDB/torque) (also developed by Vizzuality):
 
-<iframe width="100%" height="500" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/d007fb1e-a62c-11e4-b411-0e4fddd5de28/embed_map?sw_lat=50.611237544825876&sw_lon=1.8216383457183838&ne_lat=51.45753372278527&ne_lon=4.458357095718384" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/eb08c2ca-6e54-4faf-8203-d5776cad3301/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 The visualization compresses two months of data in 120 seconds. As with the previous maps, you can zoom and pan the map.
 
@@ -89,9 +92,9 @@ Next, we upload a reference grid to CartoDB. I uploaded a [shapefile of all UTM 
     WHERE ST_Intersects(utm.the_geom_webmercator, eric.the_geom_webmercator) 
     GROUP BY utm.the_geom_webmercator
 
-The resulting map, with a logaritmic choropleth scale, looks like this[^4]:
+The resulting map, with a choropleth scale, looks like this[^4]:
 
-<iframe width="100%" height="500" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/aa08c6b6-a62f-11e4-8fad-0e4fddd5de28/embed_map?sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/aa08c6b6-a62f-11e4-8fad-0e4fddd5de28/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 You can click on each square to get the time Eric spent there in seconds over two months time. We can now also easily figure out where Eric stayed more than an hour, by changing the above query to:
 
@@ -107,7 +110,7 @@ You can click on each square to get the time Eric spent there in seconds over tw
     )
     SELECT * FROM utm_squares WHERE duration_in_seconds > 3600
 
-<iframe width="100%" height="500" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/2a2a348c-a631-11e4-bfeb-0e9d821ea90d/embed_map?sw_lat=51.00684227163969&sw_lon=2.62847900390625&ne_lat=51.411199044550045&ne_lon=3.94683837890625" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/2a2a348c-a631-11e4-bfeb-0e9d821ea90d/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Conclusion
 
@@ -119,4 +122,4 @@ In my opinion [CartoDB](http://cartodb.com) is an intuitive, yet very powerful t
 [^1]: You can read more on it on the [LifeWatch Belgium website](http://www.lifewatch.be/birds).
 [^2]: A [more in-depth tutorial](http://developers.cartodb.com/tutorials/gps_track.html) is available on the CartoDB website. The main difference is that I stored the result as a view rather than a table, which is why I used `the_geom_webmercator` and not `the_geom`.
 [^3]: CartoDB requires an `cartodb_id` to allow click interaction. I am cheating here by generating a new one based on `row_number()`.
-[^4]: Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Belgium.
+[^4]: Obviously, for a real analysis, I would have to use a reference grid that extends beyond the borders of Flanders.
