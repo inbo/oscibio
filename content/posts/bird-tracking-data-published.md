@@ -11,7 +11,7 @@ We have written about our bird tracking network [before](http://lifewatch.inbo.b
 
 This tracking network is collecting rich, fascinating, and beautiful data: data which potential we do not want to limit to our research questions and needs. This is why we are happy to announce that we have just published **all gull tracking data from the 2013 breeding season** as open data, available to anyone!
 
-<iframe width="100%" height="600" frameborder="0" src="http://inbo.cartodb.com/u/lifewatch/viz/775ba7bc-b1fe-11e4-97bd-0e853d047bba/embed_map?sw_lat=51.102834783597565&sw_lon=2.485407292842865&ne_lat=51.4494738511512&ne_lon=3.6932167410850525" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/775ba7bc-b1fe-11e4-97bd-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 The [dataset](http://doi.org/10.15468/02omly) contains over 440,000 occurrences (visualized above), recorded by 27 GPS trackers mounted on 22 [Lesser Black-backed Gulls](http://en.wikipedia.org/wiki/Lesser_Black-backed_Gull) and 5 [Herring Gulls](http://en.wikipedia.org/wiki/European_Herring_Gull) breeding at the Belgian coast. The metadata provides extensive information regarding the sampling protocol, taxonomic, geographic, and temporal scope, and involved parties.
 

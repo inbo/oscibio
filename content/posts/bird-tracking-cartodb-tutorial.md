@@ -109,9 +109,7 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
 10. Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map[^5]. **Click `CSS`** in the toolbar to discover how the quantification buckets (in this case `Quantile`) are defined:
 
         :::CSS
-        /** choropleth visualization */
-
-        #bird_tracking{
+        #layer {
             marker-fill-opacity: 0.8;
             marker-line-color: #FFF;
             marker-line-width: 0.5;
@@ -120,19 +118,19 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
             marker-fill: #F2D2D3;
             marker-allow-overlap: true;
         }
-        #bird_tracking [ altitude <= 6965] {
+        #layer[altitude <= 6965] {
             marker-fill: #C1373C;
         }
-        #bird_tracking [ altitude <= 634] {
+        #layer[altitude <= 634] {
             marker-fill: #CC4E52;
         }
-        #bird_tracking [ altitude <= 338.5] {
+        #layer[altitude <= 338.5] {
             marker-fill: #D4686C;
         }
-        #bird_tracking [ altitude <= 66.5] {
+        #layer[altitude <= 66.5] {
             marker-fill: #EBB7B9;
         }
-        #bird_tracking [ altitude <= -205.5] {
+        #layer[altitude <= -205.5] {
             marker-fill: #F2D2D3;
         }
 
@@ -160,18 +158,17 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
 4. Most of the dots are red and the story does not come across yet. Let's dive into the CSS to **fine-tune the map**. We basically set all dots to green, except where the speed is below 2m/s, which we show larger and in red:
 
         :::CSS
-        /** choropleth visualization */
-
-        #bird_tracking{
-            marker-fill-opacity: 0.8;
-            marker-line-color: #FFF;
+        #layer {
             marker-line-width: 0.5;
+            marker-line-color: #FFF;
             marker-line-opacity: 1;
-            marker-width: 6;
+            marker-width: 5;
             marker-fill: #1a9850;
+            marker-fill-opacity: 0.8;
             marker-allow-overlap: true;
         }
-        #bird_tracking [ speed_2d < 2] {
+
+        #layer[speed_2d <= 2] {
             marker-fill: #d73027;
             marker-width: 10;
             marker-line-width: 1;
@@ -192,9 +189,9 @@ For this tutorial, well use [our open bird tracking data]({filename}bird-trackin
 
 [^6]: In addition to the data, which you can export from the `Edit` menu in the top right (see also step 8 of the `Data view` section of this tutorial).
 
-The [final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890-0e4fddd5de28/public_map):
+The final map:
 
-<iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890-0e4fddd5de28/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/7ad8e926-2644-11e5-9890-0e4fddd5de28/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Create a map of tracks per month
 
@@ -205,7 +202,8 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890
         SELECT
             ST_MakeLine(the_geom_webmercator ORDER BY date_time ASC) AS the_geom_webmercator,
             extract(month from date_time) AS month,
-            bird_name
+            bird_name,
+            1 AS cartodb_id -- required
         FROM bird_tracking
         WHERE
             date_time > '2013-08-15'
@@ -221,16 +219,14 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890
 4. We will also include labels (start doing this in the `Choropleth` options), so you can still see which track belongs to which individual. **Fine-tune the map in the CSS** (note that I've changed the months to integers):
 
         :::CSS
-        /** choropleth visualization */
-
-        #bird_tracking{
+        #layer {
           polygon-opacity: 0;
           line-color: #FFFFCC;
           line-width: 1.5;
           line-opacity: 0.8;
         }
 
-        #bird_tracking::labels {
+        #layer::labels {
           text-name: [bird_name];
           text-face-name: 'Lato Bold';
           text-size: 12;
@@ -244,19 +240,19 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890
           text-placement-type: simple;
         }
 
-        #bird_tracking [ month <= 12] {
+        #layer [ month <= 12] {
            line-color: #253494;
         }
-        #bird_tracking [ month <= 11] {
+        #layer [ month <= 11] {
            line-color: #2C7FB8;
         }
-        #bird_tracking [ month <= 10] {
+        #layer [ month <= 10] {
            line-color: #41B6C4;
         }
-        #bird_tracking [ month <= 9] {
+        #layer [ month <= 9] {
            line-color: #A1DAB4;
         }
-        #bird_tracking [ month <= 8] {
+        #layer [ month <= 8] {
            line-color: #FFFFCC;
         }
 
@@ -270,9 +266,9 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/7ad8e926-2644-11e5-9890
 
 7. Finally, **update the description** in `Edit metadata...` and **publish your map**.
 
-The [final map](https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b-0e018d66dc29/public_map):
+The final map:
 
-<iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b-0e018d66dc29/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/3f607d1c-264b-11e5-9d8b-0e018d66dc29/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Create an animated map
 
@@ -281,7 +277,7 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b
 3. **Apply the same time constraints** in the SQL:
 
         :::SQL
-        SELECT * 
+        SELECT *
         FROM bird_tracking
         WHERE
             date_time > '2013-08-15'
@@ -296,52 +292,39 @@ The [final map](https://inbo.cartodb.com/u/lifewatch/viz/3f607d1c-264b-11e5-9d8b
 5. The final CSS looks like this:
 
         :::CSS
-        /** torque_cat visualization */
-
         Map {
-        -torque-frame-count:256;
-        -torque-animation-duration:30;
-        -torque-time-attribute:"date_time";
-        -torque-aggregation-function:"CDB_Math_Mode(torque_category)";
-        -torque-resolution:1;
-        -torque-data-aggregation:linear;
+            -torque-frame-count: 256;
+            -torque-animation-duration: 30;
+            -torque-time-attribute: "date_time";
+            -torque-aggregation-function: "CDB_Math_Mode(value)";
+            -torque-resolution: 1;
+            -torque-data-aggregation: linear;
         }
-
-        #bird_tracking{
-            comp-op: source-over;
-            marker-fill-opacity: 0.9;
-            marker-line-color: #FFF;
+        #layer {
+            comp-op: src-over;
             marker-line-width: 0;
+            marker-line-color: #FFF;
             marker-line-opacity: 1;
-            marker-type: ellipse;
             marker-width: 3;
-            marker-fill: #FF6600;
+            marker-fill: ramp([value], (#b81609, #ffa300, #a53ed5), (1, 2, 3), "=");
+            marker-fill-opacity: 1;
         }
-        #bird_tracking[frame-offset=1] {
-            marker-width:5;
-            marker-fill-opacity:0.45; 
+        #layer[frame-offset=1] {
+            marker-width: 5;
+            marker-fill-opacity: 0.5;
         }
-        #bird_tracking[frame-offset=2] {
-            marker-width:7;
-            marker-fill-opacity:0.225; 
-        }
-        #bird_tracking[value=1] {
-            marker-fill: #B81609;
-        }
-        #bird_tracking[value=2] {
-            marker-fill: #FFA300;
-        }
-        #bird_tracking[value=3] {
-            marker-fill: #A53ED5;
+        #layer[frame-offset=2] {
+            marker-width: 7;
+            marker-fill-opacity: 0.25;
         }
 
 6. **Update the legend**, **remove the `bird_name` labels** from the other layer (they are no longer required) and **publish your map**.
 
 [^7]: You can add many layers to a map, but only one Torque layer (= one animated layer). That is because CartoDB cannot guarantee that multiple Torque layers will use the same time scale and speed (which is something the user defines), so it wouldn't make sense to play those at the same time. If you want to animate the same data, but with different colours for a certain attribute (e.g. individual), use the `Torque cat` like we did here. This works best if you don't use too many categories.
 
-The [final map](https://inbo.cartodb.com/u/lifewatch/viz/4eb8fcee-40fe-11e5-bfaa-0e9d821ea90d/public_map):
+The final map:
 
-<iframe width="100%" height="500" frameborder="0" src="https://inbo.cartodb.com/u/lifewatch/viz/4eb8fcee-40fe-11e5-bfaa-0e9d821ea90d/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/4eb8fcee-40fe-11e5-bfaa-0e9d821ea90d/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## Go forth and start mapping
 
@@ -354,4 +337,3 @@ For inspiration and tutorials, see:
 * [CartoDB map gallery](https://cartodb.com/gallery/): the cream of the crop of CartoDB maps.
 * [CartoDB academy](http://academy.cartodb.com/): step by step tutorials on how to create maps in CartoDB.
 * [CartoDB documentation](http://docs.cartodb.com/): if you want to know more about all the features.
-
