@@ -40,7 +40,7 @@ Files and directories indicated with `GENERATED` should not be edited manually.
 
 ### Build site
 
-1. Navigate to the website directory: `cd lifewatch-blog`
+1. Navigate to the website directory: `cd lifewatch-website`
 2. Build the site:
     * Locally: `pelican -s settings-local.py` → website is generated in `docs-local/`
     * For the actual website: `pelican -s settings.py` → website is generated in `docs/`
