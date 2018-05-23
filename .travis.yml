@@ -1,0 +1,27 @@
+language: python
+
+python:
+  - "3.5"
+
+branches:
+  only:
+  - master
+
+install:
+  - pip install pelican markdown beautifulsoup4
+
+  # get the build theme
+  - git clone https://github.com/inbo/eurasian-spoonbill ../
+
+script:
+  - pelican -s settings-prod.py
+
+deploy:
+    - provider: pages
+      skip_cleanup: true
+      github_token: $GH_TOKEN
+      local_dir: docs
+      on:
+        branch: master
+
+
