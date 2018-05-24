@@ -3,10 +3,6 @@ language: python
 python:
   - "3.5"
 
-branches:
-  only:
-  - ci-setup # current branch for testing
-
 install:
   - pip install pelican markdown beautifulsoup4
 
