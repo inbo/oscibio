@@ -18,7 +18,7 @@ deploy:
       github_token: $GH_TOKEN
       local_dir: docs
       on:
-        branch: ci-setup # current branch for testing
+        branch: master
         
 notifications:
   email:
