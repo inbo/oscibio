@@ -23,5 +23,10 @@ deploy:
       local_dir: docs
       on:
         branch: ci-setup
+        
+notifications:
+  email:
+    on_success: never
+    on_failure: always
 
 
