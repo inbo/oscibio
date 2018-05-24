@@ -11,7 +11,7 @@ install:
   - pip install pelican markdown beautifulsoup4
 
   # get the build theme
-  - git clone https://github.com/inbo/eurasian-spoonbill ../
+  - git clone https://github.com/inbo/eurasian-spoonbill ../eurasian-spoonbill
 
 script:
   - pelican -s settings-prod.py
