@@ -5,7 +5,7 @@ python:
 
 branches:
   only:
-  - ci-setup
+  - ci-setup # current branch for testing
 
 install:
   - pip install pelican markdown beautifulsoup4
@@ -22,7 +22,7 @@ deploy:
       github_token: $GH_TOKEN
       local_dir: docs
       on:
-        branch: ci-setup
+        branch: ci-setup # current branch for testing
         
 notifications:
   email:
