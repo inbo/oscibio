@@ -7,3 +7,6 @@
 
 # Local site
 docs-local/
+
+# Python artifacts
+.ipynb_checkpoints
