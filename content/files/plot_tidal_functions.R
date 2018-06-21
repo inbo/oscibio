@@ -112,6 +112,9 @@ ggridges_showcase <- function(eels, tidal_data, station_municipality) {
     tidal_data %>% filter(Timestamp >= start_moment, Timestamp <= end_moment) %>%
         filter(distance_to_refence_station > min_zoom, 
                distance_to_refence_station < max_zoom) -> tidal_data_zoom
+    station_municipality %>% 
+        filter(distance_to_refence_station > min_zoom, 
+               distance_to_refence_station < max_zoom) -> station_municipality_zoom
 
     ggplot() +
         geom_ridgeline(data = tidal_data_zoom, 
