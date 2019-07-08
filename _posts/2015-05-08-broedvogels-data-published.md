@@ -1,10 +1,9 @@
 ---
 title: Breeding birds atlas 2000-2002 is published as open data
-slug: broedvogels-data-published
+summary: Historical observation data on breeding birds are now available for everyone to use.
 date: 2015-05-08 14:10
 author: Peter Desmet
-tags: birds, open data, GBIF
-summary: Historical observation data on breeding birds are now available for everyone to use.
+categories: [Birds, Open data, GBIF]
 ---
 
 We have just published the observation data used for the in 2004 published "Atlas van de Vlaamse broedvogels 2000-2002":

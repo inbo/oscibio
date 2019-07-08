@@ -1,10 +1,9 @@
 ---
-title: There and back again: gull migration data visualized
-slug: gull-migration-data
+title: "There and back again: gull migration data visualized"
+description: Using CartoDB to tell migration stories in our recently republished gull tracking data.
 date: 2015-05-28 13:00
 author: Peter Desmet
-tags: birds, bird tracking, open data, visualization, CartoDB
-summary: Using CartoDB to tell migration stories in our recently republished gull tracking data.
+categories: [Birds, Bird tracking, Open data, Visualization, CartoDB]
 ---
 
 In July last year, we [released the gull tracking data from the 2013 breeding season]({filename}bird-tracking-data-published.md) as open data. We have now complemented the dataset with tracking data from the 2013/2014 migration/wintering season and the 2014 breeding season. The [dataset now contains over 1.1 million occurrence records](http://doi.org/10.15468/02omly) from 60 tracked gulls, including migration data, which wasn't included before.

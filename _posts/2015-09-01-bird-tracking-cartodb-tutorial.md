@@ -1,10 +1,9 @@
 ---
 title: A tutorial on visualizing bird tracking data with CartoDB
-slug: cartodb-tracking-data-tutorial
+summary: An introduction to using CartoDB for tracking data, based on two workshops we gave.
 date: 2015-09-01 13:00
 author: Peter Desmet
-tags: bird-tracking, visualization, CartoDB
-summary: An introduction to using CartoDB for tracking data, based on two workshops we gave.
+categories: [Bird tracking, Visualization, CartoDB]
 ---
 
 We have been using [CartoDB for bird tracking data](http://lifewatch.inbo.be/blog/tag/cartodb.html) for a while now and are very happy to see that we have inspired others to do the [same](http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html), including for [other species](http://blog.cartodb.com/fisher/). To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops[^1]. Rather than handing the course material to the participants of these workshops only, I decided to publish it here on this blog, so anyone can use it.

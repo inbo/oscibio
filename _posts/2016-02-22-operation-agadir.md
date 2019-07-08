@@ -1,10 +1,9 @@
 ---
-title: Operation Agadir: an expedition to retrieve lost tracking data
-slug: operation-agadir
+title: "Operation Agadir: an expedition to retrieve lost tracking data"
+description: Four gulls we lost track of are in Agadir right now. Can we retrieve their tracking data?
 date: 2016-02-22 09:00
 author: Peter Desmet
-tags: news, bird tracking
-summary: Four gulls we lost track of are in Agadir right now. Can we retrieve their tracking data?
+categories: [News, Bird tracking]
 ---
 
 Remember gull [Eric]({filename}tracking-eric.md)? He's one of the gulls we have been tracking since 2013 ([Stienen et al. 2016](http://doi.org/10.3897/zookeys.555.6173)). As we wrote in a [previous blog post]({filename}gull-migration-data.md), we lost track of him on May 11, 2014. Since then, we've been unable to establish a connection between his GPS tracker and the base antenna at the colony.
