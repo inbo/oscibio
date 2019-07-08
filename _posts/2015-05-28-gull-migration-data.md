@@ -6,7 +6,7 @@ author: Peter Desmet
 categories: [Birds, Bird tracking, Open data, Visualization, CartoDB]
 ---
 
-In July last year, we [released the gull tracking data from the 2013 breeding season]({filename}bird-tracking-data-published.md) as open data. We have now complemented the dataset with tracking data from the 2013/2014 migration/wintering season and the 2014 breeding season. The [dataset now contains over 1.1 million occurrence records](http://doi.org/10.15468/02omly) from 60 tracked gulls, including migration data, which wasn't included before.
+In July last year, we [released the gull tracking data from the 2013 breeding season]({% post_url 2014-07-22-bird-tracking-data-published %}) as open data. We have now complemented the dataset with tracking data from the 2013/2014 migration/wintering season and the 2014 breeding season. The [dataset now contains over 1.1 million occurrence records](https://doi.org/10.15468/02omly) from 60 tracked gulls, including migration data, which wasn't included before.
 
 The Herring Gulls don't migrate (a trip to the Nord of France at the most), but the Lesser Black-backed Gulls migrate to Spain, Morocco, or even further south.
 
@@ -30,7 +30,7 @@ The trackers also allow us to look at individual stories. The migration story of
 
 ## Where's Eric?
 
-So, how is [everyone's favourite gull Eric]({filename}tracking-eric.md) doing? As you can see below, Eric had a successful migration to Agadir, Morocco in 2013. On March 29, 2014 he flew back to the breeding colony in Zeebrugge, where he arrived eight days later. In May that year we lost track of Eric: the last occurrence we were able to retrieve dates `2014-05-11T03:22:52Z`, on the roof of a building in Zeebrugge. His tracker probably malfunctioned or he didn't stay around the antenna long enough to send more data.
+So, how is [everyone's favourite gull Eric]({% post_url 2013-10-01-tracking-eric %}) doing? As you can see below, Eric had a successful migration to Agadir, Morocco in 2013. On March 29, 2014 he flew back to the breeding colony in Zeebrugge, where he arrived eight days later. In May that year we lost track of Eric: the last occurrence we were able to retrieve dates `2014-05-11T03:22:52Z`, on the roof of a building in Zeebrugge. His tracker probably malfunctioned or he didn't stay around the antenna long enough to send more data.
 
 <iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/88a48488-ea59-11e4-849b-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 

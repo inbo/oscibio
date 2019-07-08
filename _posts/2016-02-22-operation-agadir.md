@@ -6,7 +6,7 @@ author: Peter Desmet
 categories: [News, Bird tracking]
 ---
 
-Remember gull [Eric]({% post_url 2013-10-01-tracking-eric %})? He's one of the gulls we have been tracking since 2013 ([Stienen et al. 2016](http://doi.org/10.3897/zookeys.555.6173)). As we wrote in a [previous blog post]({% post_url 2015-05-28-gull-migration-data %}), we lost track of him on May 11, 2014. Since then, we've been unable to establish a connection between his GPS tracker and the base antenna at the colony.
+Remember gull [Eric]({% post_url 2013-10-01-tracking-eric %})? He's one of the gulls we have been tracking since 2013 ([Stienen et al. 2016](https://doi.org/10.3897/zookeys.555.6173)). As we wrote in a [previous blog post]({% post_url 2015-05-28-gull-migration-data %}), we lost track of him on May 11, 2014. Since then, we've been unable to establish a connection between his GPS tracker and the base antenna at the colony.
 
 We do have another way of knowing how he is doing though, but it requires a bit of luck. As do all our gulls, Eric is ringed with two leg rings. A standard metal ring with code `L907172`, which can be read and reported if he is captured or found dead, and a blue ring with code `URAM`, which can be read from a distance with binoculars. Thanks to the blue ring and a network of voluntary observers, we know that Eric made it to Agadir, Morocco (his favourite wintering location) in 2014 and 2015. In fact, we think he is there right now.
 
