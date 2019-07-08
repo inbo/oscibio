@@ -1,0 +1,11 @@
+# Links listed below will be included in your site's navbar (navigation at the top)
+
+- name: Home # Note that users can also reach the homepage by clicking the site's title on the left in the navbar
+  link: /
+  new_window: false
+- name: Team
+  link: /team/
+  new_window: false
+- name: Blog
+  link: /blog/
+  new_window: false
