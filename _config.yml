@@ -1,0 +1,46 @@
+# SITE SETTINGS
+title: OSCIBIO
+description: Open science lab for biodiversity
+author: OSCIBIO team members
+# url: "https://lifewatch.inbo.be"
+# baseurl: "/blog"
+
+# SOCIAL PROFILES
+email: oscibio@inbo.be
+twitter_username: oscibio
+github_username: inbo
+
+# THEME SETTINGS (ALL OPTIONAL)
+theme: minima
+remote_theme: peterdesmet/petridish
+posts_on_home: 3
+tweets_on_home: true
+archive_permalink: /blog/
+colors:
+  links: "#c04384"
+  banner: "#c04384"
+  footer: "#3c3c3c"
+rounded_corners: true
+
+# BUILD SETTINGS
+markdown: kramdown
+plugins: # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - LICENSE
+  - package-lock.json
+  - package.json
+  - petridish.gemspec
+
+# FRONTMATTER DEFAULTS
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/blog/:slug/"
