@@ -38,6 +38,7 @@ exclude:
   - petridish.gemspec
 
 # FRONTMATTER DEFAULTS
+defaults:
   -
     scope:
       path: ""
