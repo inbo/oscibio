@@ -1,0 +1,51 @@
+# Project team members listed below will appear on the /team page
+
+- name: Damiano Oldoni
+  role: Research software engineer
+  image: https://avatars2.githubusercontent.com/u/33662631?s=400&v=4
+  # description: >
+  #   ...
+  orcid: 0000-0003-3445-7562
+  email: damiano.oldoni@inbo.be
+  github: damianooldoni
+  twitter: damianozingaro
+
+- name: Dimitri Brosens
+  role: Open data publisher
+  image: assets/img/team_dimi.jpg
+  description: >
+    Dimitri is data liaison officer at the [Belgian Biodiversity Platform](http://www.biodiversity.be). He loves to chat with researchers to help them publish their data. His ultimate goal is to get Belgium on the world map of biodiversity data.
+  orcid: 0000-0002-0846-9116
+  email: dimitri.brosens@inbo.be
+  github: dimevil
+  twitter: dimibro
+
+- name: Lien Reyserhove
+  role: Open data publisher
+  image: https://avatars0.githubusercontent.com/u/32466479?s=400&v=4
+  # description: >
+  #   ...
+  orcid: 0000-0001-7484-9267
+  email: lien.reyserhove@inbo.be
+  github: LienReyserhove
+  twitter: reyserhovelien
+
+- name: Peter Desmet
+  role: Open data coordinator
+  image: https://avatars1.githubusercontent.com/u/600993?s=460&v=4
+  description: >
+    Peter is biodiversity informatics geek, passionate about open data and open science. He loves creating visualizations and proper documentation.
+  orcid: 0000-0002-8442-8025
+  email: peter.desmet@inbo.be
+  github: peterdesmet
+  twitter: peterdesmet
+
+- name: Tanja Milotić
+  role: LifeWatch project coordinator
+  image: https://avatars2.githubusercontent.com/u/26165229?s=400&v=4
+  description: >
+    Tanja coordinates the LifeWatch INBO project and communication. She strongly believes in the value of open science in biodiversity research. 
+  orcid: 0000-0002-3129-6196
+  email: tanja.milotic@inbo.be
+  github: milotictanja
+  twitter: milotict
