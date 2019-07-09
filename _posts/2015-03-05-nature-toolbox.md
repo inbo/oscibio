@@ -1,6 +1,7 @@
 ---
 title: Our flow visualization is featured in Nature
 description: The current issue of Nature discusses some of the visualization tools we use.
+background: /assets/img/2015-03-05-nature-toolbox.jpg
 date: 2015-03-05 10:00
 author: Peter Desmet
 categories: [News, Birds, Visualization, Radar, ENRAM]

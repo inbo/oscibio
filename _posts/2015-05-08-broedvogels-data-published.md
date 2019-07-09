@@ -1,6 +1,7 @@
 ---
 title: Breeding birds atlas 2000-2002 is published as open data
 summary: Historical observation data on breeding birds are now available for everyone to use.
+background: /assets/img/2015-05-08-broedvogels-data-published.jpg
 date: 2015-05-08 14:10
 author: Peter Desmet
 categories: [Birds, Open data, GBIF]
@@ -8,9 +9,7 @@ categories: [Birds, Open data, GBIF]
 
 We have just published the observation data used for the in 2004 published "Atlas van de Vlaamse broedvogels 2000-2002":
 
-![Atlas van de Vlaamse broedvogels 2000-2002](/assets/img/post-broedvogel-atlas.jpg)
-
-*Vermeersch G., Anselin A., Devos K., Herremans M., Stevens J., Gabriëls J. & Van Der Krieken B. (2004) Atlas van de Vlaamse broedvogels 2000-2002. Mededelingen van het Instituut voor Natuurbehoud 23, Brussel, 496p. ISBN 90-403-0215-4*
+> Vermeersch G., Anselin A., Devos K., Herremans M., Stevens J., Gabriëls J. & Van Der Krieken B. (2004) Atlas van de Vlaamse broedvogels 2000-2002. Mededelingen van het Instituut voor Natuurbehoud 23, Brussel, 496p. ISBN 90-403-0215-4
 
 The dataset contains bird observations gathered by volunteers using four sampling methods and was used to assess the distribution - and where possible relative abundance - of all breeding bird species in Flanders at the time.
 

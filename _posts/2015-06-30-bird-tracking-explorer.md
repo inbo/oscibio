@@ -1,6 +1,7 @@
 ---
 title: Bird tracking explorer released
 description: We've developed an open source tool to let you explore our bird tracking data.
+background: /assets/img/2015-06-30-bird-tracking-explorer.jpg
 date: 2015-06-30 15:00
 author: [Bart Aelterman, Peter Desmet]
 categories: [Birds, Bird tracking, Visualization, Software, CartoDB]

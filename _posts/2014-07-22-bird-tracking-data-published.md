@@ -1,6 +1,7 @@
 ---
 title: Gull tracking data from the 2013 breeding season are published as open data
 description: Our first set of tracking data are now available for everyone to use.
+background: /assets/img/2014-07-22-bird-tracking-data-published.jpg
 date: 2014-07-22 15:20
 author: Peter Desmet
 categories: [Birds, Bird tracking, Open data, GBIF]
