@@ -1,0 +1,17 @@
+# Links listed below will be included in your site's navbar (navigation at the top)
+
+- text: Home # Note that users can also reach the homepage by clicking the site's title on the left in the navbar
+  href: /
+- text: Blog
+  href: /blog/
+- text: Output
+  href: /output/
+  menu:
+  - text: Software
+    href: /software/
+  - text: Datasets
+    href: /datasets/
+  - text: Publications
+    href: /publications/
+- text: Team
+  href: /team/
