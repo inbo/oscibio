@@ -1,0 +1,34 @@
+# Footer content is organized in columns, with the first one reserved for social icons (defined in _config.yml).
+# You can also add a small print license statement at the bottom.
+
+# Columns (the more you add, the narrower they will be)
+columns:
+  - description: "We participate in the following projects:"
+    links:
+    - text: Projects
+      href: /projects/
+    - text: Belgian Biodiversity Platform
+      href: http://www.biodiversity.be
+      new_window: true
+    - text: TrIAS
+      href: http://trias-project.be
+      new_window: true
+    - text: GloBAM
+      href: https://globam.science
+      new_window: true
+    - text: Vespa-Watch
+      href: https://vespawatch.be
+      new_window: true
+  - description: >
+      We are part of the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en).
+      Our work is funded by [Research Foundation - Flanders (FWO)](https://www.fwo.be/en/), 
+      [Belgian Science Policy Office (BELSPO)](https://www.belspo.be/), 
+      [BiodivERsA](https://www.biodiversa.org/) and 
+      [Department of Economy, Science & Innovation (EWI)](https://www.ewi-vlaanderen.be/en).
+      
+
+# Small print license statement to add at the bottom of the footer. Can be Markdown
+# Will be prefixed by "© {{ site.author }}" if defined in _config.yml
+license: >
+  Content on this site is licensed under a [CC BY 4.0 License](http://creativecommons.org/licenses/by/4.0/).
+  \| Theme: [petridish](https://github.com/peterdesmet/petridish)
