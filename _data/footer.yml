@@ -5,11 +5,16 @@
 columns:
   - description: >
       We are part of the [Research Institute for Nature and Forest (INBO)](https://www.inbo.be/en).
-      Our work is funded by [Research Foundation - Flanders (FWO)](https://www.fwo.be/en/), 
-      [Belgian Science Policy Office (BELSPO)](https://www.belspo.be/), 
-      [BiodivERsA](https://www.biodiversa.org/) and 
-      [Department of Economy, Science & Innovation (EWI)](https://www.ewi-vlaanderen.be/en).
-      
+      Our work is funded by:
+    links:
+      - text: Research Foundation - Flanders (FWO)
+        href: https://www.fwo.be/en/
+      - text: Belgian Science Policy Office (BELSPO)
+        href: https://www.belspo.be/
+      - text: BiodivERsA
+        href: https://www.biodiversa.org/
+      - text: Department of Economy, Science & Innovation (EWI)
+        href: https://www.ewi-vlaanderen.be/en
 
 # Small print license statement to add at the bottom of the footer. Can be Markdown
 # Will be prefixed by "© {{ site.author }}" if defined in _config.yml
