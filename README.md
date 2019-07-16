@@ -1,61 +1,36 @@
 # OSCIBIO website
 
-This repository contains the content and settings for the [Open science lab for biodiversity website](https://oscibio.inbo.be). It is generated as a static website with [Jekyll](https://jekyllrb.com/).
+This repository contains the source files for the [Open science lab for biodiversity website](https://oscibio.inbo.be).
 
-## Getting started
+## Usage
 
-[See the contributing guide](CONTRIBUTING.md)
+This website makes use of the static website generator [Jekyll](https://jekyllrb.com/) and the [Petridish](https://github.com/peterdesmet/petridish) theme. **Each commit to `master` will automatically trigger a new build on GitHub Pages.** There is no need to build the site locally, but you can by installing Jekyll and running `bundle exec jekyll serve`.
+
+Minor changes can be committed directly to `master`.
+
+Changes requiring review (e.g. new blog posts) should be created in a separate branch and submitted as a pull request. Some guidelines:
+
+- Use `72dpi` as image resolution
+- Place background images in `assets/backgrounds`, name them after their corresponding page/post and ideally crop them to `2100 x 700px`
+- Place content images in `assets/images/`, name them after their corresponding page/post + a suffix, e.g. `-month-tracks-3`
+- Add categories to posts to indicate the project, output type, software language, and maybe partner organization, e.g. `[TrIAS, software, R, GBIF, rOpenSci]`
+- Create internal links as `[previous post]({% post_url 2013-10-01-tracking-eric %})`
 
 ## Repo structure
 
-Files and directories indicated with `GENERATED` should not be edited manually.
+The repository structure follows that of Jekyll websites.
 
-```
-├── README.md         : Description of this repository
-├── LICENSE           : Repository license
-├── .gitignore        : Files and directories to be ignored by git
-│
-├── settings-local.py : Local settings for Pelican, generates website in "docs-local"
-├── settings.py       : Production settings for Pelican, generates website in "docs" (used by GitHub pages)
-│
-├── content
-│   ├── files         : Static files (e.g. pdfs)
-│   ├── extra         : Static files that need to go in website root
-│   ├── images        : Static images (e.g. screenshots)
-│   ├── pages         : Website pages (in Markdown)
-│   └── posts         : Website posts (in Markdown)
-│
-└── docs              : Website GENERATED
-```
-
-## Deployment
-
-### Installation
-
-1. Verify Python 3.3+ is installed: `python -V`
-2. Install [Pelican](http://docs.getpelican.com/en/stable/install.html) (the static site generator): `pip install pelican`
-3. Install the [Python implementation of Markdown](https://pypi.python.org/pypi/Markdown): `pip install markdown`
-5. Clone the theme repo: `git clone https://github.com/inbo/eurasian-spoonbill`
-6. Clone the website repo: `git clone https://github.com/inbo/lifewatch-blog`
-
-### Build site
-
-1. Navigate to the website directory: `cd lifewatch-blog`
-2. Build the site:
-    * Locally: `pelican -s settings-local.py` → website is generated in `docs-local/`
-    * For the actual website: `pelican -s settings.py` → website is generated in `docs/`
-3. Serve the **local** site:
-    
-    ```bash
-    # in a new terminal window
-    cd docs-local
-    python -m http.server 8000
-    ```
-4. Go to <http://localhost:8000>
+- General site settings: [_config.yml](_config.yml)
+- Pages: [pages/](pages/)
+- Posts: [_posts/](_posts/)
+- Images & static files: [assets/](assets/)
+- Top navigation: [_data/navigation.yml](_data/navigation.yml)
+- Footer content: [_data/footer.yml](_data/footer.yml)
+- Team members: [_data/team.yml](_data/team.yml)
 
 ## Contributors
 
-[List of contributors](https://github.com/inbo/lifewatch-blog/contributors)
+[List of contributors](https://github.com/inbo/oscibio/contributors)
 
 ## License
 
