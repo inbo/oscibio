@@ -4,8 +4,11 @@ description: Exploring different ways to visualize and analyze tracking data wit
 background: /assets/img/2013-10-01-tracking-eric.jpg
 date: 2013-10-01 11:15
 author: Peter Desmet
-categories: [Birds, Bird tracking, Visualization, CartoDB, Tutorial, Open data]
+categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
 ---
+
+{: .alert .alert-warning}
+At the time of publication CartoDB used a freemium model. It has since been rebranded to [CARTO](https://carto.com/) and no longer offers free accounts. Steps, links and examples mentioned in this tutorial might no longer work.
 
 As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS trackers. The project[^1] is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the Western Marsh Harrier) in collaboration with the [VLIZ](http://www.vliz.be/en) and [UvA-BiTS](http://www.uva-bits.nl/).
 

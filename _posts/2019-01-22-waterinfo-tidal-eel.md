@@ -1,9 +1,9 @@
 ---
-title: "wateRinfo - Downloading tidal data to understand the behaviour of a migrating eel"
+title: "wateRinfo: Downloading tidal data to understand the behaviour of a migrating eel"
 description: "A use case for our R package [wateRinfo](https://github.com/ropensci/wateRinfo)."
 background: /assets/img/2019-01-22-waterinfo-tidal-eel.jpg
 author: [Stijn Van Hoey, Peter Desmet]
-categories: [LifeWatch, Software, R, Tutorial]
+categories: [LifeWatch, software, R, rOpenSci]
 ---
 
 {: .alert .alert-info}

@@ -4,7 +4,7 @@ description: Using CartoDB to tell migration stories in our recently republished
 background: /assets/img/2015-05-28-gull-migration-data.jpg
 date: 2015-05-28 13:00
 author: Peter Desmet
-categories: [Birds, Bird tracking, Open data, Visualization, CartoDB]
+categories: [LifeWatch, bird tracking, visualization, CartoDB, presentation]
 ---
 
 In July last year, we [released the gull tracking data from the 2013 breeding season]({% post_url 2014-07-22-bird-tracking-data-published %}) as open data. We have now complemented the dataset with tracking data from the 2013/2014 migration/wintering season and the 2014 breeding season. The [dataset now contains over 1.1 million occurrence records](https://doi.org/10.15468/02omly) from 60 tracked gulls, including migration data, which wasn't included before.

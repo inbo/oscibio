@@ -3,7 +3,7 @@ title: Reporting on open science
 description: We're following a course on open access, open data, and open research.
 date: 2013-08-06 16:00
 author: Peter Desmet
-categories: [News, Open data]
+categories: [open science]
 ---
 
 We are following an [online course on open science](https://p2pu.org/en/courses/5/open-science-an-introduction/), which is hosted on P2PU and organized by [Creative Commons](http://creativecommons.org/). The course has 3 sessions:

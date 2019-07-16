@@ -4,7 +4,7 @@ description: The current issue of Nature discusses some of the visualization too
 background: /assets/img/2015-03-05-nature-toolbox.jpg
 date: 2015-03-05 10:00
 author: Peter Desmet
-categories: [News, Birds, Visualization, Radar, ENRAM]
+categories: [ENRAM]
 ---
 
 The [Toolbox special in the current issue of Nature](https://doi.org/10.1038/519119a) discusses the (new) geospatial visualization tools that are available to researchers - such as CartoDB and TileMill:

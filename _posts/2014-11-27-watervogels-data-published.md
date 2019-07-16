@@ -4,7 +4,7 @@ summary: Another core data system of the INBO is now available for everyone to u
 background: /assets/img/2014-11-27-watervogels-data-published.jpg
 date: 2014-11-27 16:00
 author: Peter Desmet
-categories: [Birds, Open data, GBIF]
+categories: [LifeWatch, biodiversity.be, open data, GBIF]
 ---
 
 We have just published another core data system of the Research Institute for Nature and Forest (INBO) as open data: **Watervogels - Wintering waterbirds in Flanders, Belgium**. The dataset joins the systems [Florabank1](http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1) and [Fish Information System (VIS)](http://www.gbif.org/dataset/search?q=vis+-+Fishes)[^1], as well as [numerous other datasets](http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b) that have been published and registered via our [GBIF Integrated Publishing Toolkit](https://ipt.inbo.be). Special thanks to principal investigator Koen Devos (INBO), data liaison officer Dimitri Brosens ([Belgian Biodiversity Platform](http://www.biodiversity.be)), and the many volunteer observers to make this possible.

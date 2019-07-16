@@ -4,8 +4,11 @@ description: We've developed an open source tool to let you explore our bird tra
 background: /assets/img/2015-06-30-bird-tracking-explorer.jpg
 date: 2015-06-30 15:00
 author: [Bart Aelterman, Peter Desmet]
-categories: [Birds, Bird tracking, Visualization, Software, CartoDB]
+categories: [LifeWatch, bird tracking, software]
 ---
+
+{: .alert .alert-warning }
+The bird tracking explorer software tool has been archived. Its [source code](https://github.com/inbo/bird-tracking/tree/335ae63a678ec81d3dfa7a7b6f57ca1e2779fb1a/explorer) is still available.
 
 As we have written before, our [bird tracking data are open]({% post_url 2014-07-22-bird-tracking-data-published %}): you can download these in [bulk](https://doi.org/10.15468/02omly), via the [CartoDB API](https://github.com/inbo/bird-tracking/blob/f80497eb105eb02d7238b9ae59f2feabe205b4f5/cartodb/README.md) or the [GBIF API](http://api.gbif.org/v1/occurrence/search?datasetkey=83e20573-f7dd-4852-9159-21566e1e691e). These methods don't allow you however to quickly explore a single individual, for a certain time period[^1]. This is why we're happy to announce our [bird tracking explorer](http://inbo.github.io/bird-tracking/explorer/index.html), an experimental, open source tool that allows you to do just that.
 
