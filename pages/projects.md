@@ -8,6 +8,10 @@ permalink: /projects/
 
 <http://www.biodiversity.be>
 
+## LifeWatch
+
+<http://www.lifewatch.be>
+
 ## TrIAS
 
 <http://trias-project.be>
