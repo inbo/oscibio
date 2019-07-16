@@ -1,5 +1,0 @@
----
-title: Software
-permalink: /software/
----
-
