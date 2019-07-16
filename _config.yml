@@ -17,9 +17,9 @@ posts_on_home: 3
 tweets_on_home: true
 archive_permalink: /blog/
 colors:
-  links: "#c04384"
-  banner: "#c04384"
-  footer: "#3c3c3c"
+  links: "#356196"  # INBO blue
+  banner: "#c04384" # INBO fuchsia
+  footer: "#3c3c3c" # INBO gray
 rounded_corners: true
 
 # BUILD SETTINGS
