@@ -1,6 +1,6 @@
-# LifeWatch INBO blog
+# OSCIBIO website
 
-This repository contains the content and settings for the [LifeWatch INBO blog](http://lifewatch.inbo.be/blog). It is generated as a static website with [Pelican](http://docs.getpelican.com).
+This repository contains the content and settings for the [Open science lab for biodiversity website](https://oscibio.inbo.be). It is generated as a static website with [Jekyll](https://jekyllrb.com/).
 
 ## Getting started
 
