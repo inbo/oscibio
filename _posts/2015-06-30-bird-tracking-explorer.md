@@ -1,7 +1,7 @@
 ---
 title: Bird tracking explorer released
 description: We've developed an open source tool to let you explore our bird tracking data.
-background: /assets/img/2015-06-30-bird-tracking-explorer.jpg
+background: /assets/backgrounds/2015-06-30-bird-tracking-explorer.jpg
 date: 2015-06-30 15:00
 author: [Bart Aelterman, Peter Desmet]
 categories: [LifeWatch, bird tracking, software]
@@ -14,7 +14,7 @@ As we have written before, our [bird tracking data are open]({% post_url 2014-07
 
 [^1]: The [birdmap developed by VLIZ](http://www.lifewatch.be/birdmap?group=Kleine%20mantelmeeuw) does allow you to do this for the real-time data.
 
-[![Bird tracking explorer](/assets/img/post-bird-tracking-explorer.png)](http://inbo.github.io/bird-tracking/explorer/index.html)
+[![Bird tracking explorer](/assets/images/2015-06-30-bird-tracking-explorer-screenshot.png)](http://inbo.github.io/bird-tracking/explorer/index.html)
 
 ## Features
 
@@ -30,7 +30,7 @@ The map and year chart already give you a general overview of the area and time 
     * **Distance travelled**/hour: an indication of activity.
     * **Furthest distance from catch location**/hour: an indication of migration/trips, as the catch location is generally in the vicinity of the birds’ nest.
 
-![Metric charts](/assets/img/post-bird-tracking-explorer-metric-charts.png)
+![Metric charts](/assets/images/2015-06-30-bird-tracking-explorer-metric-charts.png)
 
 These charts can highlight interesting patterns in the birds’ behaviour, e.g. the image above shows how gull [Eric]({% post_url 2013-10-01-tracking-eric %}) is travelling to a location at about 70 kilometers from his colony in the afternoon for five consecutive days in June 2013. That location happened to be a [potato chips factory](http://www.standaard.be/cnt/dmf20130618_00627212), where he fed on discarded chips declared unfit for human consumption.
 

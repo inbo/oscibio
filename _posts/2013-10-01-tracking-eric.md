@@ -1,7 +1,7 @@
 ---
 title: Using CartoDB to visualize two months in the life of gull Eric
 description: Exploring different ways to visualize and analyze tracking data with CartoDB.
-background: /assets/img/2013-10-01-tracking-eric.jpg
+background: /assets/backgrounds/2013-10-01-tracking-eric.jpg
 date: 2013-10-01 11:15
 author: Peter Desmet
 categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]

@@ -1,7 +1,7 @@
 ---
 title: A tutorial on visualizing bird tracking data with CartoDB
 summary: An introduction to using CartoDB for tracking data, based on two workshops we gave.
-background: /assets/img/2015-09-01-bird-tracking-cartodb-tutorial.jpg
+background: /assets/backgrounds/2015-09-01-bird-tracking-cartodb-tutorial.jpg
 date: 2015-09-01 13:00
 author: Peter Desmet
 categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
@@ -77,7 +77,7 @@ ORDER BY
 4. Most of the functionality is in the collapsed toolbar on the right, such as merging datasets, adding rows or columns, and filters.
 5. Filters are great for exploring the data. **Try out the filter for altitude.**
 
-    ![Filters](/assets/img/post-cartodb-filters.png)
+    ![Filters](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-filters.png)
 
 6. Filters are actually just SQL, a much more powerful language to select, aggregate or update your data. CartoDB supports all PostgreSQL and PostGIS SQL functions.
 7. Click `SQL` in the toolbar and **try this SQL** to get some statistics about the scope of the dataset:
@@ -105,11 +105,11 @@ ORDER BY
 7. **Click `Wizards`** in the toolbar to see a plethora of visualization options. These are all explained in the [CartoDB documentation](http://docs.cartodb.com/cartodb-editor.html#map-wizards).
 8. **Try `Intensity`** with the following options to get a sense of the distribution of occurrences:
 
-    ![Intensity map](/assets/img/post-cartodb-intensity.png)
+    ![Intensity map](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-intensity.png)
 
 9. **Try `Choropleth`** with the following options to see the relative altitude distribution (see the [documentation](http://docs.cartodb.com/cartodb-editor.html#choropleth) to learn more about the different quantification methods):
 
-    ![Choropleth map](/assets/img/post-cartodb-choropleth.png)
+    ![Choropleth map](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-choropleth.png)
 
 10. Just like the filters are powered by SQL, the wizards are powered by CartoCSS, which you can use to fine-tune your map[^5]. **Click `CSS`** in the toolbar to discover how the quantification buckets (in this case `Quantile`) are defined:
 
@@ -160,7 +160,7 @@ ORDER BY
 
 3. We want to visualize the travel speed of gull Nico. The best way to start is to **create a `Choropleth` map**, with the following options:
 
-    ![Start from a choropleth map](/assets/img/post-cartodb-migration-speed-1.png)
+    ![Start from a choropleth map](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-migration-speed-1.png)
 
 4. Most of the dots are red and the story does not come across yet. Let's dive into the CSS to **fine-tune the map**. We basically set all dots to green, except where the speed is below 2m/s, which we show larger and in red:
 
@@ -184,11 +184,11 @@ ORDER BY
 
 5. **Click `Legends`** in the toolbar to manually set what to be shown in the legend (using template `Custom`):
 
-    ![Update the legend](/assets/img/post-cartodb-migration-speed-2.png)
+    ![Update the legend](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-migration-speed-2.png)
 
 6. Click a point and chose `Select fields` to **create an info window**.
 
-    ![Define info windows](/assets/img/post-cartodb-migration-speed-3.png)
+    ![Define info windows](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-migration-speed-3.png)
 
 7. **Describe your map** by clicking `Edit metadata...` in the top left.
 8. **Share your map** by clicking `Publish` in the top right. The dialog box provides you with a link to the map or the code to embed it in a web page. `CartoDB.js` is for advanced use in apps.
@@ -223,7 +223,7 @@ The final map:
 
 3. We want to display each month in a different colour, so **start with a `Choropleth` map**, with the following options:
 
-    ![Start from a choropleth map](/assets/img/post-cartodb-month-tracks-1.png)
+    ![Start from a choropleth map](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-month-tracks-1.png)
 
 4. We will also include labels (start doing this in the `Choropleth` options), so you can still see which track belongs to which individual. **Fine-tune the map in the CSS** (note that I've changed the months to integers):
 
@@ -268,11 +268,11 @@ The final map:
 
 5. **Update the legend**:
 
-    ![Update the legend](/assets/img/post-cartodb-month-tracks-2.png)
+    ![Update the legend](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-month-tracks-2.png)
 
 6. To provide some more context, let's annotate the map. In the top right, **click `Add Element > Add annotation item` and indicate summer and winter locations**. The position of an annotation element is linked to a location on the map (though placement can be a bit difficult) and you can define between which zoom levels to show it, to avoid cluttering:
 
-    ![Add annotations](/assets/img/post-cartodb-month-tracks-3.png)
+    ![Add annotations](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-month-tracks-3.png)
 
 7. Finally, **update the description** in `Edit metadata...` and **publish your map**.
 
@@ -296,9 +296,9 @@ The final map:
 
 4. From the `Wizards`, **choose `Torque cat`**[^7], with the following options. The `Time Column` should always be your date.
 
-    ![Torque category options](/assets/img/post-cartodb-torque-1.png)
+    ![Torque category options](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-torque-1.png)
 
-    ![Torque category options](/assets/img/post-cartodb-torque-2.png)
+    ![Torque category options](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-torque-2.png)
 
 5. The final CSS looks like this:
 

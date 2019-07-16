@@ -1,7 +1,7 @@
 ---
 title: VIS, a database on fishes in Flanders, is published as open data
 description: How we used GBIF tools and CC0 to publish over 400,000 fish occurrences.
-background: /assets/img/2014-04-14-vis-data-published.jpg
+background: /assets/backgrounds/2014-04-14-vis-data-published.jpg
 date: 2014-04-14 11:40
 author: Peter Desmet
 categories: [LifeWatch, biodiversity.be, open data, GBIF]
@@ -21,7 +21,7 @@ The [Fish Information System](http://vis.milieuinfo.be) is a database set up by 
 
 Although summarized data are publicly accessible to users via vis.milieuinfo.be, these cannot be accessed via a webservice and do not meet the [criteria for open data](http://opendefinition.org) we strive for.
 
-![Map of VIS sampling locations](/assets/img/post-vis-sampling-locations.png)
+![Map of VIS sampling locations](/assets/images/2014-04-14-vis-data-published-sampling-locations.png)
 
 *Map of the all the sampling locations in VIS (orange = inland waters, green = estuarine waters).*
 

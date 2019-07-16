@@ -1,7 +1,7 @@
 ---
 title: "Operation Agadir: an expedition to retrieve lost tracking data"
 description: Four gulls we lost track of are in Agadir right now. Can we retrieve their tracking data?
-background: /assets/img/2016-02-22-operation-agadir.jpg
+background: /assets/backgrounds/2016-02-22-operation-agadir.jpg
 date: 2016-02-22 09:00
 author: Peter Desmet
 categories: [LifeWatch, bird tracking]

@@ -1,7 +1,7 @@
 ---
 title: "There and back again: gull migration data visualized"
 description: Using CartoDB to tell migration stories in our recently republished gull tracking data.
-background: /assets/img/2015-05-28-gull-migration-data.jpg
+background: /assets/backgrounds/2015-05-28-gull-migration-data.jpg
 date: 2015-05-28 13:00
 author: Peter Desmet
 categories: [LifeWatch, bird tracking, visualization, CartoDB, presentation]

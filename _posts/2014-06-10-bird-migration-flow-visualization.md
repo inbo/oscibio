@@ -1,7 +1,7 @@
 ---
 title: Visualizing one week of bird migration detected by weather radars
 description: We created a bird migration flow visualization for ENRAM during a 5 day hackathon.
-background: /assets/img/2014-06-10-bird-migration-flow-visualization.jpg
+background: /assets/backgrounds/2014-06-10-bird-migration-flow-visualization.jpg
 date: 2014-06-10 12:00
 author: Peter Desmet
 categories: [ENRAM, software, visualization]
@@ -13,7 +13,7 @@ So, last week our team created a bird migration flow visualization during a 5 da
 
 We are quite happy with the result and are looking forward to improve upon our proof of concept in the ENRAM data challenge (to be organized late 2014/early 2015).
 
-[![screenshot](/assets/img/post-bird-migration-flow-visualization.png)](http://enram.github.io/bird-migration-flow-visualization/viz/)
+[![screenshot](/assets/images/2014-06-10-bird-migration-flow-visualization-screenshot.png)](http://enram.github.io/bird-migration-flow-visualization/viz/)
 
 * [Visualization](http://enram.github.io/bird-migration-flow-visualization/viz/)
 * [Source code and documentation](https://github.com/enram/bird-migration-flow-visualization)
