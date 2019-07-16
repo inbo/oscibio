@@ -1,9 +1,15 @@
-# Python
-*.pyc
-*/__pycache__
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 # Mac OS X
 .DS_Store
+
+# Python
+*.pyc
+*/__pycache__
 
 # Local site
 docs-local/
