@@ -43,7 +43,7 @@ permalink: /software/
 
 ### Whip
 
-**YAML**{: .badge .badge-dark } Whip is a human and machine-readable syntax to express specifications for data. We use with the [pywhip](https://inbo.github.io/pywhip/) package to document and test if data provided by our partners meet the necessary requirements for publication. See [Van Hoey & Desmet 2018](https://speakerdeck.com/peterdesmet/whip-communicate-and-test-what-to-expect-from-data) for a presentation.
+**YAML**{: .badge .badge-dark } Whip is a human and machine-readable syntax to express specifications for data. We use it with the [pywhip](https://inbo.github.io/pywhip/) package to document and test if data provided by our partners meet the necessary requirements for publication. See [Van Hoey & Desmet 2018](https://speakerdeck.com/peterdesmet/whip-communicate-and-test-what-to-expect-from-data) for a presentation.
 
 {: .btn-group }
 [Documentation](https://github.com/inbo/whip/blob/master/docs/syntax.md){: .btn .btn-sm .btn-primary }
