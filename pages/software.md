@@ -7,7 +7,7 @@ permalink: /software/
 
 ### Bird migration flow visualization
 
-**JS**{: .badge .badge-dark } An interactive flow visualization of bird migration as detected by weather radars. Inspired by [air](http://air.nullschool.net) and developed for the [European Network for the Radar Surveillance of Animal Movement (ENRAM)](http://enram.eu). See [Shamoun-Baranes et al. 2016](https://dx.doi.org/10.1371/journal.pone.0160106) for a paper describing the visualization. It was also used the visualize bird migration over Europe for [Nilsson et al. 2019](https://doi.org/10.1111/ecog.04003) ([download movie](https://zenodo.org/record/1172801/files/cartoviz.mov?download=1)).
+**JS**{: .badge .badge-dark } An interactive flow visualization of bird migration as detected by weather radars. Inspired by [air](http://air.nullschool.net) and developed for the [European Network for the Radar Surveillance of Animal Movement (ENRAM)](http://enram.eu). See [Shamoun-Baranes et al. 2016](https://doi.org/10.1371/journal.pone.0160106) for a paper describing the visualization. It was also used to visualize bird migration over Europe for [Nilsson et al. 2019](https://doi.org/10.1111/ecog.04003) ([download movie](https://zenodo.org/record/1172801/files/cartoviz.mov?download=1)).
 
 {: .btn-group }
 [Website](http://enram.github.io/bird-migration-flow-visualization/viz/){: .btn .btn-sm .btn-primary }
