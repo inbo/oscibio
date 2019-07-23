@@ -3,8 +3,10 @@
 - name: Damiano Oldoni
   role: Research software engineer
   image: https://avatars2.githubusercontent.com/u/33662631?s=400&v=4
-  # description: >
-    Damiano is a research software engineer: a former physicist questing for order in the chaotic world of biology and biologists. So, make him happy: ask him for a useful function for a useful package. He will love writing unit-tests to deliver the most bug-free code ever.  
+  description: >
+    Damiano is a former physicist, trying to create order in the world of 
+    taxonomy and alike. He does so by writing elegant software functions to help 
+    you speed up your research.
   orcid: 0000-0003-3445-7562
   email: damiano.oldoni@inbo.be
   github: damianooldoni
@@ -14,7 +16,10 @@
   role: Open data publisher
   image: /assets/images/team-dimi.png
   description: >
-    Dimitri is data liaison officer at the [Belgian Biodiversity Platform](http://www.biodiversity.be). He loves to chat with researchers to help them publish their data. His ultimate goal is to get Belgium on the world map of biodiversity data.
+    Dimitri is data liaison officer at the 
+    [Belgian Biodiversity Platform](http://www.biodiversity.be). He loves to 
+    chat with researchers to help them publish their data. His ultimate goal is 
+    to get Belgium on the world map of biodiversity data.
   orcid: 0000-0002-0846-9116
   email: dimitri.brosens@inbo.be
   github: dimevil
@@ -34,7 +39,8 @@
   role: Open data coordinator
   image: https://avatars1.githubusercontent.com/u/600993?s=460&v=4
   description: >
-    Peter is biodiversity informatics geek, passionate about open data and open science. He loves creating visualizations and proper documentation.
+    Peter is biodiversity informatics geek, passionate about open data and open 
+    science. He loves creating visualizations and proper documentation.
   orcid: 0000-0002-8442-8025
   email: peter.desmet@inbo.be
   github: peterdesmet
@@ -44,7 +50,8 @@
   role: LifeWatch project coordinator
   image: https://avatars2.githubusercontent.com/u/26165229?s=400&v=4
   description: >
-    Tanja coordinates the LifeWatch INBO project and communication. She strongly believes in the value of open science in biodiversity research. 
+    Tanja coordinates the LifeWatch INBO project and communication. She 
+    strongly believes in the value of open science in biodiversity research. 
   orcid: 0000-0002-3129-6196
   email: tanja.milotic@inbo.be
   github: milotictanja
