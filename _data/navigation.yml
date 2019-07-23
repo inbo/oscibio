@@ -8,5 +8,15 @@
 #   href: /projects/
 # - text: Output
 #   href: /output/
+- text: Output
+  menu:
+  - text: Packages
+    href: /packages/
+  - text: Software
+    href: /software/
+  - text: Datasets
+    href: /datasets/
+  - text: Publications
+    href: /publications/
 - text: Blog
   href: /blog/
