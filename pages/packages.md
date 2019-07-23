@@ -97,7 +97,7 @@ permalink: /packages/
 
 ### trias [![logo][trias_logo]{: width="120" .float-right }][trias]
 
-**R**{: .badge .badge-dark } **Process Data for the Tracking Invasive Alien Species (TrIAS)**: TrIAS provides functionality to facilitate the data processing for the project [Tracking Invasive Alien Species (TrIAS)](http://www.trias-project.be).
+**R**{: .badge .badge-dark } **Process Data for the Project Tracking Invasive Alien Species (TrIAS)**: TrIAS provides functionality to facilitate the data processing for the project [Tracking Invasive Alien Species (TrIAS)](http://www.trias-project.be).
 
 {: .btn-group}
 [Documentation][trias]{: .btn .btn-sm .btn-primary }
