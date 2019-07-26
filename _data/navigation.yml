@@ -4,10 +4,8 @@
   href: /
 - text: Team
   href: /team/
-# - text: Projects
-#   href: /projects/
-# - text: Output
-#   href: /output/
+- text: Projects
+  href: /projects/
 - text: Output
   menu:
   - text: Packages
