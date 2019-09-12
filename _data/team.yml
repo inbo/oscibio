@@ -28,8 +28,10 @@
 - name: Lien Reyserhove
   role: Open data publisher
   image: https://avatars0.githubusercontent.com/u/32466479?s=400&v=4
-  # description: >
-  #   ...
+  description: >
+    Lien is an ecologist with a special interest in the publication of open and 
+    FAIR data. She wrangles data in R as a meditative activity that also 
+    facilitates biodiversity research.
   orcid: 0000-0001-7484-9267
   email: lien.reyserhove@inbo.be
   github: LienReyserhove
