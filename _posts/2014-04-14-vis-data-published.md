@@ -22,8 +22,7 @@ The [Fish Information System](http://vis.milieuinfo.be) is a database set up by 
 Although summarized data are publicly accessible to users via vis.milieuinfo.be, these cannot be accessed via a webservice and do not meet the [criteria for open data](http://opendefinition.org) we strive for.
 
 ![Map of VIS sampling locations](/assets/images/2014-04-14-vis-data-published-sampling-locations.png)
-
-*Map of the all the sampling locations in VIS (orange = inland waters, green = estuarine waters).*
+_Map of the all the sampling locations in VIS (orange = inland waters, green = estuarine waters)._
 
 ## Publishing data using GBIF tools
 
