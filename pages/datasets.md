@@ -17,4 +17,4 @@ We help researchers meet the GBIF publication requirements by standardizing thei
 
 In addition to GBIF-registered datasets, we also provide technical support for the publication of datasets that cannot be expressed in the Darwin Core standard. We publish these on [Zenodo](https://zenodo.org/), a general purpose research repository.
 
-[List of INBO datasets on Zenodo](https://zenodo.org/communities/inbo/){: .btn .btn-sm .btn-primary }
+[List of datasets we have published on Zenodo](https://zenodo.org/communities/oscibio){: .btn .btn-sm .btn-primary }
