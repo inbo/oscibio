@@ -37,6 +37,17 @@
   github: LienReyserhove
   twitter: reyserhovelien
 
+- name: Nicolas Noé
+  role: Research software developer
+  image: https://avatars1.githubusercontent.com/u/386387?s=460&v=4
+  description: >
+    Nico stumbled into the wonderful world of biodiversity informatics a while ago. 
+    He loves open source, creating random stuff, old maps, and weird fishes.
+  orcid: 0000-0002-9503-4750
+  email: nicolas.noe@inbo.be
+  github: niconoe
+  twitter: niconoe
+
 - name: Peter Desmet
   role: Open data coordinator
   image: https://avatars1.githubusercontent.com/u/600993?s=460&v=4

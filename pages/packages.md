@@ -23,7 +23,7 @@ permalink: /packages/
 [pywhip]: https://inbo.github.io/pywhip/
 [pywhip_github]: https://github.com/inbo/pywhip
 
-[rgbif]: https://ropensci.github.io/rgbif/
+[rgbif]: https://docs.ropensci.org/rgbif/
 [rgbif_github]: https://github.com/ropensci/rgbif 
 [rgbif_logo]: https://github.com/ropensci/rgbif/blob/master/man/figures/logo.png?raw=true
 
@@ -34,7 +34,7 @@ permalink: /packages/
 [uvabits]: https://inbo.github.io/uvabits/
 [uvabits_github]: https://github.com/inbo/uvabits
 
-[waterinfo]: https://ropensci.github.io/wateRinfo
+[waterinfo]: https://docs.ropensci.org/wateRinfo/
 [waterinfo_github]: https://github.com/ropensci/wateRinfo
 [waterinfo_logo]: https://github.com/ropensci/wateRinfo/blob/master/man/figures/logo.png?raw=true
 
