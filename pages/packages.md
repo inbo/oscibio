@@ -11,6 +11,7 @@ permalink: /packages/
 
 [etn]: https://inbo.github.io/etn/
 [etn_github]: https://github.com/inbo/etn
+[etn_logo]: https://github.com/inbo/etn/blob/master/man/figures/logo.png?raw=true
 
 [niche_vlaanderen]: https://inbo.github.io/niche_vlaanderen/
 [niche_vlaanderen_github]: https://github.com/inbo/niche_vlaanderen
@@ -55,7 +56,7 @@ permalink: /packages/
 [Documentation][biorad]{: .btn .btn-sm .btn-primary }
 [Source code][biorad_github]{: .btn .btn-sm .btn-light }
 
-### etn
+### etn [![logo][etn_logo]{: width="120" .float-right }][etn]
 
 **R**{: .badge .badge-dark } **Access and Process Data from the European Tracking Network**: Package with functions to access and process data from the [European Tracking Network (ETN)](http://www.lifewatch.be/etn/) hosted by the Flanders Marine Institute (VLIZ).
 
