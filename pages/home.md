@@ -13,5 +13,5 @@ We offer technical support to the [research projects](/projects/) we participate
 Interested to work with us? Get in touch.
 
 {: .text-center }
-[<i class="fa fa-envelope"></i> Contact us](mailto:oscibio@inbo.be){: .btn .btn .btn-primary } [<i class="fa fa-twitter"></i> Follow us](https://twitter.com/oscibio){: .btn .btn .btn-light }
+[<i class="fa fa-envelope"></i> Contact us](mailto:oscibio@inbo.be){: .btn .btn-primary } [<i class="fa fa-twitter"></i> Follow us](https://twitter.com/oscibio){: .btn .btn-light }
 
