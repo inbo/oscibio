@@ -1,6 +1,6 @@
 ---
 title: Using CartoDB to visualize how far birds migrate in a single night
-summary: We created two nocturnal bird migration forward trajectory visualizations for ENRAM.
+description: We created two nocturnal bird migration forward trajectory visualizations for ENRAM.
 background: /assets/backgrounds/2015-06-18-forward-trajectory-visualizations.jpg
 date: 2015-06-18 13:50
 author: [Peter Desmet, Hans van Gasteren]
