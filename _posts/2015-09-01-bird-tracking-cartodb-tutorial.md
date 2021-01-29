@@ -8,7 +8,7 @@ categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
 ---
 
 {: .alert .alert-warning}
-At the time of publication CartoDB used a freemium model. It has since been rebranded to [CARTO](https://carto.com/) and no longer offers free accounts. Steps, links and examples mentioned in this tutorial might no longer work.
+Since the publication of this post, CartoDB (now [CARTO](https://carto.com/)) no longer offers open-ended free accounts, so we have replaced the embedded maps with screenshots. Steps, links and examples mentioned in this tutorial might no longer work.
 
 We have been using CartoDB for bird tracking data for a while now and are very happy to see that we have inspired others to do the [same](http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html), including for [other species](http://blog.cartodb.com/fisher/). To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops[^1]. Rather than handing the course material to the participants of these workshops only, I decided to publish it here on this blog, so anyone can use it.
 
@@ -199,7 +199,8 @@ ORDER BY
 
 The final map:
 
-<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/7ad8e926-2644-11e5-9890-0e4fddd5de28/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<!--<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/7ad8e926-2644-11e5-9890-0e4fddd5de28/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
+![map-1](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-map-1.png)
 
 ## Create a map of tracks per month
 
@@ -278,7 +279,8 @@ The final map:
 
 The final map:
 
-<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/3f607d1c-264b-11e5-9d8b-0e018d66dc29/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<!--<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/3f607d1c-264b-11e5-9d8b-0e018d66dc29/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
+![map-2](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-map-2.png)
 
 ## Create an animated map
 
@@ -336,7 +338,8 @@ The final map:
 
 The final map:
 
-<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/4eb8fcee-40fe-11e5-bfaa-0e9d821ea90d/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<!--<iframe width="100%" height="520" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/4eb8fcee-40fe-11e5-bfaa-0e9d821ea90d/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
+![map-3](/assets/images/2015-09-01-bird-tracking-cartodb-tutorial-map-3.png)
 
 ## Go forth and start mapping
 
