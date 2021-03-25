@@ -1,6 +1,6 @@
 ---
 title: 22 winters of waterbird counts are published as open data
-summary: Another core data system of the INBO is now available for everyone to use.
+description: Another core data system of the INBO is now available for everyone to use.
 background: /assets/backgrounds/2014-11-27-watervogels-data-published.jpg
 date: 2014-11-27 16:00
 author: Peter Desmet

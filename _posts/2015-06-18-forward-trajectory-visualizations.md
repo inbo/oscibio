@@ -1,11 +1,14 @@
 ---
 title: Using CartoDB to visualize how far birds migrate in a single night
-summary: We created two nocturnal bird migration forward trajectory visualizations for ENRAM.
+description: We created two nocturnal bird migration forward trajectory visualizations for ENRAM.
 background: /assets/backgrounds/2015-06-18-forward-trajectory-visualizations.jpg
 date: 2015-06-18 13:50
 author: [Peter Desmet, Hans van Gasteren]
 categories: [ENRAM, visualization, CartoDB]
 ---
+
+{: .alert .alert-warning}
+We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots.
 
 Last week we participated in a very productive [workshop in Amsterdam](http://www.enram.eu/activities/visualisations-from-show-cases-to-production) organized by working group 3 of ENRAM. ENRAM is the European Network for the Radar Surveillance of Animal Movement funded by [COST](http://cost.eu/) and the workshop was a follow-up on the hackathon where we created the [flow visualization]({% post_url 2014-06-10-bird-migration-flow-visualization %}) last year.
 
@@ -23,7 +26,8 @@ For each individual bird track we extracted time, location, ground speed, and tr
 
 In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/eb60c596-1060-11e5-aa6e-0e853d047bba/public_map) we show nocturnal bird migration on the night of April 7-8, 2013. Bird tracks were measured every half hour and are shown as different groups in the visualization. The wind is shown as small blue tracks in the background. Note that some birds even reach the Baltic states in a single night, assuming they continued their flights until sunrise.
 
-<iframe width="100%" height="700" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/eb60c596-1060-11e5-aa6e-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<!--<iframe width="100%" height="700" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/eb60c596-1060-11e5-aa6e-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
+![map-1](/assets/images/2015-06-18-forward-trajectory-visualizations-map-1.png)
 
 ## Songbirds and waterbirds based on airspeed
 
@@ -34,6 +38,7 @@ In [this visualization](https://inbo.cartodb.com/u/lifewatch/viz/88c30be4-1063-1
 
 This visualisation shows that especially waterbirds (ducks and/or waders) dominated the bird migration (light blue colours) and due to their faster airspeeds could reach the Baltic states in a single night, a distance of 900km in 10 hours (i.e. 90km/h or 25m/s). This is much faster than what would be possible based on their powered flight alone, i.e. their airspeed, which was on average 21m/s on which they could potentially have flown 750km in a single night without wind. Birds mainly profited from the following winds in their last hours above Poland.
 
-<iframe width="100%" height="700" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/88c30be4-1063-11e5-a9ae-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<!--<iframe width="100%" height="700" frameborder="0" src="https://inbo.carto.com/u/lifewatch/builder/88c30be4-1063-11e5-a9ae-0e853d047bba/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
+![map-2](/assets/images/2015-06-18-forward-trajectory-visualizations-map-2.png)
 
 The SQL and CartoCSS for these visualizations are available in [this gist](https://gist.github.com/peterdesmet/9934ed062ddaaba04963).
