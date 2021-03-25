@@ -8,7 +8,7 @@ categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
 ---
 
 {: .alert .alert-warning}
-Since the publication of this post, CartoDB (now [CARTO](https://carto.com/)) no longer offers open-ended free accounts, so we have replaced the embedded maps with screenshots. Steps, links and examples mentioned in this tutorial might no longer work.
+We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots. Steps, links and examples mentioned in this tutorial might no longer work.
 
 As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS trackers. The project[^1] is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the Western Marsh Harrier) in collaboration with the [VLIZ](http://www.vliz.be/en) and [UvA-BiTS](http://www.uva-bits.nl/).
 
