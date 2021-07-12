@@ -17,9 +17,9 @@ In addition to the new infrastructure we are setting up for our terrestrial and 
 
 ## Background
 
-The [Fish Information System](http://vis.milieuinfo.be) is a database set up by the INBO to monitor the status of fishes and their habitats in Flanders, Belgium. It contains data regarding occurrences, stocks, pollutants, indexes, and reintroductions. The consolidated database was set up in 2001, but sampling has been going on since 1992. The data are used to calculate the EQR (Ecological Quality Ratio) in the framework of the EU water directive and Natura2000, as well as to provide updated information for the Flemish red list of freshwater fishes.
+The [Fish Information System](https://www.vlaanderen.be/inbo/en-gb/data-applications/vis-informatiesysteem/) is a database set up by the INBO to monitor the status of fishes and their habitats in Flanders, Belgium. It contains data regarding occurrences, stocks, pollutants, indexes, and reintroductions. The consolidated database was set up in 2001, but sampling has been going on since 1992. The data are used to calculate the EQR (Ecological Quality Ratio) in the framework of the EU water directive and Natura2000, as well as to provide updated information for the Flemish red list of freshwater fishes.
 
-Although summarized data are publicly accessible to users via vis.milieuinfo.be, these cannot be accessed via a webservice and do not meet the [criteria for open data](http://opendefinition.org) we strive for.
+Although summarized data are publicly accessible to users via vis.inbo.be, these cannot be accessed via a webservice and do not meet the [criteria for open data](http://opendefinition.org) we strive for.
 
 ![Map of VIS sampling locations](/assets/images/2014-04-14-vis-data-published-sampling-locations.png)
 _Map of the all the sampling locations in VIS (orange = inland waters, green = estuarine waters)._
