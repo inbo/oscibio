@@ -4,6 +4,10 @@ description: We participate in the following projects
 permalink: /projects/
 ---
 
+Our projects are listed on our institutional repository, with the major ones highlighted below:
+
+[List of our projects](https://pureportal.inbo.be/en/organisations/open-science-lab-for-biodiversity/publications/){: .btn .btn-sm .btn-primary }
+
 ## Belgian Biodiversity Platform
 
 The [Belgian Biodiversity Platform](https://www.biodiversity.be) is a [BELSPO](https://www.belspo.be)-funded initiative that provides services to the Belgian scientific community engaged in biodiversity research as well as to policy-makers and practitioners.
