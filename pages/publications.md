@@ -5,6 +5,6 @@ background: https://images.unsplash.com/photo-1513705153361-9bc726c8db67?ixlib=r
 permalink: /publications/
 ---
 
-Our publications are available through our institutional open access repository:
+Our publications are available through our institutional repository:
 
-[List of our publications](https://pureportal.inbo.be/portal/en/organisations/oscibio(0ab4aa1e-b25f-4dc3-90c1-ddcfbc726fe8)/publications.html){: .btn .btn-sm .btn-primary }
+[List of our publications](https://pureportal.inbo.be/en/organisations/open-science-lab-for-biodiversity/publications/){: .btn .btn-sm .btn-primary }
