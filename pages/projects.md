@@ -20,17 +20,17 @@ Our team is involved in the organization of events and the mobilization and publ
 
 Our team is responsible for coordinating data management, setting up a data infrastructure, and developing research software to access and analyze these data.
 
-## LifeWatch
-
-[LifeWatch Belgium](http://www.lifewatch.be) is part of [LifeWatch ERIC](https://www.lifewatch.eu/), a European infrastructure for biodiversity research. LifeWatch was established as part of the European Strategy Forum on Research Infrastructure ([ESFRI](http://ec.europa.eu/research/infrastructures/index_en.cfm?pg=esfri)) and became a European Research Infrastructure consortium (ERIC) in 2017. Belgium contributes to LifeWatch ERIC with initiatives from Flanders, Wallonia-Brussels and the federal state. The [Research Institute for Nature and Forest (INBO)](https://www.vlaanderen.be/inbo/en-gb/) and the [Flemish Marine Institute (VLIZ)](http://www.vliz.be/en) are cooperating in the Flemish LifeWatch project, funded by the [Research foundation - Flanders (FWO)](https://www.fwo.be/en/).
-
-Our team is responsible for setting up sensor networks, the publication of biodiversity data, and the development of research software. Our sensor networks include GPS trackers for large birds, an acoustic receiver network for fish, camera traps, groundwater sensors, and climate monitoring. We support researchers from (international) universities and research institutes by publishing open data, building software packages to query and analyze these data and organizing workshops.
-
 ## LIFE RIPARIAS
 
 [LIFE RIPARIAS](https://www.riparias.be/) (Reaching Integrated and Prompt Action in Response to Invasive Alien Species) is a LIFE-funded project that aims to optimize the management of IAS by developing a scientific evidence-based workflow and setting up priorities for action. This will efficiently guide decision-makers and managers in the IAS management decision-making process, informs about IAS best management methods while maximising the cost efficiency of management actions.
 
 Our team is responsible for harvesting and standardising IAS occurrence data and making them openly available and developing an early detection and alert system of invasive plants and crayfish species. As currently no standardised reporting of management actions to control or eradicate IAS exists, our team is going to develop a management reporting system using standardised and quantifiable variables.
+
+## LifeWatch
+
+[LifeWatch Belgium](http://www.lifewatch.be) is part of [LifeWatch ERIC](https://www.lifewatch.eu/), a European infrastructure for biodiversity research. LifeWatch was established as part of the European Strategy Forum on Research Infrastructure ([ESFRI](http://ec.europa.eu/research/infrastructures/index_en.cfm?pg=esfri)) and became a European Research Infrastructure consortium (ERIC) in 2017. Belgium contributes to LifeWatch ERIC with initiatives from Flanders, Wallonia-Brussels and the federal state. The [Research Institute for Nature and Forest (INBO)](https://www.vlaanderen.be/inbo/en-gb/) and the [Flemish Marine Institute (VLIZ)](http://www.vliz.be/en) are cooperating in the Flemish LifeWatch project, funded by the [Research foundation - Flanders (FWO)](https://www.fwo.be/en/).
+
+Our team is responsible for setting up sensor networks, the publication of biodiversity data, and the development of research software. Our sensor networks include GPS trackers for large birds, an acoustic receiver network for fish, camera traps, groundwater sensors, and climate monitoring. We support researchers from (international) universities and research institutes by publishing open data, building software packages to query and analyze these data and organizing workshops.
 
 ## TrIAS
 
