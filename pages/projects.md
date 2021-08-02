@@ -22,9 +22,9 @@ Our team is responsible for coordinating data management, setting up a data infr
 
 ## LIFE RIPARIAS
 
-[LIFE RIPARIAS](https://www.riparias.be/) (Reaching Integrated and Prompt Action in Response to Invasive Alien Species) is a LIFE-funded project that aims to optimize the management of IAS by developing a scientific evidence-based workflow and setting up priorities for action. This will efficiently guide decision-makers and managers in the IAS management decision-making process, informs about IAS best management methods while maximising the cost efficiency of management actions.
+[LIFE RIPARIAS](https://www.riparias.be) is a LIFE-funded project that aims to optimize the management of invasive alien species (IAS) in rivers and ponds. By developing an innovative effidence-based workflow, the project will inform decision-makers and managers of the most effective and cost efficient management actions to successfully control the most problematic species.
 
-Our team is responsible for harvesting and standardising IAS occurrence data and making them openly available and developing an early detection and alert system of invasive plants and crayfish species. As currently no standardised reporting of management actions to control or eradicate IAS exists, our team is going to develop a management reporting system using standardised and quantifiable variables.
+Our team is responsible for developing an early warning system for invasive plants and crayfish species, fed by rapidly and openly published IAS occurrence data. We will also develop a reporting system for management actions, using standardized and quantifiable variables.
 
 ## LifeWatch
 
