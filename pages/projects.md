@@ -20,6 +20,12 @@ Our team is involved in the organization of events and the mobilization and publ
 
 Our team is responsible for coordinating data management, setting up a data infrastructure, and developing research software to access and analyze these data.
 
+## LIFE RIPARIAS
+
+[LIFE RIPARIAS](https://www.riparias.be) is a LIFE-funded project that aims to optimize the management of invasive alien species (IAS) in rivers and ponds. By developing an innovative effidence-based workflow, the project will inform decision-makers and managers of the most effective and cost efficient management actions to successfully control the most problematic species.
+
+Our team is responsible for developing an early warning system for invasive plants and crayfish species, fed by rapidly and openly published IAS occurrence data. We will also develop a reporting system for management actions, using standardized and quantifiable variables.
+
 ## LifeWatch
 
 [LifeWatch Belgium](http://www.lifewatch.be) is part of [LifeWatch ERIC](https://www.lifewatch.eu/), a European infrastructure for biodiversity research. LifeWatch was established as part of the European Strategy Forum on Research Infrastructure ([ESFRI](http://ec.europa.eu/research/infrastructures/index_en.cfm?pg=esfri)) and became a European Research Infrastructure consortium (ERIC) in 2017. Belgium contributes to LifeWatch ERIC with initiatives from Flanders, Wallonia-Brussels and the federal state. The [Research Institute for Nature and Forest (INBO)](https://www.vlaanderen.be/inbo/en-gb/) and the [Flemish Marine Institute (VLIZ)](http://www.vliz.be/en) are cooperating in the Flemish LifeWatch project, funded by the [Research foundation - Flanders (FWO)](https://www.fwo.be/en/).
@@ -28,7 +34,7 @@ Our team is responsible for setting up sensor networks, the publication of biodi
 
 ## TrIAS
 
-[Tracking Invasive Alien Species (TrIAS)](http://trias-project.be) is a [BELSPO](https://www.belspo.be)-funded project that tracks invasive alien species in Belgium to inform policy, using open data and open source software. It is main partners are the [Meise Botanic Garden](https://www.plantentuinmeise.be/en), the [Belgian Biodiversity Platform](https://www.biodiversity.be), [Ghent University](https://www.ugent.be/en), and the [INBO](https://www.vlaanderen.be/inbo/en-gb/).
+[Tracking Invasive Alien Species (TrIAS)](http://trias-project.be) is a [BELSPO](https://www.belspo.be)-funded project that tracks invasive alien species in Belgium to inform policy, using open data and open source software. Its main partners are the [Meise Botanic Garden](https://www.plantentuinmeise.be/en), the [Belgian Biodiversity Platform](https://www.biodiversity.be), [Ghent University](https://www.ugent.be/en), and the [INBO](https://www.vlaanderen.be/inbo/en-gb/).
 
 Our team is responsible for mobilizing and publishing important data sources (species lists and observations) as [open data to GBIF](https://www.gbif.org/network/b153643d-735a-440f-a0e9-428b4f9d1cd2), creating a [unified checklist of alien species in Belgium](https://doi.org/10.15468/xoidmd), and feeding indicators used for policy and risk assessment. All this is done by creating [open and reproducible workflows](https://github.com/trias-project).
 
