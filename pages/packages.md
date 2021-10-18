@@ -9,6 +9,9 @@ permalink: /packages/
 [biorad_github]: https://github.com/adokter/bioRad
 [biorad_logo]: https://github.com/adokter/bioRad/blob/master/man/figures/logo.png?raw=true
 
+[datapackage]: https://inbo.github.io/datapackage/
+[datapackage_github]: https://github.com/inbo/datapackage
+
 [etn]: https://inbo.github.io/etn/
 [etn_github]: https://github.com/inbo/etn
 [etn_logo]: https://github.com/inbo/etn/blob/main/man/figures/logo.png?raw=true
@@ -52,6 +55,14 @@ permalink: /packages/
 {: .btn-group }
 [Documentation][biorad]{: .btn .btn-sm .btn-primary }
 [Source code][biorad_github]{: .btn .btn-sm .btn-light }
+
+### datapackage
+
+**R**{: .badge .badge-dark } **Read and Write Frictionless Data Packages**: Datapackage is an R package to read and write [Frictionless Data Packages](https://specs.frictionlessdata.io/data-package/) in a [Tidyverse](https://www.tidyverse.org/) way.
+
+{: .btn-group}
+[Documentation][datapackage]{: .btn .btn-sm .btn-primary }
+[Source code][datapackage_github]{: .btn .btn-sm .btn-light }
 
 ### etn [![logo][etn_logo]{: width="120" .float-right }][etn]
 
