@@ -1,12 +1,12 @@
 # OSCIBIO website
 
-This repository contains the source files for the [Open science lab for biodiversity website](https://oscibio.inbo.be).
+This repository contains the source files for the website of the [Open science lab for biodiversity](https://oscibio.inbo.be).
 
 ## Usage
 
-This website makes use of the static website generator [Jekyll](https://jekyllrb.com/) and the [Petridish](https://github.com/peterdesmet/petridish) theme. **Each commit to `master` will automatically trigger a new build on GitHub Pages.** There is no need to build the site locally, but you can by installing Jekyll and running `bundle exec jekyll serve`.
+This website makes use of the static website generator [Jekyll](https://jekyllrb.com/) and the [Petridish](https://github.com/peterdesmet/petridish) theme. **Each commit to `main` will automatically trigger a new build on GitHub Pages.** There is no need to build the site locally, but you can by installing Jekyll and running `bundle exec jekyll serve`.
 
-Minor changes can be committed directly to `master`.
+Minor changes can be committed directly to `main`.
 
 Changes requiring review (e.g. new blog posts) should be created in a separate branch and submitted as a pull request. Some guidelines:
 
