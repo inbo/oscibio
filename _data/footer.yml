@@ -9,12 +9,12 @@ columns:
     links:
       - text: Belgian Science Policy Office (BELSPO)
         href: https://www.belspo.be/
-      - text: BiodivERsA
-        href: https://www.biodiversa.org/
-      - text: Department of Economy, Science & Innovation (EWI)
-        href: https://www.ewi-vlaanderen.be/en
+      - text: Global Biodiversity Information Facility (GBIF)
+        href: https://www.gbif.org/
       - text: LIFE Programme
         href: https://cinea.ec.europa.eu/life_en
+      - text: Netherlands Biodiversity Information Facility (NLBIF)
+        href: https://www.nlbif.nl/
       - text: Research Foundation - Flanders (FWO)
         href: https://www.fwo.be/en/
 
