@@ -32,13 +32,13 @@ Our team is responsible for developing an early warning system for invasive plan
 
 Our team is responsible for setting up sensor networks, the publication of biodiversity data, and the development of research software. Our sensor networks include GPS trackers for large birds, an acoustic receiver network for fish, camera traps, groundwater sensors, and climate monitoring. We support researchers from (international) universities and research institutes by publishing open data, building software packages to query and analyze these data and organizing workshops.
 
-## TrIAS **Completed**{: .badge .badge-light }
+## TrIAS **Completed**{: .badge .bg-dark }
 
 [Tracking Invasive Alien Species (TrIAS)](http://trias-project.be) is a [BELSPO](https://www.belspo.be)-funded project that tracks invasive alien species in Belgium to inform policy, using open data and open source software. Its main partners are the [Meise Botanic Garden](https://www.plantentuinmeise.be/en), the [Belgian Biodiversity Platform](https://www.biodiversity.be), [Ghent University](https://www.ugent.be/en), and the [INBO](https://www.vlaanderen.be/inbo/en-gb/).
 
 Our team is responsible for mobilizing and publishing important data sources (species lists and observations) as [open data to GBIF](https://www.gbif.org/network/b153643d-735a-440f-a0e9-428b4f9d1cd2), creating a [unified checklist of alien species in Belgium](https://doi.org/10.15468/xoidmd), and feeding indicators used for policy and risk assessment. All this is done by creating [open and reproducible workflows](https://github.com/trias-project).
 
-## Vespa-Watch **Completed**{: .badge .badge-light }
+## Vespa-Watch **Completed**{: .badge .bg-dark }
 
 [Vespa-Watch](https://vespawatch.be) is a citizen science project funded by the [Department of Economy, Science & Innovation (EWI)](https://www.ewi-vlaanderen.be) and coordinated by the [INBO](https://www.vlaanderen.be/inbo/en-gb/) and [Honeybee Valley (Ghent University)](https://www.honeybeevalley.eu). The project aims to collect citizen science observations of the Asian hornet, an invasive species that is rapidly spreading in Western Europe.
 
