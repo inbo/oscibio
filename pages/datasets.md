@@ -5,7 +5,7 @@ background: https://images.unsplash.com/photo-1497376822814-1493daa826f0?ixlib=r
 permalink: /datasets/
 ---
 
-### GBIF-registered datasets
+## GBIF-registered datasets
 
 Most of the data we publish is registered with the [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org), an international network and research infrastructure providing open access to biodiversity data.
 
@@ -13,7 +13,7 @@ We help researchers meet the GBIF publication requirements by standardizing thei
 
 [List of datasets we have published to GBIF](https://www.gbif.org/dataset/search?hosting_org=1cd669d0-80ea-11de-a9d0-f1765f95f18b){: .btn .btn-sm .btn-primary }
 
-### Other datasets
+## Other datasets
 
 In addition to GBIF-registered datasets, we also provide technical support for the publication of datasets that cannot be expressed in the Darwin Core standard. We publish these on [Zenodo](https://zenodo.org/), a general purpose research repository.
 

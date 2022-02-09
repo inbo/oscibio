@@ -19,7 +19,7 @@ European eels ([*Anguilla anguilla*](https://en.wikipedia.org/wiki/Anguilla_angu
 
 In this blog post, we'll explore if the migration of one eel is influenced by the tide. It's a research use case for our R package [`wateRinfo`](https://ropensci.github.io/wateRinfo/), which was recently [peer reviewed](https://github.com/ropensci/software-review/issues/255) (thanks to reviewer [Laura DeCicco](https://github.com/ldecicco-USGS) and editor [Karthik Ram](https://github.com/karthik) for their constructive feedback!) and accepted as a community-contributed package to [rOpenSci](https://github.com/ropensci/wateRinfo).
 
-### Meet Princess Buttercup
+## Meet Princess Buttercup
 
 Pieterjan provided us the [tracking data](https://github.com/stijnvanhoey/waterinfo-tidal-eel/blob/master/data/eel_track.csv) for eel with transmitter `A69-1601-52622`. Let's call her **Princess Buttercup**, after the princess that almost got eaten by the Shrieking Eels in the classic and immensly quotable movie [The Princess Bride](https://www.imdb.com/title/tt0093779/quotes/).
 
@@ -42,7 +42,7 @@ Using the `latitude`, `longitude` and total `residencetime` for each station, we
 
 ![](/assets/images/2019-01-22-waterinfo-tidal-eel-map-residence-time.png)
 
-### Moving up and down the Scheldt river
+## Moving up and down the Scheldt river
 
 To get a better sense of her journey along the river, we add a `distance_to_sea` (in meters) for the stations, by joining the tracking data with a [distance reference file](https://github.com/stijnvanhoey/waterinfo-tidal-eel/blob/master/data/distance_from_sea.csv) [^1]. We can now plot her movement over time and distance:
 
@@ -50,7 +50,7 @@ To get a better sense of her journey along the river, we add a `distance_to_sea`
 
 Princess Buttercup's signal was picked up by receivers in Merelbeke (near Ghent) shortly after she was captured and released there on October 11. She resided in a 40 km stretch of the river (between Wetteren and Sint-Amands) for about a month before migrating towards the sea and starting the long journey towards the Sargasso Sea. The periodic movement pattern up and down the river during the second half of November is of particular interest: it looks like tidal frequency [^2]. It would be interesting to compare the movement pattern with real water level data from the Scheldt river... which is where our `wateRinfo` package comes in.
 
-### Getting tidal data with the `wateRinfo` package
+## Getting tidal data with the `wateRinfo` package
 
 [Waterinfo.be](http://waterinfo.be), managed by the [Flanders Environment Agency (VMM)](https://en.vmm.be/) and [Flanders Hydraulics Research](https://www.waterbouwkundiglaboratorium.be), is a website where one can find real-time water and weather related environmental variables for Flanders (Belgium), such as rainfall, air pressure, discharge, and water level. The website also provides an [API](https://www.waterinfo.be/download/9f5ee0c9-dafa-46de-958b-7cac46eb8c23?dl=0) to download time series of these measurements as open data, but compositing the download URL with the proper system codes can be challenging. To facilitate users in searching for stations and variables, subsequently downloading data of interest and incorporating waterinfo.be data access in repeatable workflows, we developed the R package [`wateRinfo`](https://github.com/ropensci/wateRinfo) to do just that. See the [package documentation](https://ropensci.github.io/wateRinfo/) for more information on how to install and get started with the package.
 
@@ -122,7 +122,7 @@ The water level is expressed in `mTAW`  (meter above mean sea level) [^3]. Let's
 
 We now have all the pieces to verify if Princess Buttercup *was* surfing the tide back and forth.
 
-### Is Princess Buttercup surfing the tide?
+## Is Princess Buttercup surfing the tide?
 
 Let's add the tidal data to Princess Buttercup's journey plot we created before. The first step is to join the tidal data with the same distance reference file to know the distance from each tidal station to the sea:
 
@@ -142,7 +142,7 @@ To avoid visual clutter, we'll use ridges (from [`ggridges`](https://cran.r-proj
 
 Looking at the plot, Princess Buttercup seems to be "lazy" and drift with the tide. Rising water levels push her upstream, while decreasing water levels bring her closer to sea again. On November 22 (see also previous plot), she embarks on her migration for real.
 
-### Conclusion
+## Conclusion
 
 In this blogpost we used the `wateRinfo` package to gain some insight in the movement/migration behaviour of an individual eel. We hope the package can support many more research questions and that you [have fun storming the castle](https://www.imdb.com/title/tt0093779/quotes/qt0482745).
 
@@ -150,7 +150,7 @@ In this blogpost we used the `wateRinfo` package to gain some insight in the mov
 -   For more info on the package, see [the package website](https://ropensci.github.io/wateRinfo/).
 -   For the full code of this blogpost, see [this repository](https://github.com/stijnvanhoey/waterinfo-tidal-eel).
 
-### Acknowledgements
+## Acknowledgements
 
 Waterinfo.be data is made available by the [Flanders Environment Agency](https://en.vmm.be/), [Flanders Hydraulics Research](https://www.waterbouwkundiglaboratorium.be/en/home), [_Agentschap Maritieme Dienstverlening & Kust_](http://www.agentschapmdk.be/) and [_De Vlaamse Waterweg_](https://www.vlaamsewaterweg.be/). The [fish acoustic receiver network](http://lifewatch.be/en/fish-acoustic-receiver-network), as well as the work by Stijn and Peter, is funded by [FWO](https://www.fwo.be/) as part of the Flemish contribution to [LifeWatch](http://www.lifewatch.be/). The animated video on eel research was funded by the [Flanders Marine Institute (VLIZ)](http://vliz.be/en/), coordinated by Karen Rappé and Pieterjan Verhelst, animated by Steve Bridger, and narrated by Bryan Kopta.
 
