@@ -2,6 +2,7 @@
 title: Projects
 description: We participate in the following projects
 permalink: /projects/
+toc: true
 ---
 
 Our projects are listed on our institutional repository, with the major ones highlighted below:

@@ -3,6 +3,7 @@ title: Software packages
 description: Our open source R and Python packages
 background: https://images.unsplash.com/photo-1546864831-f1ca1eaf4e2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
 permalink: /packages/
+toc: true
 ---
 
 [biorad]: http://adokter.github.io/bioRad

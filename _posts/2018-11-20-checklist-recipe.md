@@ -3,6 +3,7 @@ title: "Checklist Recipe: How we created a template to standardize species data"
 description: "Our winning submission to the [GBIF Ebbe Nielsen Challenge](https://www.gbif.org/news/4TuHBNfycgO4GEMOKkMi4u/six-winners-top-the-2018-ebbe-nielsen-challenge)."
 author: [Peter Desmet, Damiano Oldoni, Lien Reyserhove]
 categories: [TrIAS, software, R, GBIF, rOpenSci]
+toc: true
 ---
 
 {: .alert .alert-info}

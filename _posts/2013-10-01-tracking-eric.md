@@ -5,6 +5,7 @@ background: /assets/backgrounds/2013-10-01-tracking-eric.jpg
 date: 2013-10-01 11:15
 author: Peter Desmet
 categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
+toc: true
 ---
 
 {: .alert .alert-warning}

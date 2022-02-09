@@ -5,6 +5,7 @@ background: /assets/backgrounds/2015-06-30-bird-tracking-explorer.jpg
 date: 2015-06-30 15:00
 author: [Bart Aelterman, Peter Desmet]
 categories: [LifeWatch, bird tracking, software]
+toc: true
 ---
 
 {: .alert .alert-warning }
