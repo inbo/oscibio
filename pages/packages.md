@@ -10,7 +10,7 @@ toc: true
 [biorad_github]: https://github.com/adokter/bioRad
 [biorad_logo]: https://github.com/adokter/bioRad/blob/master/man/figures/logo.png?raw=true
 
-[frictionless]: https://frictionlessdata.github.io/frictionless-r/
+[frictionless]: https://docs.ropensci.org/frictionless/
 [frictionless_github]: https://github.com/frictionlessdata/frictionless-r
 
 [etn]: https://inbo.github.io/etn/
