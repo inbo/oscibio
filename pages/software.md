@@ -18,14 +18,6 @@ toc: true
 
 **CartoDB**{: .badge .bg-dark } See our [blog posts](/blog?category=CartoDB) on how we have visualized bird migration and tracking data with CartoDB.
 
-## Checklist recipe
-
-**R**{: .badge .bg-dark } The checklist recipe is a template GitHub repository for standardizing thematic species checklist data to Darwin Core using R. It contains all the ingredients to make data standardization open, repeatable, customizable and documented. The checklist recipe won the [2018 GBIF Ebbe Nielsen Challenge](https://www.gbif.org/news/4TuHBNfycgO4GEMOKkMi4u/six-winners-top-the-2018-ebbe-nielsen-challenge) and we use it ourselves for the [TrIAS project](http://www.trias-project.be/).
-
-{: .btn-group }
-[Documentation](https://github.com/trias-project/checklist-recipe/wiki){: .btn .btn-sm .btn-primary }
-[Source code](https://github.com/trias-project/checklist-recipe){: .btn .btn-sm .btn-light }
-
 ## CROW
 
 **JS**{: .badge .bg-dark } CROW is an online tool to visualize birds detected by weather radars. It pulls real-time open data of the Royal Meteorological Institute of Belgium (RMI) and visualizes it in the browser.
