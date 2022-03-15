@@ -10,6 +10,9 @@ toc: true
 [biorad_github]: https://github.com/adokter/bioRad
 [biorad_logo]: https://github.com/adokter/bioRad/blob/master/man/figures/logo.png?raw=true
 
+[camtraptor]: https://inbo.github.io/camtraptor/
+[camtraptor_github]: https://github.com/inbo/camtraptor
+
 [frictionless]: https://docs.ropensci.org/frictionless/
 [frictionless_github]: https://github.com/frictionlessdata/frictionless-r
 
@@ -56,6 +59,14 @@ toc: true
 {: .btn-group }
 [Documentation][biorad]{: .btn .btn-sm .btn-primary }
 [Source code][biorad_github]{: .btn .btn-sm .btn-light }
+
+## camtraptor
+
+**R**{: .badge .bg-dark } **Read, explore and visualize Camera Trap Data Packages**: [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp/) is a community developed data exchange format for this type of data. With camtraptor you can read and filter data, create overviews of observed species, relative abundance or effort, and plot these data on a map.
+
+{: .btn-group}
+[Documentation][camtraptor]{: .btn .btn-sm .btn-primary }
+[Source code][camtraptor_github]{: .btn .btn-sm .btn-light }
 
 ## frictionless
 
