@@ -20,6 +20,9 @@ toc: true
 [etn_github]: https://github.com/inbo/etn
 [etn_logo]: https://github.com/inbo/etn/blob/main/man/figures/logo.png?raw=true
 
+[movepub]: https://inbo.github.io/movepub/
+[movepub_github]: https://github.com/inbo/movepub/
+
 [niche_vlaanderen]: https://inbo.github.io/niche_vlaanderen/
 [niche_vlaanderen_github]: https://github.com/inbo/niche_vlaanderen
 
@@ -45,7 +48,7 @@ toc: true
 <!--
 ### title [![logo][pkg_logo]{: width="120" .float-right }][pkg]
 
-**pkg title**: pkg description
+**R**{: .badge .bg-dark } **pkg title**: pkg description
 
 {: .btn-group}
 [Documentation][pkg]{: .btn .btn-sm .btn-primary }
@@ -83,6 +86,14 @@ toc: true
 {: .btn-group}
 [Documentation][etn]{: .btn .btn-sm .btn-primary }
 [Source code][etn_github]{: .btn .btn-sm .btn-light }
+
+## movepub
+
+**R**{: .badge .bg-dark } **Prepare Movebank data for publication**: Prepare [Movebank](<https://movebank.org>) animal tracking data for publication in a research repository or the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org)).
+
+{: .btn-group}
+[Documentation][movepub]{: .btn .btn-sm .btn-primary }
+[Source code][movepub_github]{: .btn .btn-sm .btn-light }
 
 ## niche_vlaanderen
 
