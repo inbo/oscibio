@@ -35,6 +35,22 @@ toc: true
 [Website](http://enram.github.io/data-repository){: .btn .btn-sm .btn-primary }
 [Source code](https://github.com/enram/data-repository){: .btn .btn-sm .btn-light }
 
+## LIFE MICA dashboard
+
+The MICA dashboard gives a comprehensive overview of all muskrat and coypu observations (both catches and field observations) in Flanders, the Netherlands and certain areas in Germany. The available data is automatically refreshed daily from [GBIF](https://www.gbif.org).
+
+{: .btn-group }
+[Website](http://mica-uat.inbo.be/){: .btn .btn-sm .btn-primary }
+[Source code](https://github.com/inbo/mica-dashboard){: .btn .btn-sm .btn-light }
+
+## LIFE RIPARIAS early alert
+
+The LIFE RIPARIAS early alert website allows field managers to be immediately aware when new observations of invasive species occur in Belgium by providing a flexible e-mail notification mechanism. The available data is automatically refreshed daily from [GBIF](https://www.gbif.org).
+
+{: .btn-group }
+[Website](https://alert.riparias.be){: .btn .btn-sm .btn-primary }
+[Source code](https://github.com/riparias/early-warning-webapp){: .btn .btn-sm .btn-light }
+
 ## Vespa-Watch
 
 **Python**{: .badge .bg-dark } Vespa-Watch is a website where citizen scientists can submit observations of [_Vespa velutina_](https://www.inaturalist.org/taxa/119019-Vespa-velutina), an invasive species in Belgium. The data are automatically synchronized with [iNaturalist](https://www.inaturalist.org/) for verification and used to manage the spread of the species.
