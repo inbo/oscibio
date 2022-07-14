@@ -40,7 +40,7 @@ toc: true
 The MICA dashboard gives a comprehensive overview of all muskrat and coypu observations (both catches and field observations) in Flanders, the Netherlands and certain areas in Germany. The available data is automatically refreshed daily from [GBIF](https://www.gbif.org).
 
 {: .btn-group }
-[Website](http://mica-uat.inbo.be/){: .btn .btn-sm .btn-primary }
+[Website](http://mica.inbo.be/){: .btn .btn-sm .btn-primary }
 [Source code](https://github.com/inbo/mica-dashboard){: .btn .btn-sm .btn-light }
 
 ## LIFE RIPARIAS early alert
