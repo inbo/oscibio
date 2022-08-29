@@ -5,7 +5,7 @@ author: Tanja Milotic
 categories: [LifeWatch, workshop]
 ---
 
-[LifeWatch](https://www.lifewatch.be/), [DiSSCo](https://www.dissco.eu/be/) and [Elixir Belgium](https://www.elixir-belgium.org/) invite you to a hands-on workshop to manage and publish research data. The workshop is organized in the context of the [Empowering Biodiversity Research conference](https://www.biodiversity.be/4443) and will cover data management plans, tidy data, data cleaning, GitHub, and Zenodo. If this is jargon you always wanted to know about (but were afraid to ask), then this workshop is for you!
+[LifeWatch](https://www.lifewatch.be/) and [Elixir Belgium](https://www.elixir-belgium.org/) invite you to a hands-on workshop to manage and publish research data. The workshop is organized in the context of the [Empowering Biodiversity Research conference](https://www.biodiversity.be/4443) and will cover data management plans, data cleaning and GitHub. If this is jargon you always wanted to know about (but were afraid to ask), then this workshop is for you!
 
 ## Who
 
