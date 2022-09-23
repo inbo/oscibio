@@ -5,6 +5,9 @@ author: Tanja Milotic
 categories: [LifeWatch, workshop]
 ---
 
+{: .alert .alert-warning}
+Registration for this workshop is closed.
+
 [LifeWatch](https://www.lifewatch.be/) and [Elixir Belgium](https://www.elixir-belgium.org/) invite you to a hands-on workshop to manage and publish research data. The workshop is organized in the context of the [Empowering Biodiversity Research conference](https://www.biodiversity.be/4443) and will cover data management plans, data cleaning and GitHub. If this is jargon you always wanted to know about (but were afraid to ask), then this workshop is for you!
 
 ## Who
@@ -40,9 +43,3 @@ Participants should bring a laptop with a Mac or Windows operating system (not a
 15:15 | Coffee break
 15:45 | An introduction to GitHub (continued)
 17:00 | End
-
-## Registration
-
-The workshop, lunch and coffee breaks are offered for free by LifeWatch Flanders. The workshop is limited to 25 participants. Registration is required.
-
-[Register here](https://docs.google.com/forms/d/e/1FAIpQLScMEfe7dRhGoAIXrE7WPFwYc7o6JKZ1s_rOLllcNjQUy671pg/viewform){: .btn .btn-primary }
