@@ -16,7 +16,7 @@ This workshop is aimed at environmental and life scientists that manage research
 
 ## When
 
-Thursday September 27, 2022
+Tuesday September 27, 2022
 
 ## Where
 
