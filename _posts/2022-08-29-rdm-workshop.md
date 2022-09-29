@@ -34,7 +34,7 @@ Participants should bring a laptop with a Mac or Windows operating system (not a
 
 09:30 | Welcome & registration
 09:45 | Good enough practices for research data management - Tanja Milotic (LifeWatch) | [Presentation](https://speakerdeck.com/milotictanja/good-enough-practices-for-research-data-management)
-10:15 | An introduction to Elixirs tools for Research Data Management - Flora D'Anna & Rafael Buono (ELIXIR) | [RDM toolkit](https://rdmkit.elixir-europe.org/)
+10:15 | An introduction to ELIXIR's tools for research data management - Flora D'Anna & Rafael Buono (ELIXIR) | [Presentation](https://doi.org/10.5281/zenodo.7120492) / [RDMkit](https://rdmkit.elixir-europe.org/)
 11:00 | Coffee break
 11:30 | Data cleaning and standardisation in R - Salvador Fernandez & Laura Marquez (LifeWatch) | [Presentation](https://github.com/lifewatch/ebr-2022-data-cleaning-standarization/blob/bd9c6212d221ab94db1b55828b201675cbbd5add/slides/Datacleaning%26standardizationinR.pdf)
 12:30 | Lunch
