@@ -89,7 +89,7 @@ toc: true
 
 ## movepub
 
-**R**{: .badge .bg-dark } **Prepare Movebank data for publication**: Prepare [Movebank](<https://movebank.org>) animal tracking data for publication in a research repository or the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org)).
+**R**{: .badge .bg-dark } **Prepare Movebank data for publication**: Prepare animal tracking data from [Movebank](<https://movebank.org>) for publication in a research repository or the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org)).
 
 {: .btn-group}
 [Documentation][movepub]{: .btn .btn-sm .btn-primary }
