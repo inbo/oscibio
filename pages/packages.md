@@ -8,7 +8,7 @@ toc: true
 
 [biorad]: http://adokter.github.io/bioRad
 [biorad_github]: https://github.com/adokter/bioRad
-[biorad_logo]: https://github.com/adokter/bioRad/blob/master/man/figures/logo.png?raw=true
+[biorad_logo]: https://raw.githubusercontent.com/adokter/bioRad/master/man/figures/logo.png
 
 [camtraptor]: https://inbo.github.io/camtraptor/
 [camtraptor_github]: https://github.com/inbo/camtraptor
@@ -18,7 +18,7 @@ toc: true
 
 [etn]: https://inbo.github.io/etn/
 [etn_github]: https://github.com/inbo/etn
-[etn_logo]: https://github.com/inbo/etn/blob/main/man/figures/logo.png?raw=true
+[etn_logo]: https://raw.githubusercontent.com/inbo/etn/main/man/figures/logo.png
 
 [movepub]: https://inbo.github.io/movepub/
 [movepub_github]: https://github.com/inbo/movepub/
@@ -28,22 +28,22 @@ toc: true
 
 [pydov]: https://pydov.readthedocs.io/
 [pydov_github]: https://github.com/DOV-Vlaanderen/pydov
-[pydov_logo]: https://github.com/DOV-Vlaanderen/pydov/blob/master/docs/_static/img/logo.png?raw=true
+[pydov_logo]: https://raw.githubusercontent.com/DOV-Vlaanderen/pydov/master/docs/_static/img/logo.png
 
 [pywhip]: https://inbo.github.io/pywhip/
 [pywhip_github]: https://github.com/inbo/pywhip
 
 [rgbif]: https://docs.ropensci.org/rgbif/
 [rgbif_github]: https://github.com/ropensci/rgbif 
-[rgbif_logo]: https://github.com/ropensci/rgbif/blob/master/man/figures/logo.png?raw=true
+[rgbif_logo]: https://raw.githubusercontent.com/ropensci/rgbif/master/man/figures/logo.png
 
 [trias]: https://trias-project.github.io/trias
 [trias_github]: https://github.com/trias-project/trias
-[trias_logo]: https://github.com/trias-project/trias/blob/master/man/figures/logo.png?raw=true
+[trias_logo]: https://raw.githubusercontent.com/trias-project/trias/main/man/figures/logo.png
 
 [waterinfo]: https://docs.ropensci.org/wateRinfo/
 [waterinfo_github]: https://github.com/ropensci/wateRinfo
-[waterinfo_logo]: https://github.com/ropensci/wateRinfo/blob/master/man/figures/logo.png?raw=true
+[waterinfo_logo]: https://raw.githubusercontent.com/ropensci/wateRinfo/main/man/figures/logo.png
 
 <!--
 ### title [![logo][pkg_logo]{: width="120" .float-right }][pkg]
