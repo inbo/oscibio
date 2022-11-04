@@ -22,25 +22,10 @@ colors:
   footer: "#3c3c3c" # INBO gray
 rounded_corners: true
 
-# BUILD SETTINGS
-markdown: kramdown
-plugins: # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
-  - jekyll-feed
-  - jekyll-sitemap
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - LICENSE
-  - package-lock.json
-  - package.json
-  - petridish.gemspec
 
 # FRONTMATTER DEFAULTS
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
