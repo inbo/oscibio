@@ -8,15 +8,6 @@
   href: /projects/
 - text: Output
   menu:
-  - text: Packages
-    href: /packages/
-  - text: Software
-    href: /software/
-  - text: Datasets
-    href: /datasets/
-  - text: Publications
-    href: /publications/
-  - text: Training
-    href: /training/
+  - collection: output
 - text: Blog
   href: /blog/
