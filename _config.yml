@@ -22,11 +22,20 @@ colors:
   footer: "#3c3c3c" # INBO gray
 rounded_corners: true
 
+# COLLECTIONS
+collections:
+  output:
+    output: true
+    permalink: "/:path/"
+    layout: default
 
 # FRONTMATTER DEFAULTS
 defaults:
   - scope:
       path: ""
-      type: "posts"
+    values:
+      layout: default
+  - scope:
+      type: posts
     values:
       permalink: "/blog/:slug/"
