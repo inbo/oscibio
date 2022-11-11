@@ -29,13 +29,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
 
-# COLLECTIONS
-collections:
-  output:
-    output: true
-    permalink: "/:path/"
-    layout: default
-
 # FRONTMATTER DEFAULTS
 defaults:
   - scope:
