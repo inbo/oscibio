@@ -16,6 +16,7 @@ remote_theme: peterdesmet/petridish
 posts_on_home: 3
 tweets_on_home: true
 archive_permalink: /blog/
+github_edit: true
 colors:
   links: "#356196"  # INBO blue
   banner: "#c04384" # INBO fuchsia
