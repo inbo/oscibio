@@ -37,10 +37,6 @@ exclude:
 # FRONTMATTER DEFAULTS
 defaults:
   - scope:
-      path: ""
-    values:
-      layout: default
-  - scope:
       type: posts
     values:
       permalink: "/blog/:slug/"
