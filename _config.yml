@@ -24,6 +24,10 @@ colors:
 rounded_corners: true
 
 # BUILD SETTINGS
+markdown: kramdown
+plugins:                                # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
+  - jekyll-feed                         # Create RSS feed for posts
+  - jekyll-sitemap                      # Create sitemap
 exclude:
   - README.md
   - Gemfile
