@@ -4,7 +4,7 @@ description: Exploring different ways to visualize and analyze tracking data wit
 background: /assets/backgrounds/2013-10-01-tracking-eric.jpg
 date: 2013-10-01 11:15
 author: Peter Desmet
-categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
+tags: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
 toc: true
 ---
 

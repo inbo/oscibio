@@ -4,7 +4,7 @@ description: We created a bird migration flow visualization for ENRAM during a 5
 background: /assets/backgrounds/2014-06-10-bird-migration-flow-visualization.jpg
 date: 2014-06-10 12:00
 author: Peter Desmet
-categories: [ENRAM, software, visualization]
+tags: [ENRAM, software, visualization]
 ---
 
 Weather radars can detect bird migration, but visualizing these data in an easy to understand manner is challenging. Inspired by [air](http://air.nullschool.net) - an [open source](https://github.com/cambecc/air) flow visualization of wind in Tokyo - we wondered if we could do the same for bird migration data.

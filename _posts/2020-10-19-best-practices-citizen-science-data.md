@@ -3,7 +3,7 @@ title: "Join us now: Best practices for citizen science data"
 description: Developing a best practice guide for FAIR data.
 background: /assets/backgrounds/2020-10-19-best-practices-citizen-science-data.jpg
 author: [Lien Reyserhove, Quentin Groom, Tim Adriaens, Jan Pergl, Toril Moen, Sofie Meeus]
-categories: [TrIAS, AlienCSI]
+tags: [TrIAS, AlienCSI]
 ---
 
 {: .alert .alert-info}

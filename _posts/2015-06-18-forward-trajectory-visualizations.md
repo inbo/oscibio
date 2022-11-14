@@ -4,7 +4,7 @@ description: We created two nocturnal bird migration forward trajectory visualiz
 background: /assets/backgrounds/2015-06-18-forward-trajectory-visualizations.jpg
 date: 2015-06-18 13:50
 author: [Peter Desmet, Hans van Gasteren]
-categories: [ENRAM, visualization, CartoDB]
+tags: [ENRAM, visualization, CartoDB]
 toc: true
 ---
 

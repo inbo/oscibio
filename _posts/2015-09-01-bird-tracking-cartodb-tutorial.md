@@ -4,7 +4,7 @@ description: An introduction to using CartoDB for tracking data, based on two wo
 background: /assets/backgrounds/2015-09-01-bird-tracking-cartodb-tutorial.jpg
 date: 2015-09-01 13:00
 author: Peter Desmet
-categories: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
+tags: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
 toc: true
 ---
 
@@ -348,7 +348,7 @@ And there you have it. I hope this tutorial helped you to get a better idea of w
 
 For inspiration and tutorials, see:
 
-* [Our blog posts on CartoDB]({{ site.archive_permalink | relative_url }}?category=CartoDB), including more specific tutorials and things we've built.
+* [Our blog posts on CartoDB]({{ site.archive_permalink | relative_url }}?tag=CartoDB), including more specific tutorials and things we've built.
 * [Our CartoDB maps](https://inbo.cartodb.com/u/lifewatch/maps), mostly using bird tracking data.
 * [CartoDB map gallery](https://cartodb.com/gallery/): the cream of the crop of CartoDB maps.
 * [CartoDB academy](http://academy.cartodb.com/): step by step tutorials on how to create maps in CartoDB.

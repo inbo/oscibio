@@ -13,7 +13,7 @@ Changes requiring review (e.g. new blog posts) should be created in a separate b
 - Use `72dpi` as image resolution
 - Place background images in `assets/backgrounds`, name them after their corresponding page/post and ideally crop them to `2100 x 700px`
 - Place content images in `assets/images/`, name them after their corresponding page/post + a suffix, e.g. `-month-tracks-3`
-- Add categories to posts to indicate the project, output type, software language, and maybe partner organization, e.g. `[TrIAS, software, R, GBIF, rOpenSci]`
+- Add tags to posts to indicate the project, output type, software language, and maybe partner organization, e.g. `[TrIAS, software, R, GBIF, rOpenSci]`
 - Create internal links as `[previous post]({% post_url 2013-10-01-tracking-eric %})`
 
 ## Repo structure
@@ -21,7 +21,7 @@ Changes requiring review (e.g. new blog posts) should be created in a separate b
 The repository structure follows that of Jekyll websites.
 
 - General site settings: [_config.yml](_config.yml)
-- Pages: [pages/](pages/) or `_yourcollection`
+- Pages: [pages/](pages/)
 - Posts: [_posts/](_posts/)
 - Images & static files: [assets/](assets/)
 - Top navigation: [_data/navigation.yml](_data/navigation.yml)

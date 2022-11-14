@@ -4,7 +4,7 @@ description: How we used GBIF tools and CC0 to publish over 400,000 fish occurre
 background: /assets/backgrounds/2014-04-14-vis-data-published.jpg
 date: 2014-04-14 11:40
 author: Peter Desmet
-categories: [LifeWatch, biodiversity.be, open data, GBIF]
+tags: [LifeWatch, biodiversity.be, open data, GBIF]
 toc: true
 ---
 

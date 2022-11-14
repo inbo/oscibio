@@ -3,7 +3,7 @@ title: "wateRinfo: Downloading tidal data to understand the behaviour of a migra
 description: "A use case for our R package [wateRinfo](https://github.com/ropensci/wateRinfo)."
 background: /assets/backgrounds/2019-01-22-waterinfo-tidal-eel.jpg
 author: [Stijn Van Hoey, Peter Desmet]
-categories: [LifeWatch, software, R, rOpenSci]
+tags: [LifeWatch, software, R, rOpenSci]
 toc: true
 ---
 

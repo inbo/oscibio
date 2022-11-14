@@ -4,7 +4,7 @@ description: Four gulls we lost track of are in Agadir right now. Can we retriev
 background: /assets/backgrounds/2016-02-22-operation-agadir.jpg
 date: 2016-02-22 09:00
 author: Peter Desmet
-categories: [LifeWatch, bird tracking, CartoDB]
+tags: [LifeWatch, bird tracking, CartoDB]
 ---
 
 {: .alert .alert-warning}

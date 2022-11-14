@@ -4,7 +4,7 @@ description: We've developed an open source tool to let you explore our bird tra
 background: /assets/backgrounds/2015-06-30-bird-tracking-explorer.jpg
 date: 2015-06-30 15:00
 author: [Bart Aelterman, Peter Desmet]
-categories: [LifeWatch, bird tracking, software]
+tags: [LifeWatch, bird tracking, software]
 toc: true
 ---
 
@@ -39,7 +39,7 @@ These charts can highlight interesting patterns in the birds’ behaviour, e.g. 
 
 We developed the bird tracking explorer to learn and experiment with some open source technologies:
 
-* **CartoDB API**: We have [blogged]({{ site.archive_permalink | relative_url }}?category=CartoDB) about the mapping tool CartoDB before. Perhaps a lesser-known feature of CartoDB is its [SQL API](https://github.com/inbo/bird-tracking/blob/f80497eb105eb02d7238b9ae59f2feabe205b4f5/cartodb/README.md), which allows you to query datasets in plain SQL giving you enormous flexibility. All data shown by the explorer are queried via the CartoDB API. 
+* **CartoDB API**: We have [blogged]({{ site.archive_permalink | relative_url }}?tag=CartoDB) about the mapping tool CartoDB before. Perhaps a lesser-known feature of CartoDB is its [SQL API](https://github.com/inbo/bird-tracking/blob/f80497eb105eb02d7238b9ae59f2feabe205b4f5/cartodb/README.md), which allows you to query datasets in plain SQL giving you enormous flexibility. All data shown by the explorer are queried via the CartoDB API. 
 * **CartoDB.js**: A [JavaScript library](http://docs.cartodb.com/cartodb-platform/cartodb-js.html) to create CartoDB maps on the fly in the browser. We use it to build the map and update it when a user selects a new bird or date.
 * **jQuery**: A [Javascript library](https://jquery.com/) to interact with the SQL API and add interactivity to the page.
 * **Cal-Heatmap**: A [Javascript library](https://cal-heatmap.com/) to create interactive calendar heat maps, used for the year and month charts. Requires [D3](http://d3js.org).

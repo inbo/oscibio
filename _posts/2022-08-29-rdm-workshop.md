@@ -2,7 +2,7 @@
 title: Research data management workshop
 description: Free hands-on introductions to research data management and publication.
 author: Tanja Milotic
-categories: [LifeWatch, workshop]
+tags: [LifeWatch, workshop]
 toc: true
 ---
 
