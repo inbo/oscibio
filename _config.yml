@@ -6,9 +6,11 @@ url: "https://oscibio.inbo.be"
 baseurl: "" # Otherwise GitHub Pages will set this to "/oscibio"
 
 # SOCIAL PROFILES
-email: oscibio@inbo.be
-twitter_username: oscibio
-github_username: inbo
+social:
+  email: oscibio@inbo.be
+  twitter: oscibio
+  github: inbo/oscibio
+  mastodon: https://fosstodon.org/@oscibio
 
 # THEME SETTINGS (ALL OPTIONAL)
 theme: minima
