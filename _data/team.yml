@@ -58,6 +58,19 @@
   github: peterdesmet
   twitter: peterdesmet
   email: peter.desmet@inbo.be
+  
+- name: Pieter Huybrechts
+  role: Research Data Engineer
+  image: https://avatars.githubusercontent.com/u/48065851?s=460&v=4
+  description: >
+    Pieter is a biologist with a background in ecology and modelling biological 
+    systems. He has a strong interest in big data, open science and biodiversity
+     informatics. At home he has an ever growing collection of animal 
+     identification books and floras.
+  orcid: 0000-0002-6658-6062
+  github: PietrH
+  twitter: HuyPieter
+  email: pieter.huybrechts@inbo.be
 
 - name: Tanja Milotić
   role: LifeWatch project coordinator
