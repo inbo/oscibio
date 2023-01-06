@@ -37,17 +37,6 @@
   twitter: reyserhovelien
   email: lien.reyserhove@inbo.be
 
-- name: Nicolas Noé
-  role: Research software developer
-  image: https://avatars1.githubusercontent.com/u/386387?s=460&v=4
-  description: >
-    Nico stumbled into the wonderful world of biodiversity informatics a while ago. 
-    He loves open source, creating random stuff, old maps, and weird fishes.
-  orcid: 0000-0002-9503-4750
-  github: niconoe
-  twitter: niconoe
-  email: nicolas.noe@inbo.be
-
 - name: Peter Desmet
   role: Open data coordinator
   image: https://avatars1.githubusercontent.com/u/600993?s=460&v=4
@@ -58,6 +47,19 @@
   github: peterdesmet
   twitter: peterdesmet
   email: peter.desmet@inbo.be
+  
+- name: Pieter Huybrechts
+  role: Research data engineer
+  image: https://avatars.githubusercontent.com/u/48065851?s=460&v=4
+  description: >
+    Pieter is a biologist with a background in ecology and modelling biological 
+    systems. He has a strong interest in big data, open science and 
+    biodiversity informatics. At home he has an ever growing collection of 
+    animal identification books and floras.
+  orcid: 0000-0002-6658-6062
+  github: PietrH
+  twitter: HuyPieter
+  email: pieter.huybrechts@inbo.be
 
 - name: Tanja Milotić
   role: LifeWatch project coordinator
