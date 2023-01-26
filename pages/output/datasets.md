@@ -2,7 +2,7 @@
 title: Datasets
 description: We publish open data
 background: https://images.unsplash.com/photo-1497376822814-1493daa826f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
-order: 3
+permalink: /datasets/
 ---
 
 ## GBIF-registered datasets

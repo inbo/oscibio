@@ -1,9 +1,8 @@
 ---
 title: Training
 description: Our workshops and training materials
-permalink: /training/
 background: https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80
-order: 5
+permalink: /training/
 toc: true
 ---
 

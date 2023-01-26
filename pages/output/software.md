@@ -2,7 +2,7 @@
 title: Software
 description: We develop open source software tools
 background: https://images.unsplash.com/photo-1547954575-855750c57bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80
-order: 2
+permalink: /software/
 toc: true
 ---
 

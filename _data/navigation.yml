@@ -9,14 +9,14 @@
 - text: Output
   menu:
   - text: Packages
-    href: true
+    href: /packages/
   - text: Software
-    href: true
+    href: /software/
   - text: Datasets
-    href: true
+    href: /datasets/
   - text: Publications
-    href: true
+    href: /publications/
   - text: Training
-    href: true
+    href: /training/
 - text: Blog
   href: /blog/

@@ -2,7 +2,7 @@
 title: Open science lab for biodiversity
 description: We make biodiversity research open and reproducible
 author: oscibio team members
-url: "https://oscibio.inbo.be"
+url: "https://oscibio.inbo.be" # Custom domain is not set via CNAME, so url and baseurl need to be indicated
 baseurl: "" # Otherwise GitHub Pages will set this to "/oscibio"
 
 # SOCIAL PROFILES
