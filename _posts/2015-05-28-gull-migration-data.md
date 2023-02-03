@@ -8,7 +8,7 @@ tags: [LifeWatch, bird tracking, visualization, CartoDB, presentation]
 toc: true
 ---
 
-{: .alert .alert-warning}
+{:.alert .alert-warning}
 We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots.
 
 In July last year, we [released the gull tracking data from the 2013 breeding season]({% post_url 2014-07-22-bird-tracking-data-published %}) as open data. We have now complemented the dataset with tracking data from the 2013/2014 migration/wintering season and the 2014 breeding season. The [dataset now contains over 1.1 million occurrence records](https://doi.org/10.15468/02omly) from 60 tracked gulls, including migration data, which wasn't included before.

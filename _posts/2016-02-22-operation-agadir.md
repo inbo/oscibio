@@ -7,7 +7,7 @@ author: Peter Desmet
 tags: [LifeWatch, bird tracking, CartoDB]
 ---
 
-{: .alert .alert-warning}
+{:.alert .alert-warning}
 We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots.
 
 Remember gull [Eric]({% post_url 2013-10-01-tracking-eric %})? He's one of the gulls we have been tracking since 2013 ([Stienen et al. 2016](https://doi.org/10.3897/zookeys.555.6173)). As we wrote in a [previous blog post]({% post_url 2015-05-28-gull-migration-data %}), we lost track of him on May 11, 2014. Since then, we've been unable to establish a connection between his GPS tracker and the base antenna at the colony.

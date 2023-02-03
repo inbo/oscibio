@@ -7,7 +7,7 @@ tags: [LifeWatch, software, R, rOpenSci]
 toc: true
 ---
 
-{: .alert .alert-info}
+{:.alert .alert-info}
 We wrote this post as a guest post for the [rOpenSci blog](https://ropensci.org/blog/2019/01/22/waterinfo-tidal-eel/), where it was originally reviewed and published.
 
 > Do you know what that sound is, Highness? Those are the Shrieking Eels — if you don't believe me, just wait. They always grow louder when they're about to feed on human flesh. If you swim back now, I promise, no harm will come to you. I doubt you will get such an offer from the Eels.

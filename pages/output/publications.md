@@ -7,4 +7,4 @@ permalink: /publications/
 
 Our publications are available through our institutional repository:
 
-[List of our publications](https://pureportal.inbo.be/en/organisations/open-science-lab-for-biodiversity/publications/){: .btn .btn-sm .btn-primary }
+[List of our publications](https://pureportal.inbo.be/en/organisations/open-science-lab-for-biodiversity/publications/){:.btn .btn-sm .btn-primary}

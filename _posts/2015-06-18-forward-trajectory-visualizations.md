@@ -8,7 +8,7 @@ tags: [ENRAM, visualization, CartoDB]
 toc: true
 ---
 
-{: .alert .alert-warning}
+{:.alert .alert-warning}
 We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots.
 
 Last week we participated in a very productive [workshop in Amsterdam](http://www.enram.eu/activities/visualisations-from-show-cases-to-production) organized by working group 3 of ENRAM. ENRAM is the European Network for the Radar Surveillance of Animal Movement funded by [COST](http://cost.eu/) and the workshop was a follow-up on the hackathon where we created the [flow visualization]({% post_url 2014-06-10-bird-migration-flow-visualization %}) last year.

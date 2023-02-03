@@ -7,7 +7,7 @@ author: Peter Desmet
 tags: [LifeWatch, bird tracking, open data, GBIF, CartoDB]
 ---
 
-{: .alert .alert-warning}
+{:.alert .alert-warning}
 We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots.
 
 We have written about our bird tracking network before - the network we set up with the Flanders Marine Institute (VLIZ) to track large birds with [advanced GPS trackers](http://www.uva-bits.nl) - showing how the data can be [visualized with CartoDB]({% post_url 2014-01-22-jcd-2014 %}) and releasing a small sample dataset of the famous [Lesser Black-backed Gull Eric]({% post_url 2013-10-01-tracking-eric %}).

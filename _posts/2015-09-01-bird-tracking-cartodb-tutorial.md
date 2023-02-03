@@ -8,7 +8,7 @@ tags: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
 toc: true
 ---
 
-{: .alert .alert-warning}
+{:.alert .alert-warning}
 We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots. Steps, links and examples mentioned in this tutorial might no longer work.
 
 We have been using CartoDB for bird tracking data for a while now and are very happy to see that we have inspired others to do the [same](http://birdmapsuk.blogspot.com/2015/06/gulls-part-two.html), including for [other species](http://blog.cartodb.com/fisher/). To introduce even more people to this great tool for animal tracking data, I was invited to give a hands-on course at two workshops[^1]. Rather than handing the course material to the participants of these workshops only, I decided to publish it here on this blog, so anyone can use it.

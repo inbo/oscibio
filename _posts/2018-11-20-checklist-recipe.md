@@ -6,7 +6,7 @@ tags: [TrIAS, software, R, GBIF, rOpenSci]
 toc: true
 ---
 
-{: .alert .alert-info}
+{:.alert .alert-info}
 We wrote this post as a guest post for the [rOpenSci blog](https://ropensci.org/blog/2018/11/20/checklist-recipe/), where it was originally reviewed and published.
 
 Imagine you are a fish ecologist who compiled a list of fish species for your country. 🐟

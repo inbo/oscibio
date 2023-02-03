@@ -8,7 +8,7 @@ tags: [LifeWatch, bird tracking, visualization, CartoDB, tutorial]
 toc: true
 ---
 
-{: .alert .alert-warning}
+{:.alert .alert-warning}
 We no longer have a CartoDB/CARTO account and have replaced embedded maps with screenshots. Steps, links and examples mentioned in this tutorial might no longer work.
 
 As part of our terrestrial observatory, we are tracking large birds with lightweight, solar powered GPS trackers. The project[^1] is lead by INBO researchers Eric Stienen (for gulls) and Anny Anselin (for the Western Marsh Harrier) in collaboration with the [VLIZ](http://www.vliz.be/en) and [UvA-BiTS](http://www.uva-bits.nl/).
@@ -64,7 +64,7 @@ To truly visualize Eric in time, I used the library [Torque](https://github.com/
 
 The visualization compresses two months of data in 120 seconds. As with the previous maps, you can zoom and pan the map.
 
-{: .alert .alert-warning }
+{:.alert .alert-warning}
 *Note: since publishing this post, [Torque has been integrated in CartoDB](http://blog.cartodb.com/post/66687861735/torque-is-live-try-it-on-your-cartodb-maps-today). The map above now uses the integrated version.*
 
 ## Analyzing time spent per UTM 1km square

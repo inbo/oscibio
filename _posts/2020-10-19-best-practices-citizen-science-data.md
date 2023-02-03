@@ -6,7 +6,7 @@ author: [Lien Reyserhove, Quentin Groom, Tim Adriaens, Jan Pergl, Toril Moen, So
 tags: [TrIAS, AlienCSI]
 ---
 
-{: .alert .alert-info}
+{:.alert .alert-info}
 We wrote this post as a guest post for the [Eu-Citizen.Science blog](https://eu-citizen.science/blog/2020/10/19/join-us-now-best-practices-citizen-science-data/), where it was originally published.
 
 The vast majority of species distribution records come from citizen scientists. These data complement records from professional researchers and help global efforts to conserve biodiversity and understand the natural world. Invasive alien species policies heavily depend on citizen science data. Many invasive alien species related research and policy activities require pooling data. Therefore, open data publication, standardization and interoperability are particularly important. Without good data publishing practises, these data get lost or become useless. With time, the link between the data and the methods that were used to collect them gets lost. [The FAIR Principles](https://go-fair.org/fair-principles) have become the gold standard for publishing scientific data. They ensure that the data are **F**indable, **A**ccessible, **I**nteroperable and **R**eusable, and can be used for science indefinitely. Nevertheless, these are generic principles for any kind of data and there is a need to further refine and tailor them specifically for biodiversity data collected by citizen scientists.
