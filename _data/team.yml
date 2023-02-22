@@ -10,6 +10,7 @@
   orcid: 0000-0003-3445-7562
   github: damianooldoni
   twitter: damianozingaro
+  mastodon: https://fosstodon.org/@damianooldoni
   email: damiano.oldoni@inbo.be
 
 - name: Dimitri Brosens
@@ -23,6 +24,7 @@
   orcid: 0000-0002-0846-9116
   github: dimevil
   twitter: dimibro
+  mastodon: https://fosstodon.org/@dimitri
   email: dimitri.brosens@inbo.be
 
 - name: Lien Reyserhove
@@ -46,6 +48,7 @@
   orcid: 0000-0002-8442-8025
   github: peterdesmet
   twitter: peterdesmet
+  mastodon: https://mastodon.social/@peterdesmet
   email: peter.desmet@inbo.be
   
 - name: Pieter Huybrechts
@@ -70,4 +73,5 @@
   orcid: 0000-0002-3129-6196
   github: milotictanja
   twitter: milotict
+  mastodon: https://mastodon.social/@milotict
   email: tanja.milotic@inbo.be
