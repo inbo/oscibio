@@ -19,8 +19,8 @@ tweets_on_home: true
 archive_permalink: /blog/
 github_edit: true
 colors:
-  links: "#356196"  # INBO blue
-  banner: "#c04384" # INBO fuchsia
+  links: "#c04384"  # INBO fuchsia
+  banner: "#356196" # INBO blue
   footer: "#3c3c3c" # INBO gray
 rounded_corners: true
 
