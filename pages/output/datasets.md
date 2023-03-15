@@ -13,6 +13,10 @@ We help researchers meet the GBIF publication requirements by standardizing thei
 
 [List of datasets we have published to GBIF](https://www.gbif.org/dataset/search?hosting_org=1cd669d0-80ea-11de-a9d0-f1765f95f18b){:.btn .btn-sm .btn-primary}
 
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.gbif.org/api/widgets/literature/latest?publishingOrganizationKey=1cd669d0-80ea-11de-a9d0-f1765f95f18b&publishingOrganizationKey=4d3ceea8-5699-439d-a899-decac9cbbdac&publishingOrganizationKey=d2b220bd-5701-4fe4-ba06-a1e3fc6288fe&publishingOrganizationKey=ec5f9a9c-09b0-4da3-ae8e-22627620fff6&publishingOrganizationKey=05c249d0-dfa0-11d8-b22e-b8a03c50a862&publishingOrganizationKey=e22b5484-d879-43ed-a923-082dcc28d6f7&publishingOrganizationKey=d3769dd1-1fc5-42b7-86d6-f3393067666e" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="false"></iframe>
+</div>
+
 ## Other datasets
 
 In addition to GBIF-registered datasets, we also provide technical support for the publication of datasets that cannot be expressed in the Darwin Core standard. We publish these on [Zenodo](https://zenodo.org/), a general purpose research repository.
