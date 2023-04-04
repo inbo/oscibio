@@ -4,7 +4,7 @@ This repository contains the source files for the website of the [Open science l
 
 ## Usage
 
-This website makes use of the static website generator [Jekyll](https://jekyllrb.com/) and the [Petridish](https://github.com/peterdesmet/petridish) theme. **Each commit to `main` will automatically trigger a new build on GitHub Pages.** There is no need to build the site locally, but you can by installing Jekyll and running `bundle exec jekyll serve`.
+The website makes use of the static website generator [Jekyll](https://jekyllrb.com/) and the [Petridish](https://github.com/peterdesmet/petridish) theme. **Each commit to `main` will automatically trigger a new build on GitHub Pages.** There is no need to build the site locally, but you can do so by installing Jekyll and running `bundle exec jekyll serve`.
 
 Minor changes can be committed directly to `main`.
 
