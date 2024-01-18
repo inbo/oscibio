@@ -28,12 +28,10 @@
   email: dimitri.brosens@inbo.be
 
 - name: Lien Reyserhove
-  role: Data steward
+  role: LIFE RIPARIAS project coordinator
   image: https://avatars0.githubusercontent.com/u/32466479?s=400&v=4
   description: >
-    Lien is an ecologist with a special interest in the publication of open and 
-    FAIR data. She wrangles data in R as a meditative activity that also 
-    facilitates biodiversity research.
+    Lien contributes to biodiversity research by publishing data to GBIF. As an ecologist, she has a passion for open and FAIR data, citizen science and camera traps, with a specific focus on invasive alien species.
   orcid: 0000-0001-7484-9267
   github: LienReyserhove
   twitter: reyserhovelien
