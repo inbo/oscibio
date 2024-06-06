@@ -10,8 +10,12 @@ toc: true
 [biorad_github]: https://github.com/adokter/bioRad
 [biorad_logo]: https://raw.githubusercontent.com/adokter/bioRad/master/man/figures/logo.png
 
+[camtrapdp]: https://inbo.github.io/camtrapdp/
+[camtrapdp_github]: https://github.com/inbo/camtrapdp
+
 [camtraptor]: https://inbo.github.io/camtraptor/
 [camtraptor_github]: https://github.com/inbo/camtraptor
+[camtraptor_logo]: https://raw.githubusercontent.com/inbo/camtraptor/master/man/figures/logo.png
 
 [frictionless]: https://docs.ropensci.org/frictionless/
 [frictionless_github]: https://github.com/frictionlessdata/frictionless-r
@@ -63,9 +67,17 @@ toc: true
 [Documentation][biorad]{:.btn .btn-sm .btn-primary}
 [Source code][biorad_github]{:.btn .btn-sm .btn-light}
 
-## camtraptor
+### camtrapdp
 
-**R**{:.badge .bg-dark} **Read, explore and visualize Camera Trap Data Packages**: [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp/) is a community developed data exchange format for this type of data. With camtraptor you can read and filter data, create overviews of observed species, relative abundance or effort, and plot these data on a map.
+**R**{:.badge .bg-dark} **Read and manipulate Camera Trap Data Packages**: Read and manipulate Camera Trap Data Packages (Camtrap DP). [Camtrap DP](https://camtrap-dp.tdwg.org) is a data exchange format for camera trap data. With camtrapdp you can read, filter and transform data (including to [Darwin Core](https://dwc.tdwg.org)) before further analysis in e.g. [camtraptor](https://inbo.github.io/camtraptor/) or [camtrapR](https://cran.r-project.org/package=camtrapR).
+
+{:.btn-group}
+[Documentation][camtrapdp]{:.btn .btn-sm .btn-primary}
+[Source code][camtrapdp_github]{:.btn .btn-sm .btn-light}
+
+## camtraptor [![logo][camtraptor_logo]{:width="120" .float-right}][camtraptor]
+
+**R**{:.badge .bg-dark} **Explore and visualize camera trap data**: Read and filter data, create overviews of observed species, relative abundance or effort, and plot these data on a map.
 
 {:.btn-group}
 [Documentation][camtraptor]{:.btn .btn-sm .btn-primary}
