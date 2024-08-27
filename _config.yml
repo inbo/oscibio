@@ -15,7 +15,7 @@ social:
 theme: minima
 remote_theme: peterdesmet/petridish@3.0
 posts_on_home: 3
-tweets_on_home: true
+tweets_on_home: false
 archive_permalink: /blog/
 github_edit: true
 colors:
