@@ -13,25 +13,13 @@
   mastodon: https://fosstodon.org/@damianooldoni
   email: damiano.oldoni@inbo.be
 
-- name: Dimitri Brosens
-  role: Open data publisher
-  image: /assets/images/team-dimi.png
-  description: >
-    Dimitri is Belgian [GBIF](https://www.gbif.org) node manager at the 
-    [Belgian Biodiversity Platform](http://www.biodiversity.be). He loves to 
-    chat with researchers to help them publish their data. His ultimate goal is 
-    to get Belgium on the world map of biodiversity data.
-  orcid: 0000-0002-0846-9116
-  github: dimevil
-  twitter: dimibro
-  mastodon: https://fosstodon.org/@dimitri
-  email: dimitri.brosens@inbo.be
-
 - name: Lien Reyserhove
   role: LIFE RIPARIAS project coordinator
   image: https://avatars0.githubusercontent.com/u/32466479?s=400&v=4
   description: >
-    Lien contributes to biodiversity research by publishing data to GBIF. As an ecologist, she has a passion for open and FAIR data, citizen science and camera traps, with a specific focus on invasive alien species.
+    Lien contributes to biodiversity research by publishing data to GBIF. As an 
+    ecologist, she has a passion for open and FAIR data, citizen science and 
+    camera traps, with a specific focus on invasive alien species.
   orcid: 0000-0001-7484-9267
   github: LienReyserhove
   twitter: reyserhovelien
@@ -41,8 +29,8 @@
   role: Open data coordinator
   image: https://avatars1.githubusercontent.com/u/600993?s=460&v=4
   description: >
-    Peter is biodiversity informatics geek, passionate about open data and open 
-    science. He loves creating visualizations and proper documentation.
+    Peter is a biodiversity informatician, passionate about open data and open 
+    science. He loves standards and proper documentation.
   orcid: 0000-0002-8442-8025
   github: peterdesmet
   twitter: peterdesmet
@@ -61,6 +49,19 @@
   github: PietrH
   twitter: HuyPieter
   email: pieter.huybrechts@inbo.be
+  
+- name: Sanne Govaert
+  role: Research software engineer
+  image: https://avatars.githubusercontent.com/u/44606923?v=4
+  description: >
+    Sanne is a biologist passionate about nature, who discovered she is also
+    fond of programming. She is committed to transparancy and open data. Her
+    work primarily focuses on data and software related to machine observations
+    of biologging data.
+  orcid: 0000-0002-8939-1305
+  github: sannegovaert
+  twitter: SanneGovaert
+  email: sanne.govaert@inbo.be
 
 - name: Tanja Milotić
   role: LifeWatch project coordinator
