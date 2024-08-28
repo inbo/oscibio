@@ -13,20 +13,6 @@
   mastodon: https://fosstodon.org/@damianooldoni
   email: damiano.oldoni@inbo.be
 
-- name: Dimitri Brosens
-  role: Open data publisher
-  image: /assets/images/team-dimi.png
-  description: >
-    Dimitri is Belgian [GBIF](https://www.gbif.org) node manager at the 
-    [Belgian Biodiversity Platform](http://www.biodiversity.be). He loves to 
-    chat with researchers to help them publish their data. His ultimate goal is 
-    to get Belgium on the world map of biodiversity data.
-  orcid: 0000-0002-0846-9116
-  github: dimevil
-  twitter: dimibro
-  mastodon: https://fosstodon.org/@dimitri
-  email: dimitri.brosens@inbo.be
-
 - name: Lien Reyserhove
   role: LIFE RIPARIAS project coordinator
   image: https://avatars0.githubusercontent.com/u/32466479?s=400&v=4
