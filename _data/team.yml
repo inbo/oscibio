@@ -31,7 +31,9 @@
   role: LIFE RIPARIAS project coordinator
   image: https://avatars0.githubusercontent.com/u/32466479?s=400&v=4
   description: >
-    Lien contributes to biodiversity research by publishing data to GBIF. As an ecologist, she has a passion for open and FAIR data, citizen science and camera traps, with a specific focus on invasive alien species.
+    Lien contributes to biodiversity research by publishing data to GBIF. As an 
+    ecologist, she has a passion for open and FAIR data, citizen science and 
+    camera traps, with a specific focus on invasive alien species.
   orcid: 0000-0001-7484-9267
   github: LienReyserhove
   twitter: reyserhovelien
@@ -61,6 +63,19 @@
   github: PietrH
   twitter: HuyPieter
   email: pieter.huybrechts@inbo.be
+  
+- name: Sanne Govaert
+  role: Research software engineer
+  image: https://avatars.githubusercontent.com/u/44606923?v=4
+  description: >
+    Sanne is a biologist passionate about nature, who discovered she is also
+    fond of programming. She is committed to transparancy and open data. Her
+    work primarily focuses on data and software related to machine observations
+    of biologging data.
+  orcid: https://orcid.org/0000-0002-8939-1305
+  github: https://github.com/sannegovaert
+  twitter: SanneGovaert
+  email: sanne.govaert@inbo.be
 
 - name: Tanja Milotić
   role: LifeWatch project coordinator
