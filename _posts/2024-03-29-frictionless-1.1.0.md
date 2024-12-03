@@ -11,7 +11,7 @@ Our R package **frictionless** allows you to read and write Frictionless [Data P
 
 We developed the R package [frictionless](https://docs.ropensci.org/frictionless/) to facilitate our work, but it has since been picked up by other users and developers. Much of the feedback we gathered is now incorportated in a new release of the package: version 1.1.0.
 
-## How to install frictionnless?
+## How to install frictionless?
 
 The package is available on CRAN and can be installed with:
 
