@@ -13,7 +13,7 @@ So, last week our team created a bird migration flow visualization during a 5 da
 
 We are quite happy with the result and are looking forward to improve upon our proof of concept in the ENRAM data challenge (to be organized late 2014/early 2015).
 
-[![screenshot](/assets/images/2014-06-10-bird-migration-flow-visualization-screenshot.png)](http://enram.github.io/bird-migration-flow-visualization/viz/)
+[![screenshot](/assets/images/2014-06-10-bird-migration-flow-visualization-screenshot.png)](http://aloftdata.github.io/bird-migration-flow-visualization/viz/)
 
-* [Visualization](http://enram.github.io/bird-migration-flow-visualization/viz/)
-* [Source code and documentation](https://github.com/enram/bird-migration-flow-visualization)
+* [Visualization](http://aloftdata.github.io/bird-migration-flow-visualization/viz/)
+* [Source code and documentation](https://github.com/aloftdata/bird-migration-flow-visualization)
