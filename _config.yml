@@ -13,9 +13,8 @@ social:
 
 # THEME SETTINGS (ALL OPTIONAL)
 theme: minima
-remote_theme: peterdesmet/petridish@3.0
+remote_theme: peterdesmet/petridish@3.1
 posts_on_home: 3
-tweets_on_home: false
 archive_permalink: /blog/
 github_edit: true
 colors:
