@@ -7,7 +7,7 @@ baseurl: "" # Otherwise GitHub Pages will set this to "/oscibio"
 # SOCIAL PROFILES
 social:
   email: oscibio@inbo.be
-  bluesky: oscibio.bsky.social
+  bluesky: oscibio.inbo.be
   mastodon: https://fosstodon.org/@oscibio
   github: inbo/oscibio
 
