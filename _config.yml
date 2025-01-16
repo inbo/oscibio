@@ -10,6 +10,7 @@ social:
   bluesky: oscibio.inbo.be
   mastodon: https://fosstodon.org/@oscibio
   github: inbo/oscibio
+  disqus: oscibio
 
 # THEME SETTINGS (ALL OPTIONAL)
 theme: minima
