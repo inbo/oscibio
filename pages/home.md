@@ -13,4 +13,4 @@ We offer technical support to the [research projects](/projects/) we participate
 Interested to work with us? Get in touch.
 
 {:.text-center}
-[<i class="fa-solid fa-envelope"></i> Contact us](mailto:oscibio@inbo.be){:.btn .btn-primary} [<i class="fa-brands fa-bluesky"></i> Follow us](https://bsky.app/profile/oscibio.bsky.social){:.btn .btn-light}
+[<i class="fa-solid fa-envelope"></i> Contact us](mailto:oscibio@inbo.be){:.btn .btn-primary} [<i class="fa-brands fa-bluesky"></i> Follow us](https://bsky.app/profile/oscibio.inbo.be){:.btn .btn-light}
