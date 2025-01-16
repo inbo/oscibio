@@ -5,16 +5,14 @@
 columns:
   - description: >
       We are part of the [Research Institute for Nature and Forest (INBO)](https://www.vlaanderen.be/inbo/en-gb/).
-      Our work is funded by:
+      Our work is mainly funded by:
     links:
-      - text: Belgian Science Policy Office (BELSPO)
-        href: https://www.belspo.be/
-      - text: Global Biodiversity Information Facility (GBIF)
-        href: https://www.gbif.org/
+      - text: Horizon Europe
+        href: https://ec.europa.eu/info/horizon-europe_en
       - text: LIFE Programme
         href: https://cinea.ec.europa.eu/life_en
-      - text: Netherlands Biodiversity Information Facility (NLBIF)
-        href: https://www.nlbif.nl/
+      - text: Belgian Science Policy Office (BELSPO)
+        href: https://www.belspo.be/
       - text: Research Foundation - Flanders (FWO)
         href: https://www.fwo.be/en/
 
