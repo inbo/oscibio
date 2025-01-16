@@ -14,7 +14,7 @@ social:
 # THEME SETTINGS (ALL OPTIONAL)
 theme: minima
 remote_theme: peterdesmet/petridish@3.1
-posts_on_home: 3
+posts_on_home: 2
 archive_permalink: /blog/
 github_edit: true
 colors:
