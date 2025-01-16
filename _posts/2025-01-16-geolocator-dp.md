@@ -1,10 +1,10 @@
 ---
-title: How I build Geolocator DP using open source code
-description: This new standard and software for geolocator data used open source code by the Open science lab of biodiversity.
+title: How I built Geolocator DP using open source code
+description: New standard and software for geolocator data was inspired by tools developed by the Open science lab of biodiversity.
 background:
-  img: https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-  by: Vincent van Zalinge
-  href: https://unsplash.com/photos/vUNQaTtZeOo
+  img: https://raw.githubusercontent.com/Rafnuss/GeoLocator-DP/refs/heads/main/assets/home.png
+  by: Raphaël Nussbaumer
+  href: https://raphaelnussbaumer.com/GeoLocator-DP/
 author: Raphaël Nussbaumer
 tags: [software, R]
 ---
