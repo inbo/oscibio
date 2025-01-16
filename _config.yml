@@ -41,3 +41,4 @@ defaults:
       type: posts
     values:
       permalink: "/blog/:slug/"
+      comments: true
