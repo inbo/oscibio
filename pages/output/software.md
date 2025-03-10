@@ -53,10 +53,10 @@ The LIFE RIPARIAS early alert website allows field managers to be immediately aw
 
 ## vptstools
 
-**Python**{:.badge .bg-dark} vptstools is used in an operational pipeline to process incoming biological data derived from European weather radars. It reformats and deposits the data on the Aloft bucket, where it can be used by the radar aeroecology community.
+**Python**{:.badge .bg-dark} vptstools is used in an operational pipeline to process incoming biological data derived from European weather radars. It reformats and deposits the data on the [Aloft data portal](https://aloftdata.eu/), where it can be used by the radar aeroecology community.
 
 {:.btn-group}
-[Website](https://aloftdata.eu/browse/){:.btn .btn-sm .btn-primary}
+[Website](https://aloftdata.github.io/vptstools/){:.btn .btn-sm .btn-primary}
 [Source code](https://github.com/aloftdata/vptstools){:.btn .btn-sm .btn-light}
 
 ## Whip
