@@ -4,7 +4,7 @@ description: Weather radars detect more than weather, they also continuously reg
 background:
   img: /assets/backgrounds/2025-03-05-aloft-data-paper.jpg
   by: Bart Hoekstra
-author: [Peter Desmet, Bart Hoekstra, Baptiste Schmid, Silke Bauer, Pieter Huybrechts, Cecilia Nilsson]
+author: [Peter Desmet, Bart Hoekstra, Silke Bauer, Pieter Huybrechts, Cecilia Nilsson]
 tags: [HiRAD, GloBAM, ENRAM, open data, weather radar]
 ---
 
