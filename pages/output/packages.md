@@ -17,12 +17,15 @@ toc: true
 [camtraptor_github]: https://github.com/inbo/camtraptor
 [camtraptor_logo]: https://raw.githubusercontent.com/inbo/camtraptor/master/man/figures/logo.png
 
-[frictionless]: https://docs.ropensci.org/frictionless/
-[frictionless_github]: https://github.com/frictionlessdata/frictionless-r
-
 [etn]: https://inbo.github.io/etn/
 [etn_github]: https://github.com/inbo/etn
 [etn_logo]: https://raw.githubusercontent.com/inbo/etn/main/man/figures/logo.png
+
+[frictionless]: https://docs.ropensci.org/frictionless/
+[frictionless_github]: https://github.com/frictionlessdata/frictionless-r
+
+[getrad]: https://aloftdata.github.io/getRad/
+[getrad_github]: https://github.com/aloftdata/getRad
 
 [movepub]: https://inbo.github.io/movepub/
 [movepub_github]: https://github.com/inbo/movepub/
@@ -61,13 +64,13 @@ toc: true
 
 ## bioRad [![logo][biorad_logo]{:width="120" .float-right}][biorad]
 
-**R**{:.badge .bg-dark} **Biological Analysis and Visualization of Weather Radar Data**: Extract, visualize and summarize aerial movements of birds and insects from weather radar data. See [Dokter et al. 2019](https://doi.org/10.1111/ecog.04028) for a software paper describing the package and methodologies.
+**R**{:.badge .bg-dark} **Biological analysis and visualization of weather radar data**: Extract, visualize and summarize aerial movements of birds and insects from weather radar data. See [Dokter et al. 2019](https://doi.org/10.1111/ecog.04028) for a software paper describing the package and methodologies.
 
 {:.btn-group}
 [Documentation][biorad]{:.btn .btn-sm .btn-primary}
 [Source code][biorad_github]{:.btn .btn-sm .btn-light}
 
-### camtrapdp
+## camtrapdp
 
 **R**{:.badge .bg-dark} **Read and manipulate Camera Trap Data Packages**: Read and manipulate Camera Trap Data Packages (Camtrap DP). [Camtrap DP](https://camtrap-dp.tdwg.org) is a data exchange format for camera trap data. With camtrapdp you can read, filter and transform data (including to [Darwin Core](https://dwc.tdwg.org)) before further analysis in e.g. [camtraptor](https://inbo.github.io/camtraptor/) or [camtrapR](https://cran.r-project.org/package=camtrapR).
 
@@ -83,6 +86,14 @@ toc: true
 [Documentation][camtraptor]{:.btn .btn-sm .btn-primary}
 [Source code][camtraptor_github]{:.btn .btn-sm .btn-light}
 
+## etn [![logo][etn_logo]{:width="120" .float-right}][etn]
+
+**R**{:.badge .bg-dark} **Access data from the European Tracking Network**: Package with functions to access data from the [European Tracking Network (ETN)](http://www.lifewatch.be/etn/) hosted by the Flanders Marine Institute (VLIZ).
+
+{:.btn-group}
+[Documentation][etn]{:.btn .btn-sm .btn-primary}
+[Source code][etn_github]{:.btn .btn-sm .btn-light}
+
 ## frictionless
 
 **R**{:.badge .bg-dark} **Read and write Frictionless Data Packages**: A [Data Package](https://specs.frictionlessdata.io/data-package/) is a simple container format and standard to describe and package a collection of (tabular) data. It is typically used to publish [FAIR](https://www.go-fair.org/fair-principles/) and open datasets.
@@ -91,13 +102,13 @@ toc: true
 [Documentation][frictionless]{:.btn .btn-sm .btn-primary}
 [Source code][frictionless_github]{:.btn .btn-sm .btn-light}
 
-## etn [![logo][etn_logo]{:width="120" .float-right}][etn]
+## getRad
 
-**R**{:.badge .bg-dark} **Access Data from the European Tracking Network**: Package with functions to access data from the [European Tracking Network (ETN)](http://www.lifewatch.be/etn/) hosted by the Flanders Marine Institute (VLIZ).
+**R**{:.badge .bg-dark} **Download radar data for biological research**: Load polar volume and vertical profile data for aeroecological research directly into R. With getRad you can access data from several sources in Europe and the US and standardize it to faciliate further exploration in tools such as [bioRad](#biorad).
 
 {:.btn-group}
-[Documentation][etn]{:.btn .btn-sm .btn-primary}
-[Source code][etn_github]{:.btn .btn-sm .btn-light}
+[Documentation][getrad]{:.btn .btn-sm .btn-primary}
+[Source code][getrad_github]{:.btn .btn-sm .btn-light}
 
 ## movepub
 
@@ -141,7 +152,7 @@ toc: true
 
 ## trias [![logo][trias_logo]{:width="120" .float-right}][trias]
 
-**R**{:.badge .bg-dark} **Process Data for the Project Tracking Invasive Alien Species (TrIAS)**: TrIAS provides functionality to facilitate the data processing for the project [Tracking Invasive Alien Species (TrIAS)](http://www.trias-project.be).
+**R**{:.badge .bg-dark} **Process data for the project Tracking Invasive Alien Species (TrIAS)**: TrIAS provides functionality to facilitate the data processing for the project [Tracking Invasive Alien Species (TrIAS)](http://www.trias-project.be).
 
 {:.btn-group}
 [Documentation][trias]{:.btn .btn-sm .btn-primary}
@@ -149,7 +160,7 @@ toc: true
 
 ## wateRinfo [![logo][waterinfo_logo]{:width="120" .float-right}][waterinfo]
 
-**R**{:.badge .bg-dark} **Download Time Series Data from Waterinfo.be**: wateRinfo facilitates access to [waterinfo.be](https://www.waterinfo.be/), a website managed by the [Flanders Environment Agency (VMM)](https://en.vmm.be/) and [Flanders Hydraulics Research](https://www.waterbouwkundiglaboratorium.be/). The website provides access to real-time water and weather related environmental variables for Flanders (Belgium), such as rainfall, air pressure, discharge, and water level. The package provides functions to search for stations and variables, and download time series.
+**R**{:.badge .bg-dark} **Download time series data from Waterinfo.be**: wateRinfo facilitates access to [waterinfo.be](https://www.waterinfo.be/), a website managed by the [Flanders Environment Agency (VMM)](https://en.vmm.be/) and [Flanders Hydraulics Research](https://www.waterbouwkundiglaboratorium.be/). The website provides access to real-time water and weather related environmental variables for Flanders (Belgium), such as rainfall, air pressure, discharge, and water level. The package provides functions to search for stations and variables, and download time series.
 
 {:.btn-group}
 [Documentation][waterinfo]{:.btn .btn-sm .btn-primary}
