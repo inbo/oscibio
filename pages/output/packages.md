@@ -30,13 +30,6 @@ toc: true
 [movepub]: https://inbo.github.io/movepub/
 [movepub_github]: https://github.com/inbo/movepub/
 
-[niche_vlaanderen]: https://inbo.github.io/niche_vlaanderen/
-[niche_vlaanderen_github]: https://github.com/inbo/niche_vlaanderen
-
-[pydov]: https://pydov.readthedocs.io/
-[pydov_github]: https://github.com/DOV-Vlaanderen/pydov
-[pydov_logo]: https://raw.githubusercontent.com/DOV-Vlaanderen/pydov/master/docs/_static/img/logo.png
-
 [pywhip]: https://inbo.github.io/pywhip/
 [pywhip_github]: https://github.com/inbo/pywhip
 
@@ -117,22 +110,6 @@ toc: true
 {:.btn-group}
 [Documentation][movepub]{:.btn .btn-sm .btn-primary}
 [Source code][movepub_github]{:.btn .btn-sm .btn-light}
-
-## niche_vlaanderen
-
-**Python**{:.badge .bg-dark} **Run the NICHE Vlaanderen model**: NICHE Vlaanderen (Nature Impact Assessment of Changes in Hydro-Ecological Systems) is a hydro-ecological model that predicts the potential occurrence of (ground)water-dependent vegetation types in an area based on information about the (abiotic) site conditions. NICHE Vlaanderen can be used to evaluate the impact of changes in the water management to groundwater-dependent vegetation.
-
-{:.btn-group}
-[Documentation][niche_vlaanderen]{:.btn .btn-sm .btn-primary}
-[Source code][niche_vlaanderen_github]{:.btn .btn-sm .btn-light}
-
-## pydov [![logo][pydov_logo]{:width="120" .float-right}][pydov]
-
-**Python**{:.badge .bg-dark} **Retrieve data from Databank Ondergrond Vlaanderen (DOV)**: pydov is a Python package to query and download data from [Databank Ondergrond Vlaanderen (DOV)](https://www.dov.vlaanderen.be). It is hosted on [GitHub](https://github.com/DOV-Vlaanderen/pydov) and development is coordinated by Databank Ondergrond Vlaanderen (DOV). DOV aggregates data about soil, subsoil and groundwater of Flanders and makes them publicly available. Interactive and human-readable extraction and querying of the data is provided by a [web application](https://www.dov.vlaanderen.be/portaal/?module=verkenner#ModulePage), whereas the focus of this package is to support machine-based extraction and conversion of the data.
-
-{:.btn-group}
-[Documentation][pydov]{:.btn .btn-sm .btn-primary}
-[Source code][pydov_github]{:.btn .btn-sm .btn-light}
 
 ## pywhip
 
