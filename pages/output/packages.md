@@ -81,7 +81,7 @@ toc: true
 
 ## etn [![logo][etn_logo]{:width="120" .float-right}][etn]
 
-**R**{:.badge .bg-dark} **Access data from the European Tracking Network**: Package with functions to access data from the [European Tracking Network (ETN)](http://www.lifewatch.be/etn/) hosted by the Flanders Marine Institute (VLIZ).
+**R**{:.badge .bg-dark} **Access data from the European Tracking Network (ETN)**: With etn you can query metadata (animals, tags, deployments, receivers, projects) and data (acoustic detections, sensor data) from the [ETN](https://www.lifewatch.be/etn/) database and use these in your analyses. Data access requires user credentials and is subject to a data policy.
 
 {:.btn-group}
 [Documentation][etn]{:.btn .btn-sm .btn-primary}
