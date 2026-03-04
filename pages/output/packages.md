@@ -65,7 +65,7 @@ toc: true
 
 ## camtrapdp
 
-**R**{:.badge .bg-dark} **Read and manipulate Camera Trap Data Packages**: Read and manipulate Camera Trap Data Packages (Camtrap DP). [Camtrap DP](https://camtrap-dp.tdwg.org) is a data exchange format for camera trap data. With camtrapdp you can read, filter and transform data (including to [Darwin Core](https://dwc.tdwg.org)) before further analysis in e.g. [camtraptor](https://inbo.github.io/camtraptor/) or [camtrapR](https://cran.r-project.org/package=camtrapR).
+**R**{:.badge .bg-dark} **Read and manipulate Camera Trap Data Packages (Camtrap DP)**: [Camtrap DP](https://camtrap-dp.tdwg.org) is a data exchange format for camera trap data. With camtrapdp you can read, filter and transform data (including to [Darwin Core](https://dwc.tdwg.org)) before further analysis in e.g. [camtraptor](https://inbo.github.io/camtraptor/) or [camtrapR](https://cran.r-project.org/package=camtrapR).
 
 {:.btn-group}
 [Documentation][camtrapdp]{:.btn .btn-sm .btn-primary}
@@ -73,7 +73,7 @@ toc: true
 
 ## camtraptor [![logo][camtraptor_logo]{:width="120" .float-right}][camtraptor]
 
-**R**{:.badge .bg-dark} **Explore and visualize camera trap data**: Read and filter data, create overviews of observed species, relative abundance or effort, and plot these data on a map.
+**R**{:.badge .bg-dark} **Explore and visualize Camera Trap Data Packages (Camtrap DP)**: Read and filter data, create overviews of observed species, relative abundance or effort, and plot these data on a map.
 
 {:.btn-group}
 [Documentation][camtraptor]{:.btn .btn-sm .btn-primary}
@@ -81,7 +81,7 @@ toc: true
 
 ## etn [![logo][etn_logo]{:width="120" .float-right}][etn]
 
-**R**{:.badge .bg-dark} **Access data from the European Tracking Network**: Package with functions to access data from the [European Tracking Network (ETN)](http://www.lifewatch.be/etn/) hosted by the Flanders Marine Institute (VLIZ).
+**R**{:.badge .bg-dark} **Access data from the European Tracking Network (ETN)**: With etn you can query metadata (animals, tags, deployments, receivers, projects) and data (acoustic detections, sensor data) from the [ETN](https://www.lifewatch.be/etn/) database and use these in your analyses. Data access requires user credentials and is subject to a data policy.
 
 {:.btn-group}
 [Documentation][etn]{:.btn .btn-sm .btn-primary}
