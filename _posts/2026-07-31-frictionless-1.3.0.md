@@ -22,7 +22,7 @@ This work was funded by the NLnet foundation as part of the [Frictionless Librar
 
 ## Changes for users
 
-* New `version()` determines what version of the Data Package standard is used by a Data Package (e.g. `"1.0"`, `"2.0"`, `">=2.0"`), based on the presence and value of the `$schema` property (#299). This information is also returned by `print()`.
+* New `version()` determines what version of the Data Package standard is used by a Data Package (e.g. `"1.0"`, `"2.0"`, `">=2.0"`), based on the presence and value of the `$schema` property. This information is also returned by `print()`.
 * `read_package()` now warns when reading a `datapackage.json` that uses a version of the Data Package standard not supported by frictionless (i.e. anything other than version `"1.0"`).
 * `read_resource()` no longer guesses the type for fields without a `type`, but sets it to character (the default for a CSV). This aligns with a clarification in the [specification](https://datapackage.org/overview/changelog/#any-field-type-updated).
 * `read_resource()` now supports reading from remote zip files, thanks to support in `{vroom}` (1.3.0).
