@@ -12,7 +12,7 @@ toc: true
 
 We just released a new major version (1.0.0) of our R package **camtraptor**.
 
-With camtraptor you can explore and visualize Camera Trap Data Packages ([Camtrap DP](https://camtrap-dp.tdwg.org/)). It offers a step-by-step workflow to read Camtrap DP files, filter data of interest, summarize information (e.g. number of observed species) and visualize this per deployment on an interactive map. You can also use it to transform data for analysis in camtrapR.
+With camtraptor you can explore and visualize Camera Trap Data Packages ([Camtrap DP](https://camtrap-dp.tdwg.org/)). It offers a step-by-step workflow to read Camtrap DP files, filter data of interest, summarize information (e.g. number of observed species) and visualize this per deployment on an interactive map. You can also use it to transform data for analysis in [camtrapR](https://cran.r-project.org/package=camtrapR).
 
 This major release updates the internal data model of camtraptor to Camtrap DP 1.0, drops support for Camtrap DP 0.1.6 and facilitates a step-by-step exploration workflow with new functions.
 
