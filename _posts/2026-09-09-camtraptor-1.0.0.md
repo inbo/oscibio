@@ -2,9 +2,9 @@
 title: camtraptor 1.0.0
 description: We released a new version of our R package camtraptor.
 background:
-  img: https://images.unsplash.com/photo-1748879117589-0250bbe34916?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-  by: Paris Bilal
-  href: https://unsplash.com/photos/a-detailed-illustration-of-a-dinosaurs-head-4EU2Zlh8F08
+  img: https://images.unsplash.com/photo-1669490868884-f66ebca4feab?q=80&w=1000&h=500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&crop=top
+  by: Sandy Millar
+  href: https://unsplash.com/photos/a-lizard-with-a-human-hand-cmQR_e34Hf0
 author: Damiano Oldoni
 tags: [LifeWatch, software, R]
 toc: true
