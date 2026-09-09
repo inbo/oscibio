@@ -73,7 +73,7 @@ toc: true
 
 ## camtraptor [![logo][camtraptor_logo]{:width="120" .float-right}][camtraptor]
 
-**R**{:.badge .bg-dark} **Explore and visualize Camera Trap Data Packages (Camtrap DP)**: Read and filter data, create overviews of observed species, relative abundance or effort, and plot these data on a map.
+**R**{:.badge .bg-dark} **Explore and Visualize Camera Trap Data Packages**: It offers a step-by-step workflow to read Camtrap DP files, filter data of interest, summarize information (e.g. number of observed species) and visualize this per deployment on an interactive map. You can also use it to transform data for analysis in [camtrapR](https://cran.r-project.org/package=camtrapR).
 
 {:.btn-group}
 [Documentation][camtraptor]{:.btn .btn-sm .btn-primary}
@@ -97,7 +97,7 @@ toc: true
 
 ## getRad
 
-**R**{:.badge .bg-dark} **Download radar data for biological research**: Load polar volume and vertical profile data for aeroecological research directly into R. With getRad you can access data from several sources in Europe and the US and standardize it to faciliate further exploration in tools such as [bioRad](#biorad).
+**R**{:.badge .bg-dark} **Download radar data for biological research**: It gives access to both polar volume radar data and [vertical profile data](https://aloftdata.eu/vpts-csv/) from [different sources](https://aloftdata.github.io/getRad/articles/supported_sources.html) and loads it directly into R. getRad also facilitates further exploration of the data by other tools such as [bioRad](#bioRsad) by standardizing the data.
 
 {:.btn-group}
 [Documentation][getrad]{:.btn .btn-sm .btn-primary}
@@ -105,7 +105,7 @@ toc: true
 
 ## movepub
 
-**R**{:.badge .bg-dark} **Prepare Movebank data for publication**: Prepare animal tracking data from [Movebank](<https://movebank.org>) for publication in a research repository or the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org)).
+**R**{:.badge .bg-dark} **Prepare Movebank data for publication**: With movepub you can document data with metadata following the [Data Package](https://datapackage.org) standard and transform these to [Darwin Core](https://dwc.tdwg.org) and Ecological Metadata Language ([EML](https://eml.ecoinformatics.org/)) for publication to the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org)) and the Ocean Biodiversity Information System ([OBIS](https://obis.org)).
 
 {:.btn-group}
 [Documentation][movepub]{:.btn .btn-sm .btn-primary}
@@ -121,7 +121,7 @@ toc: true
 
 ## rgbif [![logo][rgbif_logo]{:width="120" .float-right}][rgbif]
 
-**R**{:.badge .bg-dark} **Interface to the Global Biodiversity Information Facility API**: A programmatic interface to the Web Service methods provided by the [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/developer/summary). GBIF is a database of species occurrence records from sources all over the globe. rgbif includes functions for searching for taxonomic names, retrieving information on data providers, getting species occurrence records, getting counts of occurrence records, and using the GBIF tile map service to make rasters summarizing huge amounts of data.
+**R**{:.badge .bg-dark} **Interface to the Global Biodiversity Information Facility API**: rgbif gives you access to [GBIF](https://www.gbif.org/) mediated data via its [REST API](https://www.gbif.org/developer/summary). GBIF (the Global Biodiversity Information Facility) is an international network and data infrastructure funded by the world's governments and aimed at providing anyone, anywhere, open access to data about all types of life on Earth.
 
 {:.btn-group}
 [Documentation][rgbif]{:.btn .btn-sm .btn-primary}
@@ -129,7 +129,7 @@ toc: true
 
 ## trias [![logo][trias_logo]{:width="120" .float-right}][trias]
 
-**R**{:.badge .bg-dark} **Process data for the project Tracking Invasive Alien Species (TrIAS)**: TrIAS provides functionality to facilitate the data processing for the project [Tracking Invasive Alien Species (TrIAS)](http://www.trias-project.be).
+**R**{:.badge .bg-dark} **Process data for the project Tracking Invasive Alien Species (TrIAS)**: trias was originally conceived to provide functionalities for the [Tracking Invasive Alien Species (TrIAS)](https://trias-project.be) project. However, it has been further developed to support other similar projects, such as the [LIFE RIPARIAS](https://www.riparias.be) and [B-Cubed](https://docs.b-cubed.eu/) projects.
 
 {:.btn-group}
 [Documentation][trias]{:.btn .btn-sm .btn-primary}
