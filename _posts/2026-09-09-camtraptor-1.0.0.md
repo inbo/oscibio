@@ -38,7 +38,6 @@ x %>%
   map_summary(feature = "sum_count")
 ```
 
-_Screenshot of the returned leaflet map: read Camtrap DP files, filter deployments and observations, summarize observations and visualize the number of individuals per deployment._
 ![map_summary screenshot](/assets/images/2026-09-09-camtraptor-1.0.0-map-summary.png)
 
 Note how you can stop and explore (all) the summary results returned by `summarize_observations()` before selecting one (`"sum_count"`) to visualize with `map_summary()`:
