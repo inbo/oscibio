@@ -38,26 +38,23 @@ x %>%
   map_summary(feature = "sum_count")
 ```
 
+![](/assets/images/2026-09-09-camtraptor-workflow-map.png)
+_Screenshot of the returned leaflet map: read Camtrap DP files, filter deployments and observations, summarize observations and visualize the number of individuals per deployment._
+
 Note how you can stop and explore (all) the summary results returned by `summarize_observations()` before selecting one (`"sum_count"`) to visualize with `map_summary()`:
 
 ``` r
-x %>%
-  filter_deployments(latitude > 51.0, longitude > 5.0) %>%
-  filter_observations(lifeStage == "adult") %>%
-  summarize_observations()
-#> # A tibble: 4 × 10
-#> # Groups:   deploymentID, latitude, longitude, scientificName [4]
-#>   deploymentID latitude longitude scientificName     n_scientificName n_events
-#>   <chr>           <dbl>     <dbl> <chr>                         <int>    <int>
-#> 1 29b7d356         51.2      5.66 Anas platyrhynchos                1        3
-#> 2 577b543a         51.2      5.66 Martes foina                      1        1
-#> 3 577b543a         51.2      5.66 Mustela putorius                  1        3
-#> 4 577b543a         51.2      5.66 Vulpes vulpes                     1        1
-#> # ℹ 4 more variables: n_observations <int>, sum_count <int>,
-#> #   rai_observations <dbl>, rai_count <dbl>
+# A tibble: 4 × 10
+# Groups:   deploymentID, latitude, longitude, scientificName [4]
+  deploymentID latitude longitude scientificName     n_scientificName n_events n_observations sum_count rai_observations rai_count
+  <chr>           <dbl>     <dbl> <chr>                         <int>    <int>          <int>     <int>            <dbl>     <dbl>
+1 29b7d356         51.2      5.66 Anas platyrhynchos                1        3              3         6             30.1      60.3
+2 577b543a         51.2      5.66 Martes foina                      1        1              1         1             11.0      11.0
+3 577b543a         51.2      5.66 Mustela putorius                  1        3              3         3             32.9      32.9
+4 577b543a         51.2      5.66 Vulpes vulpes                     1        1              1         1             11.0      11.0
 ```
 
-More details about the new workflow can be found in the vignette [Workfow](https://inbo.github.io/camtraptor/articles/workflow.html). For an overview of all the changes, see the [CHANGELOG](https://inbo.github.io/camtraptor/news/index.html#camtraptor-100).
+More details about the new workflow can be found in the vignette [Workfow](https://inbo.github.io/camtraptor/articles/workflow.html). Do you want more info about the visualization aspect? Give a look to the vignette [Visualize deployment features](https://inbo.github.io/camtraptor/articles/visualize-deployment-features.html). For an overview of all the changes, see the [CHANGELOG](https://inbo.github.io/camtraptor/news/index.html#camtraptor-100).
 
 ## How to install camtraptor?
 
