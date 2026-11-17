@@ -1,7 +1,10 @@
 ---
 title: frictionless 1.1.0
 description: We released a new version of our R package frictionless.
-background: https://images.unsplash.com/photo-1696778083008-cf105a901e30?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+background:
+  img: https://images.unsplash.com/photo-1696778083008-cf105a901e30?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  by: https://unsplash.com/photos/the-reflection-of-a-building-in-a-round-window-1SIyacSs8uQ
+  href: Alex Skobe
 author: Peter Desmet
 tags: [LifeWatch, software, R]
 toc: true
