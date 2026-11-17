@@ -1,7 +1,10 @@
 ---
 title: frictionless 1.3.0
 description: We released a new version of our R package frictionless.
-background: https://images.unsplash.com/photo-1722797337046-9102a0ded0bd?q=80&w=1282&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+background:
+  img: https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D
+  by: Tobias Keller
+  href: https://unsplash.com/photos/landscape-photography-of-lake-and-mountain-73F4pKoUkM0
 author: Peter Desmet
 tags: [LifeWatch, NLnet, software, R]
 toc: true
